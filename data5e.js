@@ -73,7 +73,7 @@ window.BANK_5E = {
         { d:3, q:"[AB] mesure 12 cm et [A'B'] est son image par une symétrie de centre O. Que vaut A'B' ?", a:"12", e:"La symétrie centrale conserve les longueurs : A'B' = AB = 12 cm." },
         { d:3, q:"Quel est le centre de symétrie d'un parallélogramme ?", c:["le point d'intersection de ses diagonales","le milieu d'un côté","un des sommets","un parallélogramme n'a pas de centre de symétrie"], a:0, e:"Chaque sommet a pour symétrique le sommet opposé : le centre est l'intersection des diagonales." },
         { d:3, q:"L'image d'une droite (d) ne passant pas par le centre O est...", c:["une droite parallèle à (d)","un cercle","un point","un segment plus court que (d)"], a:0, e:"L'image d'une droite ne passant pas par O est une droite parallèle à (d) ; si (d) passe par O, son image est (d) elle-même." },
-        { d:4, q:"Sur une droite graduée, le symétrique du point d'abscisse 5 par rapport au point d'abscisse 1 est le point d'abscisse...", a:"-3", e:"1 doit être le milieu : (5 + x') ÷ 2 = 1, donc x' = 2 − 5 = -3." },
+        { d:4, q:"Sur une droite graduée, le symétrique du point d'abscisse 5 par rapport au point d'abscisse 9 est le point d'abscisse...", a:"13", e:"9 doit être le milieu : (5 + x') ÷ 2 = 9, donc 5 + x' = 18 et x' = 18 − 5 = 13." },
         { d:4, q:"Un triangle quelconque et son image par une symétrie de centre O...", c:["sont superposables après un demi-tour autour de O","ont des périmètres différents","ont des aires différentes","n'ont aucun point commun possible"], a:0, e:"La symétrie centrale conserve tout : l'image se superpose à la figure d'origine après un demi-tour autour de O." },
         { d:4, q:"Un rectangle de 7 cm sur 3 cm a pour image, par une symétrie de centre O, un rectangle d'aire...", a:"21", e:"La symétrie centrale conserve les dimensions : l'image est un rectangle 7 × 3, d'aire 7 × 3 = 21 cm²." }
       ],
@@ -94,15 +94,15 @@ window.BANK_5E = {
       qs: [
         { d:1, q:"Développer : 3 × (x + 2)", c:["3x + 2","3x + 6","x + 6","3x × 6"], a:1, e:"On distribue le 3 : 3 × x + 3 × 2 = 3x + 6." },
         { d:1, q:"Réduire : 4x + 3 + 5x", c:["9x + 3","12x","9x","4x + 8x"], a:0, e:"On regroupe les x : 4x + 5x = 9x, on garde le + 3." },
-        { d:1, q:"Développer : 5 × (2 − a)", c:["10 − 5a","7 − 5a","10 − a","5 × 2 × a"], a:0, e:"5 × 2 = 10 et 5 × (−a) = −5a, donc 10 − 5a." },
-        { d:2, q:"Réduire : 7a − 2 + 3a − 8", c:["10a − 10","10a + 6","4a − 10","21a − 6"], a:0, e:"7a + 3a = 10a et −2 − 8 = −10, donc 10a − 10." },
+        { d:1, q:"Développer : 5 × (2 + a)", c:["10 + 5a","7 + 5a","10 + a","5 × 2 × a"], a:0, e:"5 × 2 = 10 et 5 × a = 5a, donc 10 + 5a." },
+        { d:2, q:"Réduire : 7a + 2 + 3a + 8", c:["10a + 10","21a + 10","10a + 16","4a + 10"], a:0, e:"7a + 3a = 10a et 2 + 8 = 10, donc 10a + 10." },
         { d:2, q:"Développer puis réduire : 2(3x + 4) + 5x", a:"11x+8", e:"2 × 3x = 6x ; 2 × 4 = 8. Puis 6x + 5x = 11x, donc 11x + 8." },
         { d:2, q:"Quelle expression est égale à 4 × (7 − 3) ?", c:["4 × 7 − 3","4 × 7 − 4 × 3","4 × 7 × 3","7 × 4 − 3"], a:1, e:"Distributivité : 4 × 7 − 4 × 3 = 28 − 12 = 16 = 4 × 4." },
         { d:3, q:"Factoriser : 5x + 25", c:["5(x + 5)","x(5 + 25)","5(x + 25)","5 × x + 5 × 5"], a:0, e:"5 est un facteur commun : 5x + 25 = 5 × x + 5 × 5 = 5(x + 5)." },
-        { d:3, q:"Développer puis réduire : 3(2x − 5) − 4x", c:["2x − 15","6x − 15","10x − 15","2x + 15"], a:0, e:"3 × 2x = 6x ; 3 × (−5) = −15. Puis 6x − 15 − 4x = 2x − 15." },
+        { d:3, q:"Développer puis réduire : 3(2x + 5) − 4x", c:["2x + 15","10x + 15","6x + 15","10x + 5"], a:0, e:"3 × 2x = 6x ; 3 × 5 = 15. Puis 6x + 15 − 4x = 2x + 15." },
         { d:3, q:"Tester l'expression : que vaut 2x + 5 pour x = 3 ?", a:"11", e:"On remplace x par sa valeur puis on calcule : 2 × 3 + 5 = 6 + 5 = 11." },
-        { d:4, q:"Pour quelle(s) valeur(s) de x a-t-on 4(x + 3) = 3x + 10 ?", c:["x = −2","x = 2","x = 1","x = 7"], a:0, e:"4(x + 3) = 4x + 12. On cherche 4x + 12 = 3x + 10, donc 4x − 3x = 10 − 12 → x = −2. Vérification : 4 × 1 = 4 et 3 × (−2) + 10 = 4." },
-        { d:4, q:"Développer puis réduire : −2(3 − x) + 4x", a:"6x-6", e:"−2 × 3 = −6 ; −2 × (−x) = +2x. Puis −6 + 2x + 4x = 6x − 6." },
+        { d:4, q:"L'égalité 2 × (x + 5) = 2x + 5 est-elle vraie pour tout x ?", c:["Non, car 2 × (x + 5) = 2x + 10","Oui, par distributivité","Oui, seulement si x = 0","Non, car 2x + 5 = 7x"], a:0, e:"Par distributivité, 2 × (x + 5) = 2x + 10, qui n'est pas 2x + 5 : l'égalité est fausse (exemple : x = 3 → 16 ≠ 11)." },
+        { d:4, q:"Développer puis réduire : 5(2x + 1) + 3(x + 4)", a:"13x+17", e:"5 × 2x = 10x ; 5 × 1 = 5 ; 3 × x = 3x ; 3 × 4 = 12. Puis 10x + 3x = 13x et 5 + 12 = 17 : 13x + 17." },
         { d:4, q:"Un rectangle a pour largeur x et pour longueur x + 7. Son périmètre (réduit) ?", c:["2x + 7","4x + 14","2x + 14","x + 7"], a:1, e:"P = 2 × (x + x + 7) = 2 × (2x + 7) = 4x + 14." }
       ],
       gen: {
@@ -289,18 +289,18 @@ window.BANK_5E = {
         { d:2, q:"Calculer 25 % de 240", c:["6","60","24","48"], a:1, e:"25 % = un quart : 240 ÷ 4 = 60. Ou 240 × 25 ÷ 100 = 60." },
         { d:2, q:"Une écharpe à 30 € augmente de 20 %. Nouveau prix ?", c:["36 €","32 €","50 €","24 €"], a:0, e:"Augmentation : 30 × 20 ÷ 100 = 6 €. Nouveau prix : 30 + 6 = 36 €." },
         { d:2, q:"Sur une carte à l'échelle 1/100 000, deux villages sont à 4 cm. Distance réelle ?", c:["400 m","4 km","40 km","40 m"], a:1, e:"1 cm sur la carte = 100 000 cm réels = 1 km. Donc 4 cm = 4 km." },
-        { d:3, q:"Un article à 80 € est soldé à −25 %. Prix soldé ?", c:["55 €","60 €","65 €","20 €"], a:1, e:"Réduction : 80 × 25 ÷ 100 = 20 €. Prix soldé : 80 − 20 = 60 €." },
+        { d:3, q:"Un robinet laisse couler 3 litres en 2 minutes. Quantité d'eau en 10 minutes ?", a:"15", e:"3 L en 2 min → 1,5 L par minute. En 10 min : 10 × 1,5 = 15 L." },
         { d:3, q:"15 litres d'essence coûtent 24 € ; prix de 40 litres (proportionnel) ?", a:"64", e:"Coefficient : 24 ÷ 15 = 1,6 €/L. Donc 40 × 1,6 = 64 €." },
-        { d:3, q:"Après une hausse de 10 %, un abonnement coûte 44 €. Prix avant hausse ?", c:["39,60 €","34 €","40 €","44,10 €"], a:2, e:"Après hausse de 10 %, le prix vaut 110 % de l'ancien : 44 = 1,1 × p, donc p = 44 ÷ 1,1 = 40 €." },
+        { d:3, q:"Un paquet de 6 yaourts coûte 4,20 €. Prix (en euros) de 9 yaourts ?", a:"6.3", e:"Un yaourt : 4,20 ÷ 6 = 0,70 €. Pour 9 : 9 × 0,70 = 6,30 €." },
         { d:4, q:"Une école compte 480 élèves ; 55 % sont des filles. Combien de garçons ?", a:"216", e:"Filles : 480 × 55 ÷ 100 = 264. Garçons : 480 − 264 = 216." },
-        { d:4, q:"Le prix d'un vélo passe de 150 € à 120 €. Quelle est la baisse en % ?", c:["30 %","20 %","25 %","80 %"], a:1, e:"Baisse : 30 €. Pourcentage : 30/150 = 1/5 = 20 %." },
+        { d:4, q:"Dans une classe de 25 élèves, 10 sont externes. Quel est le pourcentage d'externes ?", c:["40 %","50 %","25 %","60 %"], a:0, e:"10/25 = 40/100 = 40 %." },
         { d:4, q:"Une maquette à l'échelle 1/50 : une tour de 35 m de hauteur mesure combien sur la maquette ?", c:["70 cm","7 cm","35 cm","1,75 m"], a:0, e:"35 m = 3 500 cm ; 3 500 ÷ 50 = 70 cm." }
       ],
       gen: {
         2: () => { const q = [10,20,25,50][Math.floor(Math.random()*4)]; const n = (2+Math.floor(Math.random()*40))*4;
           return { q:`Calculer ${q} % de ${n}`, a:String(n*q/100), e:`${q} % de ${n} = ${n} × ${q} ÷ 100 = ${n*q}/100 = ${n*q/100}.` }; },
         3: () => { const p = 20 + Math.floor(Math.random()*40)*5, t = [10,20,25,50][Math.floor(Math.random()*4)];
-          return { q:`Un article à ${p} € est soldé à −${t} %. Prix soldé ?`, a:String(p*(100-t)/100), e:`Réduction : ${p} × ${t} ÷ 100 = ${p*t/100}. Prix soldé : ${p} − ${p*t/100} = ${p*(100-t)/100} €.` }; }
+          return { q:`Que valent ${t} % de ${p} € ?`, a:String(p*t/100), e:`${t} % de ${p} = ${p} × ${t} ÷ 100 = ${p*t/100} €.` }; }
       }
     },
     {

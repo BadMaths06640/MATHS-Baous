@@ -54,7 +54,7 @@ window.AIDE_5E = {
       "Astuce : une symétrie centrale conserve les longueurs.\nExemple similaire : [AB] = 7 cm → [A'B'] = 7 cm.",
       "Astuce : cherche le point d'où chaque sommet a pour image le sommet opposé.\nExemple similaire : dans un parallélogramme, l'intersection des diagonales est le centre de symétrie.",
       "Astuce : l'image d'une droite est une droite PARALLÈLE (si elle passe par O, elle reste invariante).\nExemple similaire : la droite (d) et son image (d') sont parallèles.",
-      "Astuce : le centre doit être le milieu : (x + x') ÷ 2 = abscisse du centre.\nExemple similaire : symétrique de 7 par rapport à 2 : (7 + x') ÷ 2 = 2 → x' = -3.",
+      "Astuce : le centre doit être le milieu : (x + x') ÷ 2 = abscisse du centre.\nExemple similaire : symétrique de 7 par rapport à 9 : (7 + x') ÷ 2 = 9 → 7 + x' = 18 et x' = 11.",
       "Astuce : l'image est IDENTIQUE : périmètre, aire et angles inchangés.\nExemple similaire : un triangle de côtés 3 ; 4 ; 5 cm a une image de côtés 3 ; 4 ; 5 cm.",
       "Astuce : dimensions conservées → même aire.\nExemple similaire : rectangle 5 × 2 cm → image : rectangle 5 × 2 cm, aire 10 cm²."
     ],
@@ -250,16 +250,16 @@ window.AIDE_5E = {
       "Astuce : 25 % = un quart.\nExemple similaire : 25 % de 200 = 50.",
       "Astuce : calcule l'augmentation, puis ajoute-la au prix initial.\nExemple similaire : 20 € + 20 % → 24 €.",
       "Astuce : 1 cm sur la carte vaut 100 000 cm réels = 1 km.\nExemple similaire : 6 cm à l'échelle 1/100 000 → 6 km.",
-      "Astuce : calcule le montant de la baisse, retire-le du prix initial.\nExemple similaire : 50 € soldés à −20 % → baisse de 10 → 40 €.",
+      "Astuce : cherche d'abord la quantité par minute, puis multiplie.\nExemple similaire : 4 L en 2 min → 2 L/min → en 10 min : 20 L.",
       "Astuce : coefficient = 24 ÷ 15, applique-le à 40.\nExemple similaire : 6 kg pour 9 € → 10 kg pour 15 €.",
-      "Astuce : après +10 %, le prix vaut 110 % de l'ancien : divise par 1,1.\nExemple similaire : 33 € après +10 % → ancien = 33 ÷ 1,1 = 30 €.",
+      "Astuce : divise par 6 pour le prix d'un seul, puis multiplie par 9.\nExemple similaire : 4 yaourts = 2,80 € → 9 = 6,30 €.",
       "Astuce : cherche d'abord le nombre de filles (55 %), puis le complément.\nExemple similaire : 400 élèves dont 30 % en CM2 → 70 % ailleurs.",
-      "Astuce : baisse en % = écart ÷ prix initial × 100.\nExemple similaire : de 60 € à 45 € → 15/60 = 25 %.",
+      "Astuce : pourcentage = (partie ÷ total) × 100.\nExemple similaire : 12 gagnants sur 30 → 12/30 = 40 %.",
       "Astuce : divise la dimension réelle par 50 pour la maquette.\nExemple similaire : 20 m à l'échelle 1/50 → 2000 ÷ 50 = 40 cm."
     ],
     genH: {
       2: "Astuce : multiplie par le pourcentage puis divise par 100.\nExemple similaire : 20 % de 45 = 9.",
-      3: "Astuce : baisse = p × t/100 ; prix soldé = p − baisse.\nExemple similaire : 60 € à −50 % → 30 €."
+      3: "Astuce : multiplie p par t, puis divise par 100.\nExemple similaire : 25 % de 60 = 60 × 25 ÷ 100 = 15."
     }
   },
   relatifs: {
@@ -341,15 +341,15 @@ window.AIDE_5E = {
     qs: [
       "Astuce : distribue le 3 aux deux termes.\nExemple similaire : 4 × (x + 5) = 4x + 20.",
       "Astuce : regroupe les x entre eux, puis les nombres.\nExemple similaire : 6a + 2 + a = 7a + 2.",
-      "Astuce : distribue aussi sur le « − » : 5 × (−a) = −5a.\nExemple similaire : 3 × (4 − b) = 12 − 3b.",
-      "Astuce : regroupe séparément les a et les nombres.\nExemple similaire : 5m − 3 + m − 4 = 6m − 7.",
+      "Astuce : distribue le 5 aux deux termes de la parenthèse.\nExemple similaire : 3 × (2 + b) = 6 + 3b.",
+      "Astuce : regroupe séparément les a et les nombres.\nExemple similaire : 5m + 3 + m + 4 = 6m + 7.",
       "Astuce : développe d'abord, réduis ensuite.\nExemple similaire : 3(2x + 1) + 2x = 6x + 3 + 2x = 8x + 3.",
       "Astuce : teste la distributivité : k(a − b) = ka − kb.\nExemple similaire : 4 × 7 − 4 × 2 = 20 = 4 × (7 − 2).",
       "Astuce : factoriser = écrire un produit ; cherche le facteur commun.\nExemple similaire : 7x + 21 = 7(x + 3).",
-      "Astuce : développe, réduis, attention aux signes.\nExemple similaire : 2(4x − 1) − 3x = 8x − 2 − 3x = 5x − 2.",
+      "Astuce : développe, calcule les constantes, puis réduis les x.\nExemple similaire : 2(4x + 1) − 3x = 8x + 2 − 3x = 5x + 2.",
       "Astuce : remplace la lettre par sa valeur puis calcule.\nExemple similaire : 3y + 1 pour y = 4 → 13.",
-      "Astuce : développe les deux côtés puis regroupe les x d'un côté.\nExemple similaire : 2(x + 1) = x + 4 → 2x + 2 = x + 4 → x = 2.",
-      "Astuce : −2 × 3 = −6 et −2 × (−x) = +2x.\nExemple similaire : −3(2 − x) + x = −6 + 3x + x = 4x − 6.",
+      "Astuce : applique la distributivité sans résoudre : 2 × (x + 5) = 2x + 10, qui n'est pas 2x + 5.\nExemple similaire : 3 × (x + 2) = 3x + 6, qui n'est pas 3x + 2 : l'égalité est fausse pour tout x.",
+      "Astuce : dévelope chaque parenthèse puis réduis les x et les nombres.\nExemple similaire : 2(3x + 1) + x = 6x + 2 + x = 7x + 2.",
       "Astuce : périmètre du rectangle = 2 × (longueur + largeur).\nExemple similaire : largeur x, longueur x + 3 → P = 2(2x + 3) = 4x + 6."
     ],
     genH: {

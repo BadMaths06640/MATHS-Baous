@@ -226,7 +226,7 @@ window.AIDE_4E = {
       { u: "https://www.youtube.com/watch?v=9Y4mCFQ4F-8", t: "Équation ax + b = cx + d" },
     ],
     resume: [
-      { t: "Double distributivité", f: "(a + b)(c + d) = ac + ad + bc + bd\n(x + 2)(x + 3) = x² + 5x + 6", d: "Chaque terme de la 1re parenthèse multiplie chaque terme de la 2e (4 produits, attention aux signes)." },
+      { t: "Supprimer des parenthèses", f: "a + (b − c) = a + b − c\nk(a + b) = k × a + k × b", d: "Le + devant la parenthèse ne change rien ; on distribue k sur chaque terme (attention aux signes devant un −)." },
       { t: "Résoudre une équation", f: "x + a = b → x = b − a\nax = b → x = b ÷ a", d: "On applique la MÊME opération des deux côtés pour isoler x (égalité conservée)." },
       { t: "Valeur de l'inconnue", f: "2x + 3 = 11 → 2x = 8 → x = 4", d: "D'abord on « déplace » les nombres, ensuite on divise. Toujours vérifier en remplaçant x dans l'équation de départ." }
     ],
@@ -235,14 +235,14 @@ window.AIDE_4E = {
       "Astuce : enlève 7 des deux côtés pour isoler x.\nExemple similaire : x + 3 = 10 → x = 7.",
       "Astuce : divise les deux côtés par 3.\nExemple similaire : 4x = 20 → x = 5.",
       "Astuce : ajoute 5 des deux côtés.\nExemple similaire : x − 7 = −3 → x = 4.",
-      "Astuce : 4 produits : x², 3x, 2x, 6, puis réduire.\nExemple similaire : (x + 1)(x + 2) = x² + 3x + 2.",
+      "Astuce : le + devant la parenthèse ne change rien, puis réduis.\nExemple similaire : 7 + (2x − 3) = 2x + 4.",
       "Astuce : divise des deux côtés par −4 (attention au signe !).\nExemple similaire : −2x = 10 → x = −5.",
       "Astuce : enlève d'abord 3, puis divise par 2.\nExemple similaire : 3x + 1 = 10 → 3x = 9 → x = 3.",
-      "Astuce : 4 produits : 2x², 8x, −x, −4, puis réduire.\nExemple similaire : (2x + 1)(x + 2) = 2x² + 5x + 2.",
+      "Astuce : 3 × 4x = 12x et 3 × 5 = 15, puis réduis les x.\nExemple similaire : 2(5x + 3) − 4x = 10x + 6 − 4x = 6x + 6.",
       "Astuce : regroupe les x à gauche (−2x) et les nombres à droite (+7).\nExemple similaire : 4x − 1 = x + 8 → 3x = 9 → x = 3.",
       "Astuce : développe d'abord, puis isole x.\nExemple similaire : 2(x − 1) = x + 3 → 2x − 2 = x + 3 → x = 5.",
       "Astuce : pose x la largeur ; P = 2 × (largeur + longueur) = 2 × (x + x + 3).\nExemple similaire : 4x + 6 = 24 → x = 4,5.",
-      "Astuce : produit nul → chaque facteur peut valoir 0, un par un.\nExemple similaire : (x − 2)(x + 7) = 0 → x = 2 ou x = −7."
+      "Astuce : regroupe les x d'un côté et les nombres de l'autre.\nExemple similaire : 5x + 2 = 2x + 14 → 3x = 12 → x = 4."
     ],
     genH: {
       1: "Astuce : enlève le nombre des deux côtés pour isoler x.\nExemple similaire : x + 4 = 9 → x = 5.",
@@ -311,8 +311,8 @@ window.AIDE_4E = {
       { u: "https://www.youtube.com/watch?v=6iYBMmT9Uio", t: "Puissances de 10" },
     ],
     resume: [
-      { t: "Les règles de base", f: "aᵐ × aⁿ = aᵐ⁺ⁿ\naᵐ ÷ aⁿ = aᵐ⁻ⁿ\n(aᵐ)ⁿ = aᵐ×ⁿ", d: "Multiplier → on ADDITIONNE les exposants. Diviser → on SOUSTRAIT. Puissance de puissance → on MULTIPLIE." },
-      { t: "Puissances de 10", f: "10ⁿ = 1 suivi de n zéros\n10⁻ⁿ = 1/10ⁿ", d: "10⁵ = 100 000 et 10⁻³ = 0,001. Exposant positif → grand nombre ; négatif → petit nombre." },
+      { t: "Les règles de base", f: "aᵐ × aⁿ = aᵐ⁺ⁿ\naᵐ ÷ aⁿ = aᵐ⁻ⁿ (m > n)\n(aᵐ)ⁿ = aᵐ×ⁿ", d: "Multiplier → on ADDITIONNE les exposants. Diviser → on SOUSTRAIT. Puissance de puissance → on MULTIPLIE." },
+      { t: "Puissances de 10", f: "10ⁿ = 1 suivi de n zéros", d: "10⁵ = 100 000. Chaque zéro de plus correspond à un exposant de plus : 10² = 100 ; 10³ = 1 000 ; 10⁴ = 10 000." },
       { t: "Erreurs à éviter", f: "2⁴ ≠ 2 × 4\n2⁴ = 2 × 2 × 2 × 2 = 16", d: "Une puissance est une multiplication répétée. a⁰ = 1 pour tout a ≠ 0 ; (a × b)ⁿ = aⁿ × bⁿ, mais (a + b)ⁿ ≠ aⁿ + bⁿ." }
     ],
     qs: [
@@ -322,11 +322,11 @@ window.AIDE_4E = {
       "Astuce : même base au produit → on additionne les exposants.\nExemple similaire : 2² × 2³ = 2⁵ = 32.",
       "Astuce : même base au quotient → on soustrait les exposants.\nExemple similaire : 7⁵ ÷ 7² = 7³.",
       "Astuce : puissance IMPAIRE d'un négatif → négatif.\nExemple similaire : (−2)³ = −8.",
-      "Astuce : exposant négatif = inverse : 10⁻³ = 1/1000.\nExemple similaire : 10⁻² = 0,01.",
+      "Astuce : même base au quotient → on soustrait les exposants (5 − 3 = 2), puis on écrit la décimale.\nExemple similaire : 10⁶ ÷ 10⁴ = 10² = 100.",
       "Astuce : puissance de puissance → on multiplie les exposants.\nExemple similaire : (3²)² = 3⁴ = 81.",
       "Astuce : enchaîne les règles : +2 puis −4 sur les exposants.\nExemple similaire : 5⁴ × 5² ÷ 5³ = 5³ = 125.",
       "Astuce : écriture scientifique = a × 10ⁿ avec 1 ≤ a < 10.\nExemple similaire : 7 800 = 7,8 × 10³.",
-      "Astuce : additionne les exposants, y compris le −1 du « ÷ 2 ».\nExemple similaire : 3⁻¹ × 3² ÷ 3 = 3⁰ = 1.",
+      "Astuce : enchaîne les règles : ÷ (soustraction) puis × (addition) sur les exposants.\nExemple similaire : 3⁴ ÷ 3² × 3 = 3³ = 27.",
       "Astuce : la puissance passe sur chaque FACTEUR d'un produit, jamais sur une somme.\nExemple similaire : (2 × 5)³ = 2³ × 5³ = 8 × 125 = 1000."
     ],
     genH: {
