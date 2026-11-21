@@ -8,13 +8,13 @@ L'application est publiée ici (GitHub Pages) : **[https://badmaths06640.github.
 
 Parcours de l'élève :
 1. **Choix du niveau de classe** (5e, 4e, 3e).
-2. **Choix du thème** (39 thèmes conformes au programme, présentés **dans l'ordre de la progression annuelle** : chaque carte indique les chapitres correspondants).
+2. **Choix du thème** (41 thèmes conformes au programme, présentés **dans l'ordre de la progression annuelle** : chaque carte indique les chapitres correspondants).
 3. **Auto-évaluation du niveau de maîtrise** (4 échelons, vocabulaire du socle commun : maîtrise fragile → très bonne maîtrise).
 4. **Résumé de cours** : chaque thème s'ouvre sur des cartes visuelles rappelant les formules et règles révisées.
 5. **Série de 10 questions** avec correction immédiate et explication pédagogique après chaque réponse.
 6. **Aide à la demande** : un bouton « 💡 Aide » présent sur CHAQUE question donne une astuce ET un exemple similaire, cliquable et dépliable autant de fois que voulu.
 7. **Révision en vidéo** : chaque thème propose une ou plusieurs vidéos 🎬 (essentiellement Yvan Monka et les capsules des cours, extraites des QR codes des PDF de cours), ouverte dans un nouvel onglet — aucune vidéo intégrée, aucun traceur chargé par l'application.
-8. **Adaptativité** : 3 bonnes réponses de suite → le niveau monte ; 2 erreurs de suite → il redescend. Les **39 thèmes** disposent désormais chacun de **générateurs infinis de questions** (inspirés de l'approche paramétrique de Mathalea), répartis sur les 4 niveaux de difficulté, avec leur propre aide (astuce + exemple similaire) : les séries sont renouvelées à l'infini, y compris sur les chapitres moins probabilistes (angles, statistiques, translation, sphères, Thalès, fonctions…).
+8. **Adaptativité** : 3 bonnes réponses de suite → le niveau monte ; 2 erreurs de suite → il redescend. Les **41 thèmes** disposent désormais chacun de **générateurs infinis de questions** (inspirés de l'approche paramétrique de Mathalea), répartis sur les 4 niveaux de difficulté, avec leur propre aide (astuce + exemple similaire) : les séries sont renouvelées à l'infini, y compris sur les chapitres moins probabilistes (angles, statistiques, translation, sphères, Thalès, fonctions…).
 9. **Bilan** avec étoiles (0 à 3) et niveau de maîtrise estimé, sauvegardé par thème.
 
 Aucun compte, aucune connexion : l'élève clique et travaille.

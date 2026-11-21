@@ -1,34 +1,6 @@
 /* ================= BaouMaths — banque de questions 3e ================= */
 window.BANK_3E = {
   themes: [
-        {
-      id: "racines", titre: "Racines carrées", icone: "√",
-      chap: [],
-      notion: "√a est le nombre positif dont le carré est a : (√a)² = a, et √(a²) = a (si a ≥ 0).\n√25 = 5 ; √(a × b) = √a × √b ; on ne peut pas dire √(a + b) = √a + √b !\nSimplifier : √50 = √(25 × 2) = 5√2.",
-      qs: [
-        { d:1, q:"Calculer : √49", c:["7","−7","24,5","14"], a:0, e:"7 × 7 = 49, donc √49 = 7 (on prend toujours le résultat positif)." },
-        { d:1, q:"Calculer : (√5)²", c:["5","10","25","√25"], a:0, e:"Le carré « annule » la racine : (√5)² = 5." },
-        { d:1, q:"9 est-il le carré de 3 ou la racine carrée de 81 ?", c:["Les deux","Seulement le carré de 3","Seulement la racine de 81","Ni l'un ni l'autre"], a:0, e:"3² = 9 et √81 = 9 : les deux affirmations sont vraies." },
-        { d:2, q:"Simplifier : √50", c:["5√2","2√5","25√2","10√5"], a:0, e:"50 = 25 × 2 → √50 = √25 × √2 = 5√2." },
-        { d:2, q:"Calculer : √4 + √9", c:["√13","5","6","√36"], a:1, e:"√4 = 2 et √9 = 3, donc 2 + 3 = 5. La racine d'une somme n'est PAS la somme des racines." },
-        { d:2, q:"Calculer : 2√18 × √2", a:"12", e:"√18 × √2 = √36 = 6, puis 2 × 6 = 12." },
-        { d:3, q:"Simplifier : √72", a:"6√2", e:"72 = 36 × 2 → √72 = 6√2." },
-        { d:3, q:"Calculer : 3√5 − √20", c:["√5","−√5","3√15","2√5"], a:0, e:"√20 = 2√5, donc 3√5 − 2√5 = √5." },
-        { d:3, q:"Encadrer √30 entre deux entiers consécutifs :", c:["5 et 6","4 et 5","6 et 7","3 et 4"], a:0, e:"5² = 25 < 30 < 36 = 6², donc 5 < √30 < 6." },
-        { d:4, q:"Calculer : (1 + √2)²", c:["3 + 2√2","3 + √2","2 + 2√2","1 + 2√2"], a:0, e:"1 + 2√2 + 2 = 3 + 2√2 (identité remarquable (a+b)² = a² + 2ab + b²)." },
-        { d:4, q:"Calculer : √12 × √27 ÷ √9", a:"6", e:"√12 × √27 ÷ √9 = √(12 × 27 ÷ 9) = √36 = 6. On peut tout mettre sous une seule racine car ce sont des produits et quotients." },
-        { d:4, q:"Que vaut l'aire d'un carré de côté √8 cm (simplifiée) ?", c:["8 cm²","16 cm²","64 cm²","4√2 cm²"], a:0, e:"Aire = (√8)² = 8 cm²." }
-      ],
-      gen: {
-        2: () => { const pairs = [[2,3],[2,5],[3,2],[3,5],[3,7],[5,2],[5,3],[5,6],[7,2],[7,3],[7,6],[6,5],[10,3],[11,2]];
-          const p = pairs[Math.floor(Math.random()*pairs.length)];
-          return { q:`≈ Simplifier : √${p[0]*p[0]*p[1]}`, c:[`${p[0]}√${p[1]}`,`${p[1]}√${p[0]}`,`${p[0]*p[0]}√${p[1]}`,`${p[0]+1}√${p[1]}`], a:0, e:`${p[0]*p[0]*p[1]} = ${p[0]*p[0]} × ${p[1]} → √${p[0]*p[0]*p[1]} = ${p[0]}√${p[1]}.` }; },
-        3: () => { const n = 12 + Math.floor(Math.random()*88);
-          const s = Math.floor(Math.sqrt(n));
-          if (s*s === n) return { q:`Calculer : √${n}`, a:String(s), e:`${s}² = ${n}, donc √${n} = ${s}.` };
-          return { q:`Entre quels entiers consécutifs se situe √${n} ?`, c:[`${s} et ${s+1}`,`${s-1} et ${s}`,`${s+1} et ${s+2}`,`${s+2} et ${s+3}`], a:0, e:`${s}² = ${s*s} < ${n} < ${(s+1)*(s+1)} = ${s+1}², donc ${s} < √${n} < ${s+1}.` }; }
-      }
-    },
 {
       id: "fractions3", titre: "Fractions et nombres relatifs", icone: "➗",
       chap: [1],
@@ -55,9 +27,62 @@ window.BANK_3E = {
           return { q:`Calculer : ${n}/2 ÷ ${d} (répondre sous la forme a/b, simplifiée)`, a:`${n/g}/${2*d/g}`, e:`Diviser par ${d} : multiplier par 1/${d}. Donc ${n}/(2 × ${d}) = ${n}/${2*d} = ${n/g}/${2*d/g}.` }; }
       }
     },
+    {
+      id: "puissances3", titre: "Puissances et notation scientifique", icone: "🔟",
+      chap: [2],
+      notion: "Règles : aᵐ × aⁿ = aᵐ⁺ⁿ ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ ; (aᵐ)ⁿ = aᵐ×ⁿ ; a⁰ = 1 ; a⁻ⁿ = 1/aⁿ (avec a non nul).\nÉcriture scientifique : a × 10ⁿ avec 1 ≤ a < 10 (un seul chiffre non nul avant la virgule).\nOrdre de grandeur : la puissance de 10 la plus proche du nombre.",
+      qs: [
+        { d:1, q:"10⁴ est égal à...", c:["10 000","1 000","100","40"], a:0, e:"10⁴ = 10 × 10 × 10 × 10 = 10 000 (le 4 compte les zéros)." },
+        { d:1, q:"a⁰ vaut (a non nul)...", c:["1","0","a","−1"], a:0, e:"Par convention, tout nombre non nul élevé à la puissance 0 vaut 1." },
+        { d:2, q:"Simplifier : 7² × 7⁵", c:["7⁷","7¹⁰","49⁵","7³"], a:0, e:"Même base : on additionne les exposants. 7² × 7⁵ = 7⁷." },
+        { d:2, q:"Simplifier : (5³)²", c:["5⁶","5⁵","5⁹","25³"], a:0, e:"Puissance de puissance : on multiplie les exposants. (5³)² = 5⁶." },
+        { d:2, q:"Calculer : 3⁷ ÷ 3⁵", c:["9","3¹²","3⁵","81"], a:0, e:"Même base : on soustrait les exposants. 3⁷ ÷ 3⁵ = 3² = 9." },
+        { d:3, q:"Calculer : 10⁻² (répondre en décimal)", a:"0.01", e:"10⁻² = 1/(10²) = 1/100 = 0,01." },
+        { d:3, q:"Simplifier : 5a⁴ × 3a³", c:["15a⁷","15a¹²","8a⁷","15a⁴"], a:0, e:"Coefficients : 5 × 3 = 15. Puissances : a⁴ × a³ = a⁷. Résultat : 15a⁷." },
+        { d:3, q:"Écriture scientifique de 45 000 ?", c:["4,5 × 10⁴","45 × 10³","4,5 × 10³","0,45 × 10⁵"], a:0, e:"Scientifique : un seul chiffre non nul avant la virgule. 45 000 = 4,5 × 10⁴." },
+        { d:3, q:"Écriture scientifique de 0,0025 ?", c:["2,5 × 10⁻³","25 × 10⁻³","2,5 × 10⁻²","2,5 × 10³"], a:0, e:"On décale la virgule de 3 rangs vers la droite : 0,0025 = 2,5 × 10⁻³." },
+        { d:4, q:"Calculer : 2⁻³ (répondre en décimal)", a:"0.125", e:"2⁻³ = 1/(2³) = 1/8 = 0,125." },
+        { d:4, q:"Calculer : (3 × 10³) × (4 × 10²) puis donner l'écriture scientifique", c:["1,2 × 10⁶","12 × 10⁵","1,2 × 10⁵","7 × 10⁵"], a:0, e:"Le produit : 3 × 4 = 12 et 10³ × 10² = 10⁵, donc 12 × 10⁵ = 1,2 × 10⁶ (on ramène 12 à 1,2 × 10)." },
+        { d:4, q:"Calculer : 5⁰ + 5¹ + 5²", a:"31", e:"5⁰ = 1, 5¹ = 5, 5² = 25. Somme : 1 + 5 + 25 = 31." }
+      ],
+      gen: {
+        1: () => { const a = 2 + Math.floor(Math.random()*5), k = 2 + Math.floor(Math.random()*3), SUP = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
+          return { q:`Calculer : ${a}${SUP[k]}`, a:String(a**k), e:`${a}${SUP[k]} = ${Array(k).fill(String(a)).join(" × ")} = ${a**k}.` }; },
+        2: () => { const a = 2 + Math.floor(Math.random()*4), p = 2 + Math.floor(Math.random()*3), k = 1 + Math.floor(Math.random()*(p-1)), SUP = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
+          return { q:`Simplifier : ${a}${SUP[p]} ÷ ${a}${SUP[k]}`, a:`${a}${SUP[p-k]}`, e:`Même base : on soustrait les exposants. ${a}${SUP[p]} ÷ ${a}${SUP[k]} = ${a}${SUP[p-k]}.` }; }
+      }
+    },
+        {
+      id: "racines", titre: "Racines carrées", icone: "√",
+      chap: [3],
+      notion: "√a est le nombre positif dont le carré est a : (√a)² = a, et √(a²) = a (si a ≥ 0).\n√25 = 5 ; √(a × b) = √a × √b ; on ne peut pas dire √(a + b) = √a + √b !\nSimplifier : √50 = √(25 × 2) = 5√2.",
+      qs: [
+        { d:1, q:"Calculer : √49", c:["7","−7","24,5","14"], a:0, e:"7 × 7 = 49, donc √49 = 7 (on prend toujours le résultat positif)." },
+        { d:1, q:"Calculer : (√5)²", c:["5","10","25","√25"], a:0, e:"Le carré « annule » la racine : (√5)² = 5." },
+        { d:1, q:"9 est-il le carré de 3 ou la racine carrée de 81 ?", c:["Les deux","Seulement le carré de 3","Seulement la racine de 81","Ni l'un ni l'autre"], a:0, e:"3² = 9 et √81 = 9 : les deux affirmations sont vraies." },
+        { d:2, q:"Simplifier : √50", c:["5√2","2√5","25√2","10√5"], a:0, e:"50 = 25 × 2 → √50 = √25 × √2 = 5√2." },
+        { d:2, q:"Calculer : √4 + √9", c:["√13","5","6","√36"], a:1, e:"√4 = 2 et √9 = 3, donc 2 + 3 = 5. La racine d'une somme n'est PAS la somme des racines." },
+        { d:2, q:"Calculer : 2√18 × √2", a:"12", e:"√18 × √2 = √36 = 6, puis 2 × 6 = 12." },
+        { d:3, q:"Simplifier : √72", a:"6√2", e:"72 = 36 × 2 → √72 = 6√2." },
+        { d:3, q:"Calculer : 3√5 − √20", c:["√5","−√5","3√15","2√5"], a:0, e:"√20 = 2√5, donc 3√5 − 2√5 = √5." },
+        { d:3, q:"Encadrer √30 entre deux entiers consécutifs :", c:["5 et 6","4 et 5","6 et 7","3 et 4"], a:0, e:"5² = 25 < 30 < 36 = 6², donc 5 < √30 < 6." },
+        { d:4, q:"Calculer : (1 + √2)²", c:["3 + 2√2","3 + √2","2 + 2√2","1 + 2√2"], a:0, e:"1 + 2√2 + 2 = 3 + 2√2 (identité remarquable (a+b)² = a² + 2ab + b²)." },
+        { d:4, q:"Calculer : √12 × √27 ÷ √9", a:"6", e:"√12 × √27 ÷ √9 = √(12 × 27 ÷ 9) = √36 = 6. On peut tout mettre sous une seule racine car ce sont des produits et quotients." },
+        { d:4, q:"Que vaut l'aire d'un carré de côté √8 cm (simplifiée) ?", c:["8 cm²","16 cm²","64 cm²","4√2 cm²"], a:0, e:"Aire = (√8)² = 8 cm²." }
+      ],
+      gen: {
+        2: () => { const pairs = [[2,3],[2,5],[3,2],[3,5],[3,7],[5,2],[5,3],[5,6],[7,2],[7,3],[7,6],[6,5],[10,3],[11,2]];
+          const p = pairs[Math.floor(Math.random()*pairs.length)];
+          return { q:`≈ Simplifier : √${p[0]*p[0]*p[1]}`, c:[`${p[0]}√${p[1]}`,`${p[1]}√${p[0]}`,`${p[0]*p[0]}√${p[1]}`,`${p[0]+1}√${p[1]}`], a:0, e:`${p[0]*p[0]*p[1]} = ${p[0]*p[0]} × ${p[1]} → √${p[0]*p[0]*p[1]} = ${p[0]}√${p[1]}.` }; },
+        3: () => { const n = 12 + Math.floor(Math.random()*88);
+          const s = Math.floor(Math.sqrt(n));
+          if (s*s === n) return { q:`Calculer : √${n}`, a:String(s), e:`${s}² = ${n}, donc √${n} = ${s}.` };
+          return { q:`Entre quels entiers consécutifs se situe √${n} ?`, c:[`${s} et ${s+1}`,`${s-1} et ${s}`,`${s+1} et ${s+2}`,`${s+2} et ${s+3}`], a:0, e:`${s}² = ${s*s} < ${n} < ${(s+1)*(s+1)} = ${s+1}², donc ${s} < √${n} < ${s+1}.` }; }
+      }
+    },
         {
       id: "thales", titre: "Théorème de Thalès", icone: "🔺",
-      chap: [2, 6, 19],
+      chap: [3, 6, 19],
       notion: "Si (BC) ∥ (MN) avec M sur (AB) et N sur (AC), alors AM/AB = AN/AC = MN/BC.\nAgrandissement-réduction de rapport k : longueurs multipliées par k, aires par k², volumes par k³.\nSi k < 1, c'est une réduction ; si k > 1, un agrandissement.",
       qs: [
         { d:1, q:"Triangle ABC, M sur [AB], N sur [AC], (MN) ∥ (BC). AM/AB = 1/3 et AB = 12. AM = ?", a:"4", e:"AM = 12 × 1/3 = 4." },
@@ -84,7 +109,7 @@ window.BANK_3E = {
     },
         {
       id: "equations3", titre: "Équations et problèmes", icone: "⚖️",
-      chap: [3, 15],
+      chap: [4, 15],
       notion: "ax + b = cx + d → on regroupe les x d'un côté, les nombres de l'autre.\nÉquation produit A × B = 0 → A = 0 ou B = 0.\nPour les problèmes : poser x l'inconnue, mettre en équation, résoudre, vérifier.",
       qs: [
         { d:1, q:"Résoudre : 2x + 5 = 13", a:"4", e:"2x = 13 − 5 = 8, donc x = 4." },
@@ -114,31 +139,6 @@ window.BANK_3E = {
           let b = -9 + Math.floor(Math.random() * 19); if (b === 0) b = 6; const d = b + (a - c) * x;
           return { q: `R\u00e9soudre : ${a}x ${b < 0 ? "\u2212 " + (-b) : "+ " + b} = ${c}x ${d < 0 ? "\u2212 " + (-d) : "+ " + d}`, a: String(x), e: `${a}x \u2212 ${c}x = ${d} ${b < 0 ? "+ " + (-b) : "\u2212 " + b} : ${a - c}x = ${d - b} puis x = ${d - b} \u00f7 ${a - c} = ${x}.` }; }
       },
-    },
-    {
-      id: "puissances3", titre: "Puissances et notation scientifique", icone: "🔟",
-      chap: [4],
-      notion: "Règles : aᵐ × aⁿ = aᵐ⁺ⁿ ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ ; (aᵐ)ⁿ = aᵐ×ⁿ ; a⁰ = 1 ; a⁻ⁿ = 1/aⁿ (avec a non nul).\nÉcriture scientifique : a × 10ⁿ avec 1 ≤ a < 10 (un seul chiffre non nul avant la virgule).\nOrdre de grandeur : la puissance de 10 la plus proche du nombre.",
-      qs: [
-        { d:1, q:"10⁴ est égal à...", c:["10 000","1 000","100","40"], a:0, e:"10⁴ = 10 × 10 × 10 × 10 = 10 000 (le 4 compte les zéros)." },
-        { d:1, q:"a⁰ vaut (a non nul)...", c:["1","0","a","−1"], a:0, e:"Par convention, tout nombre non nul élevé à la puissance 0 vaut 1." },
-        { d:2, q:"Simplifier : 7² × 7⁵", c:["7⁷","7¹⁰","49⁵","7³"], a:0, e:"Même base : on additionne les exposants. 7² × 7⁵ = 7⁷." },
-        { d:2, q:"Simplifier : (5³)²", c:["5⁶","5⁵","5⁹","25³"], a:0, e:"Puissance de puissance : on multiplie les exposants. (5³)² = 5⁶." },
-        { d:2, q:"Calculer : 3⁷ ÷ 3⁵", c:["9","3¹²","3⁵","81"], a:0, e:"Même base : on soustrait les exposants. 3⁷ ÷ 3⁵ = 3² = 9." },
-        { d:3, q:"Calculer : 10⁻² (répondre en décimal)", a:"0.01", e:"10⁻² = 1/(10²) = 1/100 = 0,01." },
-        { d:3, q:"Simplifier : 5a⁴ × 3a³", c:["15a⁷","15a¹²","8a⁷","15a⁴"], a:0, e:"Coefficients : 5 × 3 = 15. Puissances : a⁴ × a³ = a⁷. Résultat : 15a⁷." },
-        { d:3, q:"Écriture scientifique de 45 000 ?", c:["4,5 × 10⁴","45 × 10³","4,5 × 10³","0,45 × 10⁵"], a:0, e:"Scientifique : un seul chiffre non nul avant la virgule. 45 000 = 4,5 × 10⁴." },
-        { d:3, q:"Écriture scientifique de 0,0025 ?", c:["2,5 × 10⁻³","25 × 10⁻³","2,5 × 10⁻²","2,5 × 10³"], a:0, e:"On décale la virgule de 3 rangs vers la droite : 0,0025 = 2,5 × 10⁻³." },
-        { d:4, q:"Calculer : 2⁻³ (répondre en décimal)", a:"0.125", e:"2⁻³ = 1/(2³) = 1/8 = 0,125." },
-        { d:4, q:"Calculer : (3 × 10³) × (4 × 10²) puis donner l'écriture scientifique", c:["1,2 × 10⁶","12 × 10⁵","1,2 × 10⁵","7 × 10⁵"], a:0, e:"Le produit : 3 × 4 = 12 et 10³ × 10² = 10⁵, donc 12 × 10⁵ = 1,2 × 10⁶ (on ramène 12 à 1,2 × 10)." },
-        { d:4, q:"Calculer : 5⁰ + 5¹ + 5²", a:"31", e:"5⁰ = 1, 5¹ = 5, 5² = 25. Somme : 1 + 5 + 25 = 31." }
-      ],
-      gen: {
-        1: () => { const a = 2 + Math.floor(Math.random()*5), k = 2 + Math.floor(Math.random()*3), SUP = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
-          return { q:`Calculer : ${a}${SUP[k]}`, a:String(a**k), e:`${a}${SUP[k]} = ${Array(k).fill(String(a)).join(" × ")} = ${a**k}.` }; },
-        2: () => { const a = 2 + Math.floor(Math.random()*4), p = 2 + Math.floor(Math.random()*3), k = 1 + Math.floor(Math.random()*(p-1)), SUP = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
-          return { q:`Simplifier : ${a}${SUP[p]} ÷ ${a}${SUP[k]}`, a:`${a}${SUP[p-k]}`, e:`Même base : on soustrait les exposants. ${a}${SUP[p]} ÷ ${a}${SUP[k]} = ${a}${SUP[p-k]}.` }; }
-      }
     },
         {
       id: "fonctions", titre: "Fonctions : image et antécédent", icone: "📈",

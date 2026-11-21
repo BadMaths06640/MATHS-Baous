@@ -336,6 +336,64 @@ window.BANK_5E = {
       },
     },
     {
+      id: "equations5", titre: "Équations et problèmes", icone: "❓",
+      chap: [19],
+      notion: "Résoudre une équation, c'est trouver la valeur de la lettre qui rend l'égalité vraie.\nLa lettre (l'inconnue) désigne un nombre : elle garde la même valeur dans toute l'égalité.\nÉquation somme : x + a = b → x = b − a. Équation produit : a × x = b → x = b ÷ a.\nPour tester une solution, on remplace la lettre par sa valeur dans les deux membres et on compare.",
+      qs: [
+        { d:1, q:"Dans l'équation x + 5 = 12, que vaut x ?", c:["7","17","60","12"], a:0, e:"x + 5 = 12 → x = 12 − 5 = 7. Vérification : 7 + 5 = 12." },
+        { d:1, q:"Résoudre : x + 9 = 17", a:"8", e:"x = 17 − 9 = 8. Vérification : 8 + 9 = 17." },
+        { d:2, q:"Résoudre : 6 × x = 42", a:"7", e:"x = 42 ÷ 6 = 7. Vérification : 6 × 7 = 42." },
+        { d:2, q:"x = 4 est-il solution de 3 × x + 2 = 14 ?", c:["Oui, car 3 × 4 + 2 = 14","Non, car 14 n'est pas multiple de 4","Oui, car x est pair","Non, car 3 × 4 = 12 seulement"], a:0, e:"On teste : 3 × 4 + 2 = 12 + 2 = 14. Les deux membres sont égaux : x = 4 est bien solution." },
+        { d:2, q:"Résoudre : 12 + x = 30", a:"18", e:"x = 30 − 12 = 18. Vérification : 12 + 18 = 30." },
+        { d:3, q:"Résoudre : 5 × x − 6 = 24", a:"6", e:"On isole le produit : 5 × x = 24 + 6 = 30, donc x = 30 ÷ 5 = 6." },
+        { d:3, q:"x − 12 = 5 : que vaut x ?", c:["17","7","60","8"], a:0, e:"x = 5 + 12 = 17. Vérification : 17 − 12 = 5." },
+        { d:3, q:"Résoudre : x + 3 = 3 × 7", a:"18", e:"On calcule d'abord le membre de droite : 3 × 7 = 21. Puis x = 21 − 3 = 18." },
+        { d:4, q:"Résoudre : 36 = 4 × x + 8", a:"7", e:"4 × x = 36 − 8 = 28, donc x = 28 ÷ 4 = 7." },
+        { d:4, q:"Léa avait n images. Elle en reçoit 23 de plus et en a maintenant 51. Combien avait-elle d'images ?", a:"28", e:"On modélise : n + 23 = 51, donc n = 51 − 23 = 28." },
+        { d:4, q:"Le triple d'un nombre diminué de 4 vaut 17. Ce nombre vaut :", c:["7","5","21","13"], a:0, e:"3 × x − 4 = 17, donc 3 × x = 21, et x = 21 ÷ 3 = 7." },
+        { d:4, q:"Résoudre : 2 × x + 5 × 3 = 31", a:"8", e:"5 × 3 = 15, puis 2 × x = 31 − 15 = 16, donc x = 16 ÷ 2 = 8." }
+      ],
+      gen: {
+        1: () => { const a = 3 + Math.floor(Math.random()*9), b = a + 3 + Math.floor(Math.random()*12);
+          return { q:`Résoudre : x + ${a} = ${b}`, a:String(b - a), e:`x = ${b} − ${a} = ${b - a}. Vérification : ${b - a} + ${a} = ${b}.` }; },
+        2: () => { const k = 2 + Math.floor(Math.random()*9), a = 2 + Math.floor(Math.random()*6); const b = a*k;
+          return { q:`Résoudre : ${a} × x = ${b}`, a:String(k), e:`x = ${b} ÷ ${a} = ${k}. Vérification : ${a} × ${k} = ${b}.` }; },
+        3: () => { const b = 2 + Math.floor(Math.random()*5), c = 2 + Math.floor(Math.random()*5), a = 2 + Math.floor(Math.random()*15);
+          return { q:`Résoudre : x + ${a} = ${b} × ${c}`, a:String(b*c - a), e:`${b} × ${c} = ${b*c}, puis x = ${b*c} − ${a} = ${b*c - a}.` }; },
+        4: () => { const x = 2 + Math.floor(Math.random()*8), a = 2 + Math.floor(Math.random()*5), b = 1 + Math.floor(Math.random()*(a*x - 1)); const c = a*x - b;
+          return { q:`Résoudre : ${a} × x − ${b} = ${c}`, a:String(x), e:`${a} × x = ${c} + ${b} = ${a*x}, donc x = ${a*x} ÷ ${a} = ${x}.` }; }
+      },
+    },
+    {
+      id: "informatique5", titre: "Pensée informatique (Scratch)", icone: "🤖",
+      chap: [22],
+      notion: "Une variable est une boîte qui garde une valeur : « n ← 3 » met 3 dans n.\nLes instructions s'exécutent dans l'ordre, l'une après l'autre.\nUne boucle « répéter k fois » exécute la même instruction k fois de suite.\nUne boucle conditionnelle (« tant que … ») s'exécute tant que la condition est vraie : on compte les passages.",
+      qs: [
+        { d:1, q:"Programme de calcul : choisir 4 ; ajouter 5 ; doubler le résultat. Quel est le résultat final ?", a:"18", e:"4 + 5 = 9, puis on double : 9 × 2 = 18." },
+        { d:1, q:"Dans un programme, « n ← 3 » signifie que...", c:["la variable n prend la valeur 3","on teste si n vaut 3","3 devient la lettre n","on efface la valeur 3"], a:0, e:"La flèche ← est une affectation : on range 3 dans la variable n." },
+        { d:2, q:"On exécute : n ← 3 ; n ← n + 5 ; n ← n × 2. Que vaut n à la fin ?", a:"16", e:"n ← 3 + 5 = 8, puis n ← 8 × 2 = 16." },
+        { d:2, q:"n ← 5, puis on répète 4 fois l'instruction « ajouter 3 à n ». Que vaut n ?", a:"17", e:"On ajoute 4 fois 3 : 5 + 4 × 3 = 5 + 12 = 17." },
+        { d:2, q:"Que fait la boucle « répéter 6 fois : ajouter 2 à n » quand n démarre à 10 ?", c:["elle ajoute 12 à n : n = 22","elle ajoute 2 à n : n = 12","elle multiplie n par 12","elle ne change pas n"], a:0, e:"6 ajouts de 2 : n = 10 + 6 × 2 = 22." },
+        { d:3, q:"Programme de calcul : choisir 6 ; ajouter 3 ; multiplier par 2 ; soustraire 5. Résultat final ?", a:"13", e:"6 + 3 = 9 ; 9 × 2 = 18 ; 18 − 5 = 13." },
+        { d:3, q:"n ← 2, puis on répète 3 fois « multiplier n par 3 ». Que vaut n ?", a:"54", e:"n ← 2 × 3 = 6 ; puis 6 × 3 = 18 ; puis 18 × 3 = 54." },
+        { d:3, q:"Un compteur démarre à 2 et un programme ajoute 1 tant que compteur < 7. Combien d'ajouts sont effectués ?", c:["5","7","3","6"], a:0, e:"Le compteur passe à 3, 4, 5, 6, 7 : c'est 5 ajouts (il s'arrête quand la condition devient fausse)." },
+        { d:3, q:"Programme de calcul : choisir 8 ; soustraire 2 ; multiplier par 3. Résultat final ?", a:"18", e:"8 − 2 = 6 ; 6 × 3 = 18." },
+        { d:4, q:"On exécute : x ← 5 ; x ← x + a ; x ← x × 3. Le résultat final est 24. Que vaut a ?", a:"3", e:"(5 + a) × 3 = 24, donc 5 + a = 24 ÷ 3 = 8, et a = 3." },
+        { d:4, q:"n ← 20, puis on répète k fois « retirer 3 à n » et le résultat final est 8. Combien de passages ?", a:"4", e:"20 − 8 = 12 ont été retirés, et 12 ÷ 3 = 4 passages." },
+        { d:4, q:"On exécute : x ← 4 ; x ← x × 2 ; x ← x + a. Le résultat final est 100. Que vaut a ?", c:["92","96","88","100"], a:0, e:"x ← 4 × 2 = 8, puis 8 + a = 100, donc a = 92." }
+      ],
+      gen: {
+        1: () => { const a = 2 + Math.floor(Math.random()*20), b = 2 + Math.floor(Math.random()*15);
+          return { q:`Programme de calcul : choisir ${a} ; ajouter ${b}. Quel est le résultat final ?`, a:String(a + b), e:`${a} + ${b} = ${a + b}.` }; },
+        2: () => { const a = 2 + Math.floor(Math.random()*15), b = 2 + Math.floor(Math.random()*6), k = 2 + Math.floor(Math.random()*4);
+          return { q:`n ← ${a}, puis on répète ${k} fois l'instruction « ajouter ${b} à n ». Que vaut n ?`, a:String(a + k*b), e:`On ajoute ${k} fois ${b} : ${a} + ${k} × ${b} = ${a + k*b}.` }; },
+        3: () => { const a = 1 + Math.floor(Math.random()*15), k = 2 + Math.floor(Math.random()*3); const steps = [a]; for (let i = 1; i <= k; i++) steps.push(steps[i-1]*2);
+          return { q:`n ← ${a}, puis on répète ${k} fois l'instruction « multiplier n par 2 ». Que vaut n ?`, a:String(steps[k]), e:`Chaque passage double n : ${steps.slice(1).map((v,i) => `${steps[i]} × 2 = ${v}`).join(" ; puis ")}.` }; },
+        4: () => { const n = 2 + Math.floor(Math.random()*12), b = 2 + Math.floor(Math.random()*10), k = 2 + Math.floor(Math.random()*6);
+          return { q:`Programme de calcul : choisir ${n} ; ajouter ${b} ; multiplier par ${k}. Quel est le résultat final ?`, a:String((n + b) * k), e:`${n} + ${b} = ${n + b}, puis ${n + b} × ${k} = ${(n + b) * k}.` }; }
+      },
+    },
+    {
       id: "proba5", titre: "Probabilités", icone: "🎲",
       chap: [21],
       notion: "Expérience aléatoire : on ne peut pas prédire le résultat. Issues : les résultats possibles ; univers Ω : l'ensemble de toutes les issues.\nÉvénement : une partie de l'univers ; événement élémentaire : une seule issue.\nProbabilité d'un événement (cas équiprobables) : nombre de cas favorables ÷ nombre de cas possibles — un nombre entre 0 et 1.",

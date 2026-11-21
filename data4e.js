@@ -3,7 +3,7 @@ window.BANK_4E = {
   themes: [
     {
       id: "propo4", titre: "Pourcentages, vitesses, échelles", icone: "🚗",
-      chap: [1],
+      chap: [1, 18],
       notion: "Vitesse = distance ÷ temps (v = d/t) ; d = v × t ; t = d ÷ v.\nConversion : km/h ÷ 3,6 ≈ m/s.\nAugmenter de t % = multiplier par (1 + t/100) ; diminuer de t % = multiplier par (1 − t/100).",
       qs: [
         { d:1, q:"Une voiture roule à 60 km/h pendant 2 h. Distance parcourue ?", c:["30 km","120 km","62 km","240 km"], a:1, e:"d = v × t = 60 × 2 = 120 km." },
@@ -32,7 +32,7 @@ window.BANK_4E = {
     },
         {
       id: "pythagore", titre: "Théorème de Pythagore", icone: "📐",
-      chap: [2, 15],
+      chap: [2, 13],
       notion: "Si un triangle est rectangle en A, alors BC² = AB² + AC² (l'hypoténuse est le côté opposé à l'angle droit, le plus long).\nRéciproque : si BC² = AB² + AC², alors le triangle est rectangle en A.",
       qs: [
         { d:1, q:"Triangle rectangle, côtés de l'angle droit : 3 cm et 4 cm. Hypoténuse ?", c:["5 cm","7 cm","6 cm","25 cm"], a:0, e:"3² + 4² = 9 + 16 = 25 → hypoténuse = √25 = 5 cm." },
@@ -221,7 +221,7 @@ window.BANK_4E = {
     },
         {
       id: "litteral4", titre: "Calcul littéral et équations", icone: "🧩",
-      chap: [8, 13],
+      chap: [8, 14],
       notion: "Double distributivité : (a + b)(c + d) = ac + ad + bc + bd.\nÉquation x + a = b → x = b − a. Équation a × x = b → x = b ÷ a.\nL'égalité se conserve si on applique la même opération des deux côtés.",
       qs: [
         { d:1, q:"Développer : 2(3x + 1)", c:["6x + 1","6x + 2","5x + 3","3x + 2"], a:1, e:"2 × 3x = 6x et 2 × 1 = 2 → 6x + 2." },
@@ -248,7 +248,7 @@ window.BANK_4E = {
       id: "thales4",
       titre: "Th\u00e9or\u00e8me de Thal\u00e8s et triangles \u00e9gaux",
       icone: "\u224b",
-      chap: [9],
+      chap: [9, 16],
       notion: "Th\u00e9or\u00e8me de Thal\u00e8s : si M \u2208 [AB], N \u2208 [AC] et (MN) // (BC), alors AM/AB = AN/AC = MN/BC.\nConfiguration \u00ab papillon \u00bb : la m\u00eame \u00e9galit\u00e9 s'applique quand les droites (MN) et (BC) sont parall\u00e8les avec M entre A et B... en gardant les c\u00f4t\u00e9s qui partent du m\u00eame point.\nCalcul d'une longueur : on utilise le produit en croix, par exemple AM/AB = AN/AC donne AC = AB \u00d7 AN \u00f7 AM.\nTriangles \u00e9gaux : deux triangles sont \u00e9gaux (isom\u00e9triques) s'ils ont des c\u00f4t\u00e9s \u00e9gaux deux \u00e0 deux, ou un angle \u00e9gal compris entre deux c\u00f4t\u00e9s \u00e9gaux, ou deux angles \u00e9gaux et le c\u00f4t\u00e9 compris \u00e9gal.",
       qs: [
         { d: 1, q: "M \u2208 [AB], N \u2208 [AC] et (MN) // (BC). Quelle est l'\u00e9galit\u00e9 de Thal\u00e8s ?", c: ["AM/AB = AN/AC = MN/BC", "AM/AB = AN/BC = MN/AC", "AB/AM = AC/AN = BC/MN", "AM/AB = AC/AN = MN/BC"], a: 0, e: "Les rapports se font sur chaque c\u00f4t\u00e9 en partant du sommet A : AM/AB = AN/AC = MN/BC." },
@@ -311,7 +311,7 @@ window.BANK_4E = {
     },
         {
       id: "puissances", titre: "Puissances", icone: "⚡",
-      chap: [12, 17],
+      chap: [12],
       notion: "aⁿ = a × a × ... × a (n facteurs) ; a¹ = a ; a⁰ = 1 (a ≠ 0).\n10ⁿ = 1 suivi de n zéros ; 10⁻ⁿ = 1/10ⁿ.\nRègles : aᵐ × aⁿ = aᵐ⁺ⁿ ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ ; (aᵐ)ⁿ = aᵐˣⁿ ; (a×b)ⁿ = aⁿ × bⁿ.",
       qs: [
         { d:1, q:"Calculer : 2⁴", c:["8","16","6","4"], a:1, e:"2⁴ = 2 × 2 × 2 × 2 = 16 (pas 2 × 4 = 8 !)." },
@@ -336,7 +336,7 @@ window.BANK_4E = {
     },
         {
       id: "stats4", titre: "Statistiques et probabilités (début)", icone: "📊",
-      chap: [14, 16],
+      chap: [15, 17],
       notion: "Moyenne pondérée : (somme des valeurs × effectifs) ÷ effectif total.\nProbabilité : nombre de cas favorables ÷ nombre de cas possibles (produits équiprobables).\nUne probabilité est comprise entre 0 (impossible) et 1 (certain).",
       qs: [
         { d:1, q:"Probabilité d'obtenir un nombre pair en lançant un dé à 6 faces ?", c:["1/2","1/4","1/3","2/3"], a:0, e:"3 faces paires (2, 4, 6) sur 6 → 3/6 = 1/2." },
