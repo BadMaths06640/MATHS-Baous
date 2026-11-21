@@ -7,6 +7,7 @@ window.BANK_5E = {
   themes: [
     {
       id: "calc", titre: "Calcul et priorités opératoires", icone: "🧮",
+      chap: [1],
       notion: "Sans parenthèses : on calcule d'abord × et ÷, puis + et − de gauche à droite.\nAvec des parenthèses : on calcule d'abord l'intérieur des parenthèses (et des crochets).\nUne barre de fraction joue le rôle de parenthèses.",
       qs: [
         { d:1, q:"Calculer : 3 + 5 × 2", c:["16","13","11","10"], a:1, e:"On fait d'abord la multiplication : 5 × 2 = 10, puis l'addition : 3 + 10 = 13." },
@@ -32,8 +33,53 @@ window.BANK_5E = {
           return { q:`Calculer : (${x}² − 4 × ${x}) × (−1) + ${n} × ${x}`, a:String((x*x - 4*x) * (-1) + n*x), e:`Dans la parenthèse : ${x}² − ${4*x} = ${x*x - 4*x}. Multiplié par −1 : ${-(x*x-4*x)}. Puis + ${n} × ${x} = ${n*x} : ${(x*x-4*x)*(-1) + n*x}.` }; }
       }
     },
-    {
+        {
+      id: "geom5", titre: "Symétrie et triangles", icone: "📐",
+      chap: [2, 6, 8, 12, 18],
+      notion: "Symétrie centrale : le symétrique de M par rapport à O est M’ tel que O soit le milieu de [MM’] ; la figure symétrique a les mêmes longueurs et angles.\nParallélogramme : côtés opposés parallèles et de même longueur ; diagonales qui se coupent en leur milieu.\nDroites remarquables : médiatrice, médiane, hauteur ; un triangle a 3 de chacune.\nSomme des angles d'un triangle = 180°.",
+      qs: [
+        { d:1, q:"Dans un triangle, un des angles mesure 60°, un autre 40°. Le troisième ?", c:["60°","80°","100°","90°"], a:1, e:"La somme vaut 180° : 180 − (60 + 40) = 80°." },
+        { d:1, q:"Le symétrique d'un point M par rapport à un point O : où est O ?", c:["Au milieu de [MM’]","Sur la perpendiculaire","Au-delà de M’","N'importe où"], a:0, e:"O est exactement le milieu du segment [MM’]." },
+        { d:1, q:"Un parallélogramme a ses diagonales qui...", c:["se coupent en leur milieu","sont de même longueur","sont perpendiculaires (toujours)","sont des axes de symétrie"], a:0, e:"Dans tout parallélogramme, les diagonales se coupent en leur milieu. Être de même longueur ou perpendiculaires n'est vrai que pour certains cas particuliers." },
+        { d:2, q:"Triangle isocèle : angles à la base = 55° chacun. Angle au sommet ?", a:"70", e:"180 − 55 − 55 = 70°." },
+        { d:2, q:"Triangle rectangle en A : les côtés... L'angle en B mesure 37°. Angle en C ?", c:["63°","53°","90°","143°"], a:1, e:"Angle droit en A = 90°, donc 180 − 90 − 37 = 53°." },
+        { d:2, q:"Propriété d'un losange (qui est un parallélogramme particulier) :", c:["4 côtés égaux","4 angles droits (toujours)","diagonales de même longueur","un seul axe de symétrie"], a:0, e:"Le losange a ses 4 côtés de même longueur et ses diagonales perpendiculaires. Les angles droits sont réservés au carré." },
+        { d:3, q:"Triangle : 2 angles mesurent 40° et 70°. Ce triangle est...", c:["isocèle","équilatéral","rectangle","plat"], a:0, e:"Troisième angle : 180 − 110 = 70°. Deux angles égaux (70°) → triangle isocèle." },
+        { d:3, q:"Quelle droite passe par un sommet et est perpendiculaire au côté opposé ?", c:["la hauteur","la médiatrice","la médiane","la bissectrice"], a:0, e:"C'est la hauteur du triangle." },
+        { d:3, q:"Un triangle a des côtés de 6 cm ; 6 cm ; 6 cm. Nature et angles ?", c:["équilatéral, trois angles de 60°","équilatéral, trois angles de 30°","isocèle rectangle","rectangle isocèle"], a:0, e:"Trois côtés égaux → équilatéral, et ses trois angles mesurent 60° (somme 180°). Le point de concours des médiatrices est le centre du cercle circonscrit." },
+        { d:4, q:"Par symétrie de centre O, l'image d'un segment [AB] de 7 cm est un segment [A’B’] de longueur...", c:["7 cm","3,5 cm","14 cm","Longueur quelconque"], a:0, e:"La symétrie centrale conserve les longueurs : 7 cm." },
+        { d:4, q:"Si ABC est un triangle dont la médiatrice de [AB] passe par C, alors...", c:["CA = CB","l'angle C est droit","AB = BC","l'angle A = 60°"], a:0, e:"C appartient à la médiatrice de [AB] → C est à égale distance de A et B : CA = CB." },
+        { d:4, q:"Un parallélogramme qui a un angle droit est...", c:["un rectangle","un losange","un trapèze","un simple parallélogramme"], a:0, e:"Un parallélogramme avec un angle droit est un rectangle (ses 4 angles sont droits)." }
+      ]
+    },
+        {
+      id: "litteral5", titre: "Calcul littéral : distributivité", icone: "✖️",
+      chap: [3, 9, 19],
+      notion: "k × (a + b) = k × a + k × b (simple distributivité).\nRéduire une expression : regrouper les termes « semblables » : 3x + 5x = 8x, mais 3x + 5 ne se réduit pas.",
+      qs: [
+        { d:1, q:"Développer : 3 × (x + 2)", c:["3x + 2","3x + 6","x + 6","3x × 6"], a:1, e:"On distribue le 3 : 3 × x + 3 × 2 = 3x + 6." },
+        { d:1, q:"Réduire : 4x + 3 + 5x", c:["9x + 3","12x","9x","4x + 8x"], a:0, e:"On regroupe les x : 4x + 5x = 9x, on garde le + 3." },
+        { d:1, q:"Développer : 5 × (2 − a)", c:["10 − 5a","7 − 5a","10 − a","5 × 2 × a"], a:0, e:"5 × 2 = 10 et 5 × (−a) = −5a, donc 10 − 5a." },
+        { d:2, q:"Réduire : 7a − 2 + 3a − 8", c:["10a − 10","10a + 6","4a − 10","21a − 6"], a:0, e:"7a + 3a = 10a et −2 − 8 = −10, donc 10a − 10." },
+        { d:2, q:"Développer puis réduire : 2(3x + 4) + 5x", a:"11x+8", e:"2 × 3x = 6x ; 2 × 4 = 8. Puis 6x + 5x = 11x, donc 11x + 8." },
+        { d:2, q:"Quelle expression est égale à 4 × (7 − 3) ?", c:["4 × 7 − 3","4 × 7 − 4 × 3","4 × 7 × 3","7 × 4 − 3"], a:1, e:"Distributivité : 4 × 7 − 4 × 3 = 28 − 12 = 16 = 4 × 4." },
+        { d:3, q:"Factoriser : 5x + 25", c:["5(x + 5)","x(5 + 25)","5(x + 25)","5 × x + 5 × 5"], a:0, e:"5 est un facteur commun : 5x + 25 = 5 × x + 5 × 5 = 5(x + 5)." },
+        { d:3, q:"Développer puis réduire : 3(2x − 5) − 4x", c:["2x − 15","6x − 15","10x − 15","2x + 15"], a:0, e:"3 × 2x = 6x ; 3 × (−5) = −15. Puis 6x − 15 − 4x = 2x − 15." },
+        { d:3, q:"Tester l'expression : que vaut 2x + 5 pour x = 3 ?", a:"11", e:"On remplace x par sa valeur puis on calcule : 2 × 3 + 5 = 6 + 5 = 11." },
+        { d:4, q:"Pour quelle(s) valeur(s) de x a-t-on 4(x + 3) = 3x + 10 ?", c:["x = −2","x = 2","x = 1","x = 7"], a:0, e:"4(x + 3) = 4x + 12. On cherche 4x + 12 = 3x + 10, donc 4x − 3x = 10 − 12 → x = −2. Vérification : 4 × 1 = 4 et 3 × (−2) + 10 = 4." },
+        { d:4, q:"Développer puis réduire : −2(3 − x) + 4x", a:"6x-6", e:"−2 × 3 = −6 ; −2 × (−x) = +2x. Puis −6 + 2x + 4x = 6x − 6." },
+        { d:4, q:"Un rectangle a pour largeur x et pour longueur x + 7. Son périmètre (réduit) ?", c:["2x + 7","4x + 14","2x + 14","x + 7"], a:1, e:"P = 2 × (x + x + 7) = 2 × (2x + 7) = 4x + 14." }
+      ],
+      gen: {
+        2: () => { const k = 2 + Math.floor(Math.random()*6), a = 2 + Math.floor(Math.random()*6), b = 1 + Math.floor(Math.random()*9);
+          return { q:`Développer : ${k} × (x + ${b})`, a:`${k}x+${k*b}`, e:`On distribue ${k} : ${k}x + ${k*b}.` }; },
+        3: () => { const k = 2 + Math.floor(Math.random()*5), a = 1 + Math.floor(Math.random()*4), b = 2 + Math.floor(Math.random()*4);
+          return { q:`Développer puis réduire : ${k}(${a}x + ${b}) − ${k-1}x`, a:`${k*a-(k-1)}x+${k*b}`, e:`${k} × ${a}x = ${k*a}x et ${k} × ${b} = ${k*b}. Puis ${k*a}x − ${k-1}x = ${k*a-(k-1)}x. Résultat : ${k*a-(k-1)}x + ${k*b}.` }; }
+      }
+    },
+        {
       id: "relatifs", titre: "Nombres relatifs", icone: "🌡️",
+      chap: [5, 13],
       notion: "Somme : deux nombres de même signe → on garde le signe et on ajoute. Signes différents → on retire le plus petit au plus grand et on garde le signe du plus grand.\nProduit et quotient : le produit de deux nombres de même signe est positif ; de signes contraires, il est négatif.\n(−a)² = a × (−a) × (−a)... non ! (−a)² = (−a) × (−a) = a²  (positif), tandis que −a² = −(a × a) (négatif).",
       qs: [
         { d:1, q:"Calculer : (−3) + (−5)", c:["−8","8","−2","2"], a:0, e:"Même signe (−) : on ajoute les distances à zéro : 3 + 5 = 8, et on garde le signe −." },
@@ -60,21 +106,22 @@ window.BANK_5E = {
           return { q:`Calculer : (${a})² − ${a} × 2`, a:String(a*a - 2*a), e:`Le carré est positif : (${a})² = ${a*a}. Puis ${a} × 2 = ${2*a}. Donc ${a*a} − ${2*a} = ${a*a - 2*a}.` }; }
       }
     },
-    {
-      id: "fractions", titre: "Écriture fractionnaire", icone: "🍰",
-      notion: "Addition / soustraction : mettre au même dénominateur, puis additionner les numérateurs.\nProduit : on multiplie les numérateurs entre eux et les dénominateurs entre eux.\nSimplifier : on divise numérateur et dénominateur par le même nombre.",
+        {
+      id: "fractions", titre: "Fractions : comparer, additionner, soustraire", icone: "🍰",
+      chap: [7, 16],
+      notion: "Comparaison : on met les fractions au même dénominateur.\nAddition / soustraction : même dénominateur puis on opère sur les numérateurs.\nSimplifier : on divise numérateur et dénominateur par le même nombre. Fraction d'une quantité : « 2/3 de 60 » = 60 × 2 ÷ 3.",
       qs: [
         { d:1, q:"Simplifier la fraction : 12/18", c:["2/3","3/4","6/9","4/6"], a:0, e:"12 = 2 × 6 et 18 = 3 × 6 → 12/18 = 2/3 (on divise par 6). 4/6 et 6/9 ne sont pas simplifiées." },
         { d:1, q:"Calculer : 1/4 + 2/4", c:["3/8","3/4","2/16","1/2"], a:1, e:"Même dénominateur : on additionne les numérateurs : 1 + 2 = 3, donc 3/4." },
         { d:1, q:"Quelle fraction est égale à 1/2 ?", c:["3/6","2/5","4/6","5/8"], a:0, e:"3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2." },
         { d:2, q:"Calculer : 2/3 + 1/6", c:["3/9","5/6","3/6","5/9"], a:1, e:"Dénominateur commun 6 : 2/3 = 4/6. Somme : 4/6 + 1/6 = 5/6." },
-        { d:2, q:"Calculer : 3/4 × 2/5", c:["3/10","5/9","6/9","2/3"], a:0, e:"3 × 2 = 6 et 4 × 5 = 20 → 6/20, qu'on simplifie par 2 : 3/10." },
+        { d:2, q:"Calculer : 3/4 + 3/8", c:["9/8","3/12","3/8","1/2"], a:0, e:"Même dénominateur : 3/4 = 6/8. Somme : 6/8 + 3/8 = 9/8." },
         { d:2, q:"Comparer : quel est le plus grand nombre ?", c:["3/4","2/3","5/8","7/12"], a:0, e:"Mise au dénominateur 12 : 3/4 = 9/12, 2/3 = 8/12, 5/8 = 7,5/12, 7/12. Le plus grand est 9/12 = 3/4." },
         { d:3, q:"Calculer : 5/6 − 2/9", c:["3/3","11/18","23/18","1/3"], a:1, e:"Dénominateur commun 18 : 5/6 = 15/18 et 2/9 = 4/18. Différence : 15/18 − 4/18 = 11/18." },
         { d:3, q:"Calculer : 4/5 de 60", a:"48", e:"« de » signifie × : 4/5 × 60 = 240/5 = 48." },
-        { d:3, q:"Calculer : 2/3 + 1/2 × 3/4", c:["25/24","11/12","7/8","5/4"], a:0, e:"Produit d'abord : 1/2 × 3/4 = 3/8. Somme avec 2/3 (dénominateur 24) : 16/24 + 9/24 = 25/24." },
-        { d:4, q:"Calculer : (3/5 − 1/5) × 5/2", a:"1", e:"Parenthèse : 3/5 − 1/5 = 2/5. Produit : 2/5 × 5/2 = 10/10 = 1." },
-        { d:4, q:"Calculer : 1 + 3/4 × 2/3", c:["3/2","1/2","5/3","7/4"], a:0, e:"Produit d'abord : 3/4 × 2/3 = 6/12 = 1/2. Puis 1 + 1/2 = 3/2." },
+        { d:3, q:"Calculer : 5/6 − 1/3", c:["1/2","1/3","2/3","7/6"], a:0, e:"Même dénominateur : 5/6 − 2/6 = 3/6, simplifié en 1/2." },
+        { d:4, q:"Calculer : 1 − 3/8", a:"5/8", e:"1 = 8/8. Différence : 8/8 − 3/8 = 5/8." },
+        { d:4, q:"Calculer : 7/10 + 1/5", c:["9/10","8/15","3/5","7/50"], a:0, e:"Même dénominateur : 1/5 = 2/10. Somme : 7/10 + 2/10 = 9/10." },
         { d:4, q:"Un gâteau est partagé en 8. Léa en mange 3/8, Tom en mange 1/4. Quelle fraction du gâteau reste-t-il ?", c:["3/8","1/2","5/8","1/4"], a:0, e:"1/4 = 2/8. Manger : 3/8 + 2/8 = 5/8. Reste : 8/8 − 5/8 = 3/8." }
       ],
       gen: {
@@ -82,8 +129,9 @@ window.BANK_5E = {
           return { q:`Simplifier au maximum : ${n*d}/${d*d}`, a:`${n}/${d}`, e:`On divise numérateur et dénominateur par ${d} : ${n*d} ÷ ${d} = ${n} et ${d*d} ÷ ${d} = ${d}.` }; }
       }
     },
-    {
+        {
       id: "propo", titre: "Proportionnalité et pourcentages", icone: "📊",
+      chap: [11, 17],
       notion: "Tableau de proportionnalité : les quotients de chaque colonne sont égaux (coefficient de proportionnalité).\nPourcentage : t % d'une quantité = t/100 × quantité.\nÉchelle : distance sur le dessin ÷ distance réelle (avec la même unité).",
       qs: [
         { d:1, q:"3 stylos coûtent 6 €. Prix de 5 stylos (prix proportionnel) ?", c:["9 €","10 €","12 €","15 €"], a:1, e:"Un stylo coûte 6 ÷ 3 = 2 €. Donc 5 stylos : 5 × 2 = 10 €." },
@@ -106,32 +154,9 @@ window.BANK_5E = {
           return { q:`Un article à ${p} € est soldé à −${t} %. Prix soldé ?`, a:String(p*(100-t)/100), e:`Réduction : ${p} × ${t} ÷ 100 = ${p*t/100}. Prix soldé : ${p} − ${p*t/100} = ${p*(100-t)/100} €.` }; }
       }
     },
-    {
-      id: "litteral5", titre: "Calcul littéral : distributivité", icone: "✖️",
-      notion: "k × (a + b) = k × a + k × b (simple distributivité).\nRéduire une expression : regrouper les termes « semblables » : 3x + 5x = 8x, mais 3x + 5 ne se réduit pas.",
-      qs: [
-        { d:1, q:"Développer : 3 × (x + 2)", c:["3x + 2","3x + 6","x + 6","3x × 6"], a:1, e:"On distribue le 3 : 3 × x + 3 × 2 = 3x + 6." },
-        { d:1, q:"Réduire : 4x + 3 + 5x", c:["9x + 3","12x","9x","4x + 8x"], a:0, e:"On regroupe les x : 4x + 5x = 9x, on garde le + 3." },
-        { d:1, q:"Développer : 5 × (2 − a)", c:["10 − 5a","7 − 5a","10 − a","5 × 2 × a"], a:0, e:"5 × 2 = 10 et 5 × (−a) = −5a, donc 10 − 5a." },
-        { d:2, q:"Réduire : 7a − 2 + 3a − 8", c:["10a − 10","10a + 6","4a − 10","21a − 6"], a:0, e:"7a + 3a = 10a et −2 − 8 = −10, donc 10a − 10." },
-        { d:2, q:"Développer puis réduire : 2(3x + 4) + 5x", a:"11x+8", e:"2 × 3x = 6x ; 2 × 4 = 8. Puis 6x + 5x = 11x, donc 11x + 8." },
-        { d:2, q:"Quelle expression est égale à 4 × (7 − 3) ?", c:["4 × 7 − 3","4 × 7 − 4 × 3","4 × 7 × 3","7 × 4 − 3"], a:1, e:"Distributivité : 4 × 7 − 4 × 3 = 28 − 12 = 16 = 4 × 4." },
-        { d:3, q:"Factoriser : 5x + 25", c:["5(x + 5)","x(5 + 25)","5(x + 25)","5 × x + 5 × 5"], a:0, e:"5 est un facteur commun : 5x + 25 = 5 × x + 5 × 5 = 5(x + 5)." },
-        { d:3, q:"Développer puis réduire : 3(2x − 5) − 4x", c:["2x − 15","6x − 15","10x − 15","2x + 15"], a:0, e:"3 × 2x = 6x ; 3 × (−5) = −15. Puis 6x − 15 − 4x = 2x − 15." },
-        { d:3, q:"Tester l'expression : que vaut 2x + 5 pour x = 3 ?", a:"11", e:"On remplace x par sa valeur puis on calcule : 2 × 3 + 5 = 6 + 5 = 11." },
-        { d:4, q:"Pour quelle(s) valeur(s) de x a-t-on 4(x + 3) = 3x + 10 ?", c:["x = −2","x = 2","x = 1","x = 7"], a:0, e:"4(x + 3) = 4x + 12. On cherche 4x + 12 = 3x + 10, donc 4x − 3x = 10 − 12 → x = −2. Vérification : 4 × 1 = 4 et 3 × (−2) + 10 = 4." },
-        { d:4, q:"Développer puis réduire : −2(3 − x) + 4x", a:"6x-6", e:"−2 × 3 = −6 ; −2 × (−x) = +2x. Puis −6 + 2x + 4x = 6x − 6." },
-        { d:4, q:"Un rectangle a pour largeur x et pour longueur x + 7. Son périmètre (réduit) ?", c:["2x + 7","4x + 14","2x + 14","x + 7"], a:1, e:"P = 2 × (x + x + 7) = 2 × (2x + 7) = 4x + 14." }
-      ],
-      gen: {
-        2: () => { const k = 2 + Math.floor(Math.random()*6), a = 2 + Math.floor(Math.random()*6), b = 1 + Math.floor(Math.random()*9);
-          return { q:`Développer : ${k} × (x + ${b})`, a:`${k}x+${k*b}`, e:`On distribue ${k} : ${k}x + ${k*b}.` }; },
-        3: () => { const k = 2 + Math.floor(Math.random()*5), a = 1 + Math.floor(Math.random()*4), b = 2 + Math.floor(Math.random()*4);
-          return { q:`Développer puis réduire : ${k}(${a}x + ${b}) − ${k-1}x`, a:`${k*a-(k-1)}x+${k*b}`, e:`${k} × ${a}x = ${k*a}x et ${k} × ${b} = ${k*b}. Puis ${k*a}x − ${k-1}x = ${k*a-(k-1)}x. Résultat : ${k*a-(k-1)}x + ${k*b}.` }; }
-      }
-    },
-    {
+        {
       id: "stats5", titre: "Statistiques : effectifs et moyenne", icone: "📈",
+      chap: [14],
       notion: "Effectif : nombre de fois où une valeur apparaît.\nÉtendue : plus grande valeur − plus petite valeur.\nMoyenne simple : somme des valeurs ÷ nombre de valeurs (en 5e, chaque valeur compte une fois ou on divise par l'effectif total).",
       qs: [
         { d:1, q:"Notes : 8 ; 12 ; 12 ; 15. Quelle est la moyenne ?", c:["12","11,75","11,5","12,5"], a:1, e:"Somme : 8 + 12 + 12 + 15 = 47. Nombre de notes : 4. Moyenne : 47 ÷ 4 = 11,75." },
@@ -148,26 +173,9 @@ window.BANK_5E = {
         { d:4, q:"Une série de 4 notes a une moyenne de 13. On veut une moyenne de 14 après une 5e note. Combien faut-il obtenir ?", a:"18", e:"Somme visée : 5 × 14 = 70. Somme actuelle : 4 × 13 = 52. Note nécessaire : 70 − 52 = 18." }
       ]
     },
-    {
-      id: "geom5", titre: "Symétrie et triangles", icone: "📐",
-      notion: "Symétrie centrale : le symétrique de M par rapport à O est M’ tel que O soit le milieu de [MM’] ; la figure symétrique a les mêmes longueurs et angles.\nParallélogramme : côtés opposés parallèles et de même longueur ; diagonales qui se coupent en leur milieu.\nDroites remarquables : médiatrice, médiane, hauteur ; un triangle a 3 de chacune.\nSomme des angles d'un triangle = 180°.",
-      qs: [
-        { d:1, q:"Dans un triangle, un des angles mesure 60°, un autre 40°. Le troisième ?", c:["60°","80°","100°","90°"], a:1, e:"La somme vaut 180° : 180 − (60 + 40) = 80°." },
-        { d:1, q:"Le symétrique d'un point M par rapport à un point O : où est O ?", c:["Au milieu de [MM’]","Sur la perpendiculaire","Au-delà de M’","N'importe où"], a:0, e:"O est exactement le milieu du segment [MM’]." },
-        { d:1, q:"Un parallélogramme a ses diagonales qui...", c:["se coupent en leur milieu","sont de même longueur","sont perpendiculaires (toujours)","sont des axes de symétrie"], a:0, e:"Dans tout parallélogramme, les diagonales se coupent en leur milieu. Être de même longueur ou perpendiculaires n'est vrai que pour certains cas particuliers." },
-        { d:2, q:"Triangle isocèle : angles à la base = 55° chacun. Angle au sommet ?", a:"70", e:"180 − 55 − 55 = 70°." },
-        { d:2, q:"Triangle rectangle en A : les côtés... L'angle en B mesure 37°. Angle en C ?", c:["63°","53°","90°","143°"], a:1, e:"Angle droit en A = 90°, donc 180 − 90 − 37 = 53°." },
-        { d:2, q:"Propriété d'un losange (qui est un parallélogramme particulier) :", c:["4 côtés égaux","4 angles droits (toujours)","diagonales de même longueur","un seul axe de symétrie"], a:0, e:"Le losange a ses 4 côtés de même longueur et ses diagonales perpendiculaires. Les angles droits sont réservés au carré." },
-        { d:3, q:"Triangle : 2 angles mesurent 40° et 70°. Ce triangle est...", c:["isocèle","équilatéral","rectangle","plat"], a:0, e:"Troisième angle : 180 − 110 = 70°. Deux angles égaux (70°) → triangle isocèle." },
-        { d:3, q:"Quelle droite passe par un sommet et est perpendiculaire au côté opposé ?", c:["la hauteur","la médiatrice","la médiane","la bissectrice"], a:0, e:"C'est la hauteur du triangle." },
-        { d:3, q:"Un triangle a des côtés de 6 cm ; 6 cm ; 6 cm. Nature et angles ?", c:["équilatéral, trois angles de 60°","équilatéral, trois angles de 30°","isocèle rectangle","rectangle isocèle"], a:0, e:"Trois côtés égaux → équilatéral, et ses trois angles mesurent 60° (somme 180°). Le point de concours des médiatrices est le centre du cercle circonscrit." },
-        { d:4, q:"Par symétrie de centre O, l'image d'un segment [AB] de 7 cm est un segment [A’B’] de longueur...", c:["7 cm","3,5 cm","14 cm","Longueur quelconque"], a:0, e:"La symétrie centrale conserve les longueurs : 7 cm." },
-        { d:4, q:"Si ABC est un triangle dont la médiatrice de [AB] passe par C, alors...", c:["CA = CB","l'angle C est droit","AB = BC","l'angle A = 60°"], a:0, e:"C appartient à la médiatrice de [AB] → C est à égale distance de A et B : CA = CB." },
-        { d:4, q:"Un parallélogramme qui a un angle droit est...", c:["un rectangle","un losange","un trapèze","un simple parallélogramme"], a:0, e:"Un parallélogramme avec un angle droit est un rectangle (ses 4 angles sont droits)." }
-      ]
-    },
-    {
+        {
       id: "aires5", titre: "Périmètres, aires et volumes", icone: "📏",
+      chap: [15, 20],
       notion: "Périmètre d'un disque : 2 × π × r. Aire du disque : π × r².\nAire du parallélogramme : base × hauteur. Aire du triangle : (base × hauteur) ÷ 2.\nVolume du prisme : aire de la base × hauteur.\nUnités : 1 m² = 100 dm² ; 1 m³ = 1 000 L ; 1 cm³ = 1 mL.",
       qs: [
         { d:1, q:"Périmètre d'un rectangle de 8 cm sur 3 cm ?", c:["11 cm","22 cm","24 cm","16 cm"], a:1, e:"P = 2 × (8 + 3) = 2 × 11 = 22 cm." },
@@ -190,5 +198,6 @@ window.BANK_5E = {
           return { q:`Volume d'un pavé droit de ${L} cm × ${l} cm × ${h} cm ?`, a:String(L*l*h), e:`V = ${L} × ${l} × ${h} = ${L*l*h} cm³.` }; }
       }
     }
+
   ]
 };
