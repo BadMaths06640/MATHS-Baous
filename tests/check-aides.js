@@ -1,4 +1,4 @@
-/* Vérification des résumés de cours et des aides par question (30 thèmes) */
+/* Vérification des résumés de cours et des aides par question (36 thèmes) */
 const fs = require("fs"), vm = require("vm");
 const ctx = { window: {} };
 vm.createContext(ctx);
@@ -36,7 +36,7 @@ for (const n of ["5e", "4e", "3e"]) {
     }
   }
 }
-console.log(`Résumés de cours : ${nRes}/30 thèmes (${nResCards} cartes)`);
+console.log(`Résumés de cours : ${nRes}/36 thèmes (${nResCards} cartes)`);
 console.log(`Aides par question : ${nH}/${nQs} | aides générées : ${nGenCouv}/${nGenTotal}`);
 if (probs.length) { console.log(`\n⚠ PROBLÈMES (${probs.length}) :`); probs.forEach((p) => console.log(" - " + p)); process.exit(1); }
 console.log("✓ Résumés et aides couvrent tous les thèmes et toutes les questions");

@@ -35,8 +35,8 @@ window.BANK_5E = {
     },
         {
       id: "geom5", titre: "Symétrie et triangles", icone: "📐",
-      chap: [2, 6, 8, 12, 18],
-      notion: "Symétrie centrale : le symétrique de M par rapport à O est M’ tel que O soit le milieu de [MM’] ; la figure symétrique a les mêmes longueurs et angles.\nParallélogramme : côtés opposés parallèles et de même longueur ; diagonales qui se coupent en leur milieu.\nDroites remarquables : médiatrice, médiane, hauteur ; un triangle a 3 de chacune.\nSomme des angles d'un triangle = 180°.",
+      chap: [2, 6, 8, 10],
+      notion: "Symétrie centrale : le symétrique de M par rapport à O est M’ tel que O soit le milieu de [MM’] ; la figure symétrique a les mêmes longueurs et angles.\nParallélogramme : côtés opposés parallèles et de même longueur ; diagonales qui se coupent en leur milieu.\nDroites remarquables : médiatrice, médiane, hauteur ; un triangle a 3 de chacune.\nSomme des angles d'un triangle = 180°.\nInégalité triangulaire : dans un triangle, chaque côté est plus petit que la somme des deux autres.\nAngles opposés par le sommet : toujours égaux.\nDroites parallèles coupées par une sécante : les angles alternes-internes (en Z) et les angles correspondants (en F) sont égaux.",
       qs: [
         { d:1, q:"Dans un triangle, un des angles mesure 60°, un autre 40°. Le troisième ?", c:["60°","80°","100°","90°"], a:1, e:"La somme vaut 180° : 180 − (60 + 40) = 80°." },
         { d:1, q:"Le symétrique d'un point M par rapport à un point O : où est O ?", c:["Au milieu de [MM’]","Sur la perpendiculaire","Au-delà de M’","N'importe où"], a:0, e:"O est exactement le milieu du segment [MM’]." },
@@ -49,12 +49,140 @@ window.BANK_5E = {
         { d:3, q:"Un triangle a des côtés de 6 cm ; 6 cm ; 6 cm. Nature et angles ?", c:["équilatéral, trois angles de 60°","équilatéral, trois angles de 30°","isocèle rectangle","rectangle isocèle"], a:0, e:"Trois côtés égaux → équilatéral, et ses trois angles mesurent 60° (somme 180°). Le point de concours des médiatrices est le centre du cercle circonscrit." },
         { d:4, q:"Par symétrie de centre O, l'image d'un segment [AB] de 7 cm est un segment [A’B’] de longueur...", c:["7 cm","3,5 cm","14 cm","Longueur quelconque"], a:0, e:"La symétrie centrale conserve les longueurs : 7 cm." },
         { d:4, q:"Si ABC est un triangle dont la médiatrice de [AB] passe par C, alors...", c:["CA = CB","l'angle C est droit","AB = BC","l'angle A = 60°"], a:0, e:"C appartient à la médiatrice de [AB] → C est à égale distance de A et B : CA = CB." },
-        { d:4, q:"Un parallélogramme qui a un angle droit est...", c:["un rectangle","un losange","un trapèze","un simple parallélogramme"], a:0, e:"Un parallélogramme avec un angle droit est un rectangle (ses 4 angles sont droits)." }
+        { d:4, q:"Un parallélogramme qui a un angle droit est...", c:["un rectangle","un losange","un trapèze","un simple parallélogramme"], a:0, e:"Un parallélogramme avec un angle droit est un rectangle (ses 4 angles sont droits)." },
+        { d: 2, q: "Peut-on construire un triangle ABC avec AB = 5 cm, AC = 2,4 cm et BC = 1,8 cm ?", c: ["Non, car 5 > 2,4 + 1,8", "Oui, car 5 < 2,4 + 1,8", "Oui, car tout triplet de longueurs fonctionne", "Non, car 2,4 + 1,8 > 5"], a: 0, e: "2,4 + 1,8 = 4,2 < 5 : le plus grand côté dépasse la somme des deux autres, l'inégalité triangulaire n'est pas respectée." },
+        { d: 3, q: "Deux angles opposés par le sommet sont...", c: ["toujours égaux", "toujours complémentaires", "toujours adjacents", "des fois égaux, des fois non"], a: 0, e: "Deux angles opposés par le sommet (même sommet, côtés dans le prolongement l'un de l'autre) sont toujours égaux." },
+        { d: 4, q: "Deux droites parallèles sont coupées par une sécante. Deux angles alternes-internes (situation en Z) sont...", c: ["égaux", "complémentaires", "supplémentaires", "sans relation entre eux"], a: 0, e: "Avec deux droites parallèles, les angles alternes-internes (comme les correspondants) sont égaux." },
+      ]
+    },
+        {
+      id: "fractions", titre: "Fractions : comparer, additionner, soustraire", icone: "🍰",
+      chap: [3, 5],
+      notion: "Comparaison : on met les fractions au même dénominateur.\nAddition / soustraction : même dénominateur puis on opère sur les numérateurs.\nSimplifier : on divise numérateur et dénominateur par le même nombre. Fraction d'une quantité : « 2/3 de 60 » = 60 × 2 ÷ 3.",
+      qs: [
+        { d:1, q:"Simplifier la fraction : 12/18", c:["2/3","3/4","6/9","4/6"], a:0, e:"12 = 2 × 6 et 18 = 3 × 6 → 12/18 = 2/3 (on divise par 6). 4/6 et 6/9 ne sont pas simplifiées." },
+        { d:1, q:"Calculer : 1/4 + 2/4", c:["3/8","3/4","2/16","1/2"], a:1, e:"Même dénominateur : on additionne les numérateurs : 1 + 2 = 3, donc 3/4." },
+        { d:1, q:"Quelle fraction est égale à 1/2 ?", c:["3/6","2/5","4/6","5/8"], a:0, e:"3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2." },
+        { d:2, q:"Calculer : 2/3 + 1/6", c:["3/9","5/6","3/6","5/9"], a:1, e:"Dénominateur commun 6 : 2/3 = 4/6. Somme : 4/6 + 1/6 = 5/6." },
+        { d:2, q:"Calculer : 3/4 + 3/8", c:["9/8","3/12","3/8","1/2"], a:0, e:"Même dénominateur : 3/4 = 6/8. Somme : 6/8 + 3/8 = 9/8." },
+        { d:2, q:"Comparer : quel est le plus grand nombre ?", c:["3/4","2/3","5/8","7/12"], a:0, e:"Mise au dénominateur 12 : 3/4 = 9/12, 2/3 = 8/12, 5/8 = 7,5/12, 7/12. Le plus grand est 9/12 = 3/4." },
+        { d:3, q:"Calculer : 5/6 − 2/9", c:["3/3","11/18","23/18","1/3"], a:1, e:"Dénominateur commun 18 : 5/6 = 15/18 et 2/9 = 4/18. Différence : 15/18 − 4/18 = 11/18." },
+        { d:3, q:"Calculer : 4/5 de 60", a:"48", e:"« de » signifie × : 4/5 × 60 = 240/5 = 48." },
+        { d:3, q:"Calculer : 5/6 − 1/3", c:["1/2","1/3","2/3","7/6"], a:0, e:"Même dénominateur : 5/6 − 2/6 = 3/6, simplifié en 1/2." },
+        { d:4, q:"Calculer : 1 − 3/8", a:"5/8", e:"1 = 8/8. Différence : 8/8 − 3/8 = 5/8." },
+        { d:4, q:"Calculer : 7/10 + 1/5", c:["9/10","8/15","3/5","7/50"], a:0, e:"Même dénominateur : 1/5 = 2/10. Somme : 7/10 + 2/10 = 9/10." },
+        { d:4, q:"Un gâteau est partagé en 8. Léa en mange 3/8, Tom en mange 1/4. Quelle fraction du gâteau reste-t-il ?", c:["3/8","1/2","5/8","1/4"], a:0, e:"1/4 = 2/8. Manger : 3/8 + 2/8 = 5/8. Reste : 8/8 − 5/8 = 3/8." }
+      ],
+      gen: {
+        1: () => { const n = 2 + Math.floor(Math.random()*6), d = n + 1 + Math.floor(Math.random()*6);
+          return { q:`Simplifier au maximum : ${n*d}/${d*d}`, a:`${n}/${d}`, e:`On divise numérateur et dénominateur par ${d} : ${n*d} ÷ ${d} = ${n} et ${d*d} ÷ ${d} = ${d}.` }; }
+      }
+    },
+    {
+      id: "arithmetique5", titre: "Arithmétique : diviseurs et nombres premiers", icone: "🧮",
+      chap: [4],
+      notion: "Division euclidienne de a par b : a = b × q + r avec 0 ≤ r < b (q quotient entier, r reste).\nb est un diviseur de a quand le reste est nul (alors a est un multiple de b).\nCritères : par 2 (chiffre des unités pair) · par 5 (finit par 0 ou 5) · par 4 (la moitié du nombre est paire) · par 3 et 9 (somme des chiffres multiple de 3 ou 9).\nNombre premier : exactement deux diviseurs (1 et lui-même). 1 n'est pas premier ; 2 est le seul premier pair.",
+      qs: [
+        { d:1, q:"Dans la division euclidienne de 23 par 5, le reste vaut...", c:["3","2","4","0"], a:0, e:"23 = 5 × 4 + 3 avec 3 < 5 : le quotient est 4 et le reste est 3." },
+        { d:1, q:"Parmi ces nombres, lequel est un multiple de 7 ?", c:["42","50","45","64"], a:0, e:"42 = 7 × 6 : c'est un multiple de 7. 50 = 2 × 25, 64 = 2 × 32, et 45 n'est pas 7 × entier." },
+        { d:2, q:"4 est-il un diviseur de 34 ?", c:["Non, car 34 = 4 × 8 + 2","Oui, car 34 = 4 × 8","Oui, car 34 est pair","Non, car 34 est impair"], a:0, e:"34 = 4 × 8 + 2 : le reste est 2 (non nul), donc 4 n'est pas un diviseur de 34." },
+        { d:2, q:"147 est-il divisible par 3 ?", c:["Oui, car 1 + 4 + 7 = 12","Non, car il finit par 7","Oui, car il est impair","Non, aucun critère ne s'applique"], a:0, e:"1 + 4 + 7 = 12 est multiple de 3 : 147 = 3 × 49." },
+        { d:2, q:"Parmi ces nombres, lequel est divisible par 9 ?", c:["531","124","322","451"], a:0, e:"5 + 3 + 1 = 9 : 531 est divisible par 9 (531 = 9 × 59). Pour 124, 322 et 451, la somme des chiffres n'est ni 9 ni 18." },
+        { d:2, q:"Combien un nombre entier admet-il de diviseurs « évidents » au minimum ?", c:["2","1","0","4"], a:0, e:"Tout entier admet au moins deux diviseurs : 1 et lui-même." },
+        { d:3, q:"Parmi ces nombres, lequel est premier ?", c:["31","27","33","39"], a:0, e:"27 = 3 × 9 ; 33 = 3 × 11 ; 39 = 3 × 13 (somme des chiffres multiple de 3). 31 n'a que 1 et 31 comme diviseurs." },
+        { d:3, q:"Laquelle de ces divisions a un reste nul ?", c:["546 ÷ 7","546 ÷ 9","487 ÷ 7","926 ÷ 7"], a:0, e:"546 = 7 × 78 (reste 0). 546 ÷ 9 : 5 + 4 + 6 = 15, pas multiple de 9. 487 = 7 × 69 + 4 ; 926 = 7 × 132 + 2." },
+        { d:3, q:"Simplifier : 45/60 (répondre sous la forme a/b)", a:"3/4", e:"On simplifie par des nombres premiers, autant de fois que possible : par 5 → 9/12, puis par 3 → 3/4." },
+        { d:4, q:"Un nombre est divisible par 4 quand...", c:["la moitié du nombre est un nombre pair","il se termine par 0","la somme de ses chiffres vaut 4","il est impair"], a:0, e:"Exemple : 116 ÷ 2 = 58, qui est pair, donc 116 est divisible par 4 (116 = 4 × 29)." },
+        { d:4, q:"z est entier et 362 = 11 × z + 10. Que vaut z ?", a:"32", e:"362 − 10 = 352, et 352 = 11 × 32. Le quotient est 32 (reste 10 < 11)." },
+        { d:4, q:"Le produit de deux nombres premiers (autres que 2) est...", c:["toujours impair","toujours pair","toujours premier","toujours nul"], a:0, e:"Les nombres premiers sont impairs sauf 2 : le produit de deux impairs est impair. Exemple : 3 × 7 = 21." }
+      ],
+      gen: {
+        1: () => { const q = 2 + Math.floor(Math.random()*8), r = Math.floor(Math.random()*7), b = 7 + Math.floor(Math.random()*4), a = b*q + r;
+          return { q:`Quel est le reste de la division euclidienne de ${a} par ${b} ?`, a:String(r), e:`${a} = ${b} × ${q} + ${r} avec ${r} < ${b} : le quotient est ${q} et le reste est ${r}.` }; },
+        2: () => { const ok = Math.random() < 0.5, t = 100 + Math.floor(Math.random()*300), n = ok ? t*3 : t*3 + 1;
+          const s = String(n).split("").reduce((u, c) => u + Number(c), 0);
+          return { q:`${n} est-il divisible par 3 ? (répondre oui ou non)`, a: ok ? "oui" : "non", e:`La somme des chiffres de ${n} est ${s}, qui ${ok ? "est" : "n'est pas"} multiple de 3 : réponse ${ok ? "oui" : "non"}.` }; }
+      }
+    },
+        {
+      id: "propo", titre: "Proportionnalité et pourcentages", icone: "📊",
+      chap: [7],
+      notion: "Tableau de proportionnalité : les quotients de chaque colonne sont égaux (coefficient de proportionnalité).\nPourcentage : t % d'une quantité = t/100 × quantité.\nÉchelle : distance sur le dessin ÷ distance réelle (avec la même unité).",
+      qs: [
+        { d:1, q:"3 stylos coûtent 6 €. Prix de 5 stylos (prix proportionnel) ?", c:["9 €","10 €","12 €","15 €"], a:1, e:"Un stylo coûte 6 ÷ 3 = 2 €. Donc 5 stylos : 5 × 2 = 10 €." },
+        { d:1, q:"Calculer 10 % de 80", c:["8","0,8","80","18"], a:0, e:"10 % = ÷10 : 80 ÷ 10 = 8." },
+        { d:1, q:"Calculer 50 % de 34", a:"17", e:"50 % = la moitié : 34 ÷ 2 = 17." },
+        { d:2, q:"Calculer 25 % de 240", c:["6","60","24","48"], a:1, e:"25 % = un quart : 240 ÷ 4 = 60. Ou 240 × 25 ÷ 100 = 60." },
+        { d:2, q:"Une écharpe à 30 € augmente de 20 %. Nouveau prix ?", c:["36 €","32 €","50 €","24 €"], a:0, e:"Augmentation : 30 × 20 ÷ 100 = 6 €. Nouveau prix : 30 + 6 = 36 €." },
+        { d:2, q:"Sur une carte à l'échelle 1/100 000, deux villages sont à 4 cm. Distance réelle ?", c:["400 m","4 km","40 km","40 m"], a:1, e:"1 cm sur la carte = 100 000 cm réels = 1 km. Donc 4 cm = 4 km." },
+        { d:3, q:"Un article à 80 € est soldé à −25 %. Prix soldé ?", c:["55 €","60 €","65 €","20 €"], a:1, e:"Réduction : 80 × 25 ÷ 100 = 20 €. Prix soldé : 80 − 20 = 60 €." },
+        { d:3, q:"15 litres d'essence coûtent 24 € ; prix de 40 litres (proportionnel) ?", a:"64", e:"Coefficient : 24 ÷ 15 = 1,6 €/L. Donc 40 × 1,6 = 64 €." },
+        { d:3, q:"Après une hausse de 10 %, un abonnement coûte 44 €. Prix avant hausse ?", c:["39,60 €","34 €","40 €","44,10 €"], a:2, e:"Après hausse de 10 %, le prix vaut 110 % de l'ancien : 44 = 1,1 × p, donc p = 44 ÷ 1,1 = 40 €." },
+        { d:4, q:"Une école compte 480 élèves ; 55 % sont des filles. Combien de garçons ?", a:"216", e:"Filles : 480 × 55 ÷ 100 = 264. Garçons : 480 − 264 = 216." },
+        { d:4, q:"Le prix d'un vélo passe de 150 € à 120 €. Quelle est la baisse en % ?", c:["30 %","20 %","25 %","80 %"], a:1, e:"Baisse : 30 €. Pourcentage : 30/150 = 1/5 = 20 %." },
+        { d:4, q:"Une maquette à l'échelle 1/50 : une tour de 35 m de hauteur mesure combien sur la maquette ?", c:["70 cm","7 cm","35 cm","1,75 m"], a:0, e:"35 m = 3 500 cm ; 3 500 ÷ 50 = 70 cm." }
+      ],
+      gen: {
+        2: () => { const q = [10,20,25,50][Math.floor(Math.random()*4)]; const n = (2+Math.floor(Math.random()*40))*4;
+          return { q:`Calculer ${q} % de ${n}`, a:String(n*q/100), e:`${q} % de ${n} = ${n} × ${q} ÷ 100 = ${n*q}/100 = ${n*q/100}.` }; },
+        3: () => { const p = 20 + Math.floor(Math.random()*40)*5, t = [10,20,25,50][Math.floor(Math.random()*4)];
+          return { q:`Un article à ${p} € est soldé à −${t} %. Prix soldé ?`, a:String(p*(100-t)/100), e:`Réduction : ${p} × ${t} ÷ 100 = ${p*t/100}. Prix soldé : ${p} − ${p*t/100} = ${p*(100-t)/100} €.` }; }
+      }
+    },
+    {
+      id: "relatifs", titre: "Nombres relatifs : repérage et calcul", icone: "🌡️",
+      chap: [9],
+      notion: "Repérage : sur une droite graduée, chaque point est repéré par un nombre relatif ; dans le plan, un point A se repère par ses coordonnées (abscisse ; ordonnée).\nOpposé : deux nombres opposés sont de part et d'autre de 0 à la même distance ; l'opposé de 6 est −6, l'opposé de −5 est 5.\nComparer : tout nombre négatif est plus petit qu'un nombre positif ; entre deux négatifs, le plus petit est celui qui est le plus loin de 0.\nSomme : même signe → on garde le signe et on ajoute. Signes différents → on soustrait et on garde le signe du plus proche de 0.\nDifférence : soustraire, c'est ajouter l'opposé : a − b = a + (−b).",
+      qs: [
+        { d: 1, q: "Calculer : (−3) + (−5)", c: ["−8", "−2", "2", "8"], a: 0, e: "Même signe (négatif) : on ajoute les valeurs 3 + 5 = 8 et on garde le signe − : −8." },
+        { d: 1, q: "Calculer : (−7) + 4", c: ["−3", "3", "−11", "11"], a: 0, e: "Signes différents : on calcule 7 − 4 = 3, et on garde le signe du nombre le plus loin de 0, ici −7 : résultat −3." },
+        { d: 1, q: "Calculer : 6 − 10", c: ["−4", "4", "−16", "16"], a: 0, e: "Soustraire 10 à 6 : on arrive à −4 sur la droite graduée (6 − 10 = −4)." },
+        { d: 1, q: "Quel est l'opposé de 6 ?", c: ["−6", "6", "1/6", "0"], a: 0, e: "L'opposé de 6 est −6 : ils sont à la même distance de 0, de part et d'autre." },
+        { d: 2, q: "Calculer : (−10) − (−4)", a: "−6", e: "Soustraire, c'est ajouter l'opposé : (−10) − (−4) = −10 + 4 = −6." },
+        { d: 2, q: "Parmi −7 ; −2 ; 0 ; 3, quel est le plus petit ?", c: ["−7", "−2", "0", "3"], a: 0, e: "Sur la droite graduée, −7 est le plus à gauche : c'est le plus petit." },
+        { d: 2, q: "Dans un repère du plan, le point A(3 ; −2) se trouve...", c: ["3 unités à droite et 2 unités en dessous de l'origine", "3 unités à gauche et 2 unités au-dessus", "3 unités à droite et 2 unités au-dessus", "3 unités à gauche et 2 unités en dessous"], a: 0, e: "Abcisse 3 > 0 : à droite. Ordonnée −2 < 0 : en dessous de l'origine." },
+        { d: 3, q: "Calculer : −5 + 8 − 9", a: "−6", e: "On procède de gauche à droite : −5 + 8 = 3, puis 3 − 9 = −6." },
+        { d: 3, q: "À quelle distance de 0 se trouve le nombre −5 ?", a: "5", e: "La distance à zéro de −5 est sa partie numérique : 5. L'opposé est à la même distance." },
+        { d: 4, q: "Il fait −7 °C le matin. La température monte de 12 °C puis baisse de 9 °C. Quelle température fait-il ?", a: "−4", e: "−7 + 12 = 5, puis 5 − 9 = −4 : il fait −4 °C." },
+        { d: 4, q: "Calculer : 4 − 9 + 7 − 6", a: "−4", e: "De gauche à droite : 4 − 9 = −5 ; −5 + 7 = 2 ; 2 − 6 = −4." },
+        { d: 4, q: "Comment compare-t-on −2 et −8 ?", c: ["−2 > −8, car −2 est plus proche de 0", "−2 < −8, car 2 < 8", "−2 = −8, car les deux sont négatifs", "On ne peut pas comparer des négatifs"], a: 0, e: "Sur la droite graduée, −2 est à droite de −8 : −2 > −8." }
+      ],
+      gen: {
+        1: () => { const a = -1 - Math.floor(Math.random()*12), b = Math.floor(Math.random()*12);
+          return { q:`Calculer : (${a}) + ${b}`, a:String(a+b), e:`On part de ${a} et on avance de ${b} : ${a+b}.` }; },
+        2: () => { const a = 1 + Math.floor(Math.random()*12); let b2 = 1 + Math.floor(Math.random()*12); if (b2 === a) b2 = b2 + 1;
+          return { q:`Quel est le plus grand : −${a} ou −${b2} ? (répondre avec le signe −, ex. −5)`, a:`−${Math.min(a, b2)}`, e:`Les deux sont négatifs : le plus grand est celui qui est le plus proche de 0, c'est −${Math.min(a, b2)}.` }; }
+      },
+      genH: {
+        1: "Astuce : sur la droite graduée, part du premier nombre et avance/recule.\nExemple similaire : (−8) + 5 = −3.",
+        2: "Astuce : entre deux négatifs, le plus grand est le plus proche de 0.\nExemple similaire : entre −9 et −4, le plus grand est −4."
+      }
+    },
+        {
+      id: "stats5", titre: "Statistiques : effectifs et moyenne", icone: "📈",
+      chap: [11],
+      notion: "Effectif : nombre de fois où une valeur apparaît.\nÉtendue : plus grande valeur − plus petite valeur.\nMoyenne simple : somme des valeurs ÷ nombre de valeurs (en 5e, chaque valeur compte une fois ou on divise par l'effectif total).\nFréquence : effectif de la valeur ÷ effectif total (souvent en %) ; la somme des fréquences vaut 1 (100 %).\nMédiane : on ordonne les valeurs ; c'est la valeur qui partage la série ordonnée en deux groupes de même effectif.\nDiagramme en rectangles (histogramme) : la hauteur de chaque rectangle est proportionnelle à l'effectif.",
+      qs: [
+        { d:1, q:"Notes : 8 ; 12 ; 12 ; 15. Quelle est la moyenne ?", c:["12","11,75","11,5","12,5"], a:1, e:"Somme : 8 + 12 + 12 + 15 = 47. Nombre de notes : 4. Moyenne : 47 ÷ 4 = 11,75." },
+        { d:1, q:"9 ; 3 ; 12 ; 14 ; 12 ; 14; 12 quel est l'effectif de la valeur 12 ?", c:["3","1","12","2"], a:0, e:"12 apparaît trois fois : son effectif est 3." },
+        { d:1, q:"Températures : 3 °C ; 9 °C ; 12 °C ; 1 °C. Étendue ?", c:["11 °C","12 °C","9 °C","25 °C"], a:0, e:"Maximum − minimum : 12 − 1 = 11 °C." },
+        { d:2, q:"Moyenne de : 6 ; 10 ; 14 ?", a:"10", e:"6 + 10 + 14 = 30 ; 30 ÷ 3 = 10." },
+        { d:2, q:"Sur 10 jours, il a plu : 3 − 1 − 0 − 0 − 2 − 1 − 0 − 4 − 1 − 0 (mm). Quelle est l'étendue ?", c:["4 mm","3 mm","1 mm","12 mm"], a:0, e:"Max : 4, min : 0 → étendue 4 mm." },
+        { d:2, q:"Moyenne de 5 notes valant au total 42 ?", c:["8,4","8,5","42","37"], a:0, e:"42 ÷ 5 = 8,4." },
+        { d:3, q:"Âges : 12 ans (4 fois) ; 13 ans (6 fois). Âge moyen ?", c:["12,6 ans","13 ans","12,8 ans","12,5 ans"], a:0, e:"Total âges : 4 × 12 + 6 × 13 = 48 + 78 = 126. Effectif 10 (4+6). Moyenne : 126 ÷ 10 = 12,6 ans." },
+        { d:3, q:"Nombre de frères et sœurs : 1 (7 élèves), 0 (5 élèves), 2 (8 élèves). Moyenne, arrondie au dixième ?", c:["1,2","1","2","1,1"], a:0, e:"1 × 7 + 0 × 5 + 2 × 8 = 23. Effectif : 20. Moyenne : 23 ÷ 20 = 1,15 → arrondie au dixième : 1,2." },
+        { d:3, q:"Après le contrôle, la moyenne de la classe est 12,5. Tous les élèves ont-ils 12,5 ?", c:["Non, la moyenne ne donne pas chaque note","Oui, toujours","On ne peut pas savoir du tout","Seulement si l'effectif est pair"], a:0, e:"La moyenne est une valeur « centrale » : des notes autour d'elle (par ex. 8, 12, 17,5) peuvent donner 12,5." },
+        { d:4, q:"7 valeurs ont une moyenne de 9. On ajoute une valeur 20. Nouvelle moyenne ?", c:["10,375","10,5","10","11"], a:0, e:"Somme initiale : 7 × 9 = 63. Nouvelle somme : 63 + 20 = 83, pour 8 valeurs : 83 ÷ 8 = 10,375." },
+        { d:4, q:"Quelle série a la plus grande étendue ?", c:["2 ; 5 ; 9","1 ; 3 ; 7 ; 8","4 ; 6 ; 8","0 ; 5 ; 10"], a:3, e:"Étendues respectives : 7 ; 7 ; 4 ; 10. La plus grande est 10 pour 0 ; 5 ; 10." },
+        { d:4, q:"Une série de 4 notes a une moyenne de 13. On veut une moyenne de 14 après une 5e note. Combien faut-il obtenir ?", a:"18", e:"Somme visée : 5 × 14 = 70. Somme actuelle : 4 × 13 = 52. Note nécessaire : 70 − 52 = 18." },
+        { d: 3, q: "Dans une série statistique, la fréquence d'une valeur est...", c: ["l'effectif de la valeur divisé par l'effectif total", "l'effectif total divisé par l'effectif de la valeur", "la somme de tous les effectifs", "la plus grande valeur de la série"], a: 0, e: "Fréquence = effectif de la valeur ÷ effectif total ; souvent donnée en pourcentage." },
+        { d: 3, q: "Série : 2 ; 5 ; 3 ; 5 ; 7. Quelle est la fréquence de la valeur 5 ?", c: ["40 %", "20 %", "25 %", "50 %"], a: 0, e: "5 apparaît 2 fois sur 5 valeurs : fréquence = 2 ÷ 5 = 0,4 = 40 %." },
+        { d: 4, q: "Série : 4 ; 8 ; 2 ; 10 ; 6. Quelle est la médiane ?", c: ["6", "2", "4", "10"], a: 0, e: "On ordonne : 2 ; 4 ; 6 ; 8 ; 10. La valeur centrale est 6 : la médiane est 6." },
       ]
     },
         {
       id: "litteral5", titre: "Calcul littéral : distributivité", icone: "✖️",
-      chap: [3, 9, 19],
+      chap: [12],
       notion: "k × (a + b) = k × a + k × b (simple distributivité).\nRéduire une expression : regrouper les termes « semblables » : 3x + 5x = 8x, mais 3x + 5 ne se réduit pas.",
       qs: [
         { d:1, q:"Développer : 3 × (x + 2)", c:["3x + 2","3x + 6","x + 6","3x × 6"], a:1, e:"On distribue le 3 : 3 × x + 3 × 2 = 3x + 6." },
@@ -78,104 +206,8 @@ window.BANK_5E = {
       }
     },
         {
-      id: "relatifs", titre: "Nombres relatifs", icone: "🌡️",
-      chap: [5, 13],
-      notion: "Somme : deux nombres de même signe → on garde le signe et on ajoute. Signes différents → on retire le plus petit au plus grand et on garde le signe du plus grand.\nProduit et quotient : le produit de deux nombres de même signe est positif ; de signes contraires, il est négatif.\n(−a)² = a × (−a) × (−a)... non ! (−a)² = (−a) × (−a) = a²  (positif), tandis que −a² = −(a × a) (négatif).",
-      qs: [
-        { d:1, q:"Calculer : (−3) + (−5)", c:["−8","8","−2","2"], a:0, e:"Même signe (−) : on ajoute les distances à zéro : 3 + 5 = 8, et on garde le signe −." },
-        { d:1, q:"Calculer : (−7) + 4", c:["−3","3","−11","11"], a:0, e:"Signes différents : 7 − 4 = 3, et on garde le signe du plus grand (7, négatif) : −3." },
-        { d:1, q:"Calculer : 6 − 10", c:["4","−4","16","−16"], a:1, e:"Soustraire 10 revient à ajouter −10 : 6 + (−10) = −4." },
-        { d:2, q:"Calculer : (−4) × (−5)", c:["−20","−9","20","9"], a:2, e:"Deux facteurs de même signe (−) : le produit est positif : 4 × 5 = 20." },
-        { d:2, q:"Calculer : (−2) × 3 × (−4)", a:"24", e:"(−2) × 3 = −6, puis (−6) × (−4) = 24. Deux signes − « s'annulent »." },
-        { d:2, q:"Calculer : (−10) − (−4)", a:"−6", e:"Soustraire (−4) revient à ajouter 4 : −10 + 4 = −6." },
-        { d:3, q:"Calculer : (−3)² × (−2)", c:["−18","18","−36","12"], a:0, e:"(−3)² = (−3) × (−3) = 9 (positif !), puis 9 × (−2) = −18." },
-        { d:3, q:"Calculer : −5 + 2 × (−3)", a:"−11", e:"Multiplication d'abord : 2 × (−3) = −6, puis −5 + (−6) = −11." },
-        { d:3, q:"Calculer : (−12) ÷ (−3) + 1", a:"5", e:"Deux signes identiques : (−12) ÷ (−3) = 4, puis 4 + 1 = 5." },
-        { d:4, q:"Températures : il fait −7 °C le matin. La température monte de 12 °C puis baisse de 9 °C. Température finale ?", c:["−4 °C","10 °C","−10 °C","4 °C"], a:0, e:"−7 + 12 = 5, puis 5 − 9 = −4. Il fait −4 °C." },
-        { d:4, q:"Calculer : (−2)³ + 3 × (−1)⁴", a:"−5", e:"(−2)³ = −8 (puissance impaire d’un négatif). (−1)⁴ = 1 (puissance paire). Donc −8 + 3 × 1 = −5." },
-        { d:4, q:"Calculer : 8 − (−3) × (−2)²", a:"20", e:"Puissance d'abord : (−2)² = 4. Produit : (−3) × 4 = −12. On ajoute « inversé » : 8 − (−12) = 8 + 12 = 20." }
-      ],
-      gen: {
-        1: () => { const a = -1 - Math.floor(Math.random()*12), b = Math.floor(Math.random()*12);
-          return { q:`Calculer : (${a}) + ${b}`, a:String(a+b), e:`On part de ${a} et on avance de ${b} : ${a+b}.` }; },
-        2: () => { const a = -9 + Math.floor(Math.random()*19); const b = -9 + Math.floor(Math.random()*19);
-          return { q:`Calculer : (${a}) × (${b})`, a:String(a*b), e:`Le produit ${(a<0&&b<0)? "de deux nombres négatifs est positif" : "de deux nombres de signes contraires est négatif"} : ${a} × ${b} = ${a*b}.` }; },
-        3: () => { const a = -8 + Math.floor(Math.random()*17), b = 2 + Math.floor(Math.random()*6);
-          return { q:`Calculer : ${a} − 2 × (${b})`, a:String(a - 2*b), e:`Le produit 2 × (${b}) = ${2*b}, donc ${a} − ${2*b} = ${a-2*b}.` }; },
-        4: () => { const a = -4 + Math.floor(Math.random()*9), n = 2;
-          return { q:`Calculer : (${a})² − ${a} × 2`, a:String(a*a - 2*a), e:`Le carré est positif : (${a})² = ${a*a}. Puis ${a} × 2 = ${2*a}. Donc ${a*a} − ${2*a} = ${a*a - 2*a}.` }; }
-      }
-    },
-        {
-      id: "fractions", titre: "Fractions : comparer, additionner, soustraire", icone: "🍰",
-      chap: [7, 16],
-      notion: "Comparaison : on met les fractions au même dénominateur.\nAddition / soustraction : même dénominateur puis on opère sur les numérateurs.\nSimplifier : on divise numérateur et dénominateur par le même nombre. Fraction d'une quantité : « 2/3 de 60 » = 60 × 2 ÷ 3.",
-      qs: [
-        { d:1, q:"Simplifier la fraction : 12/18", c:["2/3","3/4","6/9","4/6"], a:0, e:"12 = 2 × 6 et 18 = 3 × 6 → 12/18 = 2/3 (on divise par 6). 4/6 et 6/9 ne sont pas simplifiées." },
-        { d:1, q:"Calculer : 1/4 + 2/4", c:["3/8","3/4","2/16","1/2"], a:1, e:"Même dénominateur : on additionne les numérateurs : 1 + 2 = 3, donc 3/4." },
-        { d:1, q:"Quelle fraction est égale à 1/2 ?", c:["3/6","2/5","4/6","5/8"], a:0, e:"3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2." },
-        { d:2, q:"Calculer : 2/3 + 1/6", c:["3/9","5/6","3/6","5/9"], a:1, e:"Dénominateur commun 6 : 2/3 = 4/6. Somme : 4/6 + 1/6 = 5/6." },
-        { d:2, q:"Calculer : 3/4 + 3/8", c:["9/8","3/12","3/8","1/2"], a:0, e:"Même dénominateur : 3/4 = 6/8. Somme : 6/8 + 3/8 = 9/8." },
-        { d:2, q:"Comparer : quel est le plus grand nombre ?", c:["3/4","2/3","5/8","7/12"], a:0, e:"Mise au dénominateur 12 : 3/4 = 9/12, 2/3 = 8/12, 5/8 = 7,5/12, 7/12. Le plus grand est 9/12 = 3/4." },
-        { d:3, q:"Calculer : 5/6 − 2/9", c:["3/3","11/18","23/18","1/3"], a:1, e:"Dénominateur commun 18 : 5/6 = 15/18 et 2/9 = 4/18. Différence : 15/18 − 4/18 = 11/18." },
-        { d:3, q:"Calculer : 4/5 de 60", a:"48", e:"« de » signifie × : 4/5 × 60 = 240/5 = 48." },
-        { d:3, q:"Calculer : 5/6 − 1/3", c:["1/2","1/3","2/3","7/6"], a:0, e:"Même dénominateur : 5/6 − 2/6 = 3/6, simplifié en 1/2." },
-        { d:4, q:"Calculer : 1 − 3/8", a:"5/8", e:"1 = 8/8. Différence : 8/8 − 3/8 = 5/8." },
-        { d:4, q:"Calculer : 7/10 + 1/5", c:["9/10","8/15","3/5","7/50"], a:0, e:"Même dénominateur : 1/5 = 2/10. Somme : 7/10 + 2/10 = 9/10." },
-        { d:4, q:"Un gâteau est partagé en 8. Léa en mange 3/8, Tom en mange 1/4. Quelle fraction du gâteau reste-t-il ?", c:["3/8","1/2","5/8","1/4"], a:0, e:"1/4 = 2/8. Manger : 3/8 + 2/8 = 5/8. Reste : 8/8 − 5/8 = 3/8." }
-      ],
-      gen: {
-        1: () => { const n = 2 + Math.floor(Math.random()*6), d = n + 1 + Math.floor(Math.random()*6);
-          return { q:`Simplifier au maximum : ${n*d}/${d*d}`, a:`${n}/${d}`, e:`On divise numérateur et dénominateur par ${d} : ${n*d} ÷ ${d} = ${n} et ${d*d} ÷ ${d} = ${d}.` }; }
-      }
-    },
-        {
-      id: "propo", titre: "Proportionnalité et pourcentages", icone: "📊",
-      chap: [11, 17],
-      notion: "Tableau de proportionnalité : les quotients de chaque colonne sont égaux (coefficient de proportionnalité).\nPourcentage : t % d'une quantité = t/100 × quantité.\nÉchelle : distance sur le dessin ÷ distance réelle (avec la même unité).",
-      qs: [
-        { d:1, q:"3 stylos coûtent 6 €. Prix de 5 stylos (prix proportionnel) ?", c:["9 €","10 €","12 €","15 €"], a:1, e:"Un stylo coûte 6 ÷ 3 = 2 €. Donc 5 stylos : 5 × 2 = 10 €." },
-        { d:1, q:"Calculer 10 % de 80", c:["8","0,8","80","18"], a:0, e:"10 % = ÷10 : 80 ÷ 10 = 8." },
-        { d:1, q:"Calculer 50 % de 34", a:"17", e:"50 % = la moitié : 34 ÷ 2 = 17." },
-        { d:2, q:"Calculer 25 % de 240", c:["6","60","24","48"], a:1, e:"25 % = un quart : 240 ÷ 4 = 60. Ou 240 × 25 ÷ 100 = 60." },
-        { d:2, q:"Une écharpe à 30 € augmente de 20 %. Nouveau prix ?", c:["36 €","32 €","50 €","24 €"], a:0, e:"Augmentation : 30 × 20 ÷ 100 = 6 €. Nouveau prix : 30 + 6 = 36 €." },
-        { d:2, q:"Sur une carte à l'échelle 1/100 000, deux villages sont à 4 cm. Distance réelle ?", c:["400 m","4 km","40 km","40 m"], a:1, e:"1 cm sur la carte = 100 000 cm réels = 1 km. Donc 4 cm = 4 km." },
-        { d:3, q:"Un article à 80 € est soldé à −25 %. Prix soldé ?", c:["55 €","60 €","65 €","20 €"], a:1, e:"Réduction : 80 × 25 ÷ 100 = 20 €. Prix soldé : 80 − 20 = 60 €." },
-        { d:3, q:"15 litres d'essence coûtent 24 € ; prix de 40 litres (proportionnel) ?", a:"64", e:"Coefficient : 24 ÷ 15 = 1,6 €/L. Donc 40 × 1,6 = 64 €." },
-        { d:3, q:"Après une hausse de 10 %, un abonnement coûte 44 €. Prix avant hausse ?", c:["39,60 €","34 €","40 €","44,10 €"], a:2, e:"Après hausse de 10 %, le prix vaut 110 % de l'ancien : 44 = 1,1 × p, donc p = 44 ÷ 1,1 = 40 €." },
-        { d:4, q:"Une école compte 480 élèves ; 55 % sont des filles. Combien de garçons ?", a:"216", e:"Filles : 480 × 55 ÷ 100 = 264. Garçons : 480 − 264 = 216." },
-        { d:4, q:"Le prix d'un vélo passe de 150 € à 120 €. Quelle est la baisse en % ?", c:["30 %","20 %","25 %","80 %"], a:1, e:"Baisse : 30 €. Pourcentage : 30/150 = 1/5 = 20 %." },
-        { d:4, q:"Une maquette à l'échelle 1/50 : une tour de 35 m de hauteur mesure combien sur la maquette ?", c:["70 cm","7 cm","35 cm","1,75 m"], a:0, e:"35 m = 3 500 cm ; 3 500 ÷ 50 = 70 cm." }
-      ],
-      gen: {
-        2: () => { const q = [10,20,25,50][Math.floor(Math.random()*4)]; const n = (2+Math.floor(Math.random()*40))*4;
-          return { q:`Calculer ${q} % de ${n}`, a:String(n*q/100), e:`${q} % de ${n} = ${n} × ${q} ÷ 100 = ${n*q}/100 = ${n*q/100}.` }; },
-        3: () => { const p = 20 + Math.floor(Math.random()*40)*5, t = [10,20,25,50][Math.floor(Math.random()*4)];
-          return { q:`Un article à ${p} € est soldé à −${t} %. Prix soldé ?`, a:String(p*(100-t)/100), e:`Réduction : ${p} × ${t} ÷ 100 = ${p*t/100}. Prix soldé : ${p} − ${p*t/100} = ${p*(100-t)/100} €.` }; }
-      }
-    },
-        {
-      id: "stats5", titre: "Statistiques : effectifs et moyenne", icone: "📈",
-      chap: [14],
-      notion: "Effectif : nombre de fois où une valeur apparaît.\nÉtendue : plus grande valeur − plus petite valeur.\nMoyenne simple : somme des valeurs ÷ nombre de valeurs (en 5e, chaque valeur compte une fois ou on divise par l'effectif total).",
-      qs: [
-        { d:1, q:"Notes : 8 ; 12 ; 12 ; 15. Quelle est la moyenne ?", c:["12","11,75","11,5","12,5"], a:1, e:"Somme : 8 + 12 + 12 + 15 = 47. Nombre de notes : 4. Moyenne : 47 ÷ 4 = 11,75." },
-        { d:1, q:"9 ; 3 ; 12 ; 14 ; 12 ; 14; 12 quel est l'effectif de la valeur 12 ?", c:["3","1","12","2"], a:0, e:"12 apparaît trois fois : son effectif est 3." },
-        { d:1, q:"Températures : 3 °C ; 9 °C ; 12 °C ; 1 °C. Étendue ?", c:["11 °C","12 °C","9 °C","25 °C"], a:0, e:"Maximum − minimum : 12 − 1 = 11 °C." },
-        { d:2, q:"Moyenne de : 6 ; 10 ; 14 ?", a:"10", e:"6 + 10 + 14 = 30 ; 30 ÷ 3 = 10." },
-        { d:2, q:"Sur 10 jours, il a plu : 3 − 1 − 0 − 0 − 2 − 1 − 0 − 4 − 1 − 0 (mm). Quelle est l'étendue ?", c:["4 mm","3 mm","1 mm","12 mm"], a:0, e:"Max : 4, min : 0 → étendue 4 mm." },
-        { d:2, q:"Moyenne de 5 notes valant au total 42 ?", c:["8,4","8,5","42","37"], a:0, e:"42 ÷ 5 = 8,4." },
-        { d:3, q:"Âges : 12 ans (4 fois) ; 13 ans (6 fois). Âge moyen ?", c:["12,6 ans","13 ans","12,8 ans","12,5 ans"], a:0, e:"Total âges : 4 × 12 + 6 × 13 = 48 + 78 = 126. Effectif 10 (4+6). Moyenne : 126 ÷ 10 = 12,6 ans." },
-        { d:3, q:"Nombre de frères et sœurs : 1 (7 élèves), 0 (5 élèves), 2 (8 élèves). Moyenne, arrondie au dixième ?", c:["1,2","1","2","1,1"], a:0, e:"1 × 7 + 0 × 5 + 2 × 8 = 23. Effectif : 20. Moyenne : 23 ÷ 20 = 1,15 → arrondie au dixième : 1,2." },
-        { d:3, q:"Après le contrôle, la moyenne de la classe est 12,5. Tous les élèves ont-ils 12,5 ?", c:["Non, la moyenne ne donne pas chaque note","Oui, toujours","On ne peut pas savoir du tout","Seulement si l'effectif est pair"], a:0, e:"La moyenne est une valeur « centrale » : des notes autour d'elle (par ex. 8, 12, 17,5) peuvent donner 12,5." },
-        { d:4, q:"7 valeurs ont une moyenne de 9. On ajoute une valeur 20. Nouvelle moyenne ?", c:["10,375","10,5","10","11"], a:0, e:"Somme initiale : 7 × 9 = 63. Nouvelle somme : 63 + 20 = 83, pour 8 valeurs : 83 ÷ 8 = 10,375." },
-        { d:4, q:"Quelle série a la plus grande étendue ?", c:["2 ; 5 ; 9","1 ; 3 ; 7 ; 8","4 ; 6 ; 8","0 ; 5 ; 10"], a:3, e:"Étendues respectives : 7 ; 7 ; 4 ; 10. La plus grande est 10 pour 0 ; 5 ; 10." },
-        { d:4, q:"Une série de 4 notes a une moyenne de 13. On veut une moyenne de 14 après une 5e note. Combien faut-il obtenir ?", a:"18", e:"Somme visée : 5 × 14 = 70. Somme actuelle : 4 × 13 = 52. Note nécessaire : 70 − 52 = 18." }
-      ]
-    },
-        {
       id: "aires5", titre: "Périmètres, aires et volumes", icone: "📏",
-      chap: [15, 20],
+      chap: [13],
       notion: "Périmètre d'un disque : 2 × π × r. Aire du disque : π × r².\nAire du parallélogramme : base × hauteur. Aire du triangle : (base × hauteur) ÷ 2.\nVolume du prisme : aire de la base × hauteur.\nUnités : 1 m² = 100 dm² ; 1 m³ = 1 000 L ; 1 cm³ = 1 mL.",
       qs: [
         { d:1, q:"Périmètre d'un rectangle de 8 cm sur 3 cm ?", c:["11 cm","22 cm","24 cm","16 cm"], a:1, e:"P = 2 × (8 + 3) = 2 × 11 = 22 cm." },
@@ -197,7 +229,31 @@ window.BANK_5E = {
         2: () => { const L = 2 + Math.floor(Math.random()*12), l = 1 + Math.floor(Math.random()*12), h = 2 + Math.floor(Math.random()*9);
           return { q:`Volume d'un pavé droit de ${L} cm × ${l} cm × ${h} cm ?`, a:String(L*l*h), e:`V = ${L} × ${l} × ${h} = ${L*l*h} cm³.` }; }
       }
+    },
+    {
+      id: "proba5", titre: "Probabilités", icone: "🎲",
+      chap: [14],
+      notion: "Expérience aléatoire : on ne peut pas prédire le résultat. Issues : les résultats possibles ; univers Ω : l'ensemble de toutes les issues.\nÉvénement : une partie de l'univers ; événement élémentaire : une seule issue.\nProbabilité d'un événement (cas équiprobables) : nombre de cas favorables ÷ nombre de cas possibles — un nombre entre 0 et 1.",
+      qs: [
+        { d:1, q:"Un lancer de pièce équilibrée comporte combien d'issues ?", c:["2","1","4","6"], a:0, e:"Pile ou Face : deux issues possibles." },
+        { d:1, q:"L'univers d'un lancer de dé à 6 faces, c'est...", c:["l'ensemble {1 ; 2 ; 3 ; 4 ; 5 ; 6}","seulement la face 6","les chiffres pairs uniquement","l'ensemble des nombres premiers"], a:0, e:"L'univers réunit TOUTES les issues possibles : 1, 2, 3, 4, 5 et 6." },
+        { d:2, q:"« Obtenir un nombre pair » avec un dé à 6 faces : combien de cas favorables ?", c:["3","2","6","1"], a:0, e:"Pairs : 2, 4 et 6 → 3 cas favorables." },
+        { d:2, q:"P(obtenir un nombre pair) avec un dé équilibré ?", c:["1/2","1/3","2/3","1/6"], a:0, e:"3 cas favorables sur 6 équiprobables : 3/6 = 1/2." },
+        { d:2, q:"Une probabilité est toujours comprise entre...", c:["0 et 1","0 et 100","−1 et 1","1 et 2"], a:0, e:"P = 0 pour un événement impossible ; P = 1 pour un événement certain." },
+        { d:2, q:"Un sac contient 5 billes rouges et 3 billes bleues identiques au toucher. P(tirer une bleue) ?", c:["3/8","5/8","3/5","1/2"], a:0, e:"8 billes au total, 3 bleues : P = 3/8." },
+        { d:3, q:"P(obtenir un 1 ou un 6) avec un dé équilibré ?", c:["1/3","1/6","1/2","2/3"], a:0, e:"2 cas favorables sur 6 : 2/6 = 1/3." },
+        { d:3, q:"Un événement élémentaire est un événement qui...", c:["contient une seule issue","n'a aucune chance de se produire","est certain","contient tout l'univers"], a:0, e:"Exemple : « obtenir 4 » avec un dé : une seule issue." },
+        { d:3, q:"Dans une classe de 22 élèves, 11 ont les yeux bruns. P(yeux bruns) ?", c:["1/2","1/4","3/4","1/11"], a:0, e:"11 cas favorables sur 22 : 11/22 = 1/2." },
+        { d:4, q:"On tire une carte au hasard parmi 32 cartes identiques (4 rois). P(tirer un roi) ? (forme a/b)", a:"1/8", e:"4 cas favorables sur 32 : 4/32 = 1/8." },
+        { d:4, q:"On lance deux pièces équilibrées. P(obtenir exactement un Face) ?", c:["1/2","1/4","2/3","1/3"], a:0, e:"Issues : PP, PF, FP, FF — toutes équiprobables. Exactement un Face : PF et FP → 2/4 = 1/2." },
+        { d:4, q:"Un événement a une probabilité de 0. Il est...", c:["impossible","certain","peu probable mais possible","élémentaire"], a:0, e:"Probabilité 0 : l'événement ne peut pas se produire (pour des issues équiprobables finies)." }
+      ],
+      gen: {
+        1: () => { const k = 1 + Math.floor(Math.random()*6);
+          return { q:`Un dé équilibré à 6 faces est lancé. P(obtenir exactement la face ${k}) ? (forme a/b)`, a:"1/6", e:`Un seul cas favorable (la face ${k}) sur 6 issues équiprobables : 1/6.` }; },
+        2: () => { const r = 2 + Math.floor(Math.random()*8), b = 2 + Math.floor(Math.random()*8), t = r + b, g = (a, c) => c ? g(c, a % c) : a, d = g(r, t);
+          return { q:`Un sac contient ${r} billes rouges et ${b} billes bleues identiques au toucher. P(tirer une rouge) ? (forme a/b, simplifiée)`, a:`${r/d}/${t/d}`, e:`${r} rouges sur ${t} billes : P = ${r}/${t} = ${r/d}/${t/d}.` }; }
+      }
     }
-
   ]
 };

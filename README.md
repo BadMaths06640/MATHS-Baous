@@ -8,7 +8,7 @@ L'application est publiée ici (GitHub Pages) : **[https://badmaths06640.github.
 
 Parcours de l'élève :
 1. **Choix du niveau de classe** (5e, 4e, 3e).
-2. **Choix du thème** (30 thèmes conformes au programme, présentés **dans l'ordre de la progression annuelle** : chaque carte indique les chapitres correspondants).
+2. **Choix du thème** (36 thèmes conformes au programme, présentés **dans l'ordre de la progression annuelle** : chaque carte indique les chapitres correspondants).
 3. **Auto-évaluation du niveau de maîtrise** (4 échelons, vocabulaire du socle commun : maîtrise fragile → très bonne maîtrise).
 4. **Résumé de cours** : chaque thème s'ouvre sur des cartes visuelles rappelant les formules et règles révisées.
 5. **Série de 10 questions** avec correction immédiate et explication pédagogique après chaque réponse.
@@ -38,9 +38,9 @@ index.html    interface (3 étapes : niveau → thème → maîtrise)
 style.css     design responsive (mobile/tablette/ordinateur)
 app.js        moteur : navigation, adaptativité, correction, stockage local
 data.js       agrégation des niveaux
-data5e.js     banque de questions 5e (8 thèmes)
-data4e.js     banque de questions 4e (8 thèmes)
-data3e.js     banque de questions 3e (9 thèmes)
+data5e.js     banque de questions 5e (10 thèmes)
+data4e.js     banque de questions 4e (12 thèmes)
+data3e.js     banque de questions 3e (14 thèmes)
 aide5e.js     résumés de cours + aides par question (5e)
 aide4e.js     résumés de cours + aides par question (4e)
 aide3e.js     résumés de cours + aides par question (3e)
@@ -51,10 +51,10 @@ Technologies : HTML/CSS/JavaScript natif — **zéro dépendance externe** (aucu
 
 ## 📚 Contenu pédagogique — aligné sur la progression annuelle
 
-Les thèmes sont **rangés dans l'ordre de l'année** et affichent les chapitres du programme correspondants (PDF de progression présents dans le dépôt). L'élève révise donc toujours ce qu'il vient de voir en classe.
+Les thèmes sont **rangés dans l'ordre de l'année** et affichent les chapitres du programme correspondants (PDF de cours complets 5e/4e/3e présents dans le dépôt). L'élève révise donc toujours ce qu'il vient de voir en classe.
 
 | Niveau | Thèmes → chapitres de la progression |
 |---|---|
-| 5e | Priorités opératoires (ch. 1) · Symétrie, angles et quadrilatères (ch. 2, 6, 8, 12, 18) · Calcul littéral (ch. 3, 9, 19) · Relatifs (ch. 5, 13) · Fractions : comparer, additionner, soustraire (ch. 7, 16) · Proportionnalité et pourcentages (ch. 11, 17) · Statistiques (ch. 14) · Périmètres, aires et volumes (ch. 15, 20) |
-| 4e | Pourcentages, vitesses, échelles (ch. 1, 18) · Pythagore (ch. 2, 13) · Solides et volumes (ch. 4) · Fractions, les 4 opérations (ch. 6, 10) · Calcul littéral et équations (ch. 8, 14) · Cosinus (ch. 11) · Puissances (ch. 12) · Statistiques et probabilités (ch. 15, 17) |
-| 3e | Fractions et nombres relatifs (ch. 1) · Puissances et notation scientifique (ch. 2) · Racines carrées (ch. 3 — outils Thalès/Pythagore) · Thalès et agrandissements (ch. 3, 6, 19) · Équations et problèmes (ch. 4, 15) · Fonctions (ch. 5, 7, 12) · Fonctions linéaires et affines (ch. 7, 12) · Arithmétique : multiples et diviseurs (ch. 8) · Identités remarquables et factorisation (ch. 9, 15) · Statistiques : médiane et quartiles (ch. 10) · Rotation (ch. 11) · Trigonométrie (ch. 13, 16) · Sphères, cônes, pyramides (ch. 14, 17) · Probabilités (ch. 18) |
+| 5e | Priorités opératoires (ch. 1) · Symétrie, triangles et angles (ch. 2, 6, 8, 10) · Fractions (ch. 3, 5) · Arithmétique : diviseurs et nombres premiers (ch. 4) · Proportionnalité et pourcentages (ch. 7) · Nombres relatifs (ch. 9) · Statistiques : effectifs, moyenne, médiane (ch. 11) · Calcul littéral : distributivité (ch. 12) · Périmètres, aires et volumes (ch. 13) · Probabilités (ch. 14) |
+| 4e | Pourcentages, vitesses, échelles (ch. 1) · Pythagore et racine carrée (ch. 2, 15) · Relatifs : multiplication, division, repérage (ch. 3) · Pyramide, cône et sections (ch. 4) · Divisibilité et nombres premiers (ch. 5) · Fractions (ch. 6, 10) · Translation (ch. 7) · Calcul littéral et équations (ch. 8, 13) · Thalès et triangles égaux (ch. 9) · Cosinus (ch. 11) · Puissances et puissances de 10 (ch. 12, 17) · Statistiques et probabilités (ch. 14, 16) |
+| 3e | Racines carrées (outil) · Fractions et nombres relatifs (ch. 1) · Thalès, réciproque et homothétie (ch. 2, 6, 19) · Équations et problèmes (ch. 3, 15) · Puissances (ch. 4) · Fonctions (ch. 5) · Fonctions linéaires et affines (ch. 7, 12) · Arithmétique : multiples et diviseurs (ch. 8) · Identités remarquables et factorisation (ch. 9, 15) · Statistiques : médiane et quartiles (ch. 10) · Rotation (ch. 11) · Trigonométrie (ch. 13, 16) · Sphères, sections et repérage (ch. 14, 17) · Probabilités (ch. 18) |
