@@ -10,9 +10,11 @@ Parcours de l'élève :
 1. **Choix du niveau de classe** (5e, 4e, 3e).
 2. **Choix du thème** (25 thèmes conformes au programme : nombres et calculs, données et probabilités, grandeurs et mesures, espace et géométrie).
 3. **Auto-évaluation du niveau de maîtrise** (4 échelons, vocabulaire du socle commun : maîtrise fragile → très bonne maîtrise).
-4. **Série de 10 questions** avec correction immédiate et explication pédagogique après chaque réponse.
-5. **Adaptativité** : 3 bonnes réponses de suite → le niveau monte ; 2 erreurs de suite → il redescend. Les générateurs produisent des variantes infinies de questions calculatoires.
-6. **Bilan** avec étoiles (0 à 3) et niveau de maîtrise estimé, sauvegardé par thème.
+4. **Résumé de cours** : chaque thème s'ouvre sur des cartes visuelles rappelant les formules et règles révisées.
+5. **Série de 10 questions** avec correction immédiate et explication pédagogique après chaque réponse.
+6. **Aide à la demande** : un bouton « 💡 Aide » présent sur CHAQUE question donne une astuce ET un exemple similaire, cliquable et dépliable autant de fois que voulu.
+7. **Adaptativité** : 3 bonnes réponses de suite → le niveau monte ; 2 erreurs de suite → il redescend. Les générateurs produisent des variantes infinies de questions calculatoires (avec leur propre aide).
+8. **Bilan** avec étoiles (0 à 3) et niveau de maîtrise estimé, sauvegardé par thème.
 
 Aucun compte, aucune connexion : l'élève clique et travaille.
 
@@ -39,6 +41,10 @@ data.js       agrégation des niveaux
 data5e.js     banque de questions 5e (8 thèmes)
 data4e.js     banque de questions 4e (8 thèmes)
 data3e.js     banque de questions 3e (9 thèmes)
+aide5e.js     résumés de cours + aides par question (5e)
+aide4e.js     résumés de cours + aides par question (4e)
+aide3e.js     résumés de cours + aides par question (3e)
+aides.js      fusion des aides dans les banques
 ```
 
 Technologies : HTML/CSS/JavaScript natif — **zéro dépendance externe** (aucun CDN, aucune police distante), indispensable à la conformité RGPD.

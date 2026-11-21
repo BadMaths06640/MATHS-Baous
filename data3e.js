@@ -35,7 +35,7 @@ window.BANK_3E = {
         { d:1, q:"Factoriser : x² + 7x (= x × ... + × ...)", c:["x(x + 7)","7(x + x)","x(x + 1)","x²(x + 7)"], a:0, e:"Facteur commun x : x² + 7x = x × x + x × 7 = x(x + 7)." },
         { d:1, q:"Développer : (x + 3)²", c:["x² + 9","x² + 6x + 9","x² + 3x + 9","x² + 6x + 6"], a:1, e:"(a + b)² = a² + 2ab + b² ici : x² + 2 × 3 × x + 9 = x² + 6x + 9." },
         { d:1, q:"Développer : (x − 1)(x + 1)", c:["x² − 1","x² + 1","x² − 2x + 1","x² + 2x"], a:0, e:"(a + b)(a − b) = a² − b² : x² − 1." },
-        { d:2, q:"Factoriser : x² − 16", c:["(x − 4)(x + 4)","(x − 4)²","(x − 8)(x + 2)","x² − 4² ne se factorse pas"], a:0, e:"Différence de deux carrés : x² − 4² = (x − 4)(x + 4)." },
+        { d:2, q:"Factoriser : x² − 16", c:["(x − 4)(x + 4)","(x − 4)²","(x − 8)(x + 2)","x² − 4² n'est pas factorisable ici"], a:0, e:"Différence de deux carrés : x² − 4² = (x − 4)(x + 4)." },
         { d:2, q:"Développer : (2x + 1)²", c:["4x² + 1","4x² + 4x + 1","4x² + 2x + 1","2x² + 4x + 1"], a:1, e:"(2x)² + 2 × 2x × 1 + 1² = 4x² + 4x + 1." },
         { d:2, q:"Factoriser : 5x + 10", a:"5(x+2)", e:"Le facteur commun est 5 : 5x + 10 = 5(x + 2)." },
         { d:3, q:"Factoriser : x² − 10x + 25", c:["(x − 5)²","(x + 5)²","(x − 5)(x + 5)","x (x − 10) + 25 ne se factorise pas"], a:0, e:"a² − 2ab + b² = (a − b)² ici : x² − 10x + 25 = (x − 5)²." },
@@ -65,7 +65,7 @@ window.BANK_3E = {
         { d:2, q:"f(x) = x + 5. Un antécédent de −1 est...", a:"-6", e:"x + 5 = −1 → x = −6." },
         { d:3, q:"f(x) = 5 − 2x. Quelle est l'image de 7 ?", a:"-9", e:"f(7) = 5 − 14 = −9." },
         { d:3, q:"f(x) = x² − 3. Les antécédents de 6 sont...", c:["−3 et 3","3 seulement","6 et −6","9"], a:0, e:"x² − 3 = 6 → x² = 9 → x = 3 ou x = −3." },
-        { d:3, q:"Sur une courbe, l'image de 2 se lit...", c:["la hauteur du point d'abscisse 2","la largeur... l'abscisse du point d'ordonnée 2","l'axe des abscisses","toujours 2"], a:0, e:"On lit : abscisse 2 → on monte sur la courbe → on lit l'ordonnée, qui est l'image." },
+        { d:3, q:"Sur une courbe, l'image de 2 se lit...", c:["la hauteur du point d'abscisse 2","l'abscisse du point d'ordonnée 2","l'axe des abscisses","toujours 2"], a:0, e:"On lit : abscisse 2 → on monte sur la courbe → on lit l'ordonnée, qui est l'image." },
         { d:4, q:"f(x) = (x + 1)². Quelle est l'image de −4 ?", a:"9", e:"f(−4) = (−4 + 1)² = (−3)² = 9." },
         { d:4, q:"g(x) = 2x + 1. Que vaut g(g(2)) ?", a:"11", e:"g(2) = 5 ; puis g(5) = 2 × 5 + 1 = 11." },
         { d:4, q:"g(x) = 3x. Un antécédent de 15 est...", a:"5", e:"Il faut résoudre 3x = 15 → x = 5. (Pour une fonction affine 3x − 4, un antécédent de y est (y + 4)/3 : tout nombre de l'image a un antécédent.)" }
@@ -120,19 +120,19 @@ window.BANK_3E = {
         { d:3, q:"Un fil de 8 m part du sol et touche un arbre en formant un angle de 35° avec le sol. À quelle hauteur le fil touche-t-il l'arbre (dixième) ?", a:"4.6", e:"Hauteur = 8 × sin(35°) ≈ 8 × 0,574 ≈ 4,6 m." },
         { d:3, q:"Triangle rectangle : hypoténuse = 5, angle â = 37°. Côté opposé (dixième) ?", a:"3", e:"opposé = 5 × sin(37°) ≈ 5 × 0,602 ≈ 3,0." },
         { d:3, q:"Triangle rectangle : opposé = 5, adjacent = 2. tan(â) = ?", c:["0,4","2,5","1,15","0,36"], a:1, e:"5 ÷ 2 = 2,5." },
-        { d:4, q:"Une rampe « sans pente »... Une rampe inclinée de 5 m de long monte à 1,2 m de haut. L'angle avec le sol est d'environ (degrés entiers) :", a:"14", e:"sin(â) = 1,2/5 = 0,24 → â ≈ 14°." },
+        { d:4, q:"Une rampe de 5 m de long monte à 1,2 m de haut. L'angle entre la rampe et le sol est d'environ combien de degrés ?", a:"14", e:"sin(â) = 1,2/5 = 0,24 → â ≈ 14°." },
         { d:4, q:"Compléter : cos²(â) + sin²(â) = ...", a:"1", e:"C'est une identité fondamentale : cos² + sin² = 1 pour tout angle â." },
         { d:4, q:"Un mât de 6 m est retenu par un câble fixé à 2 m du pied du mât et au sommet. L'angle du câble avec le sol est d'environ (degré) : ...°", a:"72", e:"Hypoténuse = √(6² + 2²) = √40 ≈ 6,32 m. sin(â) = 6/6,32 ≈ 0,95 → â ≈ 72°." }
       ]
     },
     {
       id: "stats3", titre: "Statistiques : médiane et quartiles", icone: "📊",
-      notion: "Médiane : valeur qui partage la série ordonnée en deux moitiés égales (les effectifs pairs de la planète...  la moitié en dessous, la moitié au-dessus).\nQuartiles : Q1 (au moins 25 % en dessous), Q3 (au moins 75 % en dessous).\nMédiane ≠ moyenne ! Quatre notes très basses ne changent pas forcément la médiane.",
+      notion: "Médiane : valeur qui partage la série ordonnée en deux moitiés égales : la moitié des valeurs en dessous, la moitié au-dessus.\nQuartiles : Q1 (au moins 25 % en dessous), Q3 (au moins 75 % en dessous).\nMédiane ≠ moyenne ! Quatre notes très basses ne changent pas forcément la médiane.",
       qs: [
         { d:1, q:"Série ordonnée : 2 ; 5 ; 8 ; 10 ; 20. Médiane ?", c:["8","10","9","5"], a:0, e:"5 valeurs : la médiane est la 3e valeur (celle du milieu) : 8." },
         { d:1, q:"9 ; 12 ; 14 la médiane vaut...", a:"12", e:"3 valeurs : la valeur du milieu est 12." },
         { d:1, q:"Série : 19 ; 8 ; 12 ; 24 ; 15. Étendue ?", a:"16", e:"On trie : 8 ; 12 ; 15 ; 19 ; 24. Étendue = max − min = 24 − 8 = 16." },
-        { d:2, q:"Série ordonnée : 3 ; 5 ; 7 ; 9 ; 11 ; 13. Médiane ?", c:["7","8","10","9"], a:1, e:"Effectif pair : médiane = (7 + 9)/2 = 8 (half-way entre les 2 valeurs centrales)." },
+        { d:2, q:"Série ordonnée : 3 ; 5 ; 7 ; 9 ; 11 ; 13. Médiane ?", c:["7","8","10","9"], a:1, e:"Effectif pair : médiane = (7 + 9)/2 = 8 (la moyenne des 2 valeurs centrales)." },
         { d:2, q:"Série : 1 ; 2 ; 3 ; 4 ; 100. Quelle valeur est la plus influencée par la valeur extrême, la moyenne ou la médiane ?", c:["La moyenne","La médiane","Aucune des deux","Les deux autant l'une que l'autre"], a:0, e:"Moyenne = 110 ÷ 5 = 22 (tronquée par le 100) ; médiane = 3 (quasi inchangée)." },
         { d:2, q:"Notes de 7 élèves dans l'ordre : 6;8;9;10;12;13;18. La médiane est :", a:"10", e:"7 valeurs : la 4e de la liste ordonnée est la médiane : 10." },
         { d:3, q:"Série ordonnée : 2 ; 4 ; 6 ; 8 ; 10 ; 12 ; 14. Q1 ?", c:["4","6","8","3"], a:0, e:"Q1 = 2e valeur ? Le quart de 7 est 1,75 → Q1 est la 2e petite valeur : 4 (au moins 25 % des valeurs ≤ Q1)." },
@@ -161,7 +161,7 @@ window.BANK_3E = {
       ],
       gen: {
         2: () => { const n = 2 + Math.floor(Math.random()*4);
-          return { q:`Probabilité (en %, arrondie) d'obtenir un nombre ≤ ${n} avec un dé à 6 faces ?`, a:String(Math.round(n/6*100)), e:`${n} cas favorables sur 6 → 6/${n}... soit ${n}/6 ≈ ${(n/6*100).toFixed(0)} % de chances.` }; }
+          return { q:`Probabilité (en %, arrondie) d'obtenir un nombre ≤ ${n} avec un dé à 6 faces ?`, a:String(Math.round(n/6*100)), e:`${n} cas favorables sur 6 → ${n}/6 ≈ ${(n/6*100).toFixed(0)} % de chances.` }; }
       }
     },
     {
@@ -178,7 +178,7 @@ window.BANK_3E = {
         { d:3, q:"Pyramide : base rectangle 8 × 5 cm, hauteur 6 cm. Volume ?", a:"80", e:"Base : 40 cm² ; V = (1/3) × 40 × 6 = 80 cm³." },
         { d:3, q:"Une boule est réduite à l'échelle 1/2 : son volume est multiplié par...", c:["1/8","c'est une réduction donc rien ne change","1/4","1/2"], a:0, e:"Volume × k³ = (1/2)³ = 1/8." },
         { d:4, q:"Un cône a V = 100 cm³ pour h = 5 cm. Aire de sa base (entier) ?", a:"60", e:"(1/3) × B × 5 = 100 → B = 100 × 3 ÷ 5 = 60 cm²." },
-        { d:4, q:"Comparons : une boule de rayon 2 et une boule de rayon 4. Le rapport des volumes est...", c:["1/8","c'est une réduction... une boule de rayon 4 a un volume 8 fois plus grand","1/4","2"], a:1, e:"Volumes proportionnels au cube du rayon : (4/2)³ = 8." },
+        { d:4, q:"Comparons : une boule de rayon 2 et une boule de rayon 4. Le rapport des volumes est...", c:["1/8","8 fois plus grand","1/4","2"], a:1, e:"Volumes proportionnels au cube du rayon : (4/2)³ = 8." },
         { d:4, q:"Pyramide : V = 60 cm³ ; base : triangle de 6 cm de base. Quelle hauteur (entier) si l'autre côté de la base est 5 cm ?", a:"6", e:"Base : (6×5)/2 = 15 cm² ; (1/3) × 15 × h = 60 → 15h = 180 → h = 6 cm." }
       ]
     }

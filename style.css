@@ -242,3 +242,26 @@ main { flex: 1; width: 100%; max-width: 900px; margin: 0 auto; padding: 1.5rem 1
   .quiz-card { padding: 1.1rem; }
   .question { font-size: 1.05rem; }
 }
+
+/* ---- résumé de cours visuel ---- */
+.resume-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .7rem; margin: 1rem 0; }
+.resume-card {
+  background: var(--bg2); border: 1px solid #2c3760; border-radius: 14px;
+  padding: .9rem 1rem; display: flex; flex-direction: column; gap: .45rem;
+}
+.resume-card .res-t { font-size: .82rem; font-weight: 700; color: var(--accent2); text-transform: uppercase; letter-spacing: .5px; }
+.resume-card .res-f {
+  font-family: "Cascadia Code", Consolas, Menlo, monospace; font-size: 1.02rem; font-weight: 700;
+  color: #ffe9a8; background: #10152b; border: 1px solid #2c3760; border-radius: 10px;
+  padding: .5rem .6rem; white-space: pre-wrap; line-height: 1.45;
+}
+.resume-card .res-d { font-size: .84rem; color: var(--ink-dim); line-height: 1.45; }
+
+/* ---- aide de question ---- */
+.hint-toggle { margin-bottom: .8rem; }
+.hint-zone {
+  margin-bottom: 1rem; padding: .85rem 1rem; border-radius: 12px;
+  background: #232a17; border: 1px solid #6a7a2a; font-size: .92rem; line-height: 1.55;
+  white-space: pre-line; animation: fadein .2s ease;
+}
+.hint-zone b.hint-label { color: #d8e26a; }

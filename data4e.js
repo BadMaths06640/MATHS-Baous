@@ -148,7 +148,7 @@ window.BANK_4E = {
         { d:3, q:"Volume d'un cylindre de rayon 3 cm et hauteur 7 cm : formule et valeur (π ≈ 3,14, dixièmes) ?", a:"197.8", e:"V = π × 9 × 7 = 63π ≈ 197,82 → 197,8 cm³." },
         { d:3, q:"Un cylindre a un volume de 100 cm³ et une hauteur de 4 cm. Aire de sa base ?", a:"25", e:"Base = V ÷ h = 100 ÷ 4 = 25 cm²." },
         { d:4, q:"Une citerne cylindrique : rayon 1 m, hauteur 2 m. Capacité en L (π ≈ 3,14) ?", a:"6280", e:"V = π × 1² × 2 ≈ 6,28 m³ = 6 280 L." },
-        { d:4, q:"Un pavé de 10 cm × 8 cm × 6 cm peut-il tenir dans une boîte cylindrique de rayon 5 cm et hauteur 12 cm ?", c:["Non","Oui","Impossible à savoir","Seulement si l'orientation change"], a:0, e:"Il faut que la diagonale de la base (10 × 8) tienne dans le disque : √(10² + 8²) ≈ 12,8 cm > 10 cm de diamètre → impossible (et la diagonal du pavé ≈ 14,7 cm > 12 cm de hauteur)." },
+        { d:4, q:"Un pavé de 10 cm × 8 cm × 6 cm peut-il tenir dans une boîte cylindrique de rayon 5 cm et hauteur 12 cm ?", c:["Non","Oui","Impossible à savoir","Seulement si l'orientation change"], a:0, e:"Il faut que la diagonale de la base (10 × 8) tienne dans le disque : √(10² + 8²) ≈ 12,8 cm > 10 cm de diamètre → impossible (et la diagonale du pavé ≈ 14,7 cm > 12 cm de hauteur)." },
         { d:4, q:"On verse 500 cm³ d'eau dans un cylindre de rayon 5 cm. Hauteur de l'eau (π ≈ 3,14, dixième) ?", a:"6.4", e:"h = V ÷ (πr²) = 500 ÷ 78,5 ≈ 6,37 → ≈ 6,4 cm." }
       ]
     },
