@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BaouMaths — Révisions de mathématiques 5e · 4e · 3e</title>
+<meta name="description" content="Application de révision progressive et adaptative en mathématiques pour le cycle 4 (5e, 4e, 3e). Aucune donnée personnelle collectée.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="brand" id="btn-home" aria-label="Retour à l'accueil">
+    <span class="brand-logo">∑</span>
+    <span class="brand-name">BaouMaths</span>
+  </button>
+  <div class="topbar-right">
+    <button class="btn-ghost" id="btn-progress" title="Mon tableau de bord">📊 Progrès</button>
+    <button class="btn-ghost" id="btn-about" title="À propos et données">ℹ️ RGPD</button>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- ÉTAPE 1 : choix du niveau -->
+  <section class="view" id="view-level">
+    <div class="hero">
+      <h1>Prêts à progresser en maths&nbsp;?</h1>
+      <p class="hero-sub">Choisis ton niveau, un thème, et entraîne-toi à ton rythme. L'appli s'adapte à toi.</p>
+    </div>
+    <div class="level-grid" id="level-grid" role="list">
+      <button class="level-card level-5e" data-niveau="5e" role="listitem">
+        <span class="level-badge">5<sup>e</sup></span>
+        <span class="level-title">Cinquième</span>
+        <span class="level-sub" id="sub-5e"></span>
+      </button>
+      <button class="level-card level-4e" data-niveau="4e" role="listitem">
+        <span class="level-badge">4<sup>e</sup></span>
+        <span class="level-title">Quatrième</span>
+        <span class="level-sub" id="sub-4e"></span>
+      </button>
+      <button class="level-card level-3e" data-niveau="3e" role="listitem">
+        <span class="level-badge">3<sup>e</sup></span>
+        <span class="level-title">Troisième</span>
+        <span class="level-sub" id="sub-3e"></span>
+      </button>
+    </div>
+    <div class="home-notice">
+      🔒 Aucun compte, aucun cookie, aucune donnée collectée. Ta progression reste sur ton appareil.
+      <a href="#" data-open-about>En savoir plus</a>
+    </div>
+  </section>
+
+  <!-- ÉTAPE 2 : choix du thème -->
+  <section class="view hidden" id="view-themes">
+    <button class="btn-back" id="btn-back-level">← Changer de niveau</button>
+    <h2 id="themes-title" class="section-title"></h2>
+    <p class="hint">Commence par le thème que tu veux travailler. Ton niveau de maîtrise est affiché en étoiles.</p>
+    <div class="themes-list" id="themes-list"></div>
+  </section>
+
+  <!-- ÉTAPE 3 : réglage du niveau de maîtrise -->
+  <section class="view hidden" id="view-setup">
+    <button class="btn-back" id="btn-back-themes">← Choisir un autre thème</button>
+    <div class="setup-card" id="setup-card"></div>
+  </section>
+
+  <!-- ÉTAPE 4 : session de questions -->
+  <section class="view hidden" id="view-quiz">
+    <div class="quiz-head">
+      <div class="quiz-title" id="quiz-title"></div>
+      <div class="quiz-meta">
+        <span id="quiz-counter">Question 1 / 10</span>
+        <span id="quiz-diff" class="diff-pill"></span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="quiz-progress"></div></div>
+    </div>
+    <div class="quiz-card">
+      <div class="question" id="question-text"></div>
+      <div id="answer-zone"></div>
+      <div class="feedback hidden" id="feedback"></div>
+      <div class="quiz-actions" id="quiz-actions"></div>
+    </div>
+  </section>
+
+  <!-- FIN de session -->
+  <section class="view hidden" id="view-result">
+    <div class="result-card">
+      <div class="result-stars" id="result-stars"></div>
+      <h2 id="result-title"></h2>
+      <p id="result-sub"></p>
+      <div class="result-stats" id="result-stats"></div>
+      <div class="result-actions">
+        <button class="btn primary" id="btn-again">🔁 Nouvelle série</button>
+        <button class="btn" id="btn-other-theme">📚 Autre thème</button>
+        <button class="btn" id="btn-home-2">🏠 Accueil</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tableau de bord -->
+  <section class="view hidden" id="view-progress">
+    <button class="btn-back" id="btn-back-progress">← Retour</button>
+    <h2 class="section-title">📊 Mon tableau de bord</h2>
+    <p class="hint">Stocké uniquement sur cet appareil. Tu peux exporter un <em>code de progression</em> pour retrouver tes résultats sur un autre appareil — le code ne contient que tes étoiles et niveaux, aucune donnée personnelle.</p>
+    <div id="progress-content"></div>
+    <div class="progress-tools">
+      <button class="btn" id="btn-export">📤 Obtenir mon code de progression</button>
+      <button class="btn" id="btn-import">📥 Coller un code</button>
+      <button class="btn danger" id="btn-wipe">🗑️ Effacer toutes mes données</button>
+    </div>
+    <textarea id="io-zone" class="hidden" placeholder="Colle ici ton code de progression puis clique sur « Enregistrer », ou clique sur « Obtenir » pour afficher le tien."></textarea>
+    <button class="btn primary hidden" id="btn-io-save">💾 Enregistrer ce code</button>
+  </section>
+
+  <!-- À propos / RGPD -->
+  <section class="view hidden" id="view-about">
+    <button class="btn-back" id="btn-back-about">← Retour</button>
+    <h2 class="section-title">ℹ️ À propos &amp; protection de tes données</h2>
+    <div class="about-card">
+      <h3>🔒 Ce que cette application ne fait PAS</h3>
+      <ul>
+        <li>Aucun compte, aucune connexion, aucune adresse e-mail.</li>
+        <li>Aucun cookie, aucun traceur, aucune publicité, aucune mesure d'audience.</li>
+        <li>Aucune donnée n'est envoyée sur Internet : l'application fonctionne entièrement dans ton navigateur.</li>
+        <li>Aucune donnée personnelle n'est collectée, conformément au RGPD.</li>
+      </ul>
+      <h3>💾 Ce qui est enregistré (et où)</h3>
+      <p>Seulement tes résultats par thème (nombre d'étoiles, niveau de maîtrise, nombre de questions réussies) dans le <em>stockage local</em> de ton navigateur, pour afficher ta progression. Ce stockage n'est lisible que par cette application, sur cet appareil.</p>
+      <p>Le « code de progression » que tu peux exporter est un simple texte chiffrant tes étoiles et niveaux : il ne contient ni nom, ni e-mail, ni autre donnée.</p>
+      <h3>🧹 Ton droit à l'effacement</h3>
+      <p>Le bouton « Effacer toutes mes données » du tableau de bord supprime immédiatement et définitivement tout ce qui est stocké localement.</p>
+      <h3>📖 Le programme</h3>
+      <p>Les thèmes et contenus suivent les programmes de mathématiques du cycle 4 en vigueur (arrêté du 17 janvier 2020, repères de progression 5e – 4e – 3e) : nombres et calculs, organisation de données, grandeurs et mesures, espace et géométrie.</p>
+      <h3>ℹ️ Informations</h3>
+      <p>Responsable du site : l'utilisateur qui héberge cette page. Application sans serveur : la page est servie statiquement par GitHub Pages et aucun appel réseau n'a lieu après le chargement.</p>
+      <p>Contact : utilisez le canal de contact du dépôt GitHub hébergeant cette page pour toute demande relative aux données.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  BaouMaths — révisions de mathématiques 5<sup>e</sup>·4<sup>e</sup>·3<sup>e</sup> · 100 % local, 0 donnée personnelle
+</footer>
+
+<script src="data5e.js"></script>
+<script src="data4e.js"></script>
+<script src="data3e.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
