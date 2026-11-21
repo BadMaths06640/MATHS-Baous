@@ -3,7 +3,7 @@ const fs = require("fs"), vm = require("vm");
 const ctx = { window: {} };
 vm.createContext(ctx);
 for (const f of ["data5e.js", "data4e.js", "data3e.js", "data.js"]) {
-  vm.runInContext(fs.readFileSync(`/workspace/MATHS-Baous/${f}`, "utf8"), ctx, { filename: f });
+  vm.runInContext(fs.readFileSync(`${__dirname}/../${f}`, "utf8"), ctx, { filename: f });
 }
 const BANKS = ctx.window.BANKS;
 const NIVEAUX = ["5e", "4e", "3e"];

@@ -30,13 +30,13 @@ window.BANK_4E = {
       notion: "Somme : dénominateur commun. Produit : numérateurs × numérateurs, dénominateurs × dénominateurs.\nDiviser par a/b = multiplier par b/a (l'inverse).\nPrendre a/b d'une quantité : multiplier par a/b.",
       qs: [
         { d:1, q:"Calculer : 1/3 + 1/6", c:["2/9","1/2","1/4","2/6"], a:1, e:"1/3 = 2/6, donc 2/6 + 1/6 = 3/6 = 1/2." },
-        { d:1, q:"Calculer : 2/5 × 3/4", c:["6/20 = 3/10","6/9","5/20","2/3"], a:0, e:"2 × 3 = 6 et 5 × 4 = 20 : 6/20 simplifié en 3/10." },
+        { d:1, q:"Calculer : 2/5 × 3/4", c:["3/10","6/9","5/20","2/3"], a:0, e:"2 × 3 = 6 et 5 × 4 = 20 : 6/20 simplifié en 3/10." },
         { d:1, q:"L'inverse de 3/4 est...", c:["4/3","−3/4","1/4","12/3"], a:0, e:"L'inverse de a/b est b/a : 4/3." },
         { d:2, q:"Calculer : 3/4 ÷ 1/2", c:["3/8","3/2","6/8 = 3/4","1/2"], a:1, e:"Diviser par 1/2 = multiplier par 2 : 3/4 × 2 = 6/4 = 3/2." },
         { d:2, q:"Calculer : 5/6 − 1/4", c:["4/2","7/12","4/12","1/6"], a:1, e:"Dénominateur commun 12 : 10/12 − 3/12 = 7/12." },
         { d:2, q:"Les 3/5 d'un terrain de 2 500 m², c'est :", a:"1500", e:"3/5 × 2500 = 7500/5 = 1500 m²." },
         { d:3, q:"Calculer : 2/3 + 5/6 − 1/2", a:"1", e:"Dénominateur 6 : 4/6 + 5/6 − 3/6 = 6/6 = 1." },
-        { d:3, q:"Calculer : (2/3) × (9/4)", c:["18/12 = 3/2","2/12","11/7","3/4"], a:0, e:"2 × 9 = 18, 3 × 4 = 12 → 18/12 = 3/2 (simplifié par 6)." },
+        { d:3, q:"Calculer : (2/3) × (9/4)", c:["3/2","2/12","11/7","3/4"], a:0, e:"2 × 9 = 18, 3 × 4 = 12 → 18/12 = 3/2 (simplifié par 6)." },
         { d:3, q:"Calculer : 4/7 − 1/7 × 2", c:["2/7","6/7","7/7","−6/7"], a:0, e:"Produit d'abord : 1/7 × 2 = 2/7. Puis 4/7 − 2/7 = 2/7." },
         { d:4, q:"Calculer : (1/2 + 1/3) ÷ 5/6", a:"1", e:"Parenthèse : 3/6 + 2/6 = 5/6. Division : 5/6 ÷ 5/6 = 5/6 × 6/5 = 1." },
         { d:4, q:"Calculer : 3/4 ÷ (1/2 + 1/4)", c:["1","3/4","3/8","9/16"], a:0, e:"Parenthèse : 1/2 + 1/4 = 3/4. Division : 3/4 ÷ 3/4 = 1." },
@@ -148,7 +148,7 @@ window.BANK_4E = {
         { d:3, q:"Volume d'un cylindre de rayon 3 cm et hauteur 7 cm : formule et valeur (π ≈ 3,14, dixièmes) ?", a:"197.8", e:"V = π × 9 × 7 = 63π ≈ 197,82 → 197,8 cm³." },
         { d:3, q:"Un cylindre a un volume de 100 cm³ et une hauteur de 4 cm. Aire de sa base ?", a:"25", e:"Base = V ÷ h = 100 ÷ 4 = 25 cm²." },
         { d:4, q:"Une citerne cylindrique : rayon 1 m, hauteur 2 m. Capacité en L (π ≈ 3,14) ?", a:"6280", e:"V = π × 1² × 2 ≈ 6,28 m³ = 6 280 L." },
-        { d:4, q:"Un pavé de 10 cm × 8 cm × 6 cm peut-il tenir dans une boîte cylindrique de rayon 5 cm et hauteur 12 cm ?", c:["Non","Oui","Impossible à savoir","Seulement si l'orientation change"], a:0, e:"Il faut que la diagonale de la base (10 × 8) tienne dans le disque : √(10² + 8²) ≈ 12,8 cm > 10 cm de diamètre → impossible (et la diagonal du pavé ≈ 14,7 cm > 12 cm de hauteur)." },
+        { d:4, q:"Un pavé de 10 cm × 8 cm × 6 cm peut-il tenir dans une boîte cylindrique de rayon 5 cm et hauteur 12 cm ?", c:["Non","Oui","Impossible à savoir","Seulement si l'orientation change"], a:0, e:"Il faut que la diagonale de la base (10 × 8) tienne dans le disque : √(10² + 8²) ≈ 12,8 cm > 10 cm de diamètre → impossible (et la diagonale du pavé ≈ 14,7 cm > 12 cm de hauteur)." },
         { d:4, q:"On verse 500 cm³ d'eau dans un cylindre de rayon 5 cm. Hauteur de l'eau (π ≈ 3,14, dixième) ?", a:"6.4", e:"h = V ÷ (πr²) = 500 ÷ 78,5 ≈ 6,37 → ≈ 6,4 cm." }
       ]
     },

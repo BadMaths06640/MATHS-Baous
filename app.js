@@ -109,7 +109,12 @@ function renderThemes() {
 
 function renderSetup() {
   const t = STATE.theme;
-  let inner = `<h2>${t.icone} ${t.titre}</h2><div class="notion">${t.notion}</div>
+  const blocCours = t.resume && t.resume.length
+    ? `<div class="resume-grid">${t.resume.map((c) =>
+        `<div class="resume-card"><div class="res-t">${c.t}</div>${c.f ? `<div class="res-f">${c.f}</div>` : ""}${c.d ? `<div class="res-d">${c.d}</div>` : ""}</div>`
+      ).join("")}</div>`
+    : `<div class="notion">${t.notion}</div>`;
+  let inner = `<h2>${t.icone} ${t.titre}</h2>${blocCours}
   <p><b>Quel est ton niveau actuel sur ce thème ?</b></p><div class="mastery-grid">`;
   for (let m = 1; m <= 4; m++) {
     const saved = (PROGRESS[STATE.niveau] || {})[t.id];
@@ -145,6 +150,7 @@ function pickQuestion(diff, used) {
   if (!pool.length) return null;
   if (pool.length === 1 && pool[0] === null) {
     const g = t.gen[diff]();
+    if (!g.h && t.genH && t.genH[diff]) g.h = t.genH[diff];
     used.add(g.q);
     return g;
   }
@@ -177,6 +183,21 @@ function nextQuestion() {
   $("question-text").textContent = q.q;
   $("feedback").className = "feedback hidden";
   $("feedback").innerHTML = "";
+  document.querySelectorAll(".hint-toggle").forEach((b) => b.remove());
+  const hz = $("hint-zone");
+  hz.classList.add("hidden"); hz.innerHTML = "";
+  const hintBtn = document.createElement("button");
+  hintBtn.className = "btn-ghost hint-toggle";
+  hintBtn.id = "btn-hint";
+  hintBtn.textContent = "💡 Aide (astuce + exemple)";
+  hintBtn.addEventListener("click", () => {
+    if (!hz.classList.contains("hidden")) { hz.classList.add("hidden"); return; }
+    hz.innerHTML = "<b class=\"hint-label\">💡 Astuce & exemple</b>\n" + (typeof q.h === "string" && q.h.trim()
+      ? q.h
+      : `Revois ces repères du cours : ${STATE.theme.resume ? STATE.theme.resume.map((c) => c.f || c.d).filter(Boolean).join(" · ") : STATE.theme.notion}`);
+    hz.classList.remove("hidden");
+  });
+  $("answer-zone").before(hintBtn);
   const z = $("answer-zone");
   z.innerHTML = "";
   $("quiz-actions").innerHTML = "";
