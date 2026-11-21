@@ -1,4 +1,4 @@
-/* Vérification des résumés de cours, des aides par question et des liens vidéo (36 thèmes) */
+/* Vérification des résumés de cours, des aides par question et des liens vidéo */
 const ALLOWED_HOSTS = ["youtube.com", "youtu.be", "www.youtube.com", "lumni.fr", "www.lumni.fr", "france.tv", "www.france.tv"];
 const fs = require("fs"), vm = require("vm");
 const ctx = { window: {} };
@@ -50,8 +50,9 @@ for (const n of ["5e", "4e", "3e"]) {
     }
   }
 }
-console.log(`Résumés de cours : ${nRes}/36 thèmes (${nResCards} cartes)`);
+const NTH = ["5e", "4e", "3e"].reduce((a, n) => a + BANKS[n].themes.length, 0);
+console.log(`Résumés de cours : ${nRes}/${NTH} thèmes (${nResCards} cartes)`);
 console.log(`Aides par question : ${nH}/${nQs} | aides générées : ${nGenCouv}/${nGenTotal}`);
-console.log(`Vidéos : ${nVid} liens sur les 36 thèmes`);
+console.log(`Vidéos : ${nVid} liens sur les ${NTH} thèmes`);
 if (probs.length) { console.log(`\n⚠ PROBLÈMES (${probs.length}) :`); probs.forEach((p) => console.log(" - " + p)); process.exit(1); }
 console.log("✓ Résumés et aides couvrent tous les thèmes et toutes les questions");
