@@ -3,56 +3,6 @@
    qs     : aide par index de question (« Astuce…\nExemple : … »)
    genH   : aide appliquée aux questions générées, par difficulté 1-4 */
 window.AIDE_3E = {
-fractions3: {
-    resume: [
-      { t: "Règle des signes", f: "(−) × (−) = +\n(−) × (+) = −", d: "Nombre pair de facteurs négatifs → produit positif ; impair → négatif. Même règle pour la division." },
-      { t: "Additionner / soustraire", f: "2/3 − 1/6 = 4/6 − 1/6 = 3/6 = 1/2", d: "Même dénominateur d'abord, puis on opère sur les numérateurs." },
-      { t: "Multiplier / diviser", f: "a/b × c/d = ac/bd\na ÷ (b/c) = a × c/b", d: "Diviser par une fraction : multiplier par son inverse (l'inverse de a/b est b/a)." }
-    ],
-    qs: [
-      "Astuce : compte les facteurs négatifs : impair → produit négatif.\nExemple similaire : 4 facteurs négatifs → positif.",
-      "Astuce : applique la règle des signes, puis multiplie les numérateurs entre eux et les dénominateurs entre eux.\nExemple similaire : (−3/4) × (2/5) = −(3 × 2)/(4 × 5) = −6/20 = −3/10.",
-      "Astuce : dénominateur commun 6.\nExemple similaire : 1/2 − 1/4 = 2/4 − 1/4 = 1/4.",
-      "Astuce : cherche un dénominateur commun : 12 convient pour 4 et 6, puis additionne les numérateurs.\nExemple similaire : 1/4 + 1/6 = 3/12 + 2/12 = 5/12.",
-      "Astuce : diviser par b/c revient à multiplier par son inverse c/b.\nExemple similaire : 5 ÷ (5/3) = 5 × 3/5 = 3.",
-      "Astuce : un quotient de deux nombres négatifs est positif ; diviser par −1/2 revient à multiplier par −2.\nExemple similaire : (−1/2) ÷ (−1/4) = (−1/2) × (−4) = 2.",
-      "Astuce : commence par la somme entre parenthèses avec le dénominateur 6, puis multiplie.\nExemple similaire : (1/2 − 1/6) × 6 : 1/2 − 1/6 = 2/6 = 1/3, puis 1/3 × 6 = 2.",
-      "Astuce : échange numérateur et dénominateur sans changer le signe.\nExemple similaire : l'inverse de −3/5 est −5/3.",
-      "Astuce : simplifie d'abord chaque parenthèse en une fraction, puis multiplie par l'inverse.\nExemple similaire : (1 + 1/2) ÷ (2 − 1/4) = (3/2) ÷ (7/4) = (3/2) × (4/7) = 6/7.",
-      "Astuce : produit en croix.\nExemple similaire : x/4 = 3/8 → x = 4 × 3/8 = 1,5.",
-      "Astuce : les inverses sont 1/2 et 1/4 ; additionne-les avec le dénominateur 4.\nExemple similaire : la somme des inverses de 2 et de 6 : 1/2 + 1/6 = 3/6 + 1/6 = 4/6 = 2/3.",
-      "Astuce : multiplie les deux membres par 5, puis divise par 2.\nExemple similaire : 3x/4 = 9 → 3x = 36 → x = 12."
-    ],
-    genH: {
-      1: "Astuce : les dénominateurs sont déjà égaux : additionne simplement les numérateurs.\nExemple similaire : 3/7 + 2/7 = 5/7.",
-      2: "Astuce : diviser par d revient à multiplier par 1/d : écris tout sur 2d, puis simplifie.\nExemple similaire : 3/2 ÷ 4 = 3/(2 × 4) = 3/8."
-    }
-  },
-  puissances3: {
-    resume: [
-      { t: "Règles de calcul", f: "aᵐ × aⁿ = aᵐ⁺ⁿ\naᵐ ÷ aⁿ = aᵐ⁻ⁿ\n(aᵐ)ⁿ = aᵐ×ⁿ", d: "Même base : on additionne les exposants (produit), on les soustrait (quotient), on les multiplie (puissance de puissance)." },
-      { t: "Puissances remarquables", f: "a⁰ = 1\na⁻ⁿ = 1/aⁿ", d: "Exemple : 10⁻² = 1/(10²) = 0,01. a est non nul." },
-      { t: "Notation scientifique", f: "a × 10ⁿ avec 1 ≤ a < 10", d: "Exemple : 45 000 = 4,5 × 10⁴. L'ordre de grandeur est la puissance de 10 la plus proche." }
-    ],
-    qs: [
-      "Astuce : compte les zéros : exposant 4 → 4 zéros.\nExemple similaire : 10⁵ = 100 000.",
-      "Astuce : tout nombre non nul élevé à la puissance 0 vaut 1.\nExemple similaire : 3⁰ + 4⁰ = 1 + 1 = 2.",
-      "Astuce : même base : additionne les exposants.\nExemple similaire : 2³ × 2⁴ = 2⁷.",
-      "Astuce : puissance de puissance : multiplie les exposants.\nExemple similaire : (2²)³ = 2⁶.",
-      "Astuce : même base : soustrais les exposants.\nExemple similaire : 5⁶ ÷ 5⁴ = 5².",
-      "Astuce : un exposant négatif donne l'inverse : 10⁻ⁿ = 1/10ⁿ.\nExemple similaire : 10⁻³ = 1/1000 = 0,001.",
-      "Astuce : multiplie les coefficients comme nombres, puis additionne les exposants.\nExemple similaire : 2a³ × 5a⁴ = 10a⁷.",
-      "Astuce : un seul chiffre non nul avant la virgule : compte le décalage de la virgule pour trouver l'exposant.\nExemple similaire : 320 000 = 3,2 × 10⁵.",
-      "Astuce : nombre plus petit que 1 : l'exposant est négatif ; décale la virgule jusqu'à un seul chiffre non nul devant.\nExemple similaire : 0,0007 = 7 × 10⁻⁴.",
-      "Astuce : un exposant négatif donne l'inverse : a⁻ⁿ = 1/aⁿ, puis calcule la puissance.\nExemple similaire : 2⁻³ = 1/(2³) = 1/8 = 0,125.",
-      "Astuce : multiplie les deux blocs séparément, puis ramène 12 à 1,2 × 10.\nExemple similaire : (2 × 10²) × (6 × 10⁴) = 12 × 10⁶ = 1,2 × 10⁷.",
-      "Astuce : calcule chaque puissance séparément, puis additionne les trois résultats.\nExemple similaire : 2⁰ + 2¹ + 2² = 1 + 2 + 4 = 7."
-    ],
-    genH: {
-      1: "Astuce : aᵏ veut dire k facteurs égaux à a : multiplie-les tous.\nExemple similaire : 3⁴ = 3 × 3 × 3 × 3 = 81.",
-      2: "Astuce : même base au numérateur et au dénominateur : soustrais les exposants.\nExemple similaire : 7⁵ ÷ 7³ = 7²."
-    }
-  },
   racines: {
     resume: [
       { t: "Définition", f: "(√a)² = a\n√(a²) = a   (a ≥ 0)", d: "√a est le nombre POSITIF dont le carré vaut a : √49 = 7 (jamais −7)." },
@@ -76,6 +26,31 @@ fractions3: {
     genH: {
       2: "Astuce : cherche le plus grand carré parfait qui divise le nombre sous la racine.\nExemple similaire : √27 = √(9 × 3) = 3√3.",
       3: "Astuce : encadre le nombre entre deux carrés parfaits consécutifs.\nExemple similaire : 40 : 36 < 40 < 49 → √40 entre 6 et 7."
+    }
+  },
+fractions3: {
+    resume: [
+      { t: "Règle des signes", f: "(−) × (−) = +\n(−) × (+) = −", d: "Nombre pair de facteurs négatifs → produit positif ; impair → négatif. Même règle pour la division." },
+      { t: "Additionner / soustraire", f: "2/3 − 1/6 = 4/6 − 1/6 = 3/6 = 1/2", d: "Même dénominateur d'abord, puis on opère sur les numérateurs." },
+      { t: "Multiplier / diviser", f: "a/b × c/d = ac/bd\na ÷ (b/c) = a × c/b", d: "Diviser par une fraction : multiplier par son inverse (l'inverse de a/b est b/a)." }
+    ],
+    qs: [
+      "Astuce : compte les facteurs négatifs : impair → produit négatif.\nExemple similaire : 4 facteurs négatifs → positif.",
+      "Astuce : applique la règle des signes, puis multiplie les numérateurs entre eux et les dénominateurs entre eux.\nExemple similaire : (−3/4) × (2/5) = −(3 × 2)/(4 × 5) = −6/20 = −3/10.",
+      "Astuce : dénominateur commun 6.\nExemple similaire : 1/2 − 1/4 = 2/4 − 1/4 = 1/4.",
+      "Astuce : cherche un dénominateur commun : 12 convient pour 4 et 6, puis additionne les numérateurs.\nExemple similaire : 1/4 + 1/6 = 3/12 + 2/12 = 5/12.",
+      "Astuce : diviser par b/c revient à multiplier par son inverse c/b.\nExemple similaire : 5 ÷ (5/3) = 5 × 3/5 = 3.",
+      "Astuce : un quotient de deux nombres négatifs est positif ; diviser par −1/2 revient à multiplier par −2.\nExemple similaire : (−1/2) ÷ (−1/4) = (−1/2) × (−4) = 2.",
+      "Astuce : commence par la somme entre parenthèses avec le dénominateur 6, puis multiplie.\nExemple similaire : (1/2 − 1/6) × 6 : 1/2 − 1/6 = 2/6 = 1/3, puis 1/3 × 6 = 2.",
+      "Astuce : échange numérateur et dénominateur sans changer le signe.\nExemple similaire : l'inverse de −3/5 est −5/3.",
+      "Astuce : simplifie d'abord chaque parenthèse en une fraction, puis multiplie par l'inverse.\nExemple similaire : (1 + 1/2) ÷ (2 − 1/4) = (3/2) ÷ (7/4) = (3/2) × (4/7) = 6/7.",
+      "Astuce : produit en croix.\nExemple similaire : x/4 = 3/8 → x = 4 × 3/8 = 1,5.",
+      "Astuce : les inverses sont 1/2 et 1/4 ; additionne-les avec le dénominateur 4.\nExemple similaire : la somme des inverses de 2 et de 6 : 1/2 + 1/6 = 3/6 + 1/6 = 4/6 = 2/3.",
+      "Astuce : multiplie les deux membres par 5, puis divise par 2.\nExemple similaire : 3x/4 = 9 → 3x = 36 → x = 12."
+    ],
+    genH: {
+      1: "Astuce : les dénominateurs sont déjà égaux : additionne simplement les numérateurs.\nExemple similaire : 3/7 + 2/7 = 5/7.",
+      2: "Astuce : diviser par d revient à multiplier par 1/d : écris tout sur 2d, puis simplifie.\nExemple similaire : 3/2 ÷ 4 = 3/(2 × 4) = 3/8."
     }
   },
   thales: {
@@ -119,6 +94,31 @@ fractions3: {
       "Astuce : c'est le carré qui se « défait » par ± : x − 3 = 5 ou x − 3 = −5.\nExemple similaire : (x + 1)² = 9 → x = 2 ou x = −4.",
       "Astuce : pose x la largeur : 2(x + x + 3) = 24, puis calcule l'aire avec les longueurs trouvées.\nExemple similaire : P = 20 et L = l + 2 → l = 4, L = 6, aire 24."
     ]
+  },
+  puissances3: {
+    resume: [
+      { t: "Règles de calcul", f: "aᵐ × aⁿ = aᵐ⁺ⁿ\naᵐ ÷ aⁿ = aᵐ⁻ⁿ\n(aᵐ)ⁿ = aᵐ×ⁿ", d: "Même base : on additionne les exposants (produit), on les soustrait (quotient), on les multiplie (puissance de puissance)." },
+      { t: "Puissances remarquables", f: "a⁰ = 1\na⁻ⁿ = 1/aⁿ", d: "Exemple : 10⁻² = 1/(10²) = 0,01. a est non nul." },
+      { t: "Notation scientifique", f: "a × 10ⁿ avec 1 ≤ a < 10", d: "Exemple : 45 000 = 4,5 × 10⁴. L'ordre de grandeur est la puissance de 10 la plus proche." }
+    ],
+    qs: [
+      "Astuce : compte les zéros : exposant 4 → 4 zéros.\nExemple similaire : 10⁵ = 100 000.",
+      "Astuce : tout nombre non nul élevé à la puissance 0 vaut 1.\nExemple similaire : 3⁰ + 4⁰ = 1 + 1 = 2.",
+      "Astuce : même base : additionne les exposants.\nExemple similaire : 2³ × 2⁴ = 2⁷.",
+      "Astuce : puissance de puissance : multiplie les exposants.\nExemple similaire : (2²)³ = 2⁶.",
+      "Astuce : même base : soustrais les exposants.\nExemple similaire : 5⁶ ÷ 5⁴ = 5².",
+      "Astuce : un exposant négatif donne l'inverse : 10⁻ⁿ = 1/10ⁿ.\nExemple similaire : 10⁻³ = 1/1000 = 0,001.",
+      "Astuce : multiplie les coefficients comme nombres, puis additionne les exposants.\nExemple similaire : 2a³ × 5a⁴ = 10a⁷.",
+      "Astuce : un seul chiffre non nul avant la virgule : compte le décalage de la virgule pour trouver l'exposant.\nExemple similaire : 320 000 = 3,2 × 10⁵.",
+      "Astuce : nombre plus petit que 1 : l'exposant est négatif ; décale la virgule jusqu'à un seul chiffre non nul devant.\nExemple similaire : 0,0007 = 7 × 10⁻⁴.",
+      "Astuce : un exposant négatif donne l'inverse : a⁻ⁿ = 1/aⁿ, puis calcule la puissance.\nExemple similaire : 2⁻³ = 1/(2³) = 1/8 = 0,125.",
+      "Astuce : multiplie les deux blocs séparément, puis ramène 12 à 1,2 × 10.\nExemple similaire : (2 × 10²) × (6 × 10⁴) = 12 × 10⁶ = 1,2 × 10⁷.",
+      "Astuce : calcule chaque puissance séparément, puis additionne les trois résultats.\nExemple similaire : 2⁰ + 2¹ + 2² = 1 + 2 + 4 = 7."
+    ],
+    genH: {
+      1: "Astuce : aᵏ veut dire k facteurs égaux à a : multiplie-les tous.\nExemple similaire : 3⁴ = 3 × 3 × 3 × 3 = 81.",
+      2: "Astuce : même base au numérateur et au dénominateur : soustrais les exposants.\nExemple similaire : 7⁵ ÷ 7³ = 7²."
+    }
   },
   fonctions: {
     resume: [
@@ -281,6 +281,7 @@ fractions3: {
   },
   sph3: {
     resume: [
+      { t: "Sections et repérage", f: "plan → cercle ; par le centre → grand cercle", d: "Exemple : l'équateur est un grand cercle de la Terre. Dans l'espace, un point du pavé droit se repère par 3 coordonnées ; sur Terre : latitude et longitude." },
       { t: "Sphère (boule)", f: "V = (4/3) × π × r³\nAire = 4 × π × r²", d: "Exemple : r = 3 → V = (4/3) × π × 27 = 36π ≈ 113 cm³. Volume en unités³, aire en unités²." },
       { t: "Cône et pyramide", f: "V = (1/3) × aire de la base × h", d: "Cône : base = π r², donc V = (1/3)πr²h. Pyramide : base = aire de sa face polygonale." },
       { t: "Agrandir / réduire", f: "V × k³", d: "Exemple : réduction k = 1/2 → volume × 1/8. Le volume varie comme le CUBE des longueurs." }
@@ -288,16 +289,21 @@ fractions3: {
     qs: [
       "Astuce : V = (1/3) × base × hauteur, même si la base est petite.\nExemple similaire : base 30 cm², h = 6 → 60 cm³.",
       "Astuce : trois cônes remplissent exactement le cylindre de même base et hauteur.\nExemple similaire : cylindre 90 cm³ → cône correspondant 30 cm³.",
-      "Astuce : c'est une V = (4/3) × π × 3³ = (4/3) × π × 27.\nExemple similaire : r = 1 → V ≈ 4,19 ≈ 4 cm³.",
+      "Astuce : V = (4/3) × π × 3³ = (4/3) × π × 27.\nExemple similaire : r = 1 → V ≈ 4,19 ≈ 4 cm³.",
       "Astuce : V = (1/3) × π × r² × h, avec le RAYON 3.\nExemple similaire : r = 1, h = 6 → 2π ≈ 6,3 cm³.",
       "Astuce : c'est une aire de base d'abord (6 × 6 = 36), puis (1/3) × 36 × 10.\nExemple similaire : base 25, h = 6 → 50.",
-      "Astuce : c'est une résous (4/3)πr³ = 36π → r³ = 27.\nExemple similaire : V = (32/3)π → r³ = 8 → r = 2.",
+      "Astuce : on résout (4/3)πr³ = 36π, donc r³ = 27.\nExemple similaire : V = (32/3)π → r³ = 8 → r = 2.",
       "Astuce : V = (1/3) × π × 2² × 9 = 12π.\nExemple similaire : r = 3, h = 7 → 21π ≈ 65,9 cm³.",
-      "Astuce : c'est une base 8 × 5 = 40, puis (1/3) × 40 × 6.\nExemple similaire : base 30, h = 5 → 50 cm³.",
+      "Astuce : base 8 × 5 = 40, puis (1/3) × 40 × 6.\nExemple similaire : base 30, h = 5 → 50 cm³.",
       "Astuce : les volumes sont multipliés par k³, pas k.\nExemple similaire : rapport 1/3 → volume × 1/27.",
       "Astuce : isole la base : B = 3V ÷ h.\nExemple similaire : V = 90, h = 3 → B = 90.",
       "Astuce : les volumes varient comme le CUBE du rayon.\nExemple similaire : r double → volume × 8.",
-      "Astuce :aire de la base triangulaire : (6 × 5)/2, puis h = 3V ÷ B.\nExemple similaire : V = 30, base 10 → h = 9."
+      "Astuce : aire de la base triangulaire : (6 × 5)/2, puis h = 3V ÷ B.\nExemple similaire : V = 30, base 10 → h = 9.",
+      "Astuce : l'aire d'une sphère est 4 × π × r².\nExemple similaire : r = 1 : aire ≈ 12,6.",
+      "Astuce : aire = 4 × π × 3² = 36 π.\nExemple similaire : r = 1 : 4π ≈ 12,6.",
+      "Astuce : toute coupe plane d'une sphère donne un cercle.\nExemple similaire : une orange coupée montre un bord circulaire.",
+      "Astuce : plan passant par le centre = grand cercle, le plus grand possible.\nExemple similaire : l'équateur est un grand cercle de la Terre.",
+      "Astuce : trois directions à repérer : longueur, largeur, hauteur.\nExemple similaire : le coin d'une pièce : (0 ; 0 ; 0), le coin opposé : (L ; l ; h).",
     ]
   },
   proba3: {

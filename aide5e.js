@@ -30,32 +30,29 @@ window.AIDE_5E = {
       4: "Astuce : parenthèse d'abord (produits avant soustraction), produit par (−1), puis addition.\nExemple similaire : (4² − 4 × 4) × (−1) + 2 × 4 = 0 + 8 = 8."
     }
   },
-  relatifs: {
+  geom5: {
     resume: [
-      { t: "Additionner", f: "(−5) + (−2) = −7\n(−5) + 8 = +3", d: "Même signe : on additionne les valeurs. Signes différents : on soustrait et on garde le signe du plus grand." },
-      { t: "Multiplier / diviser", f: "(−) × (−) = +\n(−) × (+) = −", d: "Nombre pair de facteurs négatifs → positif ; nombre impair → négatif. Même règle pour la division." },
-      { t: "Puissances", f: "(−3)² = 9   mais   −3² = −9", d: "Le carré s'applique au contenu des parenthèses. Puissance paire → positif ; impaire → négatif." }
+      { t: "Angles d'un triangle", f: "angle A + B + C = 180°", d: "La somme des trois angles d'un triangle vaut toujours 180°." },
+      { t: "Symétrie centrale", f: "O = milieu de [MM']", d: "Le symétrique de M par rapport à O s'obtient en prolongeant [MO] d'autant ; longueurs et angles sont conservés." },
+      { t: "Triangles particuliers", f: "2 angles égaux → isocèle\n3 côtés égaux → équilatéral (60°)", d: "Hauteur : du sommet, ⊥ au côté. Médiane : du sommet au milieu. Médiatrice : points à égale distance des extrémités." }
     ],
     qs: [
-      "Astuce : même signe (−) → on ajoute et on garde le −.\nExemple similaire : (−2) + (−6) = −8.",
-      "Astuce : signes différents → on calcule la différence et on garde le signe du plus fort.\nExemple similaire : (−9) + 5 = −4.",
-      "Astuce : soustraire, c'est ajouter l'opposé.\nExemple similaire : 4 − 9 = 4 + (−9) = −5.",
-      "Astuce : deux signes négatifs → produit positif.\nExemple similaire : (−3) × (−6) = 18.",
-      "Astuce : compte les signes − : ici 2, donc le produit est positif.\nExemple similaire : (−5) × 2 × (−3) = 30.",
-      "Astuce : soustraire un négatif = ajouter le positif.\nExemple similaire : (−6) − (−9) = −6 + 9 = 3.",
-      "Astuce : le carré d'abord (positif !), puis le produit.\nExemple similaire : (−4)² × (−1) = 16 × (−1) = −16.",
-      "Astuce : multiplie d'abord, additionne ensuite.\nExemple similaire : −7 + 2 × (−4) = −7 + (−8) = −15.",
-      "Astuce : (−) ÷ (−) = +.\nExemple similaire : (−20) ÷ (−4) + 1 = 5 + 1 = 6.",
-      "Astuce : imagine une droite graduée et part de la température initiale.\nExemple similaire : départ −3, puis +10 puis −5 : −3 + 10 − 5 = +2.",
-      "Astuce : puissance impaire d'un négatif → négatif ; paire → positif. Multiplie ensuite.\nExemple similaire : (−3)³ + 2 × (−1)² = −27 + 2 = −25.",
-      "Astuce : ordre : puissance, produit, puis addition (−(−12) = +12).\nExemple similaire : 7 − (−2) × (−1)² = 7 − (−2) × 1 = 7 + 2 = 9."
-    ],
-    genH: {
-      1: "Astuce : sur la droite graduée, part du premier nombre et avance/recule.\nExemple similaire : (−8) + 5 = −3.",
-      2: "Astuce : signes égaux → produit positif ; signes opposés → négatif.\nExemple similaire : (−6) × 4 = −24.",
-      3: "Astuce : produit d'abord (attention au signe), puis addition.\nExemple similaire : 3 − 2 × (−5) = 3 + 10 = 13.",
-      4: "Astuce : carré d'abord — toujours positif — puis produit et différence.\nExemple similaire : (−3)² − (−3) × 2 = 9 + 6 = 15."
-    }
+      "Astuce : 180° moins la somme des deux angles connus.\nExemple similaire : angles 50° et 60° → 180 − 110 = 70°.",
+      "Astuce : le centre de symétrie est le MILIEU du segment reliant un point et son image.\nExemple similaire : M(2;3), O(5;3) → M'(8;3).",
+      "Astuce : diagonales coupées en leur milieu = propriété de TOUS les parallélogrammes.\nExemple similaire : des diagonales de même longueur → rectangle, pas tous les parallélogrammes.",
+      "Astuce : isocèle → les deux angles à la base sont égaux.\nExemple similaire : base à 70° chacun → sommet = 180 − 140 = 40°.",
+      "Astuce : l'angle droit compte pour 90°.\nExemple similaire : rectangle en A, angle B = 30° → angle C = 60°.",
+      "Astuce : losange = 4 côtés égaux ET diagonales perpendiculaires. Les angles droits sont pour le carré.\nExemple similaire : « diagonales de même longueur » → rectangle.",
+      "Astuce : cherche d'abord le 3e angle.\nExemple similaire : 30° et 75° → 3e = 75° → deux angles égaux → isocèle.",
+      "Astuce : hauteur = du sommet, perpendiculaire au côté opposé.\nExemple similaire : la médiatrice passe elle par le MILIEU, et ⊥ aussi.",
+      "Astuce : trois côtés égaux = équilatéral = trois angles de 60°.\nExemple similaire : côtés 4 ; 4 ; 4 → chaque angle 60°.",
+      "Astuce : une symétrie centrale conserve les longueurs.\nExemple similaire : [AB] = 12 cm → [A'B'] = 12 cm.",
+      "Astuce : médiatrice = points à égale distance des extrémités.\nExemple similaire : si C est sur la médiatrice de [AB], alors CA = CB.",
+      "Astuce : un angle droit dans un parallélogramme → les quatre angles sont droits (rectangle).\nExemple similaire : un losange avec un angle droit serait un carré.",
+      "Astuce : compare le plus grand côté à la somme des deux autres.\nExemple similaire : côtés 4 ; 6 ; 9 : 9 < 10, le triangle existe.",
+      "Astuce : opposés par le sommet = angles en vis-à-vis, toujours égaux.\nExemple similaire : deux angles opposés par le sommet de 37° chacun.",
+      "Astuce : situation en Z (alternes-internes) ou en F (correspondants) avec droites parallèles : angles égaux.\nExemple similaire : un angle de 50° a son alterne-interne à 50° aussi.",
+    ]
   },
   fractions: {
     resume: [
@@ -79,6 +76,31 @@ window.AIDE_5E = {
     ],
     genH: {
       1: "Astuce : divise numérateur et dénominateur par le même nombre.\nExemple similaire : 20/35 = 4/7 (÷5)."
+    }
+  },
+  arithmetique5: {
+    resume: [
+      { t: "Division euclidienne", f: "23 = 5 × 4 + 3", d: "a = b × q + r avec 0 ≤ r < b. Le reste est toujours plus petit que le diviseur." },
+      { t: "Divisibilité", f: "par 3 ou 9 : la somme des chiffres\npar 2 : finit par 0, 2, 4, 6, 8\npar 5 : finit par 0 ou 5", d: "Si le reste est nul, le diviseur divise le nombre (il en est un diviseur, le nombre en est un multiple)." },
+      { t: "Nombres premiers", f: "2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 ; 23 ; 29 ; 31...", d: "Exactement deux diviseurs : 1 et lui-même. 1 n'est pas premier ; 2 est le seul pair." }
+    ],
+    qs: [
+      "Astuce : cherche le multiple de 5 juste en dessous de 23, ce qui manque est le reste.\nExemple similaire : 17 = 5 × 3 + 2 → reste 2.",
+      "Astuce : défile la table de 7.\nExemple similaire : 7 × 6 = 42, donc 42 est un multiple de 7 ; 43 ne l'est pas.",
+      "Astuce : cherche le reste de la division par 4 : s'il n'est pas nul, 4 n'est pas un diviseur.\nExemple similaire : 30 = 4 × 7 + 2 → 4 n'est pas un diviseur de 30.",
+      "Astuce : additionne les chiffres : si la somme est multiple de 3, le nombre aussi.\nExemple similaire : 273 → 2 + 7 + 3 = 12 → divisible par 3.",
+      "Astuce : additionne les chiffres : si la somme est 9, 18, 27..., le nombre est divisible par 9.\nExemple similaire : 729 → 7 + 2 + 9 = 18 → divisible par 9.",
+      "Astuce : tout nombre entier a au moins 1 et lui-même comme diviseurs.\nExemple similaire : 12 a au moins deux diviseurs : 1 et 12.",
+      "Astuce : teste la division par 2, 3, 5, 7... si aucun ne marche, le nombre est premier.\nExemple similaire : 29 n'est divisible ni par 2, ni par 3, ni par 5 → premier.",
+      "Astuce : cherche dans la table une multiplication exacte (reste nul).\nExemple similaire : 7 × 78 = 546 → 546 est divisible par 7,",
+      "Astuce : simplifie par les facteurs communs, autant de fois que possible.\nExemple similaire : 24/36 → par 2 : 12/18 → par 2 : 6/9 → par 3 : 2/3.",
+      "Astuce : divise par 2 une première fois : si le résultat est encore pair, le nombre est divisible par 4.\nExemple similaire : 132 ÷ 2 = 66, pair → 132 est divisible par 4.",
+      "Astuce : isole 11 × z = 362 − 10, puis divise.\nExemple similaire : 100 = 9 × z + 10 → 9 × z = 90 → z = 10.",
+      "Astuce : sauf 2, tous les nombres premiers sont impairs, et le produit de deux impairs est impair.\nExemple similaire : 3 × 5 = 15, impair."
+    ],
+    genH: {
+      1: "Astuce : cherche le multiple du diviseur juste en dessous du nombre, le reste est ce qui manque.\nExemple similaire : 47 = 6 × 7 + 5 → reste 5.",
+      2: "Astuce : additionne les chiffres : si la somme est dans la table de 3, le nombre est divisible par 3.\nExemple similaire : 271 → 2 + 7 + 1 = 10 → non ; 273 → 12 → oui."
     }
   },
   propo: {
@@ -106,6 +128,55 @@ window.AIDE_5E = {
       3: "Astuce : baisse = p × t/100 ; prix soldé = p − baisse.\nExemple similaire : 60 € à −50 % → 30 €."
     }
   },
+  relatifs: {
+    resume: [
+      { t: "Repérage et opposés", f: "A(3 ; −2)\nopposé de 6 : −6", d: "Dans le plan : abscisse (droite/gauche), ordonnée (haut/bas). Deux opposés sont de part et d'autre de 0, à la même distance." },
+      { t: "Comparer", f: "−7 < −2 < 0 < 3", d: "Tout négatif est plus petit que tout positif. Entre deux négatifs, le plus petit est le plus loin de 0." },
+      { t: "Additionner − soustraire", f: "(−5) + 8 = +3\n(−10) − (−4) = −6", d: "Même signe : on ajoute. Signes contraires : on soustrait et on garde le signe du plus loin de 0. Soustraire = ajouter l'opposé." }
+    ],
+    qs: [
+      "Astuce : même signe (−) → on ajoute et on garde le −.\nExemple similaire : (−2) + (−6) = −8.",
+      "Astuce : signes différents → on calcule la différence et on garde le signe du plus loin de 0.\nExemple similaire : (−9) + 5 = −4.",
+      "Astuce : sur la droite graduée, part de 6 et recule de 10 crans.\nExemple similaire : 4 − 9 = −5.",
+      "Astuce : l'opposé est à la même distance de 0, de l'autre côté.\nExemple similaire : l'opposé de −3 est 3.",
+      "Astuce : soustraire un négatif = ajouter le positif.\nExemple similaire : (−6) − (−9) = −6 + 9 = 3.",
+      "Astuce : place les nombres sur une droite graduée, le plus petit est à gauche.\nExemple similaire : entre −5 et −1, le plus petit est −5.",
+      "Astuce : abscisse = horizontal (droite si positive), ordonnée = vertical (haut si positive).\nExemple similaire : B(−2 ; 4) est à gauche et en haut.",
+      "Astuce : procède de gauche à droite, un calcul à la fois.\nExemple similaire : −4 + 7 − 10 = 3 − 10 = −7.",
+      "Astuce : la distance à zéro de −5, c'est sa partie numérique (sans le signe).\nExemple similaire : distance à zéro de −9 : 9.",
+      "Astuce : part de la température initiale et enchaîne les variations.\nExemple similaire : départ −3, puis +10 puis −5 : −3 + 10 − 5 = +2.",
+      "Astuce : procède de gauche à droite, en gardant le signe à chaque étape.\nExemple similaire : 2 − 8 + 5 − 1 = −6 + 5 − 1 = −2.",
+      "Astuce : sur la droite graduée, ce qui est à droite est le plus grand.\nExemple similaire : −4 > −9, car −4 est plus proche de 0."
+    ],
+    genH: {
+      1: "Astuce : sur la droite graduée, part du premier nombre et avance/recule.\nExemple similaire : (−8) + 5 = −3.",
+      2: "Astuce : entre deux négatifs, le plus grand est le plus proche de 0.\nExemple similaire : entre −9 et −4, le plus grand est −4."
+    }
+  },
+  stats5: {
+    resume: [
+      { t: "Moyenne simple", f: "(8 + 12 + 12 + 15) ÷ 4 = 11,75", d: "Somme de toutes les valeurs ÷ nombre de valeurs." },
+      { t: "Effectif", f: "« 12 » apparaît 2 fois → effectif 2", d: "L'effectif d'une valeur = le nombre de fois où elle apparaît dans la série." },
+      { t: "Étendue", f: "max − min = 12 − 1 = 11", d: "L'étendue mesure l'écart entre la plus grande et la plus petite valeur." }
+    ],
+    qs: [
+      "Astuce : somme ÷ nombre de notes.\nExemple similaire : (7 + 9 + 14) ÷ 3 = 10.",
+      "Astuce : compte les apparitions de la valeur.\nExemple similaire : 5 ; 5 ; 5 ; 2 → effectif de 5 = 3.",
+      "Astuce : trie d'abord la série.\nExemple similaire : 2 ; 10 ; 3 → triée 2 ; 3 ; 10 → étendue 8.",
+      "Astuce : divise la somme par l'effectif.\nExemple similaire : (4 + 11 + 15) ÷ 3 = 10.",
+      "Astuce : cherche max et min après tri.\nExemple similaire : max 6 mm, min 0 mm → étendue 6 mm.",
+      "Astuce : moyenne = total ÷ nombre de notes.\nExemple similaire : 36 sur 4 notes → 9.",
+      "Astuce : multiplie chaque valeur par son effectif, additionne, divise par l'effectif total.\nExemple similaire : (3×10 + 2×14) ÷ 5 = 58 ÷ 5 = 11,6.",
+      "Astuce : somme pondérée ÷ effectif total.\nExemple similaire : 2 (5 fois) et 0 (5 fois) → (2×5) ÷ 10 = 1.",
+      "Astuce : la moyenne est une valeur « centrale » : rien n'oblige chaque note à l'atteindre.\nExemple similaire : notes 8 et 17 → moyenne 12,5 sans note à 12,5.",
+      "Astuce : nouvelle moyenne = nouvelle somme ÷ nouvel effectif.\nExemple similaire : 6 notes, moyenne 10 → 60 ; on ajoute 16 → 76 ÷ 7 ≈ 10,9.",
+      "Astuce : étendue = max − min pour chaque série.\nExemple similaire : série 1 ; 9 → étendue 8.",
+      "Astuce : somme visée = moyenne × nombre de notes ; note manquante = différence.\nExemple similaire : 4 notes de moyenne 12 (somme 48), viser 13 sur 5 → 65 − 48 = 17.",
+      "Astuce : fréquence = effectif de la valeur ÷ effectif total.\nExemple similaire : 3 garçons sur 12 élèves : 3/12 = 0,25 = 25 %.",
+      "Astuce : compte les apparitions de la valeur, puis divise par le nombre total de valeurs.\nExemple similaire : 1 ; 2 ; 2 ; 4 : fréquence de 2 = 2/4 = 50 %.",
+      "Astuce : ordonne la série, la médiane est la valeur du milieu.\nExemple similaire : 1 ; 3 ; 3 ; 6 ; 8 : médiane 3.",
+    ]
+  },
   litteral5: {
     resume: [
       { t: "Simple distributivité", f: "k × (a + b) = k×a + k×b\n3 × (x + 2) = 3x + 6", d: "On distribue le facteur k à CHAQUE terme de la parenthèse (attention aux signes)." },
@@ -131,48 +202,6 @@ window.AIDE_5E = {
       3: "Astuce : développe, calcule les constantes, puis réduis les x.\nExemple similaire : 3(2x + 4) − 2x = 6x + 12 − 2x = 4x + 12."
     }
   },
-  stats5: {
-    resume: [
-      { t: "Moyenne simple", f: "(8 + 12 + 12 + 15) ÷ 4 = 11,75", d: "Somme de toutes les valeurs ÷ nombre de valeurs." },
-      { t: "Effectif", f: "« 12 » apparaît 2 fois → effectif 2", d: "L'effectif d'une valeur = le nombre de fois où elle apparaît dans la série." },
-      { t: "Étendue", f: "max − min = 12 − 1 = 11", d: "L'étendue mesure l'écart entre la plus grande et la plus petite valeur." }
-    ],
-    qs: [
-      "Astuce : somme ÷ nombre de notes.\nExemple similaire : (7 + 9 + 14) ÷ 3 = 10.",
-      "Astuce : compte les apparitions de la valeur.\nExemple similaire : 5 ; 5 ; 5 ; 2 → effectif de 5 = 3.",
-      "Astuce : trie d'abord la série.\nExemple similaire : 2 ; 10 ; 3 → triée 2 ; 3 ; 10 → étendue 8.",
-      "Astuce : divise la somme par l'effectif.\nExemple similaire : (4 + 11 + 15) ÷ 3 = 10.",
-      "Astuce : cherche max et min après tri.\nExemple similaire : max 6 mm, min 0 mm → étendue 6 mm.",
-      "Astuce : moyenne = total ÷ nombre de notes.\nExemple similaire : 36 sur 4 notes → 9.",
-      "Astuce : multiplie chaque valeur par son effectif, additionne, divise par l'effectif total.\nExemple similaire : (3×10 + 2×14) ÷ 5 = 58 ÷ 5 = 11,6.",
-      "Astuce : somme pondérée ÷ effectif total.\nExemple similaire : 2 (5 fois) et 0 (5 fois) → (2×5) ÷ 10 = 1.",
-      "Astuce : la moyenne est une valeur « centrale » : rien n'oblige chaque note à l'atteindre.\nExemple similaire : notes 8 et 17 → moyenne 12,5 sans note à 12,5.",
-      "Astuce : nouvelle moyenne = nouvelle somme ÷ nouvel effectif.\nExemple similaire : 6 notes, moyenne 10 → 60 ; on ajoute 16 → 76 ÷ 7 ≈ 10,9.",
-      "Astuce : étendue = max − min pour chaque série.\nExemple similaire : série 1 ; 9 → étendue 8.",
-      "Astuce : somme visée = moyenne × nombre de notes ; note manquante = différence.\nExemple similaire : 4 notes de moyenne 12 (somme 48), viser 13 sur 5 → 65 − 48 = 17."
-    ]
-  },
-  geom5: {
-    resume: [
-      { t: "Angles d'un triangle", f: "angle A + B + C = 180°", d: "La somme des trois angles d'un triangle vaut toujours 180°." },
-      { t: "Symétrie centrale", f: "O = milieu de [MM']", d: "Le symétrique de M par rapport à O s'obtient en prolongeant [MO] d'autant ; longueurs et angles sont conservés." },
-      { t: "Triangles particuliers", f: "2 angles égaux → isocèle\n3 côtés égaux → équilatéral (60°)", d: "Hauteur : du sommet, ⊥ au côté. Médiane : du sommet au milieu. Médiatrice : points à égale distance des extrémités." }
-    ],
-    qs: [
-      "Astuce : 180° moins la somme des deux angles connus.\nExemple similaire : angles 50° et 60° → 180 − 110 = 70°.",
-      "Astuce : le centre de symétrie est le MILIEU du segment reliant un point et son image.\nExemple similaire : M(2;3), O(5;3) → M'(8;3).",
-      "Astuce : diagonales coupées en leur milieu = propriété de TOUS les parallélogrammes.\nExemple similaire : des diagonales de même longueur → rectangle, pas tous les parallélogrammes.",
-      "Astuce : isocèle → les deux angles à la base sont égaux.\nExemple similaire : base à 70° chacun → sommet = 180 − 140 = 40°.",
-      "Astuce : l'angle droit compte pour 90°.\nExemple similaire : rectangle en A, angle B = 30° → angle C = 60°.",
-      "Astuce : losange = 4 côtés égaux ET diagonales perpendiculaires. Les angles droits sont pour le carré.\nExemple similaire : « diagonales de même longueur » → rectangle.",
-      "Astuce : cherche d'abord le 3e angle.\nExemple similaire : 30° et 75° → 3e = 75° → deux angles égaux → isocèle.",
-      "Astuce : hauteur = du sommet, perpendiculaire au côté opposé.\nExemple similaire : la médiatrice passe elle par le MILIEU, et ⊥ aussi.",
-      "Astuce : trois côtés égaux = équilatéral = trois angles de 60°.\nExemple similaire : côtés 4 ; 4 ; 4 → chaque angle 60°.",
-      "Astuce : une symétrie centrale conserve les longueurs.\nExemple similaire : [AB] = 12 cm → [A'B'] = 12 cm.",
-      "Astuce : médiatrice = points à égale distance des extrémités.\nExemple similaire : si C est sur la médiatrice de [AB], alors CA = CB.",
-      "Astuce : un angle droit dans un parallélogramme → les quatre angles sont droits (rectangle).\nExemple similaire : un losange avec un angle droit serait un carré."
-    ]
-  },
   aires5: {
     resume: [
       { t: "Rectangle", f: "P = 2 × (L + l)\nA = L × l", d: "Périmètre en unités de longueur, aire en unités²." },
@@ -196,6 +225,31 @@ window.AIDE_5E = {
     genH: {
       1: "Astuce : périmètre du rectangle = 2 × (L + l).\nExemple similaire : 7 × 3 → 20 cm.",
       2: "Astuce : multiplie les trois dimensions.\nExemple similaire : 3 × 4 × 5 = 60 cm³."
+    }
+  },
+  proba5: {
+    resume: [
+      { t: "Vocabulaire", f: "univers Ω = toutes les issues\névénement = des issues", d: "Exemple (dé) : Ω = {1 ; 2 ; 3 ; 4 ; 5 ; 6} ; « obtenir un pair » = {2 ; 4 ; 6}." },
+      { t: "Probabilité (équiprobable)", f: "p = cas favorables ÷ cas possibles", d: "Exemple : P(pair) = 3 ÷ 6 = 1/2. Résultat toujours entre 0 et 1." },
+      { t: "Cas limites", f: "p = 0 : impossible\np = 1 : certain", d: "La somme des probabilités de toutes les issues vaut 1." }
+    ],
+    qs: [
+      "Astuce : une pièce a deux faces, chacune est une issue.\nExemple similaire : une roulette à 4 zones → 4 issues.",
+      "Astuce : l'univers regroupe TOUTES les issues possibles.\nExemple similaire : pour une pièce, Ω = {Pile ; Face}.",
+      "Astuce : liste les nombres pairs du dé.\nExemple similaire : « obtenir plus de 4 » → {5 ; 6} → 2 cas favorables.",
+      "Astuce : cas favorables ÷ cas possibles, puis simplifie.\nExemple similaire : P(impair) = 3/6 = 1/2.",
+      "Astuce : une probabilité est toujours entre 0 et 1.\nExemple similaire : p = 3/2 est impossible, p = 0,25 oui (1/4).",
+      "Astuce : compte toutes les billes, puis celles de la couleur voulue.\nExemple similaire : 4 rouges et 4 bleues → P(bleue) = 4/8 = 1/2.",
+      "Astuce : compte les issues qui conviennent, sur 6 au total.\nExemple similaire : P(obtenir 2 ou 3) = 2/6 = 1/3.",
+      "Astuce : événement élémentaire = une seule issue.\nExemple similaire : « tirer l'as de cœur » : une seule carte.",
+      "Astuce : fraction puis simplifie en divisant par le PGCD.\nExemple similaire : 6 sur 24 → 6/24 = 1/4.",
+      "Astuce : compte les rois (4) sur le total (32), puis simplifie.\nExemple similaire : 4 as dans 32 cartes → 4/32 = 1/8.",
+      "Astuce : liste les issues : PP, PF, FP, FF — sans en oublier.\nExemple similaire : dé rouge et dé bleu → 36 issues.",
+      "Astuce : p = 0 veut dire zéro chance.\nExemple similaire : « obtenir 7 » avec un dé à 6 faces : p = 0."
+    ],
+    genH: {
+      1: "Astuce : une seule face convient, sur 6 issues équiprobables.\nExemple similaire : P(obtenir 4) = 1/6.",
+      2: "Astuce : fraction rouges ÷ total, puis simplifie la fraction.\nExemple similaire : 4 rouges et 8 bleues → 4/12 = 1/3."
     }
   }
 };

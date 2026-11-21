@@ -1,6 +1,34 @@
 /* ================= BaouMaths — banque de questions 3e ================= */
 window.BANK_3E = {
   themes: [
+        {
+      id: "racines", titre: "Racines carrées", icone: "√",
+      chap: [],
+      notion: "√a est le nombre positif dont le carré est a : (√a)² = a, et √(a²) = a (si a ≥ 0).\n√25 = 5 ; √(a × b) = √a × √b ; on ne peut pas dire √(a + b) = √a + √b !\nSimplifier : √50 = √(25 × 2) = 5√2.",
+      qs: [
+        { d:1, q:"Calculer : √49", c:["7","−7","24,5","14"], a:0, e:"7 × 7 = 49, donc √49 = 7 (on prend toujours le résultat positif)." },
+        { d:1, q:"Calculer : (√5)²", c:["5","10","25","√25"], a:0, e:"Le carré « annule » la racine : (√5)² = 5." },
+        { d:1, q:"9 est-il le carré de 3 ou la racine carrée de 81 ?", c:["Les deux","Seulement le carré de 3","Seulement la racine de 81","Ni l'un ni l'autre"], a:0, e:"3² = 9 et √81 = 9 : les deux affirmations sont vraies." },
+        { d:2, q:"Simplifier : √50", c:["5√2","2√5","25√2","10√5"], a:0, e:"50 = 25 × 2 → √50 = √25 × √2 = 5√2." },
+        { d:2, q:"Calculer : √4 + √9", c:["√13","5","6","√36"], a:1, e:"√4 = 2 et √9 = 3, donc 2 + 3 = 5. La racine d'une somme n'est PAS la somme des racines." },
+        { d:2, q:"Calculer : 2√18 × √2", a:"12", e:"√18 × √2 = √36 = 6, puis 2 × 6 = 12." },
+        { d:3, q:"Simplifier : √72", a:"6√2", e:"72 = 36 × 2 → √72 = 6√2." },
+        { d:3, q:"Calculer : 3√5 − √20", c:["√5","−√5","3√15","2√5"], a:0, e:"√20 = 2√5, donc 3√5 − 2√5 = √5." },
+        { d:3, q:"Encadrer √30 entre deux entiers consécutifs :", c:["5 et 6","4 et 5","6 et 7","3 et 4"], a:0, e:"5² = 25 < 30 < 36 = 6², donc 5 < √30 < 6." },
+        { d:4, q:"Calculer : (1 + √2)²", c:["3 + 2√2","3 + √2","2 + 2√2","1 + 2√2"], a:0, e:"1 + 2√2 + 2 = 3 + 2√2 (identité remarquable (a+b)² = a² + 2ab + b²)." },
+        { d:4, q:"Calculer : √12 × √27 ÷ √9", a:"6", e:"√12 × √27 ÷ √9 = √(12 × 27 ÷ 9) = √36 = 6. On peut tout mettre sous une seule racine car ce sont des produits et quotients." },
+        { d:4, q:"Que vaut l'aire d'un carré de côté √8 cm (simplifiée) ?", c:["8 cm²","16 cm²","64 cm²","4√2 cm²"], a:0, e:"Aire = (√8)² = 8 cm²." }
+      ],
+      gen: {
+        2: () => { const pairs = [[2,3],[2,5],[3,2],[3,5],[3,7],[5,2],[5,3],[5,6],[7,2],[7,3],[7,6],[6,5],[10,3],[11,2]];
+          const p = pairs[Math.floor(Math.random()*pairs.length)];
+          return { q:`≈ Simplifier : √${p[0]*p[0]*p[1]}`, c:[`${p[0]}√${p[1]}`,`${p[1]}√${p[0]}`,`${p[0]*p[0]}√${p[1]}`,`${p[0]+1}√${p[1]}`], a:0, e:`${p[0]*p[0]*p[1]} = ${p[0]*p[0]} × ${p[1]} → √${p[0]*p[0]*p[1]} = ${p[0]}√${p[1]}.` }; },
+        3: () => { const n = 12 + Math.floor(Math.random()*88);
+          const s = Math.floor(Math.sqrt(n));
+          if (s*s === n) return { q:`Calculer : √${n}`, a:String(s), e:`${s}² = ${n}, donc √${n} = ${s}.` };
+          return { q:`Entre quels entiers consécutifs se situe √${n} ?`, c:[`${s} et ${s+1}`,`${s-1} et ${s}`,`${s+1} et ${s+2}`,`${s+2} et ${s+3}`], a:0, e:`${s}² = ${s*s} < ${n} < ${(s+1)*(s+1)} = ${s+1}², donc ${s} < √${n} < ${s+1}.` }; }
+      }
+    },
 {
       id: "fractions3", titre: "Fractions et nombres relatifs", icone: "➗",
       chap: [1],
@@ -27,9 +55,47 @@ window.BANK_3E = {
           return { q:`Calculer : ${n}/2 ÷ ${d} (répondre sous la forme a/b, simplifiée)`, a:`${n/g}/${2*d/g}`, e:`Diviser par ${d} : multiplier par 1/${d}. Donc ${n}/(2 × ${d}) = ${n}/${2*d} = ${n/g}/${2*d/g}.` }; }
       }
     },
+        {
+      id: "thales", titre: "Théorème de Thalès", icone: "🔺",
+      chap: [2, 6, 19],
+      notion: "Si (BC) ∥ (MN) avec M sur (AB) et N sur (AC), alors AM/AB = AN/AC = MN/BC.\nAgrandissement-réduction de rapport k : longueurs multipliées par k, aires par k², volumes par k³.\nSi k < 1, c'est une réduction ; si k > 1, un agrandissement.",
+      qs: [
+        { d:1, q:"Triangle ABC, M sur [AB], N sur [AC], (MN) ∥ (BC). AM/AB = 1/3 et AB = 12. AM = ?", a:"4", e:"AM = 12 × 1/3 = 4." },
+        { d:1, q:"Un agrandissement de rapport 3 multiplie les longueurs par...", a:"3", e:"Rapport 3 = longueurs × 3." },
+        { d:1, q:"Une réduction de rapport 1/2 multiplie une aire par...", c:["1/2","1/4","2","1/8"], a:1, e:"Les aires sont multipliées par k² = (1/2)² = 1/4." },
+        { d:2, q:"Triangle ABC, (MN) ∥ (BC) : AM = 4, AB = 6, AC = 9. AN = ?", a:"6", e:"AN = AC × AM/AB = 9 × 4/6 = 6." },
+        { d:2, q:"(MN) ∥ (BC) : AM/AB = 2/3 et MN = 6. BC = ?", a:"9", e:"MN/BC = 2/3 → BC = 6 × 3/2 = 9." },
+        { d:2, q:"Un cube est réduit à l'échelle 1/2. Son volume est multiplié par...", c:["1/2","1/4","1/8","c'est une réduction donc rien ne change"], a:2, e:"Les volumes sont multipliés par k³ = (1/2)³ = 1/8." },
+        { d:3, q:"(MN) ∥ (BC) : AM = 5, MB = 3, AN = 10. NC = ?", a:"6", e:"AM/AB = AN/AC → 5/8 = 10/AC → AC = 16 → NC = AC − AN = 6." },
+        { d:3, q:"Une pyramide est agrandie d'un rapport 2. Le volume devient...", c:["2 fois plus grand","4 fois plus grand","8 fois plus grand","16 fois plus grand"], a:2, e:"Volume × k³ = × 8." },
+        { d:3, q:"AM/AB = AN/AC = 0,6 ; BC = 15. MN = ?", a:"9", e:"MN = BC × 0,6 = 9." },
+        { d:4, q:"Une sphère est agrandie d'un rapport 3. Son volume est multiplié par...", a:"27", e:"V × k³ = 27." },
+        { d:4, q:"(MN) ∥ (BC) : AB = 9, AM = 6, BC = 12, MN = ?", a:"8", e:"MN = BC × AM/AB = 12 × 6/9 = 8." },
+        { d:4, q:"Une figure a une aire de 24 cm². Après réduction de rapport 1/2, son aire est de...", a:"6", e:"24 × (1/2)² = 24 × 0,25 = 6 cm²." }
+      ]
+    },
+        {
+      id: "equations3", titre: "Équations et problèmes", icone: "⚖️",
+      chap: [3, 15],
+      notion: "ax + b = cx + d → on regroupe les x d'un côté, les nombres de l'autre.\nÉquation produit A × B = 0 → A = 0 ou B = 0.\nPour les problèmes : poser x l'inconnue, mettre en équation, résoudre, vérifier.",
+      qs: [
+        { d:1, q:"Résoudre : 2x + 5 = 13", a:"4", e:"2x = 13 − 5 = 8, donc x = 4." },
+        { d:1, q:"Résoudre : 3x = 2x + 7", a:"7", e:"3x − 2x = 7, donc x = 7." },
+        { d:1, q:"Résoudre : x/2 = 6", a:"12", e:"x = 6 × 2 = 12." },
+        { d:2, q:"Résoudre : 5x − 3 = 2x + 12", a:"5", e:"5x − 2x = 12 + 3 → 3x = 15 → x = 5." },
+        { d:2, q:"Résoudre (produit nul) : (x − 3)(x + 5) = 0", c:["x = 3 ou x = −5","x = −3 ou x = 5","x = 3 ou x = 5","x = 15 ou −15"], a:0, e:"Chaque facteur peut être nul : x − 3 = 0 ou x + 5 = 0." },
+        { d:2, q:"Résoudre : 4(x + 1) = 12", a:"2", e:"4x + 4 = 12 → 4x = 8 → x = 2." },
+        { d:3, q:"Résoudre : 7 − 2x = 3x + 2", a:"1", e:"−2x − 3x = 2 − 7 → −5x = −5 → x = 1." },
+        { d:3, q:"Résoudre : (2x + 1)(x − 4) = 0", c:["x = −1/2 ou x = 4","x = 1/2 ou x = −4","x = −1 ou x = 4","x = 2 ou x = 4"], a:0, e:"2x + 1 = 0 → x = −1/2 ; ou x − 4 = 0 → x = 4." },
+        { d:3, q:"J'ai pensé à un nombre, je le multiplie par 3, j'ajoute 2, et je trouve 17. Mon nombre ?", a:"5", e:"3x + 2 = 17 → 3x = 15 → x = 5." },
+        { d:4, q:"La somme de trois entiers consécutifs vaut 51 (soit x, x+1, x+2). Le plus petit est...", a:"16", e:"x + (x+1) + (x+2) = 51 → 3x + 3 = 51 → 3x = 48 → x = 16." },
+        { d:4, q:"Résoudre : (x − 3)² = 25", c:["x = 8 ou x = −2","x = 8 seulement","x = −8 ou x = 2","x = 22"], a:0, e:"x − 3 = 5 ou x − 3 = −5 → x = 8 ou x = −2." },
+        { d:4, q:"Un rectangle a un périmètre de 24 cm et une longueur de 3 cm supérieure à sa largeur. Son aire est...", a:"33.75", e:"Largeur x, longueur x + 3 : 4x + 6 = 24 → x = 4,5 et longueur 7,5. Aire : 33,75 cm²." }
+      ]
+    },
     {
       id: "puissances3", titre: "Puissances et notation scientifique", icone: "🔟",
-      chap: [2],
+      chap: [4],
       notion: "Règles : aᵐ × aⁿ = aᵐ⁺ⁿ ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ ; (aᵐ)ⁿ = aᵐ×ⁿ ; a⁰ = 1 ; a⁻ⁿ = 1/aⁿ (avec a non nul).\nÉcriture scientifique : a × 10ⁿ avec 1 ≤ a < 10 (un seul chiffre non nul avant la virgule).\nOrdre de grandeur : la puissance de 10 la plus proche du nombre.",
       qs: [
         { d:1, q:"10⁴ est égal à...", c:["10 000","1 000","100","40"], a:0, e:"10⁴ = 10 × 10 × 10 × 10 = 10 000 (le 4 compte les zéros)." },
@@ -53,74 +119,8 @@ window.BANK_3E = {
       }
     },
         {
-      id: "racines", titre: "Racines carrées", icone: "√",
-      chap: [3],
-      notion: "√a est le nombre positif dont le carré est a : (√a)² = a, et √(a²) = a (si a ≥ 0).\n√25 = 5 ; √(a × b) = √a × √b ; on ne peut pas dire √(a + b) = √a + √b !\nSimplifier : √50 = √(25 × 2) = 5√2.",
-      qs: [
-        { d:1, q:"Calculer : √49", c:["7","−7","24,5","14"], a:0, e:"7 × 7 = 49, donc √49 = 7 (on prend toujours le résultat positif)." },
-        { d:1, q:"Calculer : (√5)²", c:["5","10","25","√25"], a:0, e:"Le carré « annule » la racine : (√5)² = 5." },
-        { d:1, q:"9 est-il le carré de 3 ou la racine carrée de 81 ?", c:["Les deux","Seulement le carré de 3","Seulement la racine de 81","Ni l'un ni l'autre"], a:0, e:"3² = 9 et √81 = 9 : les deux affirmations sont vraies." },
-        { d:2, q:"Simplifier : √50", c:["5√2","2√5","25√2","10√5"], a:0, e:"50 = 25 × 2 → √50 = √25 × √2 = 5√2." },
-        { d:2, q:"Calculer : √4 + √9", c:["√13","5","6","√36"], a:1, e:"√4 = 2 et √9 = 3, donc 2 + 3 = 5. La racine d'une somme n'est PAS la somme des racines." },
-        { d:2, q:"Calculer : 2√18 × √2", a:"12", e:"√18 × √2 = √36 = 6, puis 2 × 6 = 12." },
-        { d:3, q:"Simplifier : √72", a:"6√2", e:"72 = 36 × 2 → √72 = 6√2." },
-        { d:3, q:"Calculer : 3√5 − √20", c:["√5","−√5","3√15","2√5"], a:0, e:"√20 = 2√5, donc 3√5 − 2√5 = √5." },
-        { d:3, q:"Encadrer √30 entre deux entiers consécutifs :", c:["5 et 6","4 et 5","6 et 7","3 et 4"], a:0, e:"5² = 25 < 30 < 36 = 6², donc 5 < √30 < 6." },
-        { d:4, q:"Calculer : (1 + √2)²", c:["3 + 2√2","3 + √2","2 + 2√2","1 + 2√2"], a:0, e:"1 + 2√2 + 2 = 3 + 2√2 (identité remarquable (a+b)² = a² + 2ab + b²)." },
-        { d:4, q:"Calculer : √12 × √27 ÷ √9", a:"6", e:"√12 × √27 ÷ √9 = √(12 × 27 ÷ 9) = √36 = 6. On peut tout mettre sous une seule racine car ce sont des produits et quotients." },
-        { d:4, q:"Que vaut l'aire d'un carré de côté √8 cm (simplifiée) ?", c:["8 cm²","16 cm²","64 cm²","4√2 cm²"], a:0, e:"Aire = (√8)² = 8 cm²." }
-      ],
-      gen: {
-        2: () => { const pairs = [[2,3],[2,5],[3,2],[3,5],[3,7],[5,2],[5,3],[5,6],[7,2],[7,3],[7,6],[6,5],[10,3],[11,2]];
-          const p = pairs[Math.floor(Math.random()*pairs.length)];
-          return { q:`≈ Simplifier : √${p[0]*p[0]*p[1]}`, c:[`${p[0]}√${p[1]}`,`${p[1]}√${p[0]}`,`${p[0]*p[0]}√${p[1]}`,`${p[0]+1}√${p[1]}`], a:0, e:`${p[0]*p[0]*p[1]} = ${p[0]*p[0]} × ${p[1]} → √${p[0]*p[0]*p[1]} = ${p[0]}√${p[1]}.` }; },
-        3: () => { const n = 12 + Math.floor(Math.random()*88);
-          const s = Math.floor(Math.sqrt(n));
-          if (s*s === n) return { q:`Calculer : √${n}`, a:String(s), e:`${s}² = ${n}, donc √${n} = ${s}.` };
-          return { q:`Entre quels entiers consécutifs se situe √${n} ?`, c:[`${s} et ${s+1}`,`${s-1} et ${s}`,`${s+1} et ${s+2}`,`${s+2} et ${s+3}`], a:0, e:`${s}² = ${s*s} < ${n} < ${(s+1)*(s+1)} = ${s+1}², donc ${s} < √${n} < ${s+1}.` }; }
-      }
-    },
-        {
-      id: "thales", titre: "Théorème de Thalès", icone: "🔺",
-      chap: [3, 6, 19],
-      notion: "Si (BC) ∥ (MN) avec M sur (AB) et N sur (AC), alors AM/AB = AN/AC = MN/BC.\nAgrandissement-réduction de rapport k : longueurs multipliées par k, aires par k², volumes par k³.\nSi k < 1, c'est une réduction ; si k > 1, un agrandissement.",
-      qs: [
-        { d:1, q:"Triangle ABC, M sur [AB], N sur [AC], (MN) ∥ (BC). AM/AB = 1/3 et AB = 12. AM = ?", a:"4", e:"AM = 12 × 1/3 = 4." },
-        { d:1, q:"Un agrandissement de rapport 3 multiplie les longueurs par...", a:"3", e:"Rapport 3 = longueurs × 3." },
-        { d:1, q:"Une réduction de rapport 1/2 multiplie une aire par...", c:["1/2","1/4","2","1/8"], a:1, e:"Les aires sont multipliées par k² = (1/2)² = 1/4." },
-        { d:2, q:"Triangle ABC, (MN) ∥ (BC) : AM = 4, AB = 6, AC = 9. AN = ?", a:"6", e:"AN = AC × AM/AB = 9 × 4/6 = 6." },
-        { d:2, q:"(MN) ∥ (BC) : AM/AB = 2/3 et MN = 6. BC = ?", a:"9", e:"MN/BC = 2/3 → BC = 6 × 3/2 = 9." },
-        { d:2, q:"Un cube est réduit à l'échelle 1/2. Son volume est multiplié par...", c:["1/2","1/4","1/8","c'est une réduction donc rien ne change"], a:2, e:"Les volumes sont multipliés par k³ = (1/2)³ = 1/8." },
-        { d:3, q:"(MN) ∥ (BC) : AM = 5, MB = 3, AN = 10. NC = ?", a:"6", e:"AM/AB = AN/AC → 5/8 = 10/AC → AC = 16 → NC = AC − AN = 6." },
-        { d:3, q:"Une pyramide est agrandie d'un rapport 2. Le volume devient...", c:["2 fois plus grand","4 fois plus grand","8 fois plus grand","16 fois plus grand"], a:2, e:"Volume × k³ = × 8." },
-        { d:3, q:"AM/AB = AN/AC = 0,6 ; BC = 15. MN = ?", a:"9", e:"MN = BC × 0,6 = 9." },
-        { d:4, q:"Une sphère est agrandie d'un rapport 3. Son volume est multiplié par...", a:"27", e:"V × k³ = 27." },
-        { d:4, q:"(MN) ∥ (BC) : AB = 9, AM = 6, BC = 12, MN = ?", a:"8", e:"MN = BC × AM/AB = 12 × 6/9 = 8." },
-        { d:4, q:"Une figure a une aire de 24 cm². Après réduction de rapport 1/2, son aire est de...", a:"6", e:"24 × (1/2)² = 24 × 0,25 = 6 cm²." }
-      ]
-    },
-        {
-      id: "equations3", titre: "Équations et problèmes", icone: "⚖️",
-      chap: [4, 15],
-      notion: "ax + b = cx + d → on regroupe les x d'un côté, les nombres de l'autre.\nÉquation produit A × B = 0 → A = 0 ou B = 0.\nPour les problèmes : poser x l'inconnue, mettre en équation, résoudre, vérifier.",
-      qs: [
-        { d:1, q:"Résoudre : 2x + 5 = 13", a:"4", e:"2x = 13 − 5 = 8, donc x = 4." },
-        { d:1, q:"Résoudre : 3x = 2x + 7", a:"7", e:"3x − 2x = 7, donc x = 7." },
-        { d:1, q:"Résoudre : x/2 = 6", a:"12", e:"x = 6 × 2 = 12." },
-        { d:2, q:"Résoudre : 5x − 3 = 2x + 12", a:"5", e:"5x − 2x = 12 + 3 → 3x = 15 → x = 5." },
-        { d:2, q:"Résoudre (produit nul) : (x − 3)(x + 5) = 0", c:["x = 3 ou x = −5","x = −3 ou x = 5","x = 3 ou x = 5","x = 15 ou −15"], a:0, e:"Chaque facteur peut être nul : x − 3 = 0 ou x + 5 = 0." },
-        { d:2, q:"Résoudre : 4(x + 1) = 12", a:"2", e:"4x + 4 = 12 → 4x = 8 → x = 2." },
-        { d:3, q:"Résoudre : 7 − 2x = 3x + 2", a:"1", e:"−2x − 3x = 2 − 7 → −5x = −5 → x = 1." },
-        { d:3, q:"Résoudre : (2x + 1)(x − 4) = 0", c:["x = −1/2 ou x = 4","x = 1/2 ou x = −4","x = −1 ou x = 4","x = 2 ou x = 4"], a:0, e:"2x + 1 = 0 → x = −1/2 ; ou x − 4 = 0 → x = 4." },
-        { d:3, q:"J'ai pensé à un nombre, je le multiplie par 3, j'ajoute 2, et je trouve 17. Mon nombre ?", a:"5", e:"3x + 2 = 17 → 3x = 15 → x = 5." },
-        { d:4, q:"La somme de trois entiers consécutifs vaut 51 (soit x, x+1, x+2). Le plus petit est...", a:"16", e:"x + (x+1) + (x+2) = 51 → 3x + 3 = 51 → 3x = 48 → x = 16." },
-        { d:4, q:"Résoudre : (x − 3)² = 25", c:["x = 8 ou x = −2","x = 8 seulement","x = −8 ou x = 2","x = 22"], a:0, e:"x − 3 = 5 ou x − 3 = −5 → x = 8 ou x = −2." },
-        { d:4, q:"Un rectangle a un périmètre de 24 cm et une longueur de 3 cm supérieure à sa largeur. Son aire est...", a:"33.75", e:"Largeur x, longueur x + 3 : 4x + 6 = 24 → x = 4,5 et longueur 7,5. Aire : 33,75 cm²." }
-      ]
-    },
-        {
       id: "fonctions", titre: "Fonctions : image et antécédent", icone: "📈",
-      chap: [5, 7, 12],
+      chap: [5],
       notion: "Une fonction f associe à chaque nombre x un unique nombre f(x), appelé image de x.\nSi f(3) = 12, alors 12 est l'image de 3, et 3 est un antécédent de 12.\nOn peut représenter f par un graphique, un tableau ou une formule.",
       qs: [
         { d:1, q:"f(x) = 2x + 3. L'image de 4 est...", a:"11", e:"f(4) = 2 × 4 + 3 = 8 + 3 = 11." },
@@ -274,7 +274,7 @@ window.BANK_3E = {
         {
       id: "sph3", titre: "Solides : sphères, cônes, pyramides", icone: "🔮",
       chap: [14, 17],
-      notion: "Sphère : V = (4/3) × π × r³ ; aire = 4 × π × r².\nCône de révolution : V = (1/3) × π × r² × h.\nPyramide : V = (1/3) × aire de la base × hauteur.",
+      notion: "Sphère : V = (4/3) × π × r³ ; aire = 4 × π × r².\nCône de révolution : V = (1/3) × π × r² × h.\nPyramide : V = (1/3) × aire de la base × hauteur.\nSections : un plan coupe une sphère selon un cercle ; s'il passe par le centre, c'est un grand cercle.\nRepérage dans l'espace : un point d'un pavé droit se repère par 3 coordonnées ; sur Terre, par latitude et longitude.",
       qs: [
         { d:1, q:"Volume d'une pyramide de base 12 cm² et hauteur 5 cm ?", a:"20", e:"V = (1/3) × 12 × 5 = 20 cm³." },
         { d:1, q:"Le volume d'un cône est ... du volume du cylindre de même base et même hauteur ?", c:["un tiers","la moitié","le double","le triple"], a:0, e:"V cône = (1/3) × π r² h, soit un tiers du cylindre correspondant." },
@@ -287,7 +287,12 @@ window.BANK_3E = {
         { d:3, q:"Une boule est réduite à l'échelle 1/2 : son volume est multiplié par...", c:["1/8","c'est une réduction donc rien ne change","1/4","1/2"], a:0, e:"Volume × k³ = (1/2)³ = 1/8." },
         { d:4, q:"Un cône a V = 100 cm³ pour h = 5 cm. Aire de sa base (entier) ?", a:"60", e:"(1/3) × B × 5 = 100 → B = 100 × 3 ÷ 5 = 60 cm²." },
         { d:4, q:"Comparons : une boule de rayon 2 et une boule de rayon 4. Le rapport des volumes est...", c:["1/8","8 fois plus grand","1/4","2"], a:1, e:"Volumes proportionnels au cube du rayon : (4/2)³ = 8." },
-        { d:4, q:"Pyramide : V = 60 cm³ ; base : triangle de 6 cm de base. Quelle hauteur (entier) si l'autre côté de la base est 5 cm ?", a:"6", e:"Base : (6×5)/2 = 15 cm² ; (1/3) × 15 × h = 60 → 15h = 180 → h = 6 cm." }
+        { d:4, q:"Pyramide : V = 60 cm³ ; base : triangle de 6 cm de base. Quelle hauteur (entier) si l'autre côté de la base est 5 cm ?", a:"6", e:"Base : (6×5)/2 = 15 cm² ; (1/3) × 15 × h = 60 → 15h = 180 → h = 6 cm." },
+        { d: 1, q: "Quelle est la formule de l'aire d'une sphère de rayon r ?", c: ["4 × π × r²", "π × r²", "2 × π × r", "π × r² × h"], a: 0, e: "Aire = 4 × π × r² ; le volume, lui, vaut (4/3) × π × r³." },
+        { d: 3, q: "Aire d'une sphère de rayon 3 cm (au dixième, π ≈ 3,14) ?", c: ["≈ 113 cm² (36 π)", "≈ 28,3 cm² (9 π)", "≈ 19 cm² (6 π)", "≈ 38 cm² (12 π)"], a: 0, e: "Aire = 4 × π × 3² = 36 π ≈ 113 cm²." },
+        { d: 2, q: "Une sphère est coupée par un plan. La section est...", c: ["un cercle", "un rectangle", "un point", "un ovale"], a: 0, e: "Un plan coupe toujours une sphère selon un cercle (et une boule selon un disque)." },
+        { d: 3, q: "Comment s'appelle la section d'une sphère par un plan qui passe par son centre ?", c: ["un grand cercle", "un cercle polaire", "un petit cercle", "un méridien"], a: 0, e: "C'est un grand cercle : son rayon est le rayon de la sphère. L'équateur de la Terre en est un exemple." },
+        { d: 4, q: "Comment repère-t-on un point sur un pavé droit ?", c: ["par 3 coordonnées (longueur ; largeur ; hauteur)", "par 2 coordonnées", "par 1 seule coordonnée", "par 4 coordonnées"], a: 0, e: "Dans l'espace, il faut 3 nombres. Sur la Terre, on utilise la latitude et la longitude." },
       ]
     },
         {
