@@ -28,7 +28,13 @@ window.AIDE_4E = {
       "Astuce : multiplie les deux coefficients : 1,2 × 0,8 = 0,96.\nExemple similaire : + 50 % puis − 50 % → ×1,5 × 0,5 = 0,75.",
       "Astuce : met le temps en heures (1 h 15 = 1,25 h), puis divise.\nExemple similaire : 100 km en 1 h 15 → 80 km/h.",
       "Astuce : applique les pourcentages dans l'ordre, le deuxième porte sur le RESTE.\nExemple similaire : 100 € ; + 10 % → 110 € ; − 10 % de 110 → 99 €."
-    ]
+    ],
+    genH: {
+      2: "Astuce : multiplie le nombre par le pourcentage, puis divise par 100.\nExemple similaire : 20 % de 45 = 45 × 20 ÷ 100 = 9.",
+      4: "Astuce : multiplie par le dénominateur de l'échelle, puis convertis : 100 000 cm = 1 km.\nExemple similaire : échelle 1/1 000 000, 5 cm → 5 × 1 000 000 cm = 50 km.",
+      1: "Astuce : distance = vitesse × temps.\nExemple similaire : à 80 km/h pendant 3 h : 240 km.",
+      3: "Astuce : convertis les minutes en heures (30 min = 0,5 h) puis v = d ÷ t.\nExemple similaire : 40 km en 30 min → 40 ÷ 0,5 = 80 km/h."
+    },
   },
   pythagore: {
     videos: [
@@ -119,7 +125,13 @@ window.AIDE_4E = {
       "Astuce : V = (π × r² × h) ÷ 3.\nExemple similaire : r = 2, h = 6 : π × 4 × 6 ÷ 3 = 8π ≈ 25,1 cm³.",
       "Astuce : plan parallèle à la base d'un cylindre : disque identique à la base.\nExemple similaire : cylindre de rayon 5 coupé au milieu : disque de rayon 5.",
       "Astuce : plan parallèle à la base d'une pyramide : réduction de la base.\nExemple similaire : coupée à mi-hauteur : section = base à l'échelle 1/2.",
-    ]
+    ],
+    genH: {
+      1: "Astuce : volume du prisme = aire de la base × hauteur.\nExemple similaire : base rectangle 4 × 3 cm, hauteur 5 cm → 60 cm³.",
+      2: "Astuce : le cylindre suit la même règle : V = aire de la base × hauteur.\nExemple similaire : B = 10 cm², h = 7 cm → 70 cm³.",
+      3: "Astuce : volume d'une pyramide = aire de base × hauteur ÷ 3.\nExemple similaire : base 18 cm², hauteur 5 cm → 18 × 5 ÷ 3 = 30 cm³.",
+      4: "Astuce : parallèle à la base → section = réduction de la base (pyramide/cône) ou base identique (prisme/cylindre).\nExemple similaire : un cylindre coupé parallèlement à la base donne un disque identique."
+    },
   },
   arithmetique4: {
     videos: [
@@ -202,7 +214,10 @@ window.AIDE_4E = {
       "Astuce : longueurs conservées : M'N' = MN.\nExemple similaire : MN = 8 cm → M'N' = 8 cm.",
       "Astuce : les angles sont conservés.\nExemple similaire : angle de 30° → image de 30°."
     ],
-    genH: {}
+    genH: {
+      3: "Astuce : l'abscisse de l'image = abscisse de départ + le déplacement horizontal.\nExemple similaire : A(2 ; 5), translation de 4 carreaux vers la droite → x' = 2 + 4 = 6.",
+      2: "Astuce : une translation conserve longueurs, angles, aires et alignement.\nExemple similaire : l'image d'un segment de 5 cm par une translation est un segment de 5 cm."
+    },
   },
   litteral4: {
     videos: [
@@ -284,7 +299,11 @@ window.AIDE_4E = {
       "Astuce : dans un triangle rectangle, l'adjacent est toujours plus court que l'hypoténuse.\nExemple similaire : adjacent 0,9 × hypoténuse → cos = 0,9.",
       "Astuce : repère à retenir : cos(30°) ≈ 0,87.\nExemple similaire : cos(30°) est plus grand que cos(60°) = 0,5.",
       "Astuce : retiens cos(60°) = 1/2 et sers-t'en « à l'envers ».\nExemple similaire : cos(â) = 0,87 → â ≈ 30°."
-    ]
+    ],
+    genH: {
+      2: "Astuce : cos(x) = côté adjacent ÷ hypoténuse ; la réponse est la fraction simplifiée.\nExemple similaire : adjacent 3, hypoténuse 4 → cos(x) = 3/4.",
+      3: "Astuce : côté adjacent = hypoténuse × cos(x).\nExemple similaire : cos(x) = 3/5 et hypoténuse 15 → adjacent = 15 × 3/5 = 9."
+    },
   },
   puissances: {
     videos: [
@@ -338,6 +357,11 @@ window.AIDE_4E = {
       "Astuce : dénombre les issues (PP, PF, FP, FF) avant de diviser.\nExemple similaire : au moins une face → 3/4.",
       "Astuce : multiplie chaque valeur par son effectif, puis divise par l'effectif total.\nExemple similaire : 8 (3 fois), 12 (2 fois) → (24 + 24) ÷ 5 = 9,6.",
       "Astuce : divise le nombre de garçons par l'effectif total, et arrondis.\nExemple similaire : 20 élèves dont 8 filles → 12/28... non : 8/20 = 0,4."
-    ]
+    ],
+    genH: {
+      1: "Astuce : moyenne = somme des valeurs ÷ nombre de valeurs.\nExemple similaire : (8 + 10 + 12 + 14 + 16) ÷ 5 = 60 ÷ 5 = 12.",
+      2: "Astuce : moyenne pondérée = (somme des valeur × effectif) ÷ effectif total.\nExemple similaire : 12 (2 fois) et 9 (3 fois) : (24 + 27) ÷ 5 = 51 ÷ 5 = 10,2.",
+      3: "Astuce : classe les valeurs ; avec 7 valeurs, la médiane est la 4ᵉ.\nExemple similaire : 1 ; 3 ; 5 ; 7 ; 9 ; 11 ; 13 → médiane 7."
+    },
   }
 };

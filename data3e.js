@@ -72,7 +72,15 @@ window.BANK_3E = {
         { d:4, q:"Une sphère est agrandie d'un rapport 3. Son volume est multiplié par...", a:"27", e:"V × k³ = 27." },
         { d:4, q:"(MN) ∥ (BC) : AB = 9, AM = 6, BC = 12, MN = ?", a:"8", e:"MN = BC × AM/AB = 12 × 6/9 = 8." },
         { d:4, q:"Une figure a une aire de 24 cm². Après réduction de rapport 1/2, son aire est de...", a:"6", e:"24 × (1/2)² = 24 × 0,25 = 6 cm²." }
-      ]
+      ],
+      gen: {
+        2: () => { const P = [[1, 2], [2, 3], [3, 4], [1, 3], [2, 5], [3, 5], [5, 6]]; const p = P[Math.floor(Math.random() * P.length)]; const w = 1 + Math.floor(Math.random() * 5), u = 3 + Math.floor(Math.random() * 6);
+          const AM = p[0] * w, AB = p[1] * w, BC = p[1] * u, MN = p[0] * u;
+          return { q: `(MN) \u2225 (BC), M \u2208 [AB] et N \u2208 [AC] : AM = ${AM}, AB = ${AB}, BC = ${BC}. Combien vaut MN ?`, a: String(MN), e: `Th\u00e9or\u00e8me de Thal\u00e8s : MN = BC \u00d7 AM/AB = ${BC} \u00d7 ${AM}/${AB} = ${MN}.` }; },
+        4: () => { const P = [[1, 2], [2, 3], [3, 4], [1, 3], [2, 5], [3, 5], [5, 6]]; const p = P[Math.floor(Math.random() * P.length)]; const w = 1 + Math.floor(Math.random() * 5), u = 2 + Math.floor(Math.random() * 7);
+          const AM = p[0] * w, AB = p[1] * w, AN = p[0] * u, AC = p[1] * u;
+          return { q: `(MN) \u2225 (BC), M \u2208 [AB] et N \u2208 [AC] : AM = ${AM}, AB = ${AB}, AN = ${AN}. Combien vaut AC ?`, a: String(AC), e: `Produit en croix sur AM/AB = AN/AC : AC = AN \u00d7 AB/AM = ${AN} \u00d7 ${AB}/${AM} = ${AC}.` }; }
+      },
     },
         {
       id: "equations3", titre: "Équations et problèmes", icone: "⚖️",
@@ -91,7 +99,21 @@ window.BANK_3E = {
         { d:4, q:"La somme de trois entiers consécutifs vaut 51 (soit x, x+1, x+2). Le plus petit est...", a:"16", e:"x + (x+1) + (x+2) = 51 → 3x + 3 = 51 → 3x = 48 → x = 16." },
         { d:4, q:"Résoudre : (x − 3)² = 25", c:["x = 8 ou x = −2","x = 8 seulement","x = −8 ou x = 2","x = 22"], a:0, e:"x − 3 = 5 ou x − 3 = −5 → x = 8 ou x = −2." },
         { d:4, q:"Un rectangle a un périmètre de 24 cm et une longueur de 3 cm supérieure à sa largeur. Son aire est...", a:"33.75", e:"Largeur x, longueur x + 3 : 4x + 6 = 24 → x = 4,5 et longueur 7,5. Aire : 33,75 cm²." }
-      ]
+      ],
+      gen: {
+        1: () => { const b = 2 + Math.floor(Math.random() * 14); let x = -9 + Math.floor(Math.random() * 19); if (x === 0) x = 7; const sub = Math.random() < 0.5; const c = sub ? x - b : x + b;
+          return sub
+            ? { q: `R\u00e9soudre : x \u2212 ${b} = ${c}`, a: String(x), e: `x = ${c} + ${b} = ${x}. V\u00e9rification : ${x} \u2212 ${b} = ${c}.` }
+            : { q: `R\u00e9soudre : x + ${b} = ${c}`, a: String(x), e: `x = ${c} \u2212 ${b} = ${x}. V\u00e9rification : ${x} + ${b} = ${c}.` }; },
+        2: () => { const a = 2 + Math.floor(Math.random() * 8); let x = -6 + Math.floor(Math.random() * 13); if (x === 0) x = 5; const c = a * x;
+          return { q: `R\u00e9soudre : ${a}x = ${c}`, a: String(x), e: `x = ${c} \u00f7 ${a} = ${x}. V\u00e9rification : ${a} \u00d7 ${x} = ${c}.` }; },
+        3: () => { const a = 2 + Math.floor(Math.random() * 8); let x = -6 + Math.floor(Math.random() * 13); if (x === 0) x = 4; let b = -9 + Math.floor(Math.random() * 19); if (b === 0) b = 5; const c = a * x + b;
+          return { q: `R\u00e9soudre : ${a}x ${b < 0 ? "\u2212 " + (-b) : "+ " + b} = ${c}`, a: String(x), e: `${a}x = ${c} ${b < 0 ? "+ " + (-b) : "\u2212 " + b} = ${a * x} puis x = ${a * x} \u00f7 ${a} = ${x}. V\u00e9rification : ${a} \u00d7 ${x} ${b < 0 ? "\u2212 " + (-b) : "+ " + b} = ${c}.` }; },
+        4: () => { const a = 3 + Math.floor(Math.random() * 5); let c = a + (1 + Math.floor(Math.random() * 3)) * (Math.random() < 0.5 ? 1 : -1); if (c < 2) c = a + 2; if (c === a) c = a + 1;
+          let x = -5 + Math.floor(Math.random() * 11); if (x === 0) x = 3;
+          let b = -9 + Math.floor(Math.random() * 19); if (b === 0) b = 6; const d = b + (a - c) * x;
+          return { q: `R\u00e9soudre : ${a}x ${b < 0 ? "\u2212 " + (-b) : "+ " + b} = ${c}x ${d < 0 ? "\u2212 " + (-d) : "+ " + d}`, a: String(x), e: `${a}x \u2212 ${c}x = ${d} ${b < 0 ? "+ " + (-b) : "\u2212 " + b} : ${a - c}x = ${d - b} puis x = ${d - b} \u00f7 ${a - c} = ${x}.` }; }
+      },
     },
     {
       id: "puissances3", titre: "Puissances et notation scientifique", icone: "🔟",
@@ -135,7 +157,19 @@ window.BANK_3E = {
         { d:4, q:"f(x) = (x + 1)². Quelle est l'image de −4 ?", a:"9", e:"f(−4) = (−4 + 1)² = (−3)² = 9." },
         { d:4, q:"g(x) = 2x + 1. Que vaut g(g(2)) ?", a:"11", e:"g(2) = 5 ; puis g(5) = 2 × 5 + 1 = 11." },
         { d:4, q:"g(x) = 3x. Un antécédent de 15 est...", a:"5", e:"Il faut résoudre 3x = 15 → x = 5. (Pour une fonction affine 3x − 4, un antécédent de y est (y + 4)/3 : tout nombre de l'image a un antécédent.)" }
-      ]
+      ],
+      gen: {
+        1: () => { const a = 2 + Math.floor(Math.random() * 4), b = -6 + Math.floor(Math.random() * 13); const xs = [-2, 0, 1, 3, 5].sort(() => Math.random() - 0.5).slice(0, 4).sort((x, y) => x - y); const i = Math.floor(Math.random() * 4);
+          const ys = xs.map(x => a * x + b);
+          return { q: `f est telle que : f(${xs[0]}) = ${ys[0]} ; f(${xs[1]}) = ${ys[1]} ; f(${xs[2]}) = ${ys[2]} ; f(${xs[3]}) = ${ys[3]}. Quelle est l'image de ${xs[i]} ?`, a: String(ys[i]), e: `On lit la valeur donn\u00e9e pour x = ${xs[i]} : f(${xs[i]}) = ${ys[i]}.` }; },
+        2: () => { const a = 2 + Math.floor(Math.random() * 4), b = -6 + Math.floor(Math.random() * 13); const xs = [-2, 0, 1, 3, 5].sort(() => Math.random() - 0.5).slice(0, 4).sort((x, y) => x - y); const i = Math.floor(Math.random() * 4);
+          const ys = xs.map(x => a * x + b);
+          return { q: `f est telle que : f(${xs[0]}) = ${ys[0]} ; f(${xs[1]}) = ${ys[1]} ; f(${xs[2]}) = ${ys[2]} ; f(${xs[3]}) = ${ys[3]}. Quel est un ant\u00e9c\u00e9dent de ${ys[i]} ?`, a: String(xs[i]), e: `${ys[i]} est l'image de ${xs[i]} : un ant\u00e9c\u00e9dent de ${ys[i]} est donc ${xs[i]}.` }; },
+        3: () => { const a = 2 + Math.floor(Math.random() * 5), b = -7 + Math.floor(Math.random() * 15); const x = -4 + Math.floor(Math.random() * 9); const y = a * x + b;
+          return { q: `f(x) = ${a}x ${b < 0 ? "\u2212 " + (-b) : "+ " + b}. Quelle est l'image de ${x} ?`, a: String(y), e: `f(${x}) = ${a} \u00d7 ${x} ${b < 0 ? "\u2212 " + (-b) : "+ " + b} = ${y}.` }; },
+        4: () => { const a = 2 + Math.floor(Math.random() * 5), b = -7 + Math.floor(Math.random() * 15); let x = -5 + Math.floor(Math.random() * 11); if (x === 0) x = 3; const y = a * x + b;
+          return { q: `f(x) = ${a}x ${b < 0 ? "\u2212 " + (-b) : "+ " + b}. Quel est un ant\u00e9c\u00e9dent de ${y} ?`, a: String(x), e: `On r\u00e9sout ${a}x ${b < 0 ? "\u2212 " + (-b) : "+ " + b} = ${y} : ${a}x = ${y} ${b < 0 ? "+ " + (-b) : "\u2212 " + b} = ${a * x} puis x = ${a * x} \u00f7 ${a} = ${x}.` }; }
+      },
     },
     {
       id: "faffine3", titre: "Fonctions linéaires et affines", icone: "↗️",
@@ -231,7 +265,17 @@ window.BANK_3E = {
         { d:4, q:"7 valeurs ; la moyenne est 13 et la médiane 12. Si la plus grande valeur (20) passe à 40 :", c:["la moyenne augmente, la médiane ne bouge pas","la médiane augmente, la moyenne non","les deux augmentent de 20","rien ne change"], a:0, e:"Une valeur extrême fait bouger la moyenne (plus de somme pour le même effectif), mais la médiane — 4e valeur sur 7 — reste identique." },
         { d:4, q:"Série de 20 valeurs ordonnées : la médiane est la moyenne des valeurs numéro :", c:["10 et 11","9 et 10","11 et 12","5 et 15"], a:0, e:"20 valeurs : les positions centrales sont 10 et 11 → médiane = moyenne des valeurs 10 et 11." },
         { d:4, q:"Série ordonnée : 8 ; 9 ; 10 ; 11 ; 15 ; x avec x ≥ 15. La médiane des 6 valeurs est :", c:["10,5","11","15","9"], a:0, e:"6 valeurs : la médiane est la moyenne des 3e et 4e valeurs, soit (10 + 11)/2 = 10,5, quelle que soit la 6e valeur (elle est loin du centre)." }
-      ]
+      ],
+      gen: {
+        1: () => { const t = new Set(); while (t.size < 6) t.add(1 + Math.floor(Math.random() * 40)); const s = [...t];
+          return { q: `S\u00e9rie : ${s.join(" ; ")}. \u00c9tendue de la s\u00e9rie ?`, a: String(Math.max(...s) - Math.min(...s)), e: `\u00c9tendue = max \u2212 min = ${Math.max(...s)} \u2212 ${Math.min(...s)} = ${Math.max(...s) - Math.min(...s)}.` }; },
+        2: () => { const m = 12 + Math.floor(Math.random() * 9); const vals = [-4, -2, 0, 2, 4].sort(() => Math.random() - 0.5).map(o => m + o);
+          return { q: `S\u00e9rie : ${vals.join(" ; ")}. Moyenne ?`, a: String(m), e: `Somme = ${vals.join(" + ")} = ${5 * m}. Moyenne = ${5 * m} \u00f7 5 = ${m}.` }; },
+        3: () => { const t = new Set(); while (t.size < 7) t.add(2 + Math.floor(Math.random() * 39)); const s = [...t].sort((x, y) => x - y);
+          return { q: `S\u00e9rie : ${s.join(" ; ")}. M\u00e9diane ?`, a: String(s[3]), e: `7 valeurs : apr\u00e8s classement, la m\u00e9diane est la 4\u1d49 valeur : ${s[3]}.` }; },
+        4: () => { const t = new Set(); while (t.size < 8) t.add(1 + Math.floor(Math.random() * 40)); const s = [...t].sort((x, y) => x - y);
+          return { q: `S\u00e9rie : ${s.join(" ; ")}. Premier quartile Q1 ?`, a: String(s[1]), e: `8 valeurs : Q1 est la plus petite valeur telle qu'au moins 25 % des valeurs sont en dessous, soit la 2\u1d49 : Q1 = ${s[1]}.` }; }
+      },
     },
     {
       id: "rotation3", titre: "Rotation", icone: "🌀",
@@ -250,7 +294,13 @@ window.BANK_3E = {
         { d:4, q:"Quel est le plus petit polygone régulier invariant par une rotation de 30° autour de son centre ? (répondre son nombre de côtés)", a:"12", e:"360° ÷ n = 30° donne n = 12. Un dodécagone convient (mais aussi 24, 36... côtés : 12 est le plus petit)." },
         { d:4, q:"Une rotation de −90° (sens horaire) équivaut à une rotation de...", c:["270° dans le sens trigonométrique (anti-horaire)","90° dans le sens trigonométrique","180° dans le sens trigonométrique","90° sans importance de sens"], a:0, e:"Tourner 90° dans un sens, c'est tourner 360 − 90 = 270° dans l'autre sens : le résultat est identique." },
         { d:4, q:"Dans un pavage engendré par rotations autour d'un même centre, l'angle des rotations utilisées...", c:["doit diviser 360°","doit valoir exactement 90°","est libre","doit être supérieur à 180°"], a:0, e:"Après un nombre entier de virages de même angle, on doit retrouver l'orientation de départ : l'angle doit diviser 360°." }
-      ]
+      ],
+      gen: {
+        2: () => { const ang = 30 + Math.floor(Math.random() * 61);
+          return { q: `Un segment de 7 cm est transform\u00e9 par une rotation de centre O et d'angle ${ang}\u00b0. Longueur de son image ?`, a: "7", e: `La rotation conserve les longueurs : l'image est un segment de 7 cm (l'angle ${ang}\u00b0 mesure le virage, pas un changement de longueur).` }; },
+        3: () => { const ang = 25 + Math.floor(Math.random() * 56); const rot = [40, 60, 90, 120, 180][Math.floor(Math.random() * 5)];
+          return { q: `Une figure a un angle de ${ang}\u00b0. Son image par la rotation de centre O et d'angle ${rot}\u00b0 a un angle de combien de degr\u00e9s ?`, a: String(ang), e: `La rotation conserve les angles : l'angle reste ${ang}\u00b0 (l'angle de la rotation ne s'ajoute pas).` }; }
+      },
     },
         {
       id: "trigo", titre: "Trigonométrie (sinus, tangente)", icone: "📐",
@@ -269,7 +319,15 @@ window.BANK_3E = {
         { d:4, q:"Une rampe de 5 m de long monte à 1,2 m de haut. L'angle entre la rampe et le sol est d'environ combien de degrés ?", a:"14", e:"sin(â) = 1,2/5 = 0,24 → â ≈ 14°." },
         { d:4, q:"Compléter : cos²(â) + sin²(â) = ...", a:"1", e:"C'est une identité fondamentale : cos² + sin² = 1 pour tout angle â." },
         { d:4, q:"Un mât de 6 m est retenu par un câble fixé à 2 m du pied du mât et au sommet. L'angle du câble avec le sol est d'environ (degré) : ...°", a:"72", e:"Hypoténuse = √(6² + 2²) = √40 ≈ 6,32 m. sin(â) = 6/6,32 ≈ 0,95 → â ≈ 72°." }
-      ]
+      ],
+      gen: {
+        2: () => { const T = [[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [20, 21, 29]]; const t = T[Math.floor(Math.random() * T.length)]; const cosv = Math.random() < 0.5;
+          return cosv
+            ? { q: `Triangle rectangle : l'hypot\u00e9nuse mesure ${t[2]} et le c\u00f4t\u00e9 adjacent \u00e0 l'angle x mesure ${t[1]}. Donner cos(x) (fraction).`, a: [`${t[1]}/${t[2]}`], e: `cos(x) = c\u00f4t\u00e9 adjacent \u00f7 hypot\u00e9nuse = ${t[1]}/${t[2]}.` }
+            : { q: `Triangle rectangle : l'hypot\u00e9nuse mesure ${t[2]} et le c\u00f4t\u00e9 oppos\u00e9 \u00e0 l'angle x mesure ${t[0]}. Donner sin(x) (fraction).`, a: [`${t[0]}/${t[2]}`], e: `sin(x) = c\u00f4t\u00e9 oppos\u00e9 \u00f7 hypot\u00e9nuse = ${t[0]}/${t[2]}.` }; },
+        3: () => { const P = [[3, 5], [4, 5], [1, 2], [5, 13], [8, 17], [12, 13], [7, 25]]; const p = P[Math.floor(Math.random() * P.length)]; const w = 2 + Math.floor(Math.random() * 7); const hyp = p[1] * w, L = p[0] * w; const cosv = Math.random() < 0.5;
+          return { q: `Dans un triangle rectangle, ${cosv ? "cos" : "sin"}(x) = ${p[0]}/${p[1]} et l'hypot\u00e9nuse mesure ${hyp}. Longueur du c\u00f4t\u00e9 ${cosv ? "adjacent \u00e0 x" : "oppos\u00e9 \u00e0 x"} ?`, a: String(L), e: `${cosv ? "Adjacent" : "Oppos\u00e9"} = hypot\u00e9nuse \u00d7 ${cosv ? "cos" : "sin"}(x) = ${hyp} \u00d7 ${p[0]}/${p[1]} = ${L}.` }; }
+      },
     },
         {
       id: "sph3", titre: "Solides : sphères, cônes, pyramides", icone: "🔮",
@@ -293,7 +351,16 @@ window.BANK_3E = {
         { d: 2, q: "Une sphère est coupée par un plan. La section est...", c: ["un cercle", "un rectangle", "un point", "un ovale"], a: 0, e: "Un plan coupe toujours une sphère selon un cercle (et une boule selon un disque)." },
         { d: 3, q: "Comment s'appelle la section d'une sphère par un plan qui passe par son centre ?", c: ["un grand cercle", "un cercle polaire", "un petit cercle", "un méridien"], a: 0, e: "C'est un grand cercle : son rayon est le rayon de la sphère. L'équateur de la Terre en est un exemple." },
         { d: 4, q: "Comment repère-t-on un point sur un pavé droit ?", c: ["par 3 coordonnées (longueur ; largeur ; hauteur)", "par 2 coordonnées", "par 1 seule coordonnée", "par 4 coordonnées"], a: 0, e: "Dans l'espace, il faut 3 nombres. Sur la Terre, on utilise la latitude et la longitude." },
-      ]
+      ],
+      gen: {
+        2: () => { const r = 1 + Math.floor(Math.random() * 9); const S = 4 * r * r;
+          return { q: `Aire d'une sph\u00e8re de rayon ${r} cm (r\u00e9sultat sous la forme ... \u00d7 \u03c0, par exemple 12\u03c0) ?`, a: [`${S}\u03c0`], e: `Aire = 4 \u00d7 \u03c0 \u00d7 r\u00b2 = 4 \u00d7 \u03c0 \u00d7 ${r}\u00b2 = ${S}\u03c0 cm\u00b2.` }; },
+        3: () => { const r = 3 * (1 + Math.floor(Math.random() * 3)); const V = 4 * r * r * r / 3;
+          return { q: `Volume d'une boule de rayon ${r} cm (r\u00e9sultat sous la forme ... \u00d7 \u03c0, par exemple 12\u03c0) ?`, a: [`${V}\u03c0`], e: `V = 4 \u00d7 \u03c0 \u00d7 r\u00b3 \u00f7 3 = 4 \u00d7 \u03c0 \u00d7 ${r}\u00b3 \u00f7 3 = ${V}\u03c0 cm\u00b3.` }; },
+        4: () => Math.random() < 0.5
+          ? { q: "La section d'une sph\u00e8re par un plan est toujours...", c: ["un cercle", "un disque", "un rectangle", "une sph\u00e8re plus petite"], a: 0, e: "La section d'une sph\u00e8re par un plan est un cercle." }
+          : { q: "Quand le plan passe par le centre de la sph\u00e8re, la section est...", c: ["un grand cercle", "un petit cercle", "un segment", "un point"], a: 0, e: "Un plan passant par le centre d'une sph\u00e8re la coupe selon un grand cercle, de m\u00eame rayon que la sph\u00e8re." }
+      },
     },
         {
       id: "proba3", titre: "Probabilités", icone: "🎲",
@@ -314,7 +381,9 @@ window.BANK_3E = {
       ],
       gen: {
         2: () => { const n = 2 + Math.floor(Math.random()*4);
-          return { q:`Probabilité (en %, arrondie) d'obtenir un nombre ≤ ${n} avec un dé à 6 faces ?`, a:String(Math.round(n/6*100)), e:`${n} cas favorables sur 6 → ${n}/6 ≈ ${(n/6*100).toFixed(0)} % de chances.` }; }
+          return { q:`Probabilité (en %, arrondie) d'obtenir un nombre ≤ ${n} avec un dé à 6 faces ?`, a:String(Math.round(n/6*100)), e:`${n} cas favorables sur 6 → ${n}/6 ≈ ${(n/6*100).toFixed(0)} % de chances.` }; },
+        3: () => { const P = [[2, 4], [3, 3], [4, 6], [6, 4], [2, 8], [5, 15], [8, 12], [6, 9]]; const p = P[Math.floor(Math.random() * P.length)]; const r = p[0], tot = p[0] + p[1]; const g = (x, y) => y ? g(y, x % y) : x; const s = g(r, tot);
+          return { q: `Une urne contient ${r} boules rouges et ${p[1]} boules bleues. Probabilit\u00e9 de tirer une boule rouge (fraction simplifi\u00e9e) ?`, a: [`${r / s}/${tot / s}`, `${r}/${tot}`], e: `${r} cas favorables sur ${tot} : P = ${r}/${tot} = ${r / s}/${tot / s}.` }; }
       }
     }
   ]

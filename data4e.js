@@ -18,7 +18,17 @@ window.BANK_4E = {
         { d:4, q:"Après une hausse de 20 % puis une baisse de 20 %, le prix final par rapport au prix initial...", c:["est environ 4 % plus bas","est identique","est environ 4 % plus haut","a doublé"], a:0, e:"Multiplier par 1,2 puis par 0,8 donne 0,96 : le prix final est 4 % plus bas que le prix initial (jamais identique)." },
         { d:4, q:"Un train fait 150 km en 1 h 15 min en moyenne. Vitesse moyenne en km/h ?", a:"120", e:"1 h 15 = 1,25 h. v = 150 ÷ 1,25 = 120 km/h." },
         { d:4, q:"Une école de 600 élèves : 60 % sont en 6e ou 5e, et 25 % des élèves restants sont en 4e. Combien d'élèves en 4e ?", a:"60", e:"6e-5e : 600 × 0,6 = 360 (restent 240). 25 % de 240 = 60 élèves en 4e." }
-      ]
+      ],
+      gen: {
+        1: () => { const v = [40, 50, 60, 70, 80, 90][Math.floor(Math.random() * 6)]; const t = 2 + Math.floor(Math.random() * 4); const d = v * t;
+          return { q: `Un v\u00e9hicule roule \u00e0 ${v} km/h pendant ${t} h. Distance parcourue ?`, a: String(d), e: `d = v \u00d7 t = ${v} \u00d7 ${t} = ${d} km.` }; },
+        2: () => { const P = [[10, 150], [10, 240], [20, 60], [20, 80], [20, 150], [20, 200], [25, 40], [25, 80], [25, 120], [25, 200], [50, 40], [50, 70], [50, 90], [50, 150], [75, 40], [75, 60], [75, 120]]; const p = P[Math.floor(Math.random() * P.length)]; const r = p[0] * p[1] / 100;
+          return { q: `Calculer ${p[0]} % de ${p[1]}.`, a: String(r), e: `${p[0]} % de ${p[1]} = ${p[1]} \u00d7 ${p[0]}/100 = ${r}.` }; },
+        3: () => { const P = [[15, 40], [15, 60], [24, 50], [24, 75], [30, 50], [30, 80], [45, 60], [45, 80], [36, 50], [36, 100]]; const p = P[Math.floor(Math.random() * P.length)]; const H = { 15: "0,25", 24: "0,4", 30: "0,5", 45: "0,75", 36: "0,6" };
+          return { q: `${p[0] * p[1] / 60} km parcourus en ${p[0]} min. Vitesse moyenne en km/h ?`, a: String(p[1]), e: `${p[0]} min = ${H[p[0]]} h. v = ${p[0] * p[1] / 60} \u00f7 ${H[p[0]]} = ${p[1]} km/h.` }; },
+        4: () => { const P = [[100000, 1], [500000, 5], [2000000, 20]]; const p = P[Math.floor(Math.random() * 3)]; const cm = 2 + Math.floor(Math.random() * 4); const km = cm * p[1];
+          return { q: `Sur une carte \u00e0 l'\u00e9chelle 1/${p[0]}, une distance de ${cm} cm repr\u00e9sente combien de km en r\u00e9alit\u00e9 ?`, a: String(km), e: `${cm} \u00d7 ${p[0]} = ${cm * p[0]} cm = ${km} km (1 km = 100 000 cm).` }; }
+      },
     },
         {
       id: "pythagore", titre: "Théorème de Pythagore", icone: "📐",
@@ -103,7 +113,18 @@ window.BANK_4E = {
         { d: 3, q: "Volume d'un cône de rayon 3 cm et de hauteur 7 cm (à l'unité près, π ≈ 3,14) ?", c: ["≈ 66 cm³", "≈ 22 cm³", "≈ 44 cm³", "≈ 198 cm³"], a: 0, e: "V = (π × 3² × 7) ÷ 3 = 21 π ≈ 65,9, soit environ 66 cm³." },
         { d: 3, q: "Un cylindre est coupé par un plan parallèle à sa base. La section est...", c: ["un disque de même rayon que la base", "un rectangle", "un disque plus petit que la base", "une ellipse"], a: 0, e: "Dans un cylindre (comme dans un prisme), la section parallèle à la base est identique à la base." },
         { d: 4, q: "Une pyramide est coupée par un plan parallèle à sa base. La section est...", c: ["une réduction de la base", "un agrandissement de la base", "un triangle", "un disque"], a: 0, e: "Un plan parallèle à la base d'une pyramide (ou d'un cône) donne une section qui est une réduction de la base." },
-      ]
+      ],
+      gen: {
+        1: () => { const L = 2 + Math.floor(Math.random() * 8), w = 2 + Math.floor(Math.random() * 6), h = 2 + Math.floor(Math.random() * 5);
+          return { q: `Un prisme a pour base un rectangle de ${L} cm sur ${w} cm et pour hauteur ${h} cm. Volume ?`, a: String(L * w * h), e: `V = B \u00d7 h = (${L} \u00d7 ${w}) \u00d7 ${h} = ${L * w * h} cm\u00b3.` }; },
+        2: () => { const B = 3 + Math.floor(Math.random() * 18), h = 2 + Math.floor(Math.random() * 8);
+          return { q: `Un cylindre a une aire de base de ${B} cm\u00b2 et une hauteur de ${h} cm. Volume ?`, a: String(B * h), e: `V = B \u00d7 h = ${B} \u00d7 ${h} = ${B * h} cm\u00b3.` }; },
+        3: () => { const B = 3 * (2 + Math.floor(Math.random() * 9)), h = 2 + Math.floor(Math.random() * 7);
+          return { q: `Une pyramide a une base d'aire ${B} cm\u00b2 et une hauteur de ${h} cm. Volume ?`, a: String(B * h / 3), e: `V = B \u00d7 h \u00f7 3 = ${B} \u00d7 ${h} \u00f7 3 = ${B * h / 3} cm\u00b3.` }; },
+        4: () => Math.random() < 0.5
+          ? { q: "Un c\u00f4ne de r\u00e9volution est coup\u00e9 par un plan parall\u00e8le \u00e0 sa base. La section est...", c: ["une r\u00e9duction du disque de base", "un rectangle", "un disque identique \u00e0 la base", "un triangle"], a: 0, e: "Un plan parall\u00e8le \u00e0 la base d'un c\u00f4ne (ou d'une pyramide) donne une section qui est une r\u00e9duction de la base." }
+          : { q: "Un prisme est coup\u00e9 par un plan parall\u00e8le \u00e0 sa base. La section est...", c: ["un polygone identique \u00e0 la base", "un disque", "une r\u00e9duction de la base", "toujours un triangle"], a: 0, e: "Dans un prisme (comme dans un cylindre), la section parall\u00e8le \u00e0 la base est identique \u00e0 la base." }
+      },
     },
     {
       id: "arithmetique4",
@@ -191,8 +212,12 @@ window.BANK_4E = {
         { d: 3, q: "MN = 6 cm. Quelle est la longueur de M'N', o\u00f9 M' et N' sont les images de M et N par une translation ?", a: "6", e: "La translation conserve les longueurs : M'N' = MN = 6 cm." },
         { d: 3, q: "Un angle de 45\u00b0 est translat\u00e9. Quelle est la mesure de l'angle image ?", a: "45", e: "La translation conserve les angles : l'angle image mesure aussi 45\u00b0." }
       ],
-      gen: {},
-      genH: {}
+      gen: {
+        2: () => ({ q: "La translation transforme une figure en une figure image. Elle conserve...", c: ["les longueurs, les angles et les aires", "les longueurs mais pas les angles", "les angles mais pas les aires", "ni les longueurs ni les angles"], a: 0, e: "Une translation conserve les longueurs, les angles, les aires, l'alignement et le parall\u00e9lisme : l'image d'une figure est une figure identique, d\u00e9plac\u00e9e." }),
+        3: () => { let ax = -5 + Math.floor(Math.random() * 11), ay = -5 + Math.floor(Math.random() * 11); let dx = -4 + Math.floor(Math.random() * 9), dy = -4 + Math.floor(Math.random() * 9); if (dx === 0) dx = 3; if (dy === 0) dy = -2;
+          const dirx = dx < 0 ? `${-dx} carreaux vers la gauche` : `${dx} carreaux vers la droite`; const diry = dy < 0 ? `${-dy} carreaux vers le bas` : `${dy} carreaux vers le haut`;
+          return { q: `Dans un rep\u00e8re, A(${ax} ; ${ay}). On applique \u00e0 A la translation de ${dirx} et ${diry}. Quelle est l'abscisse du point A' image de A ?`, a: String(ax + dx), e: `Une translation ajoute le d\u00e9placement aux coordonn\u00e9es : abscisse = ${ax} ${dx < 0 ? "\u2212 " + (-dx) : "+ " + dx} = ${ax + dx}.` }; }
+      },
     },
         {
       id: "litteral4", titre: "Calcul littéral et équations", icone: "🧩",
@@ -276,7 +301,13 @@ window.BANK_4E = {
         { d:4, q:"Le cosinus d'un angle aigu est toujours compris entre...", c:["0 et 1","0 et 90","−1 et 1","1 et 2"], a:0, e:"Dans un triangle rectangle, le côté adjacent est toujours plus court que l'hypoténuse : le cosinus est strictement entre 0 et 1." },
         { d:4, q:"Quelle égalité est vraie ?", c:["cos(30°) ≈ 0,87","cos(30°) ≈ 0,5","cos(30°) ≈ 0","cos(30°) ≈ 1,73"], a:0, e:"cos(30°) ≈ 0,866." },
         { d:4, q:"Si cos(â) = 1/2 alors l'angle â mesure...", a:"60", e:"On sait que cos(60°) = 1/2 → â = 60°." }
-      ]
+      ],
+      gen: {
+        2: () => { const T = [[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [20, 21, 29], [9, 40, 41]]; const t = T[Math.floor(Math.random() * T.length)];
+          return { q: `Triangle rectangle : l'hypot\u00e9nuse mesure ${t[2]} et le c\u00f4t\u00e9 adjacent \u00e0 l'angle x mesure ${t[1]}. Cosinus de x ? (fraction)`, a: [`${t[1]}/${t[2]}`], e: `cos(x) = c\u00f4t\u00e9 adjacent \u00f7 hypot\u00e9nuse = ${t[1]}/${t[2]}.` }; },
+        3: () => { const P = [[1, 2], [2, 3], [3, 4], [4, 5], [2, 5], [3, 5], [5, 6], [3, 8]]; const p = P[Math.floor(Math.random() * P.length)]; const w = 2 + Math.floor(Math.random() * 8); const hyp = p[1] * w, adj = p[0] * w;
+          return { q: `cos(x) = ${p[0]}/${p[1]} et l'hypot\u00e9nuse mesure ${hyp}. Longueur du c\u00f4t\u00e9 adjacent ?`, a: String(adj), e: `Adjacent = hypot\u00e9nuse \u00d7 cos(x) = ${hyp} \u00d7 ${p[0]}/${p[1]} = ${adj}.` }; }
+      },
     },
         {
       id: "puissances", titre: "Puissances", icone: "⚡",
@@ -320,7 +351,16 @@ window.BANK_4E = {
         { d:4, q:"On joue 2 fois au pile ou face (équiprobable). Probabilité de 2 piles ?", c:["1/4","1/2","1/3","2/4"], a:0, e:"4 issues (PP, PF, FP, FF) équiprobables → 1/4." },
         { d:4, q:"Une série : 12 (3 fois), 15 (2 fois), 10. Moyenne ?", a:"12.67", e:"(36 + 30 + 10) ÷ 6 = 76 ÷ 6 ≈ 12,67." },
         { d:4, q:"Dans une classe de 28 élèves : 16 filles. Un élève tiré au hasard ; probabilité que ce soit un garçon (décimales 2 chiffres) ?", a:"0.43", e:"12 garçons → 12/28 ≈ 0,4286 ≈ 0,43." }
-      ]
+      ],
+      gen: {
+        1: () => { const m = 10 + Math.floor(Math.random() * 9); const vals = [-3, -1, 0, 1, 3].sort(() => Math.random() - 0.5).map(o => m + o);
+          return { q: `Temp\u00e9ratures relev\u00e9es : ${vals.join(" ; ")}. Moyenne ?`, a: String(m), e: `Somme = ${vals.join(" + ")} = ${5 * m}. Moyenne = ${5 * m} \u00f7 5 = ${m}.` }; },
+        2: () => { const m = 10 + Math.floor(Math.random() * 7); const O = [[3, -2, 0], [-1, -2, 2], [5, -2, -1]]; const o = O[Math.floor(Math.random() * 3)]; const E = [[2, 3, 4], [4, 3, 2], [2, 4, 3], [3, 2, 4]]; const e = E[Math.floor(Math.random() * 4)];
+          const v = [m + o[0], m + o[1], m + o[2]], tot = e[0] + e[1] + e[2], somme = v[0] * e[0] + v[1] * e[1] + v[2] * e[2];
+          return { q: `Notes obtenues : ${v[0]} (${e[0]} fois), ${v[1]} (${e[1]} fois), ${v[2]} (${e[2]} fois). Moyenne de la s\u00e9rie ?`, a: String(m), e: `Somme pond\u00e9r\u00e9e = ${v[0]}\u00d7${e[0]} + ${v[1]}\u00d7${e[1]} + ${v[2]}\u00d7${e[2]} = ${somme}. Moyenne = ${somme} \u00f7 ${tot} = ${m}.` }; },
+        3: () => { const t = new Set(); while (t.size < 7) t.add(2 + Math.floor(Math.random() * 39)); const s = [...t].sort((x, y) => x - y);
+          return { q: `S\u00e9rie : ${s.join(" ; ")}. M\u00e9diane ?`, a: String(s[3]), e: `7 valeurs : apr\u00e8s classement, la m\u00e9diane est la 4\u1d49 valeur : ${s[3]}.` }; }
+      },
     }
   ]
 };

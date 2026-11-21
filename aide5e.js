@@ -62,7 +62,11 @@ window.AIDE_5E = {
       "Astuce : compare le plus grand côté à la somme des deux autres.\nExemple similaire : côtés 4 ; 6 ; 9 : 9 < 10, le triangle existe.",
       "Astuce : opposés par le sommet = angles en vis-à-vis, toujours égaux.\nExemple similaire : deux angles opposés par le sommet de 37° chacun.",
       "Astuce : situation en Z (alternes-internes) ou en F (correspondants) avec droites parallèles : angles égaux.\nExemple similaire : un angle de 50° a son alterne-interne à 50° aussi.",
-    ]
+    ],
+    genH: {
+      2: "Astuce : les trois angles d'un triangle totalisent 180°.\nExemple similaire : pour 50° et 60°, le troisième mesure 180 − 50 − 60 = 70°.",
+      4: "Astuce : avec deux droites parallèles, les alternes-internes (en Z) et les correspondants (en F) sont égaux.\nExemple similaire : un angle de 47° a un alternes-interne de 47°."
+    },
   },
   fractions: {
     videos: [
@@ -211,7 +215,13 @@ window.AIDE_5E = {
       "Astuce : fréquence = effectif de la valeur ÷ effectif total.\nExemple similaire : 3 garçons sur 12 élèves : 3/12 = 0,25 = 25 %.",
       "Astuce : compte les apparitions de la valeur, puis divise par le nombre total de valeurs.\nExemple similaire : 1 ; 2 ; 2 ; 4 : fréquence de 2 = 2/4 = 50 %.",
       "Astuce : ordonne la série, la médiane est la valeur du milieu.\nExemple similaire : 1 ; 3 ; 3 ; 6 ; 8 : médiane 3.",
-    ]
+    ],
+    genH: {
+      1: "Astuce : l'effectif total est la somme des effectifs de chaque catégorie.\nExemple similaire : 12 + 8 + 5 = 25.",
+      2: "Astuce : moyenne = somme des valeurs ÷ nombre de valeurs.\nExemple similaire : (10 + 14 + 12 + 16 + 18) ÷ 5 = 70 ÷ 5 = 14.",
+      3: "Astuce : classe les valeurs ; avec 5 valeurs, la médiane est la 3ᵉ.\nExemple similaire : 2 ; 4 ; 6 ; 8 ; 10 → médiane 6.",
+      4: "Astuce : fréquence = (effectif ÷ total) × 100.\nExemple similaire : 9 élèves sur 15 → 9 ÷ 15 = 0,6 = 60 %."
+    },
   },
   litteral5: {
     videos: [

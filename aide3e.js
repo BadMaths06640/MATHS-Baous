@@ -85,7 +85,11 @@ fractions3: {
       "Astuce : volume × k³ = 3³.\nExemple similaire : rapport 2 → volume × 8.",
       "Astuce : MN = BC × AM/AB = 12 × 6/9.\nExemple similaire : AB = 8, AM = 4, BC = 10 → MN = 5.",
       "Astuce : aire × k² = 24 × (1/2)².\nExemple similaire : aire 40, rapport 1/2 → 10."
-    ]
+    ],
+    genH: {
+      2: "Astuce : Thalès : MN = BC × AM/AB (les petites longueurs sur les grandes).\nExemple similaire : AM = 2, AB = 4, BC = 10 → MN = 10 × 2/4 = 5.",
+      4: "Astuce : produit en croix sur AM/AB = AN/AC : AC = AN × AB/AM.\nExemple similaire : AM = 2, AB = 4, AN = 3 → AC = 3 × 4/2 = 6."
+    },
   },
   equations3: {
     videos: [
@@ -110,7 +114,13 @@ fractions3: {
       "Astuce : somme = x + (x + 1) + (x + 2) = 3x + 3.\nExemple similaire : somme 24 → 3x + 3 = 24 → x = 7.",
       "Astuce : c'est le carré qui se « défait » par ± : x − 3 = 5 ou x − 3 = −5.\nExemple similaire : (x + 1)² = 9 → x = 2 ou x = −4.",
       "Astuce : pose x la largeur : 2(x + x + 3) = 24, puis calcule l'aire avec les longueurs trouvées.\nExemple similaire : P = 20 et L = l + 2 → l = 4, L = 6, aire 24."
-    ]
+    ],
+    genH: {
+      1: "Astuce : isole x : passe le nombre de l'autre côté en changeant de signe.\nExemple similaire : x + 5 = 2 → x = 2 − 5 = −3.",
+      2: "Astuce : x = c ÷ a.\nExemple similaire : 4x = −20 → x = −20 ÷ 4 = −5.",
+      3: "Astuce : d'abord ax = c − b, puis divise par a.\nExemple similaire : 3x + 2 = 11 → 3x = 9 → x = 3.",
+      4: "Astuce : regroupe les x d'un côté : (a − c)x = d − b, puis divise.\nExemple similaire : 5x + 1 = 3x + 9 → 2x = 8 → x = 4."
+    },
   },
   puissances3: {
     videos: [
@@ -165,7 +175,13 @@ fractions3: {
       "Astuce : commence par la parenthèse : −4 + 1 = −3, puis élève au carré.\nExemple similaire : f(x) = (x + 2)² → f(−5) = 9.",
       "Astuce : calcule g(2) D'ABORD, puis injecte ce résultat dans g.\nExemple similaire : g(x) = x + 3 → g(g(1)) = g(4) = 7.",
       "Astuce : résous 3x = 15.\nExemple similaire : g(x) = 5x, image 35 → x = 7."
-    ]
+    ],
+    genH: {
+      1: "Astuce : l'image de x se lit directement dans la table (f(x)).\nExemple similaire : si f(3) = 12, l'image de 3 est 12.",
+      2: "Astuce : l'antécédent de y est le x tel que f(x) = y.\nExemple similaire : si f(3) = 12, un antécédent de 12 est 3.",
+      3: "Astuce : remplace x par sa valeur dans la formule.\nExemple similaire : f(x) = 3x + 2 → f(4) = 14.",
+      4: "Astuce : résous ax + b = y.\nExemple similaire : f(x) = 3x + 2, antécédent de 14 : 3x = 12 → x = 4."
+    },
   },
   faffine3: {
     videos: [
@@ -276,7 +292,13 @@ fractions3: {
       "Astuce : une valeur extrême fait bouger la moyenne, mais pas la médiane (4e valeur sur 7).\nExemple similaire : modifier le 100 en 200 de « 1 ; 2 ; 3 ; 4 ; 100 » ne change pas la médiane.",
       "Astuce : c'est une série de 20 valeurs → positions 10 et 11.\nExemple similaire : 6 valeurs → 3e et 4e.",
       "Astuce : médiane des 6 valeurs = moyenne des 3e et 4e : elle ne dépend pas de x.\nExemple similaire : 1 ; 2 ; 3 ; 4 ; 5 ; 100 → médiane 3,5."
-    ]
+    ],
+    genH: {
+      1: "Astuce : étendue = plus grande valeur − plus petite.\nExemple similaire : 3 ; 7 ; 12 → étendue 12 − 3 = 9.",
+      2: "Astuce : moyenne = somme ÷ nombre de valeurs.\nExemple similaire : (10 + 12 + 14 + 16 + 18) ÷ 5 = 14.",
+      3: "Astuce : classe les valeurs ; avec 7 valeurs, la médiane est la 4ᵉ.\nExemple similaire : 2 ; 4 ; 6 ; 8 ; 10 ; 12 ; 14 → médiane 8.",
+      4: "Astuce : classe les valeurs ; avec 8 valeurs, Q1 est la 2ᵉ valeur (au moins 25 % en dessous).\nExemple similaire : 1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8 → Q1 = 2."
+    },
   },
   rotation3: {
     videos: [
@@ -301,7 +323,11 @@ fractions3: {
       "Astuce : résous 360° ÷ n = 30° pour trouver le nombre de côtés.\nExemple similaire : pour un angle de 45° : 360 ÷ 45 = 8 côtés (l'octogone).",
       "Astuce : tourner de 90° dans un sens, c'est tourner de 360 − 90 dans l'autre sens.\nExemple similaire : une rotation de −30° équivaut à une rotation de 330° dans le sens trigonométrique.",
       "Astuce : après plusieurs virages identiques, il faut retrouver l'orientation de départ : l'angle doit diviser 360°.\nExemple similaire : des rotations de 72° conviennent pour un pavage : 360 ÷ 72 = 5."
-    ]
+    ],
+    genH: {
+      2: "Astuce : une rotation conserve les longueurs et les angles.\nExemple similaire : l'image d'un segment de 6 cm par une rotation est un segment de 6 cm.",
+      3: "Astuce : une rotation conserve les angles : la mesure ne change pas.\nExemple similaire : un angle de 30° a pour image un angle de 30°."
+    },
   },
   trigo: {
     videos: [
@@ -326,7 +352,11 @@ fractions3: {
       "Astuce : sin(â) = 1,2/5 = 0,24, puis touche sin⁻¹.\nExemple similaire : sin(â) = 0,5 → â = 30°.",
       "Astuce : c'est l'identité fondamentale, valable pour tout â.\nExemple similaire : si cos(â) = 0,6, alors sin(â) = 0,8 (car cos² + sin² = 1).",
       "Astuce : d'abord l'hypoténuse par Pythagore (√(6² + 2²)), puis sin = opposé ÷ hypoténuse.\nExemple similaire : mât 4 m, pied à 3 m → hypoténuse 5, sin = 4/5 = 0,8 → â ≈ 53°."
-    ]
+    ],
+    genH: {
+      2: "Astuce : cos(x) = adjacent ÷ hypoténuse ; sin(x) = opposé ÷ hypoténuse.\nExemple similaire : opposé 3, hypoténuse 5 → sin(x) = 3/5.",
+      3: "Astuce : côté = hypoténuse × cos(x) (ou × sin(x) pour l'opposé).\nExemple similaire : sin(x) = 3/5, hypoténuse 15 → opposé = 15 × 3/5 = 9."
+    },
   },
   sph3: {
     videos: [
@@ -356,7 +386,12 @@ fractions3: {
       "Astuce : toute coupe plane d'une sphère donne un cercle.\nExemple similaire : une orange coupée montre un bord circulaire.",
       "Astuce : plan passant par le centre = grand cercle, le plus grand possible.\nExemple similaire : l'équateur est un grand cercle de la Terre.",
       "Astuce : trois directions à repérer : longueur, largeur, hauteur.\nExemple similaire : le coin d'une pièce : (0 ; 0 ; 0), le coin opposé : (L ; l ; h).",
-    ]
+    ],
+    genH: {
+      2: "Astuce : aire de la sphère = 4 × π × r² ; donne le résultat en …π.\nExemple similaire : r = 3 → 4 × π × 9 = 36π.",
+      3: "Astuce : volume de la boule = 4 × π × r³ ÷ 3.\nExemple similaire : r = 3 → 4 × π × 27 ÷ 3 = 36π.",
+      4: "Astuce : plan quelconque → cercle ; plan passant par le centre → grand cercle.\nExemple similaire : l'équateur est un grand cercle de la Terre."
+    },
   },
   proba3: {
     videos: [
@@ -382,7 +417,8 @@ fractions3: {
       "Astuce : passe par l'événement contraire : p(aucun pile) = 1/8, donc p = 1 − 1/8.\nExemple similaire : 2 lancers, au moins une face → 1 − 1/4 = 3/4."
     ],
     genH: {
-      2: "Astuce : compte les cas favorables (1 à n), divise par 6 et convertis en %.\nExemple similaire : ≤ 3 → 3/6 = 50 %."
+      2: "Astuce : compte les cas favorables (1 à n), divise par 6 et convertis en %.\nExemple similaire : ≤ 3 → 3/6 = 50 %.",
+      3: "Astuce : P = cas favorables ÷ cas possibles, puis simplifie la fraction.\nExemple similaire : 4 rouges sur 12 boules → 4/12 = 1/3.",
     }
   }
 };

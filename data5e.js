@@ -53,7 +53,15 @@ window.BANK_5E = {
         { d: 2, q: "Peut-on construire un triangle ABC avec AB = 5 cm, AC = 2,4 cm et BC = 1,8 cm ?", c: ["Non, car 5 > 2,4 + 1,8", "Oui, car 5 < 2,4 + 1,8", "Oui, car tout triplet de longueurs fonctionne", "Non, car 2,4 + 1,8 > 5"], a: 0, e: "2,4 + 1,8 = 4,2 < 5 : le plus grand côté dépasse la somme des deux autres, l'inégalité triangulaire n'est pas respectée." },
         { d: 3, q: "Deux angles opposés par le sommet sont...", c: ["toujours égaux", "toujours complémentaires", "toujours adjacents", "des fois égaux, des fois non"], a: 0, e: "Deux angles opposés par le sommet (même sommet, côtés dans le prolongement l'un de l'autre) sont toujours égaux." },
         { d: 4, q: "Deux droites parallèles sont coupées par une sécante. Deux angles alternes-internes (situation en Z) sont...", c: ["égaux", "complémentaires", "supplémentaires", "sans relation entre eux"], a: 0, e: "Avec deux droites parallèles, les angles alternes-internes (comme les correspondants) sont égaux." },
-      ]
+      ],
+      gen: {
+        2: () => { const a = 35 + Math.floor(Math.random() * 50); const b = 30 + Math.floor(Math.random() * (145 - a - 25)); const c = 180 - a - b;
+          return { q: `Deux angles d'un triangle mesurent ${a}\u00b0 et ${b}\u00b0. Combien mesure le troisi\u00e8me ?`, a: String(c), e: `Somme des angles = 180\u00b0 : 180 \u2212 ${a} \u2212 ${b} = ${c}\u00b0.` }; },
+        4: () => { const ang = 20 + Math.floor(Math.random() * 141); const alt = Math.random() < 0.5;
+          return alt
+            ? { q: `Deux droites parall\u00e8les sont coup\u00e9es par une s\u00e9cante. Un angle mesure ${ang}\u00b0. Combien mesure son alternes-interne ?`, a: String(ang), e: `Avec deux droites parall\u00e8les, les angles alternes-internes (situation en Z) sont \u00e9gaux : ${ang}\u00b0.` }
+            : { q: `Deux droites parall\u00e8les sont coup\u00e9es par une s\u00e9cante. Un angle mesure ${ang}\u00b0. Combien mesure son correspondant ?`, a: String(ang), e: `Avec deux droites parall\u00e8les, les angles correspondants (situation en F) sont \u00e9gaux : ${ang}\u00b0.` }; }
+      },
     },
         {
       id: "fractions", titre: "Fractions : comparer, additionner, soustraire", icone: "🍰",
@@ -178,7 +186,17 @@ window.BANK_5E = {
         { d: 3, q: "Dans une série statistique, la fréquence d'une valeur est...", c: ["l'effectif de la valeur divisé par l'effectif total", "l'effectif total divisé par l'effectif de la valeur", "la somme de tous les effectifs", "la plus grande valeur de la série"], a: 0, e: "Fréquence = effectif de la valeur ÷ effectif total ; souvent donnée en pourcentage." },
         { d: 3, q: "Série : 2 ; 5 ; 3 ; 5 ; 7. Quelle est la fréquence de la valeur 5 ?", c: ["40 %", "20 %", "25 %", "50 %"], a: 0, e: "5 apparaît 2 fois sur 5 valeurs : fréquence = 2 ÷ 5 = 0,4 = 40 %." },
         { d: 4, q: "Série : 4 ; 8 ; 2 ; 10 ; 6. Quelle est la médiane ?", c: ["6", "2", "4", "10"], a: 0, e: "On ordonne : 2 ; 4 ; 6 ; 8 ; 10. La valeur centrale est 6 : la médiane est 6." },
-      ]
+      ],
+      gen: {
+        1: () => { const a = 5 + Math.floor(Math.random() * 11), b = 5 + Math.floor(Math.random() * 11), c = 5 + Math.floor(Math.random() * 11);
+          return { q: `${a} \u00e9l\u00e8ves pr\u00e9f\u00e8rent le foot, ${b} le basket et ${c} le tennis. Effectif total de la s\u00e9rie ?`, a: String(a + b + c), e: `Effectif total = ${a} + ${b} + ${c} = ${a + b + c}.` }; },
+        2: () => { const m = 8 + Math.floor(Math.random() * 9); const vals = [-4, -2, 0, 2, 4].sort(() => Math.random() - 0.5).map(o => m + o);
+          return { q: `S\u00e9rie : ${vals.join(" ; ")}. Quelle est la moyenne ?`, a: String(m), e: `Somme = ${vals.join(" + ")} = ${5 * m}. Moyenne = ${5 * m} \u00f7 5 = ${m}.` }; },
+        3: () => { const set = new Set(); while (set.size < 5) set.add(2 + Math.floor(Math.random() * 29)); const s = [...set].sort((x, y) => x - y);
+          return { q: `S\u00e9rie : ${s.join(" ; ")}. Quelle est la m\u00e9diane ?`, a: String(s[2]), e: `5 valeurs : apr\u00e8s classement, la m\u00e9diane est la 3\u1d49 valeur : ${s[2]}.` }; },
+        4: () => { const P = [[4, 25], [4, 50], [4, 75], [5, 20], [5, 40], [5, 60], [5, 80], [10, 30], [10, 40], [10, 60], [10, 70]]; const p = P[Math.floor(Math.random() * P.length)]; const D = { 20: "0,2", 25: "0,25", 30: "0,3", 40: "0,4", 50: "0,5", 60: "0,6", 70: "0,7", 75: "0,75", 80: "0,8" };
+          return { q: `${p[0] * p[1] / 100} \u00e9l\u00e8ves sur ${p[0]} prennent le bus. Fr\u00e9quence (en %) ?`, a: [`${p[1]} %`, String(p[1])], e: `Fr\u00e9quence = ${p[0] * p[1] / 100} \u00f7 ${p[0]} = ${D[p[1]]} = ${p[1]} %.` }; }
+      },
     },
         {
       id: "litteral5", titre: "Calcul littéral : distributivité", icone: "✖️",
