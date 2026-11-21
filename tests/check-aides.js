@@ -1,4 +1,4 @@
-/* Vérification des résumés de cours et des aides par question (25 thèmes) */
+/* Vérification des résumés de cours et des aides par question (30 thèmes) */
 const fs = require("fs"), vm = require("vm");
 const ctx = { window: {} };
 vm.createContext(ctx);
@@ -7,7 +7,7 @@ for (const f of ["data5e.js", "data4e.js", "data3e.js", "data.js", "aide5e.js", 
 }
 const BANKS = ctx.window.BANKS;
 const probs = [];
-let nRes = 0, nResCards = 0, nH = 0, nGen = 0, nGenCouv = 0, nGenTotal = 0;
+let nRes = 0, nResCards = 0, nH = 0, nQs = 0, nGen = 0, nGenCouv = 0, nGenTotal = 0;
 for (const n of ["5e", "4e", "3e"]) {
   for (const t of BANKS[n].themes) {
     if (!Array.isArray(t.resume) || !t.resume.length) {
@@ -21,6 +21,7 @@ for (const n of ["5e", "4e", "3e"]) {
         if (/\\n(?!\\)/.test(JSON.stringify(c.f))) { /* ok : vrai \n */ }
       });
     }
+    nQs += t.qs.length;
     const nbH = t.qs.filter((q) => typeof q.h === "string" && q.h.includes("Astuce") && q.h.includes("Exemple")).length;
     if (nbH !== t.qs.length) probs.push(`${n}/${t.id}: ${t.qs.length - nbH} question(s) sans aide complète`);
     nH += nbH;
@@ -35,7 +36,7 @@ for (const n of ["5e", "4e", "3e"]) {
     }
   }
 }
-console.log(`Résumés de cours : ${nRes}/25 thèmes (${nResCards} cartes)`);
-console.log(`Aides par question : ${nH}/299 | aides générées : ${nGenCouv}/${nGenTotal}`);
+console.log(`Résumés de cours : ${nRes}/30 thèmes (${nResCards} cartes)`);
+console.log(`Aides par question : ${nH}/${nQs} | aides générées : ${nGenCouv}/${nGenTotal}`);
 if (probs.length) { console.log(`\n⚠ PROBLÈMES (${probs.length}) :`); probs.forEach((p) => console.log(" - " + p)); process.exit(1); }
 console.log("✓ Résumés et aides couvrent tous les thèmes et toutes les questions");

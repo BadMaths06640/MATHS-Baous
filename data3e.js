@@ -1,7 +1,58 @@
 /* ================= BaouMaths — banque de questions 3e ================= */
 window.BANK_3E = {
   themes: [
+{
+      id: "fractions3", titre: "Fractions et nombres relatifs", icone: "➗",
+      chap: [1],
+      notion: "Relatifs : multiplier ou diviser — on effectue le calcul et on applique la règle des signes (pair de signes − : positif ; impair : négatif).\nAdditionner ou soustraire des fractions : les ramener au même dénominateur, puis opérer sur les numérateurs.\nMultiplier des fractions : numérateurs entre eux, dénominateurs entre eux.\nDiviser par une fraction : multiplier par son inverse (l'inverse de a/b est b/a).",
+      qs: [
+        { d:1, q:"Le produit de trois nombres négatifs est...", c:["négatif","positif","ça dépend des valeurs","nul"], a:0, e:"Nombre impair (3) de facteurs négatifs : le produit est négatif." },
+        { d:1, q:"Calculer : (−2/3) × (6/5)", c:["−4/5","4/5","−12/5","−2/5"], a:0, e:"Signes : (−) × (+) = −. Valeur : (2 × 6)/(3 × 5) = 12/15 = 4/5. Résultat : −4/5." },
+        { d:2, q:"Calculer : 2/3 − 1/6", c:["1/2","1/6","1/3","5/6"], a:0, e:"Même dénominateur 6 : 2/3 = 4/6, puis 4/6 − 1/6 = 3/6 = 1/2." },
+        { d:2, q:"Calculer : 3/4 + 5/6 (répondre sous la forme a/b, simplifiée)", a:"19/12", e:"Dénominateur commun 12 : 3/4 = 9/12 et 5/6 = 10/12. Somme : 19/12 (irréductible : 19 est premier et ne divise pas 12)." },
+        { d:2, q:"Diviser par une fraction, c'est...", c:["multiplier par son inverse","multiplier par son contraire","soustraire son inverse","inverser la première fraction"], a:0, e:"a ÷ (b/c) = a × (c/b). Exemple : 2 ÷ (1/3) = 2 × 3 = 6." },
+        { d:3, q:"Calculer : (−3/4) ÷ (−1/2)", c:["3/2","3/8","−3/8","1/2"], a:0, e:"(−) ÷ (−) = +. Diviser par −1/2 : multiplier par −2. Donc (−3/4) × (−2) = 6/4 = 3/2." },
+        { d:3, q:"Calculer : (−1/2 + 1/3) × 6 (répondre un entier)", a:["−1","-1"], e:"−1/2 + 1/3 = −1/6 (dénominateur 6). Puis (−1/6) × 6 = −1." },
+        { d:3, q:"L'inverse de −2/7 est...", c:["−7/2","7/2","2/7","−2/7"], a:0, e:"Inverser la fraction sans changer le signe : l'inverse de −2/7 est −7/2 (car (−2/7) × (−7/2) = 1)." },
+        { d:4, q:"Calculer : (2 − 1/2) ÷ (1 + 1/4) (répondre sous la forme a/b, simplifiée)", a:"6/5", e:"2 − 1/2 = 3/2 et 1 + 1/4 = 5/4. Division : (3/2) × (4/5) = 12/10 = 6/5." },
+        { d:4, q:"Que vaut x si x/3 = 5/6 ?", c:["2,5","1,5","10/3","0,6"], a:0, e:"Produit en croix : x = (3 × 5) ÷ 6 = 15/6 = 2,5." },
+        { d:4, q:"Que vaut la somme des inverses de 2 et de 4 ? (répondre sous la forme a/b, simplifiée)", a:"3/4", e:"Inverses : 1/2 et 1/4. Somme avec dénominateur 4 : 2/4 + 1/4 = 3/4." },
+        { d:4, q:"Que vaut x si 2x/5 = 6 ?", a:"15", e:"2x/5 = 6, donc 2x = 30 et x = 15. Vérification : 2 × 15/5 = 6." }
+      ],
+      gen: {
+        1: () => { let p = 1 + Math.floor(Math.random()*5), s = 1 + Math.floor(Math.random()*5); while (p+s === 7) { p = 1 + Math.floor(Math.random()*5); s = 1 + Math.floor(Math.random()*5); }
+          return { q:`Calculer : ${p}/7 + ${s}/7 (répondre sous la forme a/b, simplifiée)`, a:`${p+s}/7`, e:`Même dénominateur 7 : (${p} + ${s})/7 = ${p+s}/7, déjà simplifiée (7 est premier et ne divise pas ${p+s}).` }; },
+        2: () => { let n = 1 + Math.floor(Math.random()*6), d = 2 + Math.floor(Math.random()*6); while (n > 1 && (2*d) % n === 0) { n = 1 + Math.floor(Math.random()*6); d = 2 + Math.floor(Math.random()*6); }
+          let g = n, b2 = 2*d; while (b2) { const r = g % b2; g = b2; b2 = r; }
+          return { q:`Calculer : ${n}/2 ÷ ${d} (répondre sous la forme a/b, simplifiée)`, a:`${n/g}/${2*d/g}`, e:`Diviser par ${d} : multiplier par 1/${d}. Donc ${n}/(2 × ${d}) = ${n}/${2*d} = ${n/g}/${2*d/g}.` }; }
+      }
+    },
     {
+      id: "puissances3", titre: "Puissances et notation scientifique", icone: "🔟",
+      chap: [2],
+      notion: "Règles : aᵐ × aⁿ = aᵐ⁺ⁿ ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ ; (aᵐ)ⁿ = aᵐ×ⁿ ; a⁰ = 1 ; a⁻ⁿ = 1/aⁿ (avec a non nul).\nÉcriture scientifique : a × 10ⁿ avec 1 ≤ a < 10 (un seul chiffre non nul avant la virgule).\nOrdre de grandeur : la puissance de 10 la plus proche du nombre.",
+      qs: [
+        { d:1, q:"10⁴ est égal à...", c:["10 000","1 000","100","40"], a:0, e:"10⁴ = 10 × 10 × 10 × 10 = 10 000 (le 4 compte les zéros)." },
+        { d:1, q:"a⁰ vaut (a non nul)...", c:["1","0","a","−1"], a:0, e:"Par convention, tout nombre non nul élevé à la puissance 0 vaut 1." },
+        { d:2, q:"Simplifier : 7² × 7⁵", c:["7⁷","7¹⁰","49⁵","7³"], a:0, e:"Même base : on additionne les exposants. 7² × 7⁵ = 7⁷." },
+        { d:2, q:"Simplifier : (5³)²", c:["5⁶","5⁵","5⁹","25³"], a:0, e:"Puissance de puissance : on multiplie les exposants. (5³)² = 5⁶." },
+        { d:2, q:"Calculer : 3⁷ ÷ 3⁵", c:["9","3¹²","3⁵","81"], a:0, e:"Même base : on soustrait les exposants. 3⁷ ÷ 3⁵ = 3² = 9." },
+        { d:3, q:"Calculer : 10⁻² (répondre en décimal)", a:"0.01", e:"10⁻² = 1/(10²) = 1/100 = 0,01." },
+        { d:3, q:"Simplifier : 5a⁴ × 3a³", c:["15a⁷","15a¹²","8a⁷","15a⁴"], a:0, e:"Coefficients : 5 × 3 = 15. Puissances : a⁴ × a³ = a⁷. Résultat : 15a⁷." },
+        { d:3, q:"Écriture scientifique de 45 000 ?", c:["4,5 × 10⁴","45 × 10³","4,5 × 10³","0,45 × 10⁵"], a:0, e:"Scientifique : un seul chiffre non nul avant la virgule. 45 000 = 4,5 × 10⁴." },
+        { d:3, q:"Écriture scientifique de 0,0025 ?", c:["2,5 × 10⁻³","25 × 10⁻³","2,5 × 10⁻²","2,5 × 10³"], a:0, e:"On décale la virgule de 3 rangs vers la droite : 0,0025 = 2,5 × 10⁻³." },
+        { d:4, q:"Calculer : 2⁻³ (répondre en décimal)", a:"0.125", e:"2⁻³ = 1/(2³) = 1/8 = 0,125." },
+        { d:4, q:"Calculer : (3 × 10³) × (4 × 10²) puis donner l'écriture scientifique", c:["1,2 × 10⁶","12 × 10⁵","1,2 × 10⁵","7 × 10⁵"], a:0, e:"Le produit : 3 × 4 = 12 et 10³ × 10² = 10⁵, donc 12 × 10⁵ = 1,2 × 10⁶ (on ramène 12 à 1,2 × 10)." },
+        { d:4, q:"Calculer : 5⁰ + 5¹ + 5²", a:"31", e:"5⁰ = 1, 5¹ = 5, 5² = 25. Somme : 1 + 5 + 25 = 31." }
+      ],
+      gen: {
+        1: () => { const a = 2 + Math.floor(Math.random()*5), k = 2 + Math.floor(Math.random()*3), SUP = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
+          return { q:`Calculer : ${a}${SUP[k]}`, a:String(a**k), e:`${a}${SUP[k]} = ${Array(k).fill(String(a)).join(" × ")} = ${a**k}.` }; },
+        2: () => { const a = 2 + Math.floor(Math.random()*4), p = 2 + Math.floor(Math.random()*3), k = 1 + Math.floor(Math.random()*(p-1)), SUP = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
+          return { q:`Simplifier : ${a}${SUP[p]} ÷ ${a}${SUP[k]}`, a:`${a}${SUP[p-k]}`, e:`Même base : on soustrait les exposants. ${a}${SUP[p]} ÷ ${a}${SUP[k]} = ${a}${SUP[p-k]}.` }; }
+      }
+    },
+        {
       id: "racines", titre: "Racines carrées", icone: "√",
       chap: [3],
       notion: "√a est le nombre positif dont le carré est a : (√a)² = a, et √(a²) = a (si a ≥ 0).\n√25 = 5 ; √(a × b) = √a × √b ; on ne peut pas dire √(a + b) = √a + √b !\nSimplifier : √50 = √(25 × 2) = 5√2.",
@@ -86,6 +137,57 @@ window.BANK_3E = {
         { d:4, q:"g(x) = 3x. Un antécédent de 15 est...", a:"5", e:"Il faut résoudre 3x = 15 → x = 5. (Pour une fonction affine 3x − 4, un antécédent de y est (y + 4)/3 : tout nombre de l'image a un antécédent.)" }
       ]
     },
+    {
+      id: "faffine3", titre: "Fonctions linéaires et affines", icone: "↗️",
+      chap: [7,12],
+      notion: "Fonction linéaire : f(x) = ax (modélise une proportionnalité) ; sa droite passe par l'origine du repère.\nFonction affine : f(x) = ax + b ; a est le coefficient directeur, b l'ordonnée à l'origine (f(0) = b).\nCoefficient : a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁) à partir de deux points.",
+      qs: [
+        { d:1, q:"Une fonction linéaire s'écrit...", c:["f(x) = ax","f(x) = ax + b","f(x) = x²","f(x) = 1/x"], a:0, e:"Linéaire : multiplier par le coefficient a, sans constante. Exemples : f(x) = 3x, f(x) = −2x." },
+        { d:1, q:"Le nombre a dans f(x) = ax s'appelle...", c:["le coefficient directeur (ou de proportionnalité)","l'ordonnée à l'origine","l'antécédent de 0","la racine"], a:0, e:"a est le coefficient directeur de la droite (et le coefficient de proportionnalité de la fonction linéaire)." },
+        { d:2, q:"La représentation graphique d'une fonction affine est...", c:["une droite","une parabole","une courbe en escalier","un cercle"], a:0, e:"Linéaire et affine ont pour représentation graphique une droite ; celle de la linéaire passe par l'origine." },
+        { d:2, q:"f(x) = 3x + 2. Que vaut f(4) ?", a:"14", e:"f(4) = 3 × 4 + 2 = 12 + 2 = 14." },
+        { d:2, q:"f(x) = 5x. Que vaut f(0) ?", c:["0","5","1","x"], a:0, e:"f(0) = 5 × 0 = 0 : toute fonction linéaire s'annule en 0 (droite passant par l'origine)." },
+        { d:2, q:"Une situation de proportionnalité est modélisée par une fonction...", c:["linéaire","affine quelconque","carrée","constante"], a:0, e:"Proportionnalité : image = coefficient × valeur, c'est f(x) = ax, une fonction linéaire." },
+        { d:3, q:"Une droite passe par l'origine O et par le point (2 ; 6). Son coefficient directeur ?", c:["3","1/3","6","2"], a:0, e:"Linéaire : f(2) = 6, donc a = 6 ÷ 2 = 3 (f(x) = 3x)." },
+        { d:3, q:"f est affine : f(1) = 5 et f(3) = 11. Que vaut f(0) ?", a:"2", e:"a = (11 − 5) ÷ (3 − 1) = 3. Puis f(1) = 5 : 3 × 1 + b = 5, donc b = 2. f(0) = 2 (ordonnée à l'origine)." },
+        { d:3, q:"Dans f(x) = ax + b, le nombre b s'appelle...", c:["l'ordonnée à l'origine","le coefficient directeur","la variable","l'antécédent"], a:0, e:"b = f(0) : c'est l'ordonnée du point où la droite coupe l'axe des ordonnées." },
+        { d:4, q:"f est affine : f(2) = 7 et f(5) = 16. Que vaut le coefficient a ?", a:"3", e:"a = (f(5) − f(2)) ÷ (5 − 2) = (16 − 7) ÷ 3 = 9 ÷ 3 = 3." },
+        { d:4, q:"g(x) = −2x + 8. Pour quelle valeur de x a-t-on g(x) = 0 ?", c:["4","2","−4","8"], a:0, e:"−2x + 8 = 0, donc −2x = −8 et x = 4. La droite coupe l'axe des abscisses en (4 ; 0)." },
+        { d:4, q:"f(x) = 2x − 1. Que vaut f(0) ?", a:["−1","-1"], e:"f(0) = 2 × 0 − 1 = −1 : l'ordonnée à l'origine est −1 (la droite passe par le point (0 ; −1))." }
+      ],
+      gen: {
+        1: () => { const a = 2 + Math.floor(Math.random()*8), x = 1 + Math.floor(Math.random()*9);
+          return { q:`f(x) = ${a}x. Que vaut f(${x}) ?`, a:String(a*x), e:`Linéaire : f(${x}) = ${a} × ${x} = ${a*x}.` }; },
+        2: () => { const a = 2 + Math.floor(Math.random()*5), b = (Math.random() < 0.5 ? -1 : 1) * (1 + Math.floor(Math.random()*5)), x = 1 + Math.floor(Math.random()*6);
+          return { q:`f(x) = ${a}x ${b < 0 ? "−" : "+"} ${Math.abs(b)}. Que vaut f(${x}) ?`, a:String(a*x+b), e:`f(${x}) = ${a} × ${x} ${b < 0 ? "−" : "+"} ${Math.abs(b)} = ${a*x} ${b < 0 ? "−" : "+"} ${Math.abs(b)} = ${a*x+b}.` }; }
+      }
+    },
+    {
+      id: "arithmetique3", titre: "Arithmétique : multiples et diviseurs", icone: "🧮",
+      chap: [8],
+      notion: "b est un diviseur de a (et a un multiple de b) quand a = b × k avec k entier. Exemple : 3 et 5 sont des diviseurs de 15.\nDécomposition en facteurs premiers : 60 = 2 × 2 × 3 × 5 (chaque facteur est premier).\nPGCD de deux nombres : produit des facteurs premiers communs pris avec le plus petit exposant.\nFraction irréductible : le PGCD du numérateur et du dénominateur vaut 1.",
+      qs: [
+        { d:1, q:"Parmi ces nombres, lequel est un multiple de 7 ?", c:["91","93","95","97"], a:0, e:"7 × 13 = 91 : 91 est un multiple de 7. Les autres ne le sont pas (93 = 3 × 31, 95 = 5 × 19, 97 premier)." },
+        { d:1, q:"Décomposition de 12 en facteurs premiers ?", c:["2 × 2 × 3","2 × 6","3 × 4","1 × 12"], a:0, e:"Tous ces produits valent 12, mais seuls 2 et 3 sont premiers : la décomposition correcte est 2 × 2 × 3." },
+        { d:2, q:"Que vaut le PGCD (8 ; 12) ?", c:["4","2","8","24"], a:0, e:"Diviseurs de 8 : 1, 2, 4, 8. De 12 : 1, 2, 3, 4, 6, 12. Le plus grand commun est 4 (8 = 2 × 2 × 2 ; 12 = 2 × 2 × 3 ; facteurs communs 2 × 2)." },
+        { d:2, q:"Combien de diviseurs compte 20 ?", a:"6", e:"1, 2, 4, 5, 10 et 20 : six diviseurs (20 = 2 × 2 × 5)." },
+        { d:2, q:"Que vaut le PGCD (24 ; 36) ?", c:["12","6","8","4"], a:0, e:"24 = 2 × 2 × 2 × 3 ; 36 = 2 × 2 × 3 × 3. Facteurs communs : 2 × 2 × 3 = 12." },
+        { d:3, q:"A = 2 × 2 × 3 × 5 et B = 2 × 5 × 5. Que vaut le PGCD (A ; B) ?", c:["10","100","2","20"], a:0, e:"Facteurs premiers communs avec le plus petit exposant : 2 (une fois) et 5 (une fois). PGCD = 2 × 5 = 10." },
+        { d:3, q:"84 = 2 × 2 × 3 × 7 et 105 = 3 × 5 × 7. Que vaut le PGCD (84 ; 105) ?", a:"21", e:"Facteurs communs : 3 et 7. PGCD = 3 × 7 = 21." },
+        { d:3, q:"Parmi ces nombres, lequel est premier ?", c:["61","51","57","91"], a:0, e:"51 = 3 × 17 et 57 = 3 × 19 sont divisibles par 3 (somme des chiffres 6), 91 = 7 × 13. 61 n'est divisible ni par 2, ni par 3, ni par 5, ni par 7 : il est premier." },
+        { d:4, q:"Combien de diviseurs compte 18 ?", c:["6","4","8","9"], a:0, e:"1, 2, 3, 6, 9 et 18 : six diviseurs (18 = 2 × 3 × 3)." },
+        { d:4, q:"Deux nombres premiers entre eux ont...", c:["un seul diviseur commun : 1","tous les deux un unique diviseur","le même nombre de diviseurs","un PGCD égal à leur produit"], a:0, e:"« Premiers entre eux » : leur seul diviseur commun est 1 (exemples : 8 et 9, 4 et 15). Chacun peut avoir plusieurs diviseurs." },
+        { d:4, q:"Réduire en fraction irréductible : 84/126 (répondre sous la forme a/b)", a:"2/3", e:"PGCD (84 ; 126) = 42 (2 × 3 × 7 en commun). 84/126 = 2/3." },
+        { d:4, q:"Deux bus partent ensemble d'un arrêt : l'un toutes les 12 minutes, l'autre toutes les 18. Dans combien de minutes repartiront-ils ensemble ? (répondre en minutes)", a:"36", e:"On cherche le plus petit multiple commun : multiples de 12 (12, 24, 36...) et de 18 (18, 36...) : le premier commun est 36 minutes." }
+      ],
+      gen: {
+        1: () => { const pairs = [[2,3],[2,5],[3,4],[3,5],[4,5],[5,6],[2,7],[3,7],[4,7],[5,7],[6,7]]; const pr = pairs[Math.floor(Math.random()*pairs.length)]; const g = 2 + Math.floor(Math.random()*6);
+          return { q:`Que vaut le PGCD (${g*pr[0]} ; ${g*pr[1]}) ?`, a:String(g), e:`${g*pr[0]} et ${g*pr[1]} sont tous deux des multiples de ${g} : leur plus grand diviseur commun est ${g}.` }; },
+        2: () => { const p = [2,3,5,7][Math.floor(Math.random()*4)], k = 1 + Math.floor(Math.random()*3), n = Math.pow(p, k);
+          const divs = [String(1)]; for (let u = 1; u <= k; u++) divs.push(String(p**u));
+          return { q:`Combien de diviseurs compte le nombre ${n} ?`, a:String(k+1), e:`${n} = ${Array(k).fill(String(p)).join(" × ")} (${p} est premier) : ses diviseurs sont ${divs.join(", ")}, soit ${k+1} diviseurs.` }; }
+      }
+    },
         {
       id: "identites", titre: "Identités remarquables & factorisation", icone: "🧩",
       chap: [9, 15],
@@ -129,6 +231,25 @@ window.BANK_3E = {
         { d:4, q:"7 valeurs ; la moyenne est 13 et la médiane 12. Si la plus grande valeur (20) passe à 40 :", c:["la moyenne augmente, la médiane ne bouge pas","la médiane augmente, la moyenne non","les deux augmentent de 20","rien ne change"], a:0, e:"Une valeur extrême fait bouger la moyenne (plus de somme pour le même effectif), mais la médiane — 4e valeur sur 7 — reste identique." },
         { d:4, q:"Série de 20 valeurs ordonnées : la médiane est la moyenne des valeurs numéro :", c:["10 et 11","9 et 10","11 et 12","5 et 15"], a:0, e:"20 valeurs : les positions centrales sont 10 et 11 → médiane = moyenne des valeurs 10 et 11." },
         { d:4, q:"Série ordonnée : 8 ; 9 ; 10 ; 11 ; 15 ; x avec x ≥ 15. La médiane des 6 valeurs est :", c:["10,5","11","15","9"], a:0, e:"6 valeurs : la médiane est la moyenne des 3e et 4e valeurs, soit (10 + 11)/2 = 10,5, quelle que soit la 6e valeur (elle est loin du centre)." }
+      ]
+    },
+    {
+      id: "rotation3", titre: "Rotation", icone: "🌀",
+      chap: [11],
+      notion: "Une rotation est définie par son centre, son angle et son sens (trigonométrique = anti-horaire).\nLa figure image est superposable à l'originale : longueurs, angles, alignement et parallélisme sont conservés.\nRotation de 180° autour d'un point O : c'est la symétrie centrale de centre O.",
+      qs: [
+        { d:1, q:"Une rotation est définie par...", c:["un centre, un angle et un sens","un centre et un axe","un axe et un angle","deux points uniquement"], a:0, e:"Trois éléments : le point où « pivote » la figure, l'angle de virage et le sens du virage." },
+        { d:1, q:"Une figure et son image par une rotation sont...", c:["superposables","de longueurs différentes","inversées comme dans un miroir","agrandies"], a:0, e:"La rotation fait pivoter la figure sans la déformer : image superposable." },
+        { d:2, q:"Une rotation de 180° autour d'un point O est exactement...", c:["la symétrie centrale de centre O","la projection sur O","la translation de centre O","la symétrie axiale d'axe passant par O"], a:0, e:"Demi-tour autour de O : c'est la définition de la symétrie centrale." },
+        { d:2, q:"M' est l'image de M par une rotation de centre O et d'angle 90°. OM = 3 cm. Que vaut OM' (en cm) ?", a:"3", e:"La rotation conserve les longueurs : OM' = OM = 3 cm, mais la direction de [OM] a tourné de 90°." },
+        { d:2, q:"Une figure et son image par une rotation ont...", c:["même périmètre et même aire","des aires différentes","des périmètres différents","des angles doublés"], a:0, e:"Figures superposables : mêmes mesures de longueurs et d'angles, donc même périmètre et même aire." },
+        { d:3, q:"Quel polygone régulier est invariant par une rotation de 60° autour de son centre ?", c:["l'hexagone régulier","le Carré","le pentagone régulier","le triangle équilatéral"], a:0, e:"Sommet suivant à 360° ÷ 6 = 60° : une rotation de 60° redonne le même hexagone." },
+        { d:3, q:"M' est l'image de M par une rotation d'angle 45° et de centre O. Que vaut l'angle MOM' (en degrés) ?", a:"45", e:"L'angle de la rotation est exactement l'angle entre un point et son image vu du centre : 45°." },
+        { d:3, q:"Quelle rotation laisse invariant le triangle équilatéral ?", c:["120° (ou 240°)","90°","45°","60°"], a:0, e:"Sommet suivant à 360° ÷ 3 = 120° : les rotations de 120° et 240° redonnent le triangle." },
+        { d:4, q:"Une figure à 4 branches identiques régulièrement espacées est invariante pour toute rotation d'angle...", c:["90° (ou un multiple de 90°)","45°","180° uniquement","60°"], a:0, e:"Branche suivante tous les 360° ÷ 4 = 90° : les rotations de 90°, 180° et 270° redonnent la figure." },
+        { d:4, q:"Quel est le plus petit polygone régulier invariant par une rotation de 30° autour de son centre ? (répondre son nombre de côtés)", a:"12", e:"360° ÷ n = 30° donne n = 12. Un dodécagone convient (mais aussi 24, 36... côtés : 12 est le plus petit)." },
+        { d:4, q:"Une rotation de −90° (sens horaire) équivaut à une rotation de...", c:["270° dans le sens trigonométrique (anti-horaire)","90° dans le sens trigonométrique","180° dans le sens trigonométrique","90° sans importance de sens"], a:0, e:"Tourner 90° dans un sens, c'est tourner 360 − 90 = 270° dans l'autre sens : le résultat est identique." },
+        { d:4, q:"Dans un pavage engendré par rotations autour d'un même centre, l'angle des rotations utilisées...", c:["doit diviser 360°","doit valoir exactement 90°","est libre","doit être supérieur à 180°"], a:0, e:"Après un nombre entier de virages de même angle, on doit retrouver l'orientation de départ : l'angle doit diviser 360°." }
       ]
     },
         {
@@ -191,6 +312,5 @@ window.BANK_3E = {
           return { q:`Probabilité (en %, arrondie) d'obtenir un nombre ≤ ${n} avec un dé à 6 faces ?`, a:String(Math.round(n/6*100)), e:`${n} cas favorables sur 6 → ${n}/6 ≈ ${(n/6*100).toFixed(0)} % de chances.` }; }
       }
     }
-
   ]
 };
