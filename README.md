@@ -8,7 +8,7 @@ L'application est publiée ici (GitHub Pages) : **[https://badmaths06640.github.
 
 Parcours de l'élève :
 1. **Choix du niveau de classe** (5e, 4e, 3e).
-2. **Choix du thème** (25 thèmes conformes au programme, présentés **dans l'ordre de la progression annuelle** : chaque carte indique les chapitres correspondants).
+2. **Choix du thème** (30 thèmes conformes au programme, présentés **dans l'ordre de la progression annuelle** : chaque carte indique les chapitres correspondants).
 3. **Auto-évaluation du niveau de maîtrise** (4 échelons, vocabulaire du socle commun : maîtrise fragile → très bonne maîtrise).
 4. **Résumé de cours** : chaque thème s'ouvre sur des cartes visuelles rappelant les formules et règles révisées.
 5. **Série de 10 questions** avec correction immédiate et explication pédagogique après chaque réponse.
@@ -57,4 +57,4 @@ Les thèmes sont **rangés dans l'ordre de l'année** et affichent les chapitres
 |---|---|
 | 5e | Priorités opératoires (ch. 1) · Symétrie, angles et quadrilatères (ch. 2, 6, 8, 12, 18) · Calcul littéral (ch. 3, 9, 19) · Relatifs (ch. 5, 13) · Fractions : comparer, additionner, soustraire (ch. 7, 16) · Proportionnalité et pourcentages (ch. 11, 17) · Statistiques (ch. 14) · Périmètres, aires et volumes (ch. 15, 20) |
 | 4e | Pourcentages, vitesses, échelles (ch. 1, 18) · Pythagore (ch. 2, 13) · Solides et volumes (ch. 4) · Fractions, les 4 opérations (ch. 6, 10) · Calcul littéral et équations (ch. 8, 14) · Cosinus (ch. 11) · Puissances (ch. 12) · Statistiques et probabilités (ch. 15, 17) |
-| 3e | Racines carrées (ch. 3 — outils Thalès/Pythagore) · Thalès et agrandissements (ch. 3, 6, 19) · Équations et problèmes (ch. 4, 15) · Fonctions (ch. 5, 7, 12) · Identités remarquables et factorisation (ch. 9, 15) · Statistiques : médiane et quartiles (ch. 10) · Trigonométrie (ch. 13, 16) · Sphères, cônes, pyramides (ch. 14, 17) · Probabilités (ch. 18) |
+| 3e | Fractions et nombres relatifs (ch. 1) · Puissances et notation scientifique (ch. 2) · Racines carrées (ch. 3 — outils Thalès/Pythagore) · Thalès et agrandissements (ch. 3, 6, 19) · Équations et problèmes (ch. 4, 15) · Fonctions (ch. 5, 7, 12) · Fonctions linéaires et affines (ch. 7, 12) · Arithmétique : multiples et diviseurs (ch. 8) · Identités remarquables et factorisation (ch. 9, 15) · Statistiques : médiane et quartiles (ch. 10) · Rotation (ch. 11) · Trigonométrie (ch. 13, 16) · Sphères, cônes, pyramides (ch. 14, 17) · Probabilités (ch. 18) |
