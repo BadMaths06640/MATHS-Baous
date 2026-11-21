@@ -26,6 +26,7 @@ function starsHTML(n) {
 }
 function norm(s) {
   return String(s).toLowerCase()
+    .replace(/[\u2212\u2013\u2014\u2010\u2011]/g, "-")
     .replace(/\s+/g, "")
     .replace(/,/g, ".")
     .replace(/^x=/, "")
@@ -119,7 +120,12 @@ function renderSetup() {
     : `<div class="notion">${t.notion}</div>`;
   const chapLabel = Array.isArray(t.chap) && t.chap.length
     ? `<p class="theme-chap">Chapitres ${t.chap.join(" · ")} de la progression annuelle</p>` : "";
-  let inner = `<h2>${t.icone} ${t.titre}</h2>${chapLabel}${blocCours}
+  const blocVideos = Array.isArray(t.videos) && t.videos.length
+    ? `<div class="video-row"><span class="video-label">🎬 Révision en vidéo :</span>${t.videos.map((v) =>
+        `<a class="video-link" href="${v.u}" target="_blank" rel="noopener noreferrer" title="S'ouvre dans un nouvel onglet">🎬 ${v.t}</a>`
+      ).join("")}</div>`
+    : "";
+  let inner = `<h2>${t.icone} ${t.titre}</h2>${chapLabel}${blocCours}${blocVideos}
   <p><b>Quel est ton niveau actuel sur ce thème ?</b></p><div class="mastery-grid">`;
   for (let m = 1; m <= 4; m++) {
     const saved = (PROGRESS[STATE.niveau] || {})[t.id];
@@ -181,6 +187,12 @@ function nextQuestion() {
   s.current = q; s.answered = false;
   s.i++;
   $("quiz-title").textContent = `${STATE.theme.icone} ${STATE.theme.titre}`;
+  const qv = $("quiz-video");
+  if (Array.isArray(STATE.theme.videos) && STATE.theme.videos.length) {
+    qv.hidden = false;
+    qv.href = STATE.theme.videos[0].u;
+    qv.title = `Vidéo : ${STATE.theme.videos[0].t}`;
+  } else { qv.hidden = true; }
   $("quiz-counter").textContent = `Question ${s.i} / ${SESSION_LEN}`;
   $("quiz-diff").textContent = `Niveau ${s.diff} · ${DIFF_LABELS[s.diff]}`;
   $("quiz-diff").className = `diff-pill d${s.diff}`;
