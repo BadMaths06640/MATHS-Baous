@@ -16,21 +16,21 @@ window.BANK_5E = {
         { d:2, q:"Calculer : 4 + 3 × (7 − 5)", a:"10", e:"Parenthèse d'abord : 7 − 5 = 2. Multiplication : 3 × 2 = 6. Addition : 4 + 6 = 10." },
         { d:2, q:"Calculer : 18 ÷ 3 × 2", c:["3","12","6","2"], a:1, e:"÷ et × ont la même priorité : on calcule de gauche à droite. 18 ÷ 3 = 6, puis 6 × 2 = 12." },
         { d:2, q:"Calculer : 2 + 3 × 4 − 5 × 2", a:"4", e:"On calcule d'abord les produits : 3 × 4 = 12 et 5 × 2 = 10. Puis 2 + 12 − 10 = 4." },
-        { d:3, q:"Calculer : 5 × (4 − 7)² + 6", c:["51","21","−69","−39"], a:0, e:"Parenthèse : 4 − 7 = −3. Puissance : (−3)² = 9. Produit : 5 × 9 = 45. Somme : 45 + 6 = 51. Attention : 5 × (−3)² = 5 × 9, pas −15." },
+        { d:3, q:"Calculer : 5 × (2 + 3)² + 6", c:["131","31","56","81"], a:0, e:"Parenthèse : 2 + 3 = 5. Puissance : 5² = 25. Produit : 5 × 25 = 125. Somme : 125 + 6 = 131. Attention : on élève au carré AVANT de multiplier par 5 : 5 × 5 + 6 = 31 est faux." },
         { d:3, q:"Calculer : 24 − [ 3 × (2 + 5) − 1 ]", a:"4", e:"Parenthèse : 2 + 5 = 7. Crochets : 3 × 7 − 1 = 21 − 1 = 20. Puis 24 − 20 = 4." },
-        { d:3, q:"Calculer : 2 × 5 − 4 × 3", a:"−2", e:"Produits d'abord : 2 × 5 = 10 et 4 × 3 = 12. Puis 10 − 12 = −2." },
-        { d:4, q:"Calculer : (8 − 2 × 5) × (−3)²", c:["−18","18","−162","54"], a:0, e:"Premier crochet : 2 × 5 = 10, donc 8 − 10 = −2. Puissance : (−3)² = 9. Produit : −2 × 9 = −18." },
+        { d:3, q:"Calculer : 4 × 5 − 2 × 3", a:"14", e:"Produits d'abord : 4 × 5 = 20 et 2 × 3 = 6. Puis 20 − 6 = 14." },
+        { d:4, q:"Calculer : (9 − 2 × 3) × (2 + 5)²", c:["147","63","21","441"], a:0, e:"Parenthèse : 2 × 3 = 6, donc 9 − 6 = 3. Puissance : (2 + 5)² = 7² = 49. Produit : 3 × 49 = 147." },
         { d:4, q:"Calculer : 7 − 2 × [ 12 ÷ (1 + 5) ]", a:"3", e:"Parenthèse : 1 + 5 = 6. Crochets : 12 ÷ 6 = 2, puis 2 × 2 = 4. Puis 7 − 4 = 3." },
-        { d:4, q:"Quelle expression est égale à 15 ?", c:["(2 + 3) × 4 − 5","2 + 3 × (4 − 5)","2 × (3 + 4) − 5","2 + 5 × 3 − 1"], a:0, e:"(2 + 3) × 4 − 5 = 5 × 4 − 5 = 20 − 5 = 15. Vérifie les autres : 2 + 3 × (−1) = −1 ; 2 × 7 − 5 = 9 ; 2 + 15 − 1 = 16." }
+        { d:4, q:"Quelle expression est égale à 15 ?", c:["(2 + 3) × 4 − 5","2 + 3 × (4 + 5)","2 × (3 + 4) + 5","2 + 5 × 3 + 1"], a:0, e:"(2 + 3) × 4 − 5 = 5 × 4 − 5 = 20 − 5 = 15. Vérifie les autres : 2 + 3 × 9 = 29 ; 2 × 7 + 5 = 19 ; 2 + 15 + 1 = 18." }
       ],
       gen: {
         1: () => { const a = 2 + Math.floor(Math.random()*9), b = 2 + Math.floor(Math.random()*9), c = 2 + Math.floor(Math.random()*6);
           return { q:`Calculer : ${a} + ${b} × ${c}`, a:String(a + b*c), e:`Multiplication d'abord : ${b} × ${c} = ${b*c}. Puis ${a} + ${b*c} = ${a+b*c}.` }; },
-        2: () => { const a = 5 + Math.floor(Math.random()*15), b = 2 + Math.floor(Math.random()*4), c = 2 + Math.floor(Math.random()*4);
-          return { q:`Calculer : ${a} − ${b} × ${c} + ${b}`, a:String(a - b*c + b), e:`On calcule ${b} × ${c} = ${b*c} d'abord, puis ${a} − ${b*c} + ${b} = ${a - b*c + b}.` }; },
+        2: () => { const b = 2 + Math.floor(Math.random()*4), c = 2 + Math.floor(Math.random()*4); const bc = b*c; const a = bc + 2 + Math.floor(Math.random()*12);
+          return { q:`Calculer : ${a} − ${b} × ${c} + ${b}`, a:String(a - bc + b), e:`Produit d'abord : ${b} × ${c} = ${bc}. Puis ${a} − ${bc} = ${a - bc}, et ${a - bc} + ${b} = ${a - bc + b}.` }; },
         3: () => { const a = 2 + Math.floor(Math.random()*4); return { q:`Calculer : ${a} × (${a} + ${2*a}) − ${a}²`, a:String(a*3*a - a*a), e:`Parenthèse : ${a} + ${2*a} = ${3*a}. Produit : ${a} × ${3*a} = ${3*a*a}. Carré : ${a}² = ${a*a}. Différence : ${3*a*a} − ${a*a} = ${2*a*a}.` }; },
-        4: () => { const n = 1 + Math.floor(Math.random()*4); const x = 2 + Math.floor(Math.random()*5);
-          return { q:`Calculer : (${x}² − 4 × ${x}) × (−1) + ${n} × ${x}`, a:String((x*x - 4*x) * (-1) + n*x), e:`Dans la parenthèse : ${x}² − ${4*x} = ${x*x - 4*x}. Multiplié par −1 : ${-(x*x-4*x)}. Puis + ${n} × ${x} = ${n*x} : ${(x*x-4*x)*(-1) + n*x}.` }; }
+        4: () => { const a = 2 + Math.floor(Math.random()*3), b = 2 + Math.floor(Math.random()*3), c = 1 + Math.floor(Math.random()*3), d = 1 + Math.floor(Math.random()*3);
+          return { q:`Calculer : (${a} + ${b})² − ${c} × ${d}`, a:String((a+b)*(a+b) - c*d), e:`Parenthèse : ${a} + ${b} = ${a+b}. Carré : ${a+b}² = ${(a+b)*(a+b)}. Produit : ${c} × ${d} = ${c*d}. Différence : ${(a+b)*(a+b)} − ${c*d} = ${(a+b)*(a+b)-c*d}.` }; }
       }
     },
     {

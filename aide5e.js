@@ -11,7 +11,7 @@ window.AIDE_5E = {
     resume: [
       { t: "L'ordre de calcul", f: "1) ( )    2) × ÷    3) + −", d: "D'abord les parenthèses, puis les multiplications et divisions de gauche à droite, enfin les additions et soustractions." },
       { t: "Exemple guide", f: "3 + 5 × 2 = 3 + 10 = 13", d: "La multiplication passe avant l'addition, même si elle vient après dans l'écriture." },
-      { t: "Puissance et carré", f: "(−3)² = 9  (jamais négatif)", d: "Le carré s'applique d'abord au contenu de la parenthèse, avant la multiplication extérieure." }
+      { t: "Puissance et crochets", f: "(2 + 3)² = 25  puis  24 − [3 × 7 − 1] = 4", d: "Le carré s'applique au contenu de la parenthèse avant la multiplication extérieure. Crochets et barre de fraction jouent le rôle de parenthèses : on calcule du plus intérieur au plus extérieur." }
     ],
     qs: [
       "Astuce : la multiplication est prioritaire sur l'addition.\nExemple similaire : 4 + 6 × 3 = 4 + 18 = 22.",
@@ -20,10 +20,10 @@ window.AIDE_5E = {
       "Astuce : trois étapes — parenthèse, puis produit, puis addition.\nExemple similaire : 5 + 2 × (9 − 6) = 5 + 2 × 3 = 5 + 6 = 11.",
       "Astuce : ÷ et × ont le même rang : on calcule de gauche à droite.\nExemple similaire : 20 ÷ 4 × 5 = 5 × 5 = 25.",
       "Astuce : calcule les deux produits d'abord, puis enchaîne + et −.\nExemple similaire : 1 + 4 × 5 − 2 × 3 = 1 + 20 − 6 = 15.",
-      "Astuce : ordre complet — parenthèse, carré, produit, addition. Un carré est toujours positif ou nul.\nExemple similaire : 2 × (3 − 6)² + 1 = 2 × 9 + 1 = 19.",
+      "Astuce : ordre complet — parenthèse, carré, produit, addition. On élève au carré AVANT de multiplier.\nExemple similaire : 2 × (3 + 4)² + 1 = 2 × 49 + 1 = 99.",
       "Astuce : va du plus intérieur au plus extérieur (parenthèse → crochets → soustraction).\nExemple similaire : 30 − [2 × (1 + 3) − 2] = 30 − 6 = 24.",
-      "Astuce : calcule chaque produit séparément, puis soustrais.\nExemple similaire : 7 × 2 − 3 × 4 = 14 − 12 = 2.",
-      "Astuce : traite chaque parenthèse séparément avant le produit final.\nExemple similaire : (10 − 2 × 4) × (−2)² = 2 × 4 = 8.",
+      "Astuce : calcule chaque produit séparément, puis soustrais.\nExemple similaire : 6 × 3 − 2 × 5 = 18 − 10 = 8.",
+      "Astuce : traite chaque parenthèse séparément avant le produit final.\nExemple similaire : (10 − 2 × 4) × (2 + 3)² = 2 × 25 = 50.",
       "Astuce : commence par la parenthèse la plus intérieure.\nExemple similaire : 9 − 3 × [8 ÷ (2 + 2)] = 9 − 3 × 2 = 3.",
       "Astuce : teste chaque choix jusqu'au bout, en respectant l'ordre des opérations.\nExemple similaire : 4 × 6 − 4 × 3 = 24 − 12 = 12."
     ],
@@ -31,7 +31,7 @@ window.AIDE_5E = {
       1: "Astuce : la multiplication est prioritaire sur l'addition.\nExemple similaire : 6 + 5 × 3 = 6 + 15 = 21.",
       2: "Astuce : produit d'abord, puis chaîne de + et −.\nExemple similaire : 12 − 3 × 2 + 3 = 12 − 6 + 3 = 9.",
       3: "Astuce : parenthèse, produit, carré, puis différence.\nExemple similaire : 3 × (3 + 6) − 3² = 27 − 9 = 18.",
-      4: "Astuce : parenthèse d'abord (produits avant soustraction), produit par (−1), puis addition.\nExemple similaire : (4² − 4 × 4) × (−1) + 2 × 4 = 0 + 8 = 8."
+      4: "Astuce : parenthèse d'abord, puis le carré, le produit, et enfin la différence.\nExemple similaire : (3 + 4)² − 2 × 5 = 49 − 10 = 39."
     }
   },
   symetrie5: {
