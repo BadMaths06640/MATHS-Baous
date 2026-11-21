@@ -259,6 +259,32 @@ main { flex: 1; width: 100%; max-width: 900px; margin: 0 auto; padding: 1.5rem 1
 .resume-card .res-d { font-size: .84rem; color: var(--ink-dim); line-height: 1.45; }
 
 /* ---- aide de question ---- */
+.video-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+  margin: .9rem 0 .2rem;
+  padding: .7rem .9rem;
+  background: rgba(110, 68, 255, .07);
+  border: 1px solid rgba(110, 68, 255, .18);
+  border-radius: 12px;
+}
+.video-row .video-label { font-size: .85rem; font-weight: 700; color: var(--ink-dim); margin-right: .2rem; }
+.video-link {
+  display: inline-block;
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  background: var(--card-hover);
+  border: 1px solid rgba(110, 68, 255, .3);
+  color: var(--accent2);
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .15s, border-color .15s;
+}
+.video-link:hover { background: var(--accent); color: #fff; }
+.video-mini { margin-left: .4rem; padding: .15rem .6rem; font-size: .78rem; }
 .hint-toggle { margin-bottom: .8rem; }
 .hint-zone {
   margin-bottom: 1rem; padding: .85rem 1rem; border-radius: 12px;

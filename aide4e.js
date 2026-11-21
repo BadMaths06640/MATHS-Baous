@@ -4,6 +4,12 @@
    genH   : aide appliquée aux questions générées, par difficulté 1-4 */
 window.AIDE_4E = {
   propo4: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=mMW0CSC4mVA", t: "Compléter un tableau de proportionnalité (coefficient)" },
+      { u: "https://www.youtube.com/watch?v=ZGNJxFTPq4Q", t: "Le produit en croix" },
+      { u: "https://www.youtube.com/watch?v=l88QVVAAdhs", t: "Augmenter d'un pourcentage" },
+      { u: "https://www.youtube.com/watch?v=lJZ_cQ-hiT8", t: "Diminuer d'un pourcentage" },
+    ],
     resume: [
       { t: "Vitesses", f: "v = d ÷ t\nd = v × t\nt = d ÷ v", d: "Attention aux unités : 1 h 30 = 1,5 h ; km/h ÷ 3,6 ≈ m/s." },
       { t: "Pourcentages", f: "+ t % → multiplier par (1 + t/100)\n− t % → multiplier par (1 − t/100)", d: "Augmenter de 20 % = ×1,2 ; diminuer de 25 % = ×0,75. Deux variations successives se multiplient." },
@@ -25,6 +31,10 @@ window.AIDE_4E = {
     ]
   },
   pythagore: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=9itzajcpn_I", t: "Le théorème de Pythagore" },
+      { u: "https://www.youtube.com/watch?v=CNuIvPTzmsU", t: "Calculer un côté de l'angle droit" },
+    ],
     resume: [
       { t: "Théorème (hypoténuse)", f: "BC² = AB² + AC²", d: "Si le triangle est rectangle en A, l'hypoténuse est [BC] : le côté opposé à l'angle droit, le plus long." },
       { t: "Chercher un côté de l'angle droit", f: "AB² = BC² − AC²", d: "Quand on connaît l'hypoténuse, on SOUSTRAIT (jamais additionner). Puis on prend la racine carrée." },
@@ -50,6 +60,12 @@ window.AIDE_4E = {
     }
   },
   relatifs4: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=MC6ueOgx90U", t: "Additionner deux nombres relatifs" },
+      { u: "https://www.youtube.com/watch?v=SxVtlYvvIJY", t: "Soustraire un nombre relatif" },
+      { u: "https://www.youtube.com/watch?v=mALMh6TqHuk", t: "Multiplier deux relatifs" },
+      { u: "https://www.youtube.com/watch?v=har1B0Q0yL8", t: "Diviser deux relatifs" },
+    ],
     resume: [
       { t: "Règle des signes", f: "(−) × (−) = +\n(−) × (+) = −", d: "Même règle pour la division : mêmes signes → positif, signes contraires → négatif." },
       { t: "Plusieurs facteurs", f: "(−2) × 3 × (−4) = +24", d: "Compte les facteurs négatifs : nombre pair → produit positif ; impair → négatif." },
@@ -75,6 +91,11 @@ window.AIDE_4E = {
     }
   },
   sphvol: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=-ylcRWcwIGM", t: "Sections d'un cylindre par un plan" },
+      { u: "https://www.youtube.com/watch?v=Cu9USzow-_o", t: "Sections d'une pyramide par un plan" },
+      { u: "https://www.youtube.com/watch?v=RzIJ5Fq2fiU", t: "Volume d'une pyramide ou d'un cône" },
+    ],
     resume: [
       { t: "Pyramide et cône", f: "V = (aire de la base × h) ÷ 3", d: "Cône : base = π × r², donc V = (π × r² × h) ÷ 3. Sections parallèles à la base : réduction de la base (pyramide, cône) ou base identique (cylindre, prisme)." },
       { t: "Prisme et cylindre", f: "V = aire de la base × hauteur\nCylindre : V = π × r² × h", d: "Toujours : aire de la base (disque, rectangle…) × hauteur du solide." },
@@ -101,6 +122,10 @@ window.AIDE_4E = {
     ]
   },
   arithmetique4: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=g9PLLhnCv88", t: "Reconnaître un nombre premier" },
+      { u: "https://www.youtube.com/watch?v=kQJ1dYqA6ZU", t: "Le cours : divisibilité" },
+    ],
     resume: [
       { t: "Division euclidienne", f: "702 = 273 × 2 + 156", d: "a = b × q + r avec r < b. Le reste est toujours plus petit que le diviseur." },
       { t: "Critères de divisibilité", f: "par 2 : unités paires\npar 3 ou 9 : somme des chiffres\npar 5 : finit par 0 ou 5\npar 4 : les 2 derniers chiffres", d: "Exemple : 312 → 3 + 1 + 2 = 6 → divisible par 3 ; 312 finit par 12, divisible par 4." },
@@ -126,6 +151,10 @@ window.AIDE_4E = {
     }
   },
   rationnels: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=IbshJBzzNcs", t: "Nombres en écritures fractionnaires" },
+      { u: "https://www.youtube.com/watch?v=XcsbENjMFZo", t: "Additions et soustractions de fractions (avec relatifs)" },
+    ],
     resume: [
       { t: "Somme / différence", f: "2/3 + 1/6 = 4/6 + 1/6 = 5/6", d: "On met d'abord au même dénominateur, puis on additionne les numérateurs." },
       { t: "Produit", f: "3/4 × 2/5 = 6/20 = 3/10", d: "Numérateurs entre eux, dénominateurs entre eux, puis on simplifie." },
@@ -151,6 +180,10 @@ window.AIDE_4E = {
     }
   },
   translation4: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=O5h2AuM2FWw", t: "Translation sur papier blanc" },
+      { u: "https://www.youtube.com/watch?v=YzG5ZP9Kp6k", t: "Image d'un point par une translation" },
+    ],
     resume: [
       { t: "Définition", f: "M' : MM' = AB\net (MM') // (AB)", d: "L'image de M par la translation qui transforme A en B : on reporte depuis M la direction, le sens et la longueur de A vers B." },
       { t: "Ce qui est conservé", f: "longueurs · angles · aires\nalignement · parallélisme", d: "Une figure et son image sont identiques, juste déplacées : même périmètre, même aire." },
@@ -172,6 +205,11 @@ window.AIDE_4E = {
     genH: {}
   },
   litteral4: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=6gy3DH19Ifk", t: "Équation x + a = b" },
+      { u: "https://www.youtube.com/watch?v=gcdBHwRaBa8", t: "Équation ax = b" },
+      { u: "https://www.youtube.com/watch?v=9Y4mCFQ4F-8", t: "Équation ax + b = cx + d" },
+    ],
     resume: [
       { t: "Double distributivité", f: "(a + b)(c + d) = ac + ad + bc + bd\n(x + 2)(x + 3) = x² + 5x + 6", d: "Chaque terme de la 1re parenthèse multiplie chaque terme de la 2e (4 produits, attention aux signes)." },
       { t: "Résoudre une équation", f: "x + a = b → x = b − a\nax = b → x = b ÷ a", d: "On applique la MÊME opération des deux côtés pour isoler x (égalité conservée)." },
@@ -197,6 +235,9 @@ window.AIDE_4E = {
     }
   },
   thales4: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=08UEfPADVWs", t: "Le théorème de Thalès" },
+    ],
     resume: [
       { t: "Configuration", f: "M ∈ [AB], N ∈ [AC]\n(MN) // (BC)", d: "Idem en « papillon » : M entre A et B de l'autre côté, les rapports se font toujours à partir du point commun A... ou M." },
       { t: "Théorème", f: "AM/AB = AN/AC = MN/BC", d: "On écrit les rapports sur chaque côté en partant du point commun, puis on calcule par produit en croix." },
@@ -222,6 +263,9 @@ window.AIDE_4E = {
     }
   },
   cosinus: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=YiY0thNvTrQ", t: "Trigonométrie : préparer les chapitres (4e et 3e)" },
+    ],
     resume: [
       { t: "La formule", f: "cos(â) = adjacent ÷ hypoténuse", d: "Adjacent = côté de l'angle droit qui touche l'angle â (jamais l'hypoténuse). Mnémo : CAH dans SOH-CAH-TOA." },
       { t: "Chercher une longueur", f: "adjacent = hypoténuse × cos(â)", d: "On isole la longueur cherchée dans la formule, calculatrice en mode DEGRÉS." },
@@ -243,6 +287,10 @@ window.AIDE_4E = {
     ]
   },
   puissances: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=DFthuKo3byw", t: "Puissance d'exposant positif" },
+      { u: "https://www.youtube.com/watch?v=6iYBMmT9Uio", t: "Puissances de 10" },
+    ],
     resume: [
       { t: "Les règles de base", f: "aᵐ × aⁿ = aᵐ⁺ⁿ\naᵐ ÷ aⁿ = aᵐ⁻ⁿ\n(aᵐ)ⁿ = aᵐ×ⁿ", d: "Multiplier → on ADDITIONNE les exposants. Diviser → on SOUSTRAIT. Puissance de puissance → on MULTIPLIE." },
       { t: "Puissances de 10", f: "10ⁿ = 1 suivi de n zéros\n10⁻ⁿ = 1/10ⁿ", d: "10⁵ = 100 000 et 10⁻³ = 0,001. Exposant positif → grand nombre ; négatif → petit nombre." },
@@ -268,6 +316,10 @@ window.AIDE_4E = {
     }
   },
   stats4: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=DtJAwfouGfY", t: "Le cours : statistiques (4e)" },
+      { u: "https://www.youtube.com/watch?v=tf9fFDacKAQ", t: "Trouver une médiane dans une liste de valeurs" },
+    ],
     resume: [
       { t: "Moyenne pondérée", f: "(10×1 + 14×2) ÷ (1+2) ≈ 12,67", d: "On multiplie chaque valeur par son coefficient (ou effectif), on divise par la somme des coefficients." },
       { t: "Probabilité", f: "p = (cas favorables) ÷ (cas possibles)", d: "Valable pour des issues équiprobables. La proba se donne en fraction, décimale ou pourcentage." },

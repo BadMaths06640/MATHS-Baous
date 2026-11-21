@@ -4,6 +4,10 @@
    genH   : aide appliquée aux questions générées, par difficulté 1-4 */
 window.AIDE_3E = {
   racines: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=y2HlgP09Bog", t: "Calculer une racine carrée" },
+      { u: "https://www.youtube.com/watch?v=bjS5LW-hgWk", t: "Encadrer une racine carrée" },
+    ],
     resume: [
       { t: "Définition", f: "(√a)² = a\n√(a²) = a   (a ≥ 0)", d: "√a est le nombre POSITIF dont le carré vaut a : √49 = 7 (jamais −7)." },
       { t: "Produit et quotient", f: "√(a × b) = √a × √b\n√(a ÷ b) = √a ÷ √b", d: "Exemple : √(4 × 9) = √4 × √9 = 6. ATTENTION : √(a + b) ≠ √a + √b !" },
@@ -29,6 +33,11 @@ window.AIDE_3E = {
     }
   },
 fractions3: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=Z86gfJOKgBg", t: "Calculs de fractions (1)" },
+      { u: "https://www.youtube.com/watch?v=1yV5scwCwvg", t: "Calculs de fractions (2)" },
+      { u: "https://www.youtube.com/watch?v=qZaTliAWkA0", t: "Rendre une fraction irréductible" }
+    ],
     resume: [
       { t: "Règle des signes", f: "(−) × (−) = +\n(−) × (+) = −", d: "Nombre pair de facteurs négatifs → produit positif ; impair → négatif. Même règle pour la division." },
       { t: "Additionner / soustraire", f: "2/3 − 1/6 = 4/6 − 1/6 = 3/6 = 1/2", d: "Même dénominateur d'abord, puis on opère sur les numérateurs." },
@@ -54,6 +63,10 @@ fractions3: {
     }
   },
   thales: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=08UEfPADVWs", t: "Le théorème de Thalès" },
+      { u: "https://www.youtube.com/watch?v=BNgjzubShAo", t: "Image d'un point par une homothétie" },
+    ],
     resume: [
       { t: "Le théorème", f: "AM/AB = AN/AC = MN/BC", d: "Valable si (MN) ∥ (BC) avec M sur (AB) et N sur (AC). On écrit les rapports à partir du sommet commun A." },
       { t: "Agrandir / réduire", f: "longueurs : × k\naires : × k²\nvolumes : × k³", d: "Exemple : k = 3 → aires × 9, volumes × 27. k < 1 : réduction ; k > 1 : agrandissement." },
@@ -75,6 +88,10 @@ fractions3: {
     ]
   },
   equations3: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=gcdBHwRaBa8", t: "Résoudre une équation ax = b" },
+      { u: "https://www.youtube.com/watch?v=9Y4mCFQ4F-8", t: "Résoudre ax + b = cx + d" },
+    ],
     resume: [
       { t: "Équation ax + b = cx + d", f: "3x + 2 = x + 10 → 2x = 8 → x = 4", d: "On regroupe les x d'un côté (soustraction) et les nombres de l'autre, puis on divise." },
       { t: "Produit nul", f: "A × B = 0 ⟺ A = 0 ou B = 0", d: "Exemple : (x − 3)(x + 5) = 0 → x = 3 ou x = −5. Deux solutions à vérifier séparément." },
@@ -96,6 +113,10 @@ fractions3: {
     ]
   },
   puissances3: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=IKmReDkNGp8", t: "Calculs de puissances (1)" },
+      { u: "https://www.youtube.com/watch?v=_iwHYbuZ4N8", t: "Calculs de puissances (2)" },
+    ],
     resume: [
       { t: "Règles de calcul", f: "aᵐ × aⁿ = aᵐ⁺ⁿ\naᵐ ÷ aⁿ = aᵐ⁻ⁿ\n(aᵐ)ⁿ = aᵐ×ⁿ", d: "Même base : on additionne les exposants (produit), on les soustrait (quotient), on les multiplie (puissance de puissance)." },
       { t: "Puissances remarquables", f: "a⁰ = 1\na⁻ⁿ = 1/aⁿ", d: "Exemple : 10⁻² = 1/(10²) = 0,01. a est non nul." },
@@ -121,6 +142,11 @@ fractions3: {
     }
   },
   fonctions: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=gQUt5y8LFKk", t: "Lire graphiquement une image et un antécédent" },
+      { u: "https://www.youtube.com/watch?v=EOS5bSPTZjg", t: "Image et antécédent dans un tableau" },
+      { u: "https://www.youtube.com/watch?v=FjqPwHS7vE8", t: "Calculer une image par une fonction" },
+    ],
     resume: [
       { t: "Image", f: "f(x) = 2x + 3 → f(4) = 11", d: "L'image de 4 est 11 : on REMPLACE x par 4 dans la formule et on calcule. La flèche va de x vers f(x)." },
       { t: "Antécédent", f: "f(x) = 11 → 2x + 3 = 11 → x = 4", d: "Chercher un antécédent = résoudre une équation. Une image est unique ; un antécédent peut ne pas exister ou être multiple." },
@@ -142,6 +168,9 @@ fractions3: {
     ]
   },
   faffine3: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=qahxeWQ7kTg", t: "Représenter une fonction affine" },
+    ],
     resume: [
       { t: "Fonction linéaire", f: "f(x) = ax", d: "Multiplie par a (coefficient de proportionnalité) ; la droite passe par l'origine. Exemple : f(x) = 3x → f(4) = 12." },
       { t: "Fonction affine", f: "f(x) = ax + b", d: "a : coefficient directeur ; b : ordonnée à l'origine (f(0) = b). La droite coupe l'axe des ordonnées au point (0 ; b)." },
@@ -167,6 +196,10 @@ fractions3: {
     }
   },
   arithmetique3: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=al9oHwrlTNo", t: "Le cours : arithmétique (multiples et diviseurs)" },
+      { u: "https://www.youtube.com/watch?v=RBE2wPIKagI", t: "Décomposer en produit de facteurs premiers" },
+    ],
     resume: [
       { t: "Multiples et diviseurs", f: "20 = 4 × 5 → 4 et 5 sont des diviseurs de 20", d: "a est multiple de b quand a = b × k avec k entier. Les multiples de 7 : 7, 14, 21, 28, 35..." },
       { t: "Décomposition en facteurs premiers", f: "60 = 2 × 2 × 3 × 5", d: "On divise autant de fois que possible par 2, puis 3, 5, 7... on s'arrête quand il ne reste que des facteurs premiers." },
@@ -192,6 +225,10 @@ fractions3: {
     }
   },
   identites: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=jmKHKs2ZM94", t: "Factoriser une expression" },
+      { u: "https://www.youtube.com/watch?v=6j0oMQlaBYg", t: "Identité (a − b)(a + b) = a² − b²" },
+    ],
     resume: [
       { t: "Les 3 identités", f: "(a + b)² = a² + 2ab + b²\n(a − b)² = a² − 2ab + b²\n(a + b)(a − b) = a² − b²", d: "Le double-produit 2ab est LE terme qu'on oublie. (x + 3)² = x² + 6x + 9, pas x² + 9 !" },
       { t: "Développer ou factoriser ?", f: "x² + 6x + 9 = (x + 3)²", d: "Développer = transformer un produit en somme. Factoriser = l'inverse : repérer une identité ou un facteur commun." },
@@ -217,6 +254,10 @@ fractions3: {
     }
   },
   stats3: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=aO3pb-FEsbk", t: "Moyenne, médiane, étendue (1)" },
+      { u: "https://www.youtube.com/watch?v=AcSxB_wedkU", t: "Moyenne, médiane, étendue (2)" },
+    ],
     resume: [
       { t: "Médiane", f: "2 ; 5 ; 8 ; 10 ; 20 → Médiane = 8", d: "On ORDONNE la série. Effectif impair → valeur du milieu ; effectif pair → moyenne des deux valeurs centrales." },
       { t: "Quartiles", f: "Q1 : au moins 25 % en dessous\nQ3 : au moins 75 % en dessous", d: "Q1 = Q3 sont cherchés sur la série ordonnée, séparément de la moyenne." },
@@ -238,6 +279,10 @@ fractions3: {
     ]
   },
   rotation3: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=xd_-KzMmjwI", t: "Image d'un point par une rotation" },
+      { u: "https://www.youtube.com/watch?v=_lr-qTQVtCg", t: "Image d'une figure par une rotation" },
+    ],
     resume: [
       { t: "Définition", f: "centre O + angle + sens", d: "La rotation de centre O, d'angle et de sens donnés fait « pivoter » la figure autour de O. Sens trigonométrique : anti-horaire." },
       { t: "Ce qui est conservé", f: "longueurs · angles · alignement", d: "Image superposable : OM' = OM, longueurs, angles, alignement et parallélisme conservés, donc même périmètre et même aire." },
@@ -259,6 +304,10 @@ fractions3: {
     ]
   },
   trigo: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=G54mXt7J9dg", t: "Calculer une longueur avec la trigonométrie" },
+      { u: "https://www.youtube.com/watch?v=pO8J2hA7aso", t: "La tangente d'un angle aigu" },
+    ],
     resume: [
       { t: "Les 3 formules", f: "sin = opposé ÷ hypoténuse\ncos = adjacent ÷ hypoténuse\ntan = opposé ÷ adjacent", d: "Mnémo : SOH-CAH-TOA. L'hypoténuse est face à l'angle droit ; l'opposé est face à l'angle â." },
       { t: "Valeurs repères", f: "sin(30°) = 0,5\ntan(45°) = 1\nsin(90°) = 1", d: "sin(60°) ≈ 0,87 ; cos(60°) = 0,5. La calculatrice doit être en mode DEGRÉS (deg)." },
@@ -280,6 +329,9 @@ fractions3: {
     ]
   },
   sph3: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=GNbVEivQpVQ", t: "Se repérer sur une sphère" },
+    ],
     resume: [
       { t: "Sections et repérage", f: "plan → cercle ; par le centre → grand cercle", d: "Exemple : l'équateur est un grand cercle de la Terre. Dans l'espace, un point du pavé droit se repère par 3 coordonnées ; sur Terre : latitude et longitude." },
       { t: "Sphère (boule)", f: "V = (4/3) × π × r³\nAire = 4 × π × r²", d: "Exemple : r = 3 → V = (4/3) × π × 27 = 36π ≈ 113 cm³. Volume en unités³, aire en unités²." },
@@ -307,6 +359,10 @@ fractions3: {
     ]
   },
   proba3: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=CBtj0nLx-N4", t: "Le cours : probabilités (3e)" },
+      { u: "https://www.youtube.com/watch?v=d6Co0q01QH0", t: "Calculer une probabilité" },
+    ],
     resume: [
       { t: "La formule", f: "p = (cas favorables) ÷ (cas possibles)", d: "Uniquement pour des issues équiprobables. Exemple : dé → p(nombre pair) = 3/6 = 1/2." },
       { t: "Encadrement", f: "0 ≤ p ≤ 1", d: "p = 0 : impossible ; p = 1 : certain. En pourcentage : p = 25 % ↔ 1 chance sur 4." },

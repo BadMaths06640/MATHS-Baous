@@ -4,6 +4,10 @@
    genH   : aide appliquée aux questions générées, par difficulté 1-4 */
 window.AIDE_5E = {
   calc: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=xsv49X48RvE", t: "Enchaîner des opérations sans parenthèses" },
+      { u: "https://www.youtube.com/watch?v=zi17rpzxsC8", t: "Enchaîner des opérations avec parenthèses" },
+    ],
     resume: [
       { t: "L'ordre de calcul", f: "1) ( )    2) × ÷    3) + −", d: "D'abord les parenthèses, puis les multiplications et divisions de gauche à droite, enfin les additions et soustractions." },
       { t: "Exemple guide", f: "3 + 5 × 2 = 3 + 10 = 13", d: "La multiplication passe avant l'addition, même si elle vient après dans l'écriture." },
@@ -31,6 +35,12 @@ window.AIDE_5E = {
     }
   },
   geom5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=rJvF6iENYME", t: "L'inégalité triangulaire" },
+      { u: "https://www.youtube.com/watch?v=FucUXFt-wjI", t: "Somme des angles d'un triangle" },
+      { u: "https://www.youtube.com/watch?v=o-LXjfesIxw", t: "La symétrie centrale" },
+      { u: "https://www.youtube.com/watch?v=4dGM22L9030", t: "Le parallélogramme" },
+    ],
     resume: [
       { t: "Angles d'un triangle", f: "angle A + B + C = 180°", d: "La somme des trois angles d'un triangle vaut toujours 180°." },
       { t: "Symétrie centrale", f: "O = milieu de [MM']", d: "Le symétrique de M par rapport à O s'obtient en prolongeant [MO] d'autant ; longueurs et angles sont conservés." },
@@ -55,6 +65,11 @@ window.AIDE_5E = {
     ]
   },
   fractions: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=RJwAP3LNPqA", t: "Fractions égales et simplification" },
+      { u: "https://www.youtube.com/watch?v=Kgy1Uv0KAdY", t: "Comparer une fraction à l'unité" },
+      { u: "https://www.youtube.com/watch?v=K7e_5LJdKPE", t: "Additionner des fractions de dénominateurs différents" },
+    ],
     resume: [
       { t: "Addition / soustraction", f: "2/3 + 1/6 = 4/6 + 1/6 = 5/6", d: "On met d'abord au même dénominateur, puis on additionne les numérateurs." },
       { t: "Fraction d'une quantité", f: "2/3 de 60 = 60 × 2 = 120 → ÷ 3 = 40", d: "« 2/3 de 60 » : on multiplie par le numérateur puis on divise par le dénominateur (ou l'inverse, le résultat est le même)." },
@@ -79,6 +94,12 @@ window.AIDE_5E = {
     }
   },
   arithmetique5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=phQY4ybQrUI", t: "Poser une division euclidienne" },
+      { u: "https://www.youtube.com/watch?v=y3nU79nBMpw", t: "Divisibilité par 2" },
+      { u: "https://www.youtube.com/watch?v=d0JC5Ar_Jzc", t: "Divisibilité par 3 et 9" },
+      { u: "https://www.youtube.com/watch?v=kWMh9eZJIxQ", t: "Nombres premiers : définition" },
+    ],
     resume: [
       { t: "Division euclidienne", f: "23 = 5 × 4 + 3", d: "a = b × q + r avec 0 ≤ r < b. Le reste est toujours plus petit que le diviseur." },
       { t: "Divisibilité", f: "par 3 ou 9 : la somme des chiffres\npar 2 : finit par 0, 2, 4, 6, 8\npar 5 : finit par 0 ou 5", d: "Si le reste est nul, le diviseur divise le nombre (il en est un diviseur, le nombre en est un multiple)." },
@@ -104,6 +125,10 @@ window.AIDE_5E = {
     }
   },
   propo: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=leBAfrIbAbk", t: "Le tableau de proportionnalité" },
+      { u: "https://www.youtube.com/watch?v=6MMvDOPKDOE", t: "Appliquer et calculer un pourcentage" },
+    ],
     resume: [
       { t: "Tableau de proportionnalité", f: "3 → 6 €\n1 → 2 €   (÷3)\n5 → 10 €  (×5)", d: "Le coefficient multiplie toute la colonne : passer par l'unité évite les erreurs." },
       { t: "Pourcentages", f: "10 % de 80 = 80 × 10/100 = 8", d: "Repères : 50 % = moitié, 25 % = quart, 10 % = dixième. Sinon on multiplie par t/100." },
@@ -129,6 +154,12 @@ window.AIDE_5E = {
     }
   },
   relatifs: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=WauL1kM2lmQ", t: "Repérer un nombre relatif" },
+      { u: "https://www.youtube.com/watch?v=4hRzrbn32V8", t: "Comparer des nombres relatifs" },
+      { u: "https://www.youtube.com/watch?v=I0NiW8GeHEY", t: "Additionner des nombres relatifs" },
+      { u: "https://www.youtube.com/watch?v=3YKQYLe93Yk", t: "Soustraire des nombres relatifs" },
+    ],
     resume: [
       { t: "Repérage et opposés", f: "A(3 ; −2)\nopposé de 6 : −6", d: "Dans le plan : abscisse (droite/gauche), ordonnée (haut/bas). Deux opposés sont de part et d'autre de 0, à la même distance." },
       { t: "Comparer", f: "−7 < −2 < 0 < 3", d: "Tout négatif est plus petit que tout positif. Entre deux négatifs, le plus petit est le plus loin de 0." },
@@ -154,6 +185,11 @@ window.AIDE_5E = {
     }
   },
   stats5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=RVExjE6PGhw", t: "Lire un tableau à double entrée" },
+      { u: "https://www.youtube.com/watch?v=h0urYAnMUNI", t: "Calculer une moyenne" },
+      { u: "https://www.youtube.com/watch?v=MwNV5eCBFrI", t: "Calculer des fréquences" },
+    ],
     resume: [
       { t: "Moyenne simple", f: "(8 + 12 + 12 + 15) ÷ 4 = 11,75", d: "Somme de toutes les valeurs ÷ nombre de valeurs." },
       { t: "Effectif", f: "« 12 » apparaît 2 fois → effectif 2", d: "L'effectif d'une valeur = le nombre de fois où elle apparaît dans la série." },
@@ -178,6 +214,10 @@ window.AIDE_5E = {
     ]
   },
   litteral5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=eBPOd0bTBro", t: "Simplifier une expression" },
+      { u: "https://www.youtube.com/watch?v=xZCXVgGT_Bk", t: "Tester une égalité" },
+    ],
     resume: [
       { t: "Simple distributivité", f: "k × (a + b) = k×a + k×b\n3 × (x + 2) = 3x + 6", d: "On distribue le facteur k à CHAQUE terme de la parenthèse (attention aux signes)." },
       { t: "Réduire", f: "4x + 3 + 5x = 9x + 3", d: "On regroupe les termes « semblables » (les x entre eux, les nombres entre eux). Mais 3x + 5 ne se réduit pas." },
@@ -203,6 +243,9 @@ window.AIDE_5E = {
     }
   },
   aires5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=Ao8cRWT_ELY", t: "Volume d'un prisme et d'un cylindre" },
+    ],
     resume: [
       { t: "Rectangle", f: "P = 2 × (L + l)\nA = L × l", d: "Périmètre en unités de longueur, aire en unités²." },
       { t: "Triangle et disque", f: "A(triangle) = (b × h) ÷ 2\nA(disque) = π × r²", d: "Attention : le périmètre du disque est 2 × π × r (ou π × d), pas son aire !" },
@@ -228,6 +271,10 @@ window.AIDE_5E = {
     }
   },
   proba5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=g9CT15Tz7TI", t: "Le cours : probabilités (5e)" },
+      { u: "https://www.youtube.com/watch?v=a9Mb5v7Z4Mw", t: "Calculs de probabilités très simples" },
+    ],
     resume: [
       { t: "Vocabulaire", f: "univers Ω = toutes les issues\névénement = des issues", d: "Exemple (dé) : Ω = {1 ; 2 ; 3 ; 4 ; 5 ; 6} ; « obtenir un pair » = {2 ; 4 ; 6}." },
       { t: "Probabilité (équiprobable)", f: "p = cas favorables ÷ cas possibles", d: "Exemple : P(pair) = 3 ÷ 6 = 1/2. Résultat toujours entre 0 et 1." },
