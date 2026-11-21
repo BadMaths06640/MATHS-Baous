@@ -60,7 +60,7 @@ window.AIDE_5E = {
   fractions: {
     resume: [
       { t: "Addition / soustraction", f: "2/3 + 1/6 = 4/6 + 1/6 = 5/6", d: "On met d'abord au même dénominateur, puis on additionne les numérateurs." },
-      { t: "Produit", f: "3/4 × 2/5 = 6/20 = 3/10", d: "On multiplie les numérateurs entre eux et les dénominateurs entre eux, puis on simplifie." },
+      { t: "Fraction d'une quantité", f: "2/3 de 60 = 60 × 2 = 120 → ÷ 3 = 40", d: "« 2/3 de 60 » : on multiplie par le numérateur puis on divise par le dénominateur (ou l'inverse, le résultat est le même)." },
       { t: "Simplification", f: "12/18 = 2/3   (÷6)", d: "On divise numérateur et dénominateur par un même nombre, jusqu'à la fraction irréductible." }
     ],
     qs: [
@@ -68,13 +68,13 @@ window.AIDE_5E = {
       "Astuce : dénominateurs égaux → additionne simplement les numérateurs.\nExemple similaire : 2/5 + 1/5 = 3/5.",
       "Astuce : cherche une fraction égale en divisant numérateur et dénominateur.\nExemple similaire : 4/8 = 1/2 et 3/6 = 1/2.",
       "Astuce : dénominateur commun 6 ici : 2/3 = 4/6.\nExemple similaire : 1/2 + 1/3 = 3/6 + 2/6 = 5/6.",
-      "Astuce : multiplie en ligne, puis simplifie par 2.\nExemple similaire : 1/3 × 3/4 = 3/12 = 1/4.",
+      "Astuce : 3/4 = 6/8 : mets au même dénominateur puis additionne.\nExemple similaire : 1/4 + 1/8 = 2/8 + 1/8 = 3/8.",
       "Astuce : mets tout au même dénominateur pour comparer.\nExemple similaire : 1/2 = 4/8 et 5/8 : le plus grand est 5/8.",
       "Astuce : dénominateur commun 18.\nExemple similaire : 3/4 − 1/6 = 9/12 − 2/12 = 7/12.",
       "Astuce : « de » signifie « fois ».\nExemple similaire : 2/3 de 90 = 2/3 × 90 = 60.",
-      "Astuce : produit d'abord, puis mise au même dénominateur pour l'addition.\nExemple similaire : 1/2 + 1/5 × 1/2 = 1/2 + 1/10 = 5/10 + 1/10 = 3/5.",
-      "Astuce : parenthèse d'abord, puis multiplie.\nExemple similaire : (3/7 − 1/7) × 7/4 = 2/7 × 7/4 = 1/2.",
-      "Astuce : multiplie d'abord, simplifie, additionne ensuite.\nExemple similaire : 1 + 1/3 × 3/4 = 1 + 1/4 = 5/4.",
+      "Astuce : 1/3 = 2/6, même dénominateur puis soustrais.\nExemple similaire : 3/4 − 1/2 = 3/4 − 2/4 = 1/4.",
+      "Astuce : écris 1 = 8/8 (même dénominateur), puis soustrais.\nExemple similaire : 1 − 2/5 = 5/5 − 2/5 = 3/5.",
+      "Astuce : 1/5 = 2/10 : détecte le dénominateur commun qui simplifie tout.\nExemple similaire : 1/2 + 3/10 = 5/10 + 3/10 = 8/10 = 4/5.",
       "Astuce : fraction restante = 1 − fractions mangées.\nExemple similaire : 1/2 + 1/4 mangés → reste 1/4."
     ],
     genH: {

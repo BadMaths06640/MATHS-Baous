@@ -97,8 +97,11 @@ function renderThemes() {
     const p = (PROGRESS[STATE.niveau] || {})[t.id];
     const btn = document.createElement("button");
     btn.className = "theme-card";
+    const chapLabel = Array.isArray(t.chap) && t.chap.length
+      ? `<div class="theme-chap">Chap. ${t.chap.join(" · ")} — progression annuelle</div>` : "";
     btn.innerHTML = `
       <div class="theme-head"><span class="theme-icon">${t.icone}</span><span class="theme-title">${t.titre}</span></div>
+      ${chapLabel}
       <div class="theme-stars">${starsHTML(p ? p.stars : 0)}</div>
       <div class="theme-mastery">${p && p.mastery ? MASTERY_LABELS[p.mastery] : "pas encore évalué"}</div>`;
     btn.addEventListener("click", () => { STATE.theme = t; renderSetup(); });
@@ -114,7 +117,9 @@ function renderSetup() {
         `<div class="resume-card"><div class="res-t">${c.t}</div>${c.f ? `<div class="res-f">${c.f}</div>` : ""}${c.d ? `<div class="res-d">${c.d}</div>` : ""}</div>`
       ).join("")}</div>`
     : `<div class="notion">${t.notion}</div>`;
-  let inner = `<h2>${t.icone} ${t.titre}</h2>${blocCours}
+  const chapLabel = Array.isArray(t.chap) && t.chap.length
+    ? `<p class="theme-chap">Chapitres ${t.chap.join(" · ")} de la progression annuelle</p>` : "";
+  let inner = `<h2>${t.icone} ${t.titre}</h2>${chapLabel}${blocCours}
   <p><b>Quel est ton niveau actuel sur ce thème ?</b></p><div class="mastery-grid">`;
   for (let m = 1; m <= 4; m++) {
     const saved = (PROGRESS[STATE.niveau] || {})[t.id];
