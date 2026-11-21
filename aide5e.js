@@ -11,7 +11,7 @@ window.AIDE_5E = {
     resume: [
       { t: "L'ordre de calcul", f: "1) ( )    2) × ÷    3) + −", d: "D'abord les parenthèses, puis les multiplications et divisions de gauche à droite, enfin les additions et soustractions." },
       { t: "Exemple guide", f: "3 + 5 × 2 = 3 + 10 = 13", d: "La multiplication passe avant l'addition, même si elle vient après dans l'écriture." },
-      { t: "Puissance et carré", f: "(−3)² = 9  (jamais négatif)", d: "Le carré s'applique d'abord au contenu de la parenthèse, avant la multiplication extérieure." }
+      { t: "Crochets", f: "24 − [3 × (2 + 5) − 1] = 24 − 20 = 4", d: "Les crochets jouent le rôle de parenthèses : on calcule du plus intérieur (la parenthèse) au plus extérieur, puis on termine l'expression." }
     ],
     qs: [
       "Astuce : la multiplication est prioritaire sur l'addition.\nExemple similaire : 4 + 6 × 3 = 4 + 18 = 22.",
@@ -20,18 +20,18 @@ window.AIDE_5E = {
       "Astuce : trois étapes — parenthèse, puis produit, puis addition.\nExemple similaire : 5 + 2 × (9 − 6) = 5 + 2 × 3 = 5 + 6 = 11.",
       "Astuce : ÷ et × ont le même rang : on calcule de gauche à droite.\nExemple similaire : 20 ÷ 4 × 5 = 5 × 5 = 25.",
       "Astuce : calcule les deux produits d'abord, puis enchaîne + et −.\nExemple similaire : 1 + 4 × 5 − 2 × 3 = 1 + 20 − 6 = 15.",
-      "Astuce : ordre complet — parenthèse, carré, produit, addition. Un carré est toujours positif ou nul.\nExemple similaire : 2 × (3 − 6)² + 1 = 2 × 9 + 1 = 19.",
+      "Astuce : ordre complet — parenthèse, produit, addition. Dans la parenthèse, la multiplication passe avant l'addition.\nExemple similaire : 2 × (3 + 4 × 2) + 1 = 2 × 11 + 1 = 23.",
       "Astuce : va du plus intérieur au plus extérieur (parenthèse → crochets → soustraction).\nExemple similaire : 30 − [2 × (1 + 3) − 2] = 30 − 6 = 24.",
-      "Astuce : calcule chaque produit séparément, puis soustrais.\nExemple similaire : 7 × 2 − 3 × 4 = 14 − 12 = 2.",
-      "Astuce : traite chaque parenthèse séparément avant le produit final.\nExemple similaire : (10 − 2 × 4) × (−2)² = 2 × 4 = 8.",
+      "Astuce : calcule chaque produit séparément, puis soustrais.\nExemple similaire : 6 × 3 − 2 × 5 = 18 − 10 = 8.",
+      "Astuce : traite chaque parenthèse séparément avant le produit final.\nExemple similaire : (10 − 2 × 4) × (3 + 5) = 2 × 8 = 16.",
       "Astuce : commence par la parenthèse la plus intérieure.\nExemple similaire : 9 − 3 × [8 ÷ (2 + 2)] = 9 − 3 × 2 = 3.",
       "Astuce : teste chaque choix jusqu'au bout, en respectant l'ordre des opérations.\nExemple similaire : 4 × 6 − 4 × 3 = 24 − 12 = 12."
     ],
     genH: {
       1: "Astuce : la multiplication est prioritaire sur l'addition.\nExemple similaire : 6 + 5 × 3 = 6 + 15 = 21.",
       2: "Astuce : produit d'abord, puis chaîne de + et −.\nExemple similaire : 12 − 3 × 2 + 3 = 12 − 6 + 3 = 9.",
-      3: "Astuce : parenthèse, produit, carré, puis différence.\nExemple similaire : 3 × (3 + 6) − 3² = 27 − 9 = 18.",
-      4: "Astuce : parenthèse d'abord (produits avant soustraction), produit par (−1), puis addition.\nExemple similaire : (4² − 4 × 4) × (−1) + 2 × 4 = 0 + 8 = 8."
+      3: "Astuce : parenthèse d'abord, puis les deux produits, et enfin la différence.\nExemple similaire : 4 × (4 + 3) − 4 × 3 = 28 − 12 = 16.",
+      4: "Astuce : va du plus intérieur au plus extérieur : parenthèse, crochets, puis soustraction finale.\nExemple similaire : 20 − [3 × (2 + 4) − 2] = 20 − 16 = 4."
     }
   },
   symetrie5: {
@@ -223,7 +223,7 @@ window.AIDE_5E = {
       "Astuce : tout nombre entier a au moins 1 et lui-même comme diviseurs.\nExemple similaire : 12 a au moins deux diviseurs : 1 et 12.",
       "Astuce : teste la division par 2, 3, 5, 7... si aucun ne marche, le nombre est premier.\nExemple similaire : 29 n'est divisible ni par 2, ni par 3, ni par 5 → premier.",
       "Astuce : cherche dans la table une multiplication exacte (reste nul).\nExemple similaire : 7 × 78 = 546 → 546 est divisible par 7,",
-      "Astuce : simplifie par les facteurs communs, autant de fois que possible.\nExemple similaire : 24/36 → par 2 : 12/18 → par 2 : 6/9 → par 3 : 2/3.",
+      "Astuce : cherche le plus grand multiple du diviseur en dessous du nombre, le reste complète.\nExemple similaire : 100 = 9 × ... + 1 → 9 × 11 = 99 : le quotient est 11.",
       "Astuce : divise par 2 une première fois : si le résultat est encore pair, le nombre est divisible par 4.\nExemple similaire : 132 ÷ 2 = 66, pair → 132 est divisible par 4.",
       "Astuce : isole 11 × z = 362 − 10, puis divise.\nExemple similaire : 100 = 9 × z + 10 → 9 × z = 90 → z = 10.",
       "Astuce : sauf 2, tous les nombres premiers sont impairs, et le produit de deux impairs est impair.\nExemple similaire : 3 × 5 = 15, impair."

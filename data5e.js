@@ -16,21 +16,22 @@ window.BANK_5E = {
         { d:2, q:"Calculer : 4 + 3 × (7 − 5)", a:"10", e:"Parenthèse d'abord : 7 − 5 = 2. Multiplication : 3 × 2 = 6. Addition : 4 + 6 = 10." },
         { d:2, q:"Calculer : 18 ÷ 3 × 2", c:["3","12","6","2"], a:1, e:"÷ et × ont la même priorité : on calcule de gauche à droite. 18 ÷ 3 = 6, puis 6 × 2 = 12." },
         { d:2, q:"Calculer : 2 + 3 × 4 − 5 × 2", a:"4", e:"On calcule d'abord les produits : 3 × 4 = 12 et 5 × 2 = 10. Puis 2 + 12 − 10 = 4." },
-        { d:3, q:"Calculer : 5 × (4 − 7)² + 6", c:["51","21","−69","−39"], a:0, e:"Parenthèse : 4 − 7 = −3. Puissance : (−3)² = 9. Produit : 5 × 9 = 45. Somme : 45 + 6 = 51. Attention : 5 × (−3)² = 5 × 9, pas −15." },
+        { d:3, q:"Calculer : 5 × (2 + 3 × 4) + 6", c:["76","40","110","26"], a:0, e:"Parenthèse : 3 × 4 = 12, puis 2 + 12 = 14. Produit : 5 × 14 = 70. Somme : 70 + 6 = 76. Attention : dans la parenthèse, la multiplication passe avant l'addition." },
         { d:3, q:"Calculer : 24 − [ 3 × (2 + 5) − 1 ]", a:"4", e:"Parenthèse : 2 + 5 = 7. Crochets : 3 × 7 − 1 = 21 − 1 = 20. Puis 24 − 20 = 4." },
-        { d:3, q:"Calculer : 2 × 5 − 4 × 3", a:"−2", e:"Produits d'abord : 2 × 5 = 10 et 4 × 3 = 12. Puis 10 − 12 = −2." },
-        { d:4, q:"Calculer : (8 − 2 × 5) × (−3)²", c:["−18","18","−162","54"], a:0, e:"Premier crochet : 2 × 5 = 10, donc 8 − 10 = −2. Puissance : (−3)² = 9. Produit : −2 × 9 = −18." },
+        { d:3, q:"Calculer : 4 × 5 − 2 × 3", a:"14", e:"Produits d'abord : 4 × 5 = 20 et 2 × 3 = 6. Puis 20 − 6 = 14." },
+        { d:4, q:"Calculer : (4 + 2 × 3) × (8 − 2 × 3)", c:["20","8","26","14"], a:0, e:"Première parenthèse : 2 × 3 = 6, donc 4 + 6 = 10. Seconde parenthèse : 2 × 3 = 6, donc 8 − 6 = 2. Produit : 10 × 2 = 20." },
         { d:4, q:"Calculer : 7 − 2 × [ 12 ÷ (1 + 5) ]", a:"3", e:"Parenthèse : 1 + 5 = 6. Crochets : 12 ÷ 6 = 2, puis 2 × 2 = 4. Puis 7 − 4 = 3." },
-        { d:4, q:"Quelle expression est égale à 15 ?", c:["(2 + 3) × 4 − 5","2 + 3 × (4 − 5)","2 × (3 + 4) − 5","2 + 5 × 3 − 1"], a:0, e:"(2 + 3) × 4 − 5 = 5 × 4 − 5 = 20 − 5 = 15. Vérifie les autres : 2 + 3 × (−1) = −1 ; 2 × 7 − 5 = 9 ; 2 + 15 − 1 = 16." }
+        { d:4, q:"Quelle expression est égale à 15 ?", c:["(2 + 3) × 4 − 5","2 + 3 × (4 + 5)","2 × (3 + 4) + 5","2 + 5 × 3 + 1"], a:0, e:"(2 + 3) × 4 − 5 = 5 × 4 − 5 = 20 − 5 = 15. Vérifie les autres : 2 + 3 × 9 = 29 ; 2 × 7 + 5 = 19 ; 2 + 15 + 1 = 18." }
       ],
       gen: {
         1: () => { const a = 2 + Math.floor(Math.random()*9), b = 2 + Math.floor(Math.random()*9), c = 2 + Math.floor(Math.random()*6);
           return { q:`Calculer : ${a} + ${b} × ${c}`, a:String(a + b*c), e:`Multiplication d'abord : ${b} × ${c} = ${b*c}. Puis ${a} + ${b*c} = ${a+b*c}.` }; },
-        2: () => { const a = 5 + Math.floor(Math.random()*15), b = 2 + Math.floor(Math.random()*4), c = 2 + Math.floor(Math.random()*4);
-          return { q:`Calculer : ${a} − ${b} × ${c} + ${b}`, a:String(a - b*c + b), e:`On calcule ${b} × ${c} = ${b*c} d'abord, puis ${a} − ${b*c} + ${b} = ${a - b*c + b}.` }; },
-        3: () => { const a = 2 + Math.floor(Math.random()*4); return { q:`Calculer : ${a} × (${a} + ${2*a}) − ${a}²`, a:String(a*3*a - a*a), e:`Parenthèse : ${a} + ${2*a} = ${3*a}. Produit : ${a} × ${3*a} = ${3*a*a}. Carré : ${a}² = ${a*a}. Différence : ${3*a*a} − ${a*a} = ${2*a*a}.` }; },
-        4: () => { const n = 1 + Math.floor(Math.random()*4); const x = 2 + Math.floor(Math.random()*5);
-          return { q:`Calculer : (${x}² − 4 × ${x}) × (−1) + ${n} × ${x}`, a:String((x*x - 4*x) * (-1) + n*x), e:`Dans la parenthèse : ${x}² − ${4*x} = ${x*x - 4*x}. Multiplié par −1 : ${-(x*x-4*x)}. Puis + ${n} × ${x} = ${n*x} : ${(x*x-4*x)*(-1) + n*x}.` }; }
+        2: () => { const b = 2 + Math.floor(Math.random()*4), c = 2 + Math.floor(Math.random()*4); const bc = b*c; const a = bc + 2 + Math.floor(Math.random()*12);
+          return { q:`Calculer : ${a} − ${b} × ${c} + ${b}`, a:String(a - bc + b), e:`Produit d'abord : ${b} × ${c} = ${bc}. Puis ${a} − ${bc} = ${a - bc}, et ${a - bc} + ${b} = ${a - bc + b}.` }; },
+        3: () => { const a = 2 + Math.floor(Math.random()*4), b = 2 + Math.floor(Math.random()*6);
+          return { q:`Calculer : ${a} × (${a} + ${b}) \u2212 ${a} × ${b}`, a:String(a*a), e:`Parenthèse : ${a} + ${b} = ${a+b}. Produit : ${a} × ${a+b} = ${a*(a+b)}. Autre produit : ${a} × ${b} = ${a*b}. Différence : ${a*(a+b)} \u2212 ${a*b} = ${a*a}.` }; },
+        4: () => { const b = 2 + Math.floor(Math.random()*2), c = 2 + Math.floor(Math.random()*3), d = 2 + Math.floor(Math.random()*3), k = 1 + Math.floor(Math.random()*4); const inner = b*(c+d) - k; const p = 2 + Math.floor(Math.random()*12); const a = inner + p;
+          return { q:`Calculer : ${a} − [ ${b} × (${c} + ${d}) − ${k} ]`, a:String(p), e:`Parenthèse : ${c} + ${d} = ${c+d}. Crochets : ${b} × ${c+d} − ${k} = ${b*(c+d)} − ${k} = ${inner}. Puis ${a} − ${inner} = ${p}.` }; }
       }
     },
     {
@@ -46,7 +47,7 @@ window.BANK_5E = {
         { d:2, q:"Combien un nombre entier admet-il de diviseurs « évidents » au minimum ?", c:["2","1","0","4"], a:0, e:"Tout entier admet au moins deux diviseurs : 1 et lui-même." },
         { d:3, q:"Parmi ces nombres, lequel est premier ?", c:["31","27","33","39"], a:0, e:"27 = 3 × 9 ; 33 = 3 × 11 ; 39 = 3 × 13 (somme des chiffres multiple de 3). 31 n'a que 1 et 31 comme diviseurs." },
         { d:3, q:"Laquelle de ces divisions a un reste nul ?", c:["546 ÷ 7","546 ÷ 9","487 ÷ 7","926 ÷ 7"], a:0, e:"546 = 7 × 78 (reste 0). 546 ÷ 9 : 5 + 4 + 6 = 15, pas multiple de 9. 487 = 7 × 69 + 4 ; 926 = 7 × 132 + 2." },
-        { d:3, q:"Simplifier : 45/60 (répondre sous la forme a/b)", a:"3/4", e:"On simplifie par des nombres premiers, autant de fois que possible : par 5 → 9/12, puis par 3 → 3/4." },
+        { d:3, q:"Compléter la division euclidienne : 245 = 12 × ... + 5. Quel est le quotient ?", a:"20", e:"12 × 20 = 240, et 240 + 5 = 245. Le quotient est 20 (reste 5 < 12)." },
         { d:4, q:"Un nombre est divisible par 4 quand...", c:["la moitié du nombre est un nombre pair","il se termine par 0","la somme de ses chiffres vaut 4","il est impair"], a:0, e:"Exemple : 116 ÷ 2 = 58, qui est pair, donc 116 est divisible par 4 (116 = 4 × 29)." },
         { d:4, q:"z est entier et 362 = 11 × z + 10. Que vaut z ?", a:"32", e:"362 − 10 = 352, et 352 = 11 × 32. Le quotient est 32 (reste 10 < 11)." },
         { d:4, q:"Le produit de deux nombres premiers (autres que 2) est...", c:["toujours impair","toujours pair","toujours premier","toujours nul"], a:0, e:"Les nombres premiers sont impairs sauf 2 : le produit de deux impairs est impair. Exemple : 3 × 7 = 21." }
