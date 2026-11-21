@@ -9,6 +9,7 @@ const BANKS = ctx.window.BANKS;
 const NIVEAUX = ["5e", "4e", "3e"];
 const norm = (s) => String(s).toLowerCase().replace(/\s+/g, "").replace(/,/g, ".").replace(/^x=/, "").replace(/^[a-z]\s*=/, "").replace(/(cm|mm|dm|km|g|kg|l|ml|°|€|\$)$/i, "");
 const same = (u, e) => { const l = Array.isArray(e) ? e : [e]; const n = norm(u); return l.some((x) => norm(x) === n && n !== ""); };
+const okA = (g) => (Array.isArray(g.a) ? g.a.some((x) => norm(x) !== "") : same(g.a, g.a));
 
 let probs = [], nQ = 0;
 for (const n of NIVEAUX) {
@@ -41,7 +42,7 @@ for (const n of NIVEAUX) {
         if (q.c) {
           if (!Array.isArray(q.c) || q.c.length !== 4 || !(q.a >= 0 && q.a < 4)) { probs.push(`${n}/${t.id}.gen${g}: QCM invalide`); break; }
           if (new Set(q.c.map((c) => norm(c))).size < 4) { probs.push(`${n}/${t.id}.gen${g}: doublons de choix: ${q.c}`); break; }
-        } else if (!same(q.a, q.a)) { probs.push(`${n}/${t.id}.gen${g}: auto-test réponse échoué`); break; }
+        } else if (!okA(q)) { probs.push(`${n}/${t.id}.gen${g}: auto-test réponse échoué`); break; }
       }
     }
   }
@@ -50,7 +51,7 @@ for (const n of NIVEAUX) {
 /* simulation de sessions (moteur adaptatif comme app.js) */
 function pickQuestion(t, diff, used) {
   let pool = t.qs.filter((q) => q.d === diff && !used.has(q.q));
-  if (!pool.length && t.gen && t.gen[diff]) { const g = t.gen[diff](); if (!g.c && !same(g.a, g.a)) return null; used.add(g.q); return g; }
+  if (!pool.length && t.gen && t.gen[diff]) { const g = t.gen[diff](); if (!g.c && !okA(g)) return null; used.add(g.q); return g; }
   if (!pool.length) for (let d = diff - 1; d >= 1; d--) { pool = t.qs.filter((q) => q.d === d && !used.has(q.q)); if (pool.length) break; }
   if (!pool.length) for (let d = diff + 1; d <= 4; d++) { pool = t.qs.filter((q) => q.d === d && !used.has(q.q)); if (pool.length) break; }
   if (!pool.length) return null;
