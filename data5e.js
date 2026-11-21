@@ -10,13 +10,13 @@ window.BANK_5E = {
       notion: "Sans parenthèses : on calcule d'abord × et ÷, puis + et − de gauche à droite.\nAvec des parenthèses : on calcule d'abord l'intérieur des parenthèses (et des crochets).\nUne barre de fraction joue le rôle de parenthèses.",
       qs: [
         { d:1, q:"Calculer : 3 + 5 × 2", c:["16","13","11","10"], a:1, e:"On fait d'abord la multiplication : 5 × 2 = 10, puis l'addition : 3 + 10 = 13." },
-        { d:1, q:"Calculer : 20 − 8 ÷ 2", c:["6","14","16","24"], a:1, e:"On fait d'abord la division : 8 ÷ 2 = 4, puis la soustraction : 20 − 4 = 16." },
+        { d:1, q:"Calculer : 20 − 8 ÷ 2", c:["6","14","16","24"], a:2, e:"On fait d'abord la division : 8 ÷ 2 = 4, puis la soustraction : 20 − 4 = 16." },
         { d:1, q:"Calculer : (3 + 5) × 2", c:["11","13","16","10"], a:2, e:"On calcule d'abord la parenthèse : 3 + 5 = 8, puis : 8 × 2 = 16." },
         { d:2, q:"Calculer : 4 + 3 × (7 − 5)", a:"10", e:"Parenthèse d'abord : 7 − 5 = 2. Multiplication : 3 × 2 = 6. Addition : 4 + 6 = 10." },
         { d:2, q:"Calculer : 18 ÷ 3 × 2", c:["3","12","6","2"], a:1, e:"÷ et × ont la même priorité : on calcule de gauche à droite. 18 ÷ 3 = 6, puis 6 × 2 = 12." },
         { d:2, q:"Calculer : 2 + 3 × 4 − 5 × 2", a:"4", e:"On calcule d'abord les produits : 3 × 4 = 12 et 5 × 2 = 10. Puis 2 + 12 − 10 = 4." },
-        { d:3, q:"Calculer : 5 × (4 − 7)² + 6", c:["−39","21","−69","51"], a:0, e:"Parenthèse : 4 − 7 = −3. Puissance : (−3)² = 9. Produit : 5 × 9 = 45. Somme : 45 + 6 = 51. Attention : 5 × (−3)² = 5 × 9, pas −15." },
-        { d:3, q:"Calculer : 24 − [ 3 × (2 + 5) − 1 ]", a:"2", e:"Parenthèse : 2 + 5 = 7. Crochets : 3 × 7 − 1 = 21 − 1 = 20. Puis 24 − 20 = 4." },
+        { d:3, q:"Calculer : 5 × (4 − 7)² + 6", c:["51","21","−69","−39"], a:0, e:"Parenthèse : 4 − 7 = −3. Puissance : (−3)² = 9. Produit : 5 × 9 = 45. Somme : 45 + 6 = 51. Attention : 5 × (−3)² = 5 × 9, pas −15." },
+        { d:3, q:"Calculer : 24 − [ 3 × (2 + 5) − 1 ]", a:"4", e:"Parenthèse : 2 + 5 = 7. Crochets : 3 × 7 − 1 = 21 − 1 = 20. Puis 24 − 20 = 4." },
         { d:3, q:"Calculer : 2 × 5 − 4 × 3", a:"−2", e:"Produits d'abord : 2 × 5 = 10 et 4 × 3 = 12. Puis 10 − 12 = −2." },
         { d:4, q:"Calculer : (8 − 2 × 5) × (−3)²", c:["−18","18","−162","54"], a:0, e:"Premier crochet : 2 × 5 = 10, donc 8 − 10 = −2. Puissance : (−3)² = 9. Produit : −2 × 9 = −18." },
         { d:4, q:"Calculer : 7 − 2 × [ 12 ÷ (1 + 5) ]", a:"3", e:"Parenthèse : 1 + 5 = 6. Crochets : 12 ÷ 6 = 2, puis 2 × 2 = 4. Puis 7 − 4 = 3." },
@@ -29,7 +29,7 @@ window.BANK_5E = {
           return { q:`Calculer : ${a} − ${b} × ${c} + ${b}`, a:String(a - b*c + b), e:`On calcule ${b} × ${c} = ${b*c} d'abord, puis ${a} − ${b*c} + ${b} = ${a - b*c + b}.` }; },
         3: () => { const a = 2 + Math.floor(Math.random()*4); return { q:`Calculer : ${a} × (${a} + ${2*a}) − ${a}²`, a:String(a*3*a - a*a), e:`Parenthèse : ${a} + ${2*a} = ${3*a}. Produit : ${a} × ${3*a} = ${3*a*a}. Carré : ${a}² = ${a*a}. Différence : ${3*a*a} − ${a*a} = ${2*a*a}.` }; },
         4: () => { const n = 1 + Math.floor(Math.random()*4); const x = 2 + Math.floor(Math.random()*5);
-          return { q:`Calculer : (${x}² − 4 × ${x}) × (−1)${"⁻"}${n === 1 ? "" : ""} + ${n} × ${x}`, a:String((x*x - 4*x) * (-1) + n*x), e:`Dans la parenthèse : ${x}² − ${4*x} = ${x*x - 4*x}. Multiplié par −1 : ${-(x*x-4*x)}. Puis + ${n*x} : ${(x*x-4*x)*(-1) + n*x}.` }; }
+          return { q:`Calculer : (${x}² − 4 × ${x}) × (−1) + ${n} × ${x}`, a:String((x*x - 4*x) * (-1) + n*x), e:`Dans la parenthèse : ${x}² − ${4*x} = ${x*x - 4*x}. Multiplié par −1 : ${-(x*x-4*x)}. Puis + ${n} × ${x} = ${n*x} : ${(x*x-4*x)*(-1) + n*x}.` }; }
       }
     },
     {
@@ -46,7 +46,7 @@ window.BANK_5E = {
         { d:3, q:"Calculer : −5 + 2 × (−3)", a:"−11", e:"Multiplication d'abord : 2 × (−3) = −6, puis −5 + (−6) = −11." },
         { d:3, q:"Calculer : (−12) ÷ (−3) + 1", a:"5", e:"Deux signes identiques : (−12) ÷ (−3) = 4, puis 4 + 1 = 5." },
         { d:4, q:"Températures : il fait −7 °C le matin. La température monte de 12 °C puis baisse de 9 °C. Température finale ?", c:["−4 °C","10 °C","−10 °C","4 °C"], a:0, e:"−7 + 12 = 5, puis 5 − 9 = −4. Il fait −4 °C." },
-        { d:4, q:"Calculer : (−2)³ + 3 × (−1)⁴", a:"−4", e:"(−2)³ = −8 (négatif : trois facteurs négatifs). (−1)⁴ = 1 (puissance paire). Donc −8 + 3 × 1 = −5." },
+        { d:4, q:"Calculer : (−2)³ + 3 × (−1)⁴", a:"−5", e:"(−2)³ = −8 (puissance impaire d’un négatif). (−1)⁴ = 1 (puissance paire). Donc −8 + 3 × 1 = −5." },
         { d:4, q:"Calculer : 8 − (−3) × (−2)²", a:"20", e:"Puissance d'abord : (−2)² = 4. Produit : (−3) × 4 = −12. On ajoute « inversé » : 8 − (−12) = 8 + 12 = 20." }
       ],
       gen: {
@@ -68,7 +68,7 @@ window.BANK_5E = {
         { d:1, q:"Calculer : 1/4 + 2/4", c:["3/8","3/4","2/16","1/2"], a:1, e:"Même dénominateur : on additionne les numérateurs : 1 + 2 = 3, donc 3/4." },
         { d:1, q:"Quelle fraction est égale à 1/2 ?", c:["3/6","2/5","4/6","5/8"], a:0, e:"3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2." },
         { d:2, q:"Calculer : 2/3 + 1/6", c:["3/9","5/6","3/6","5/9"], a:1, e:"Dénominateur commun 6 : 2/3 = 4/6. Somme : 4/6 + 1/6 = 5/6." },
-        { d:2, q:"Calculer : 3/4 × 2/5", c:["6/20 = 3/10","5/9","6/9","3/10... c'est pareil !"], a:0, e:"3 × 2 = 6 et 4 × 5 = 20 → 6/20, qu'on simplifie par 2 : 3/10." },
+        { d:2, q:"Calculer : 3/4 × 2/5", c:["3/10","5/9","6/9","2/3"], a:0, e:"3 × 2 = 6 et 4 × 5 = 20 → 6/20, qu'on simplifie par 2 : 3/10." },
         { d:2, q:"Comparer : quel est le plus grand nombre ?", c:["3/4","2/3","5/8","7/12"], a:0, e:"Mise au dénominateur 12 : 3/4 = 9/12, 2/3 = 8/12, 5/8 = 7,5/12, 7/12. Le plus grand est 9/12 = 3/4." },
         { d:3, q:"Calculer : 5/6 − 2/9", c:["3/3","11/18","23/18","1/3"], a:1, e:"Dénominateur commun 18 : 5/6 = 15/18 et 2/9 = 4/18. Différence : 15/18 − 4/18 = 11/18." },
         { d:3, q:"Calculer : 4/5 de 60", a:"48", e:"« de » signifie × : 4/5 × 60 = 240/5 = 48." },
