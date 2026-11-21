@@ -34,38 +34,143 @@ window.AIDE_5E = {
       4: "Astuce : parenthèse d'abord (produits avant soustraction), produit par (−1), puis addition.\nExemple similaire : (4² − 4 × 4) × (−1) + 2 × 4 = 0 + 8 = 8."
     }
   },
-  geom5: {
+  symetrie5: {
     videos: [
-      { u: "https://www.youtube.com/watch?v=rJvF6iENYME", t: "L'inégalité triangulaire" },
-      { u: "https://www.youtube.com/watch?v=FucUXFt-wjI", t: "Somme des angles d'un triangle" },
       { u: "https://www.youtube.com/watch?v=o-LXjfesIxw", t: "La symétrie centrale" },
-      { u: "https://www.youtube.com/watch?v=4dGM22L9030", t: "Le parallélogramme" },
+      { u: "https://www.youtube.com/watch?v=EBEiFNLxm9s", t: "Utiliser les propriétés de la symétrie centrale" },
     ],
     resume: [
-      { t: "Angles d'un triangle", f: "angle A + B + C = 180°", d: "La somme des trois angles d'un triangle vaut toujours 180°." },
-      { t: "Symétrie centrale", f: "O = milieu de [MM']", d: "Le symétrique de M par rapport à O s'obtient en prolongeant [MO] d'autant ; longueurs et angles sont conservés." },
-      { t: "Triangles particuliers", f: "2 angles égaux → isocèle\n3 côtés égaux → équilatéral (60°)", d: "Hauteur : du sommet, ⊥ au côté. Médiane : du sommet au milieu. Médiatrice : points à égale distance des extrémités." }
+      { t: "Image d'un point", f: "O = milieu de [MM']", d: "On prolonge [MO] d'autant de l'autre côté : OM' = OM, et M, O, M' sont alignés (demi-tour)." },
+      { t: "Figure image", f: "mêmes longueurs, angles, aires", d: "L'image est identique, tournée d'un demi-tour autour de O : seul le sens de parcours s'inverse." },
+      { t: "Centre de symétrie", f: "parallélogramme → diagonales\nsecteur du cercle → centre", d: "Test : un demi-tour (180°) autour du point supposé centre laisse la figure invariante (cercle, parallélogramme, hexagone régulier...)." }
+    ],
+    qs: [
+      "Astuce : par symétrie centrale, le centre O est toujours au MILIEU entre le point et son image.\nExemple similaire : M et son image M' avec MO = 3 cm → OM' = 3 cm.",
+      "Astuce : l'image d'un segment est un segment de MÊME longueur.\nExemple similaire : [AB] de 5 cm → [A'B'] de 5 cm.",
+      "Astuce : test du demi-tour : tourne la figure de 180° autour du point supposé centre → elle doit se recouvrir exactement.\nExemple similaire : le carré se superpose après un demi-tour autour de son centre → centre de symétrie.",
+      "Astuce : O milieu de [MM'] → OM = OM'.\nExemple similaire : MO = 6 cm → OM' = 6 cm.",
+      "Astuce : MM' = MO + OM' = 2 × MO.\nExemple similaire : MO = 5 cm → MM' = 10 cm.",
+      "Astuce : par symétrie centrale, tout est conservé : longueurs, angles, aires. Seul le sens de parcours s'inverse.\nExemple similaire : un rectangle 6 × 4 cm a une image de même taille et même forme.",
+      "Astuce : une symétrie centrale conserve les longueurs.\nExemple similaire : [AB] = 7 cm → [A'B'] = 7 cm.",
+      "Astuce : cherche le point d'où chaque sommet a pour image le sommet opposé.\nExemple similaire : dans un parallélogramme, l'intersection des diagonales est le centre de symétrie.",
+      "Astuce : l'image d'une droite est une droite PARALLÈLE (si elle passe par O, elle reste invariante).\nExemple similaire : la droite (d) et son image (d') sont parallèles.",
+      "Astuce : le centre doit être le milieu : (x + x') ÷ 2 = abscisse du centre.\nExemple similaire : symétrique de 7 par rapport à 2 : (7 + x') ÷ 2 = 2 → x' = -3.",
+      "Astuce : l'image est IDENTIQUE : périmètre, aire et angles inchangés.\nExemple similaire : un triangle de côtés 3 ; 4 ; 5 cm a une image de côtés 3 ; 4 ; 5 cm.",
+      "Astuce : dimensions conservées → même aire.\nExemple similaire : rectangle 5 × 2 cm → image : rectangle 5 × 2 cm, aire 10 cm²."
+    ],
+    genH: {
+      1: "Astuce : O est le milieu de [MM'] : OM' = OM.\nExemple similaire : OM = 5 cm → OM' = 5 cm.",
+      2: "Astuce : MM' = MO + OM' = 2 × MO.\nExemple similaire : OM = 6 cm → MM' = 12 cm.",
+      3: "Astuce : dimensions conservées : le rectangle image est identique ; périmètre = 2 × (L + l).\nExemple similaire : 6 × 4 cm → périmètre 2 × (6 + 4) = 20 cm.",
+      4: "Astuce : la symétrie centrale conserve longueurs, angles et aires (juste un demi-tour autour de O).\nExemple similaire : un triangle de côtés 3 ; 4 ; 5 cm a une image aux mêmes côtés."
+    },
+  },
+
+  angles5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=H2m_XYGgFwc", t: "Propriétés des angles (5ème)" },
+      { u: "https://www.youtube.com/watch?v=L9mP1DwXTDg", t: "Angles et droites parallèles" },
+      { u: "https://www.youtube.com/watch?v=3h5x2gSIr-c", t: "Les angles en 5ème" },
+    ],
+    resume: [
+      { t: "Angles opposés par le sommet", f: "égaux (toujours)", d: "Même sommet, côtés dans le prolongement l'un de l'autre, en vis-à-vis : égaux, sans condition de parallélisme." },
+      { t: "Angles alternes-internes (Z)", f: "figure en Z → égaux si ∥", d: "Situés entre les deux droites, de part et d'autre de la sécante." },
+      { t: "Angles correspondants (F)", f: "figure en F → égaux si ∥", d: "Du même côté de la sécante, l'un entre les droites, l'autre à l'extérieur." },
+      { t: "Angles autour d'une droite", f: "angle plat = 180°", d: "Deux angles adjacents le long d'une même droite : somme 180° (supplémentaires). Complémentaires = somme 90°." }
+    ],
+    qs: [
+      "Astuce : opposés par le sommet = angles en vis-à-vis, toujours égaux, sans condition.\nExemple similaire : deux angles opposés par le sommet de 55° chacun.",
+      "Astuce : des angles opposés par le sommet sont toujours ÉGAUX.\nExemple similaire : l'un mesure 60° → l'autre 60°.",
+      "Astuce : en Z, les deux angles sont ENTRE les droites, de part et d'autre de la sécante.\nExemple similaire : dessine un Z : les deux angles dans les creux du Z sont alternes-internes.",
+      "Astuce : droites parallèles → angles alternes-internes (Z) ÉGAUX.\nExemple similaire : l'un 52° → l'autre 52°.",
+      "Astuce : droites parallèles → angles correspondants (F) ÉGAUX.\nExemple similaire : l'un 132° → le correspondant 132°.",
+      "Astuce : c'est la RÉCIPROQUE : angles en Z égaux → droites parallèles.\nExemple similaire : si les angles en Z sont égaux sur ta figure, les deux côtés sont parallèles.",
+      "Astuce : sur la même droite, les deux angles forment un angle plat : somme 180°.\nExemple similaire : angle de 65° → l'adjacent vaut 180 − 65 = 115°.",
+      "Astuce : complémentaires = somme 90°.\nExemple similaire : 30° et 60° sont complémentaires.",
+      "Astuce : la lettre F = même côté de la sécante, même position relative aux droites.\nExemple similaire : deux angles chacun en haut à droite → correspondants.",
+      "Astuce : d'abord le supplémentaire (180 − 34 = 146°), puis l'alternes-interne : même mesure avec des droites parallèles.\nExemple similaire : angle 40° → supplémentaire 140° → alternes-interne 140°.",
+      "Astuce : supplémentaires = somme 180°.\nExemple similaire : 100° et 80°.",
+      "Astuce : traduis l'énoncé : x + 2x = 90 → 3x = 90.\nExemple similaire : si y = 3x : x + 3x = 90 → x = 22,5°."
+    ],
+    genH: {
+      1: "Astuce : des angles opposés par le sommet sont toujours ÉGAUX.\nExemple similaire : l'un 58° → l'autre 58°.",
+      2: "Astuce : droites parallèles → alternes-internes (Z) et correspondants (F) égaux.\nExemple similaire : un angle de 72° a son alternes-interne à 72° aussi.",
+      3: "Astuce : supplémentaires = somme 180°.\nExemple similaire : l'un 105° → l'autre 180 − 105 = 75°.",
+      4: "Astuce : complémentaires = somme 90°.\nExemple similaire : l'un 18° → l'autre 90 − 18 = 72°."
+    },
+  },
+
+  triangles5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=FucUXFt-wjI", t: "Somme des angles d'un triangle" },
+      { u: "https://www.youtube.com/watch?v=rJvF6iENYME", t: "L'inégalité triangulaire" },
+      { u: "https://www.youtube.com/watch?v=u1rqg_5pL1s", t: "Reconnaître des triangles égaux" },
+      { u: "https://www.youtube.com/watch?v=7inMCnths8I", t: "Médiatrices et cercle circonscrit" },
+      { u: "https://www.youtube.com/watch?v=k3_g9amoIDE", t: "Les hauteurs d'un triangle" },
+    ],
+    resume: [
+      { t: "Somme des angles", f: "A + B + C = 180°", d: "Toujours 180° : pour trouver un angle, soustrais la somme des deux autres." },
+      { t: "Inégalité triangulaire", f: "plus grand côté < somme des 2 autres", d: "Sinon le triangle n'existe pas." },
+      { t: "Triangles particuliers", f: "2 côtés égaux → isocèle\n3 côtés égaux → équilatéral (60°)", d: "Rectangle : un angle droit." },
+      { t: "Droites remarquables", f: "médiatrice · hauteur · médiane", d: "Médiatrice : milieu + ⊥ (cercle circonscrit). Hauteur : du sommet, ⊥ au côté opposé (orthocentre). Médiane : du sommet au milieu du côté (centre de gravité)." }
     ],
     qs: [
       "Astuce : 180° moins la somme des deux angles connus.\nExemple similaire : angles 50° et 60° → 180 − 110 = 70°.",
-      "Astuce : le centre de symétrie est le MILIEU du segment reliant un point et son image.\nExemple similaire : M(2;3), O(5;3) → M'(8;3).",
-      "Astuce : diagonales coupées en leur milieu = propriété de TOUS les parallélogrammes.\nExemple similaire : des diagonales de même longueur → rectangle, pas tous les parallélogrammes.",
+      "Astuce : trois côtés → trois médiatrices, qui se coupent au centre du cercle circonscrit.\nExemple similaire : la médiatrice de [AB] = tous les points à égale distance de A et de B.",
+      "Astuce : isocèle = 2 côtés égaux (et donc 2 angles à la base égaux).\nExemple similaire : côtés 6 ; 6 ; 4 → isocèle.",
       "Astuce : isocèle → les deux angles à la base sont égaux.\nExemple similaire : base à 70° chacun → sommet = 180 − 140 = 40°.",
       "Astuce : l'angle droit compte pour 90°.\nExemple similaire : rectangle en A, angle B = 30° → angle C = 60°.",
-      "Astuce : losange = 4 côtés égaux ET diagonales perpendiculaires. Les angles droits sont pour le carré.\nExemple similaire : « diagonales de même longueur » → rectangle.",
+      "Astuce : compare le plus grand côté à la somme des deux autres.\nExemple similaire : côtés 4 ; 6 ; 9 : 9 < 10, le triangle existe.",
       "Astuce : cherche d'abord le 3e angle.\nExemple similaire : 30° et 75° → 3e = 75° → deux angles égaux → isocèle.",
       "Astuce : hauteur = du sommet, perpendiculaire au côté opposé.\nExemple similaire : la médiatrice passe elle par le MILIEU, et ⊥ aussi.",
-      "Astuce : trois côtés égaux = équilatéral = trois angles de 60°.\nExemple similaire : côtés 4 ; 4 ; 4 → chaque angle 60°.",
-      "Astuce : une symétrie centrale conserve les longueurs.\nExemple similaire : [AB] = 12 cm → [A'B'] = 12 cm.",
+      "Astuce : 180 − 90 − l'angle connu.\nExemple similaire : triangle rectangle avec un angle de 30° → le troisième = 60°.",
       "Astuce : médiatrice = points à égale distance des extrémités.\nExemple similaire : si C est sur la médiatrice de [AB], alors CA = CB.",
-      "Astuce : un angle droit dans un parallélogramme → les quatre angles sont droits (rectangle).\nExemple similaire : un losange avec un angle droit serait un carré.",
-      "Astuce : compare le plus grand côté à la somme des deux autres.\nExemple similaire : côtés 4 ; 6 ; 9 : 9 < 10, le triangle existe.",
-      "Astuce : opposés par le sommet = angles en vis-à-vis, toujours égaux.\nExemple similaire : deux angles opposés par le sommet de 37° chacun.",
-      "Astuce : situation en Z (alternes-internes) ou en F (correspondants) avec droites parallèles : angles égaux.\nExemple similaire : un angle de 50° a son alterne-interne à 50° aussi.",
+      "Astuce : médiatrice → cercle circonscrit ; hauteur → orthocentre ; médiane → centre de gravité.\nExemple similaire : les 3 médianes se coupent au centre de gravité.",
+      "Astuce : les angles à la base d'un isocèle sont égaux : (180 − angle au sommet) ÷ 2.\nExemple similaire : sommet 40° → base = (180 − 40) ÷ 2 = 70°."
     ],
     genH: {
-      2: "Astuce : les trois angles d'un triangle totalisent 180°.\nExemple similaire : pour 50° et 60°, le troisième mesure 180 − 50 − 60 = 70°.",
-      4: "Astuce : avec deux droites parallèles, les alternes-internes (en Z) et les correspondants (en F) sont égaux.\nExemple similaire : un angle de 47° a un alternes-interne de 47°."
+      1: "Astuce : les trois angles d'un triangle totalisent 180°.\nExemple similaire : pour 50° et 60°, le troisième mesure 180 − 50 − 60 = 70°.",
+      2: "Astuce : isocèle : les angles à la base sont égaux ; sommet = 180 − 2 × angle.\nExemple similaire : base 65° → sommet = 180 − 130 = 50°.",
+      3: "Astuce : triangle rectangle : l'angle droit = 90° → troisième = 90 − angle.\nExemple similaire : un angle de 55° → le troisième = 35°.",
+      4: "Astuce : angles à la base = (180 − angle au sommet) ÷ 2.\nExemple similaire : sommet 60° → base = (180 − 60) ÷ 2 = 60° (triangle équilatéral)."
+    },
+  },
+
+  parallelogrammes5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=4dGM22L9030", t: "Le parallélogramme" },
+      { u: "https://www.youtube.com/watch?v=hUoaHWdYi_8", t: "Reconnaître un parallélogramme" },
+      { u: "https://www.youtube.com/watch?v=e-baAiHlypg", t: "Parallélogrammes particuliers" },
+      { u: "https://www.youtube.com/watch?v=y2UKmaVd0WI", t: "Carré, rectangle, losange : définitions et propriétés" },
+      { u: "https://www.youtube.com/watch?v=DRGJ2Y_TyCI", t: "Construire un parallélogramme au compas" },
+      { u: "https://www.youtube.com/watch?v=RrdxZu9l1_8", t: "Construire un parallélogramme règle et équerre" },
+      { u: "https://www.youtube.com/watch?v=ctVWi7FakFc", t: "Construire un parallélogramme sur quadrillage" },
+    ],
+    resume: [
+      { t: "Parallélogramme", f: "côtés opposés ∥ et égaux", d: "Diagonales coupées en leur milieu (= centre de symétrie) ; angles opposés égaux ; angles consécutifs supplémentaires." },
+      { t: "Rectangle", f: "parallélogramme + angle droit", d: "4 angles droits ; diagonales de MÊME longueur." },
+      { t: "Losange", f: "parallélogramme + 4 côtés égaux", d: "Diagonales PERPENDICULAIRES." },
+      { t: "Carré et aires", f: "carré = rectangle + losange", d: "Aire d'un parallélogramme = base × hauteur ; aire d'un losange = d₁ × d₂ ÷ 2." }
+    ],
+    qs: [
+      "Astuce : diagonales coupées en leur milieu = propriété de TOUS les parallélogrammes.\nExemple similaire : des diagonales de même longueur → rectangle, pas tous les parallélogrammes.",
+      "Astuce : 4 angles droits = rectangle ; 4 côtés égaux = losange ; les deux à la fois = carré.\nExemple similaire : côtés de 5 cm partout et 4 angles droits → carré.",
+      "Astuce : parallélogramme = côtés opposés PARALLÈLES, donc de même longueur.\nExemple similaire : [AB] et [DC] parallèles et AB = DC.",
+      "Astuce : losange = 4 côtés égaux ET diagonales perpendiculaires. Les angles droits sont pour le carré.\nExemple similaire : « diagonales de même longueur » → rectangle.",
+      "Astuce : côté opposé = même longueur ; périmètre = 2 × (a + b).\nExemple similaire : côtés 6 cm et 3 cm → 2 × (6 + 3) = 18 cm.",
+      "Astuce : angles opposés égaux ; angles consécutifs supplémentaires (somme 180°).\nExemple similaire : angles de 120° et 60° en vis-à-vis.",
+      "Astuce : les angles opposés d'un parallélogramme sont ÉGAUX.\nExemple similaire : l'un 72° → l'opposé 72°.",
+      "Astuce : un angle droit dans un parallélogramme → les quatre angles sont droits (rectangle).\nExemple similaire : un losange avec un angle droit serait un carré.",
+      "Astuce : aire = base × hauteur (la hauteur : perpendiculaire du sommet à la base).\nExemple similaire : base 6 cm, hauteur 4 cm → 24 cm².",
+      "Astuce : angles consécutifs = supplémentaires → 180 − angle.\nExemple similaire : angle 70° → consécutif 110°.",
+      "Astuce : diagonales perpendiculaires = losange ; diagonales de même longueur = rectangle.\nExemple similaire : un losange avec des diagonales ⊥ et de même longueur → carré.",
+      "Astuce : aire du losange = d₁ × d₂ ÷ 2.\nExemple similaire : diagonales 10 et 4 cm → 10 × 4 ÷ 2 = 20 cm²."
+    ],
+    genH: {
+      1: "Astuce : les angles opposés d'un parallélogramme sont égaux.\nExemple similaire : l'un 84° → l'opposé 84°.",
+      2: "Astuce : angles consécutifs supplémentaires : 180 − angle.\nExemple similaire : angle 98° → consécutif 82°.",
+      3: "Astuce : aire du parallélogramme = base × hauteur.\nExemple similaire : base 11 cm, hauteur 3 cm → 33 cm².",
+      4: "Astuce : aire du losange = d₁ × d₂ ÷ 2.\nExemple similaire : diagonales 8 et 5 cm → 20 cm²."
     },
   },
   fractions: {

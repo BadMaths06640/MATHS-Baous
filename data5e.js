@@ -33,62 +33,9 @@ window.BANK_5E = {
           return { q:`Calculer : (${x}² − 4 × ${x}) × (−1) + ${n} × ${x}`, a:String((x*x - 4*x) * (-1) + n*x), e:`Dans la parenthèse : ${x}² − ${4*x} = ${x*x - 4*x}. Multiplié par −1 : ${-(x*x-4*x)}. Puis + ${n} × ${x} = ${n*x} : ${(x*x-4*x)*(-1) + n*x}.` }; }
       }
     },
-        {
-      id: "geom5", titre: "Symétrie et triangles", icone: "📐",
-      chap: [2, 6, 8, 10],
-      notion: "Symétrie centrale : le symétrique de M par rapport à O est M’ tel que O soit le milieu de [MM’] ; la figure symétrique a les mêmes longueurs et angles.\nParallélogramme : côtés opposés parallèles et de même longueur ; diagonales qui se coupent en leur milieu.\nDroites remarquables : médiatrice, médiane, hauteur ; un triangle a 3 de chacune.\nSomme des angles d'un triangle = 180°.\nInégalité triangulaire : dans un triangle, chaque côté est plus petit que la somme des deux autres.\nAngles opposés par le sommet : toujours égaux.\nDroites parallèles coupées par une sécante : les angles alternes-internes (en Z) et les angles correspondants (en F) sont égaux.",
-      qs: [
-        { d:1, q:"Dans un triangle, un des angles mesure 60°, un autre 40°. Le troisième ?", c:["60°","80°","100°","90°"], a:1, e:"La somme vaut 180° : 180 − (60 + 40) = 80°." },
-        { d:1, q:"Le symétrique d'un point M par rapport à un point O : où est O ?", c:["Au milieu de [MM’]","Sur la perpendiculaire","Au-delà de M’","N'importe où"], a:0, e:"O est exactement le milieu du segment [MM’]." },
-        { d:1, q:"Un parallélogramme a ses diagonales qui...", c:["se coupent en leur milieu","sont de même longueur","sont perpendiculaires (toujours)","sont des axes de symétrie"], a:0, e:"Dans tout parallélogramme, les diagonales se coupent en leur milieu. Être de même longueur ou perpendiculaires n'est vrai que pour certains cas particuliers." },
-        { d:2, q:"Triangle isocèle : angles à la base = 55° chacun. Angle au sommet ?", a:"70", e:"180 − 55 − 55 = 70°." },
-        { d:2, q:"Triangle rectangle en A : les côtés... L'angle en B mesure 37°. Angle en C ?", c:["63°","53°","90°","143°"], a:1, e:"Angle droit en A = 90°, donc 180 − 90 − 37 = 53°." },
-        { d:2, q:"Propriété d'un losange (qui est un parallélogramme particulier) :", c:["4 côtés égaux","4 angles droits (toujours)","diagonales de même longueur","un seul axe de symétrie"], a:0, e:"Le losange a ses 4 côtés de même longueur et ses diagonales perpendiculaires. Les angles droits sont réservés au carré." },
-        { d:3, q:"Triangle : 2 angles mesurent 40° et 70°. Ce triangle est...", c:["isocèle","équilatéral","rectangle","plat"], a:0, e:"Troisième angle : 180 − 110 = 70°. Deux angles égaux (70°) → triangle isocèle." },
-        { d:3, q:"Quelle droite passe par un sommet et est perpendiculaire au côté opposé ?", c:["la hauteur","la médiatrice","la médiane","la bissectrice"], a:0, e:"C'est la hauteur du triangle." },
-        { d:3, q:"Un triangle a des côtés de 6 cm ; 6 cm ; 6 cm. Nature et angles ?", c:["équilatéral, trois angles de 60°","équilatéral, trois angles de 30°","isocèle rectangle","rectangle isocèle"], a:0, e:"Trois côtés égaux → équilatéral, et ses trois angles mesurent 60° (somme 180°). Le point de concours des médiatrices est le centre du cercle circonscrit." },
-        { d:4, q:"Par symétrie de centre O, l'image d'un segment [AB] de 7 cm est un segment [A’B’] de longueur...", c:["7 cm","3,5 cm","14 cm","Longueur quelconque"], a:0, e:"La symétrie centrale conserve les longueurs : 7 cm." },
-        { d:4, q:"Si ABC est un triangle dont la médiatrice de [AB] passe par C, alors...", c:["CA = CB","l'angle C est droit","AB = BC","l'angle A = 60°"], a:0, e:"C appartient à la médiatrice de [AB] → C est à égale distance de A et B : CA = CB." },
-        { d:4, q:"Un parallélogramme qui a un angle droit est...", c:["un rectangle","un losange","un trapèze","un simple parallélogramme"], a:0, e:"Un parallélogramme avec un angle droit est un rectangle (ses 4 angles sont droits)." },
-        { d: 2, q: "Peut-on construire un triangle ABC avec AB = 5 cm, AC = 2,4 cm et BC = 1,8 cm ?", c: ["Non, car 5 > 2,4 + 1,8", "Oui, car 5 < 2,4 + 1,8", "Oui, car tout triplet de longueurs fonctionne", "Non, car 2,4 + 1,8 > 5"], a: 0, e: "2,4 + 1,8 = 4,2 < 5 : le plus grand côté dépasse la somme des deux autres, l'inégalité triangulaire n'est pas respectée." },
-        { d: 3, q: "Deux angles opposés par le sommet sont...", c: ["toujours égaux", "toujours complémentaires", "toujours adjacents", "des fois égaux, des fois non"], a: 0, e: "Deux angles opposés par le sommet (même sommet, côtés dans le prolongement l'un de l'autre) sont toujours égaux." },
-        { d: 4, q: "Deux droites parallèles sont coupées par une sécante. Deux angles alternes-internes (situation en Z) sont...", c: ["égaux", "complémentaires", "supplémentaires", "sans relation entre eux"], a: 0, e: "Avec deux droites parallèles, les angles alternes-internes (comme les correspondants) sont égaux." },
-      ],
-      gen: {
-        2: () => { const a = 35 + Math.floor(Math.random() * 50); const b = 30 + Math.floor(Math.random() * (145 - a - 25)); const c = 180 - a - b;
-          return { q: `Deux angles d'un triangle mesurent ${a}\u00b0 et ${b}\u00b0. Combien mesure le troisi\u00e8me ?`, a: String(c), e: `Somme des angles = 180\u00b0 : 180 \u2212 ${a} \u2212 ${b} = ${c}\u00b0.` }; },
-        4: () => { const ang = 20 + Math.floor(Math.random() * 141); const alt = Math.random() < 0.5;
-          return alt
-            ? { q: `Deux droites parall\u00e8les sont coup\u00e9es par une s\u00e9cante. Un angle mesure ${ang}\u00b0. Combien mesure son alternes-interne ?`, a: String(ang), e: `Avec deux droites parall\u00e8les, les angles alternes-internes (situation en Z) sont \u00e9gaux : ${ang}\u00b0.` }
-            : { q: `Deux droites parall\u00e8les sont coup\u00e9es par une s\u00e9cante. Un angle mesure ${ang}\u00b0. Combien mesure son correspondant ?`, a: String(ang), e: `Avec deux droites parall\u00e8les, les angles correspondants (situation en F) sont \u00e9gaux : ${ang}\u00b0.` }; }
-      },
-    },
-        {
-      id: "fractions", titre: "Fractions : comparer, additionner, soustraire", icone: "🍰",
-      chap: [3, 5],
-      notion: "Comparaison : on met les fractions au même dénominateur.\nAddition / soustraction : même dénominateur puis on opère sur les numérateurs.\nSimplifier : on divise numérateur et dénominateur par le même nombre. Fraction d'une quantité : « 2/3 de 60 » = 60 × 2 ÷ 3.",
-      qs: [
-        { d:1, q:"Simplifier la fraction : 12/18", c:["2/3","3/4","6/9","4/6"], a:0, e:"12 = 2 × 6 et 18 = 3 × 6 → 12/18 = 2/3 (on divise par 6). 4/6 et 6/9 ne sont pas simplifiées." },
-        { d:1, q:"Calculer : 1/4 + 2/4", c:["3/8","3/4","2/16","1/2"], a:1, e:"Même dénominateur : on additionne les numérateurs : 1 + 2 = 3, donc 3/4." },
-        { d:1, q:"Quelle fraction est égale à 1/2 ?", c:["3/6","2/5","4/6","5/8"], a:0, e:"3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2." },
-        { d:2, q:"Calculer : 2/3 + 1/6", c:["3/9","5/6","3/6","5/9"], a:1, e:"Dénominateur commun 6 : 2/3 = 4/6. Somme : 4/6 + 1/6 = 5/6." },
-        { d:2, q:"Calculer : 3/4 + 3/8", c:["9/8","3/12","3/8","1/2"], a:0, e:"Même dénominateur : 3/4 = 6/8. Somme : 6/8 + 3/8 = 9/8." },
-        { d:2, q:"Comparer : quel est le plus grand nombre ?", c:["3/4","2/3","5/8","7/12"], a:0, e:"Mise au dénominateur 12 : 3/4 = 9/12, 2/3 = 8/12, 5/8 = 7,5/12, 7/12. Le plus grand est 9/12 = 3/4." },
-        { d:3, q:"Calculer : 5/6 − 2/9", c:["3/3","11/18","23/18","1/3"], a:1, e:"Dénominateur commun 18 : 5/6 = 15/18 et 2/9 = 4/18. Différence : 15/18 − 4/18 = 11/18." },
-        { d:3, q:"Calculer : 4/5 de 60", a:"48", e:"« de » signifie × : 4/5 × 60 = 240/5 = 48." },
-        { d:3, q:"Calculer : 5/6 − 1/3", c:["1/2","1/3","2/3","7/6"], a:0, e:"Même dénominateur : 5/6 − 2/6 = 3/6, simplifié en 1/2." },
-        { d:4, q:"Calculer : 1 − 3/8", a:"5/8", e:"1 = 8/8. Différence : 8/8 − 3/8 = 5/8." },
-        { d:4, q:"Calculer : 7/10 + 1/5", c:["9/10","8/15","3/5","7/50"], a:0, e:"Même dénominateur : 1/5 = 2/10. Somme : 7/10 + 2/10 = 9/10." },
-        { d:4, q:"Un gâteau est partagé en 8. Léa en mange 3/8, Tom en mange 1/4. Quelle fraction du gâteau reste-t-il ?", c:["3/8","1/2","5/8","1/4"], a:0, e:"1/4 = 2/8. Manger : 3/8 + 2/8 = 5/8. Reste : 8/8 − 5/8 = 3/8." }
-      ],
-      gen: {
-        1: () => { const n = 2 + Math.floor(Math.random()*6), d = n + 1 + Math.floor(Math.random()*6);
-          return { q:`Simplifier au maximum : ${n*d}/${d*d}`, a:`${n}/${d}`, e:`On divise numérateur et dénominateur par ${d} : ${n*d} ÷ ${d} = ${n} et ${d*d} ÷ ${d} = ${d}.` }; }
-      }
-    },
     {
       id: "arithmetique5", titre: "Arithmétique : diviseurs et nombres premiers", icone: "🧮",
-      chap: [4],
+      chap: [1],
       notion: "Division euclidienne de a par b : a = b × q + r avec 0 ≤ r < b (q quotient entier, r reste).\nb est un diviseur de a quand le reste est nul (alors a est un multiple de b).\nCritères : par 2 (chiffre des unités pair) · par 5 (finit par 0 ou 5) · par 4 (la moitié du nombre est paire) · par 3 et 9 (somme des chiffres multiple de 3 ou 9).\nNombre premier : exactement deux diviseurs (1 et lui-même). 1 n'est pas premier ; 2 est le seul premier pair.",
       qs: [
         { d:1, q:"Dans la division euclidienne de 23 par 5, le reste vaut...", c:["3","2","4","0"], a:0, e:"23 = 5 × 4 + 3 avec 3 < 5 : le quotient est 4 et le reste est 3." },
@@ -112,34 +59,93 @@ window.BANK_5E = {
           return { q:`${n} est-il divisible par 3 ? (répondre oui ou non)`, a: ok ? "oui" : "non", e:`La somme des chiffres de ${n} est ${s}, qui ${ok ? "est" : "n'est pas"} multiple de 3 : réponse ${ok ? "oui" : "non"}.` }; }
       }
     },
-        {
-      id: "propo", titre: "Proportionnalité et pourcentages", icone: "📊",
-      chap: [7],
-      notion: "Tableau de proportionnalité : les quotients de chaque colonne sont égaux (coefficient de proportionnalité).\nPourcentage : t % d'une quantité = t/100 × quantité.\nÉchelle : distance sur le dessin ÷ distance réelle (avec la même unité).",
+    {
+      id: "symetrie5", titre: "Symétrie centrale", icone: "🧭",
+      chap: [2],
+      notion: "Symétrie de centre O : le symétrique de M est M' tel que O soit le MILIEU de [MM'].\nL'image d'un segment est un segment de même longueur ; l'image d'une droite (ne passant pas par O) est une droite parallèle.\nLa symétrie centrale conserve les longueurs, les angles et les aires.\nUne figure a un centre de symétrie si un demi-tour (180°) autour de ce point la laisse invariante (cercle → son centre ; parallélogramme → intersection des diagonales).",
       qs: [
-        { d:1, q:"3 stylos coûtent 6 €. Prix de 5 stylos (prix proportionnel) ?", c:["9 €","10 €","12 €","15 €"], a:1, e:"Un stylo coûte 6 ÷ 3 = 2 €. Donc 5 stylos : 5 × 2 = 10 €." },
-        { d:1, q:"Calculer 10 % de 80", c:["8","0,8","80","18"], a:0, e:"10 % = ÷10 : 80 ÷ 10 = 8." },
-        { d:1, q:"Calculer 50 % de 34", a:"17", e:"50 % = la moitié : 34 ÷ 2 = 17." },
-        { d:2, q:"Calculer 25 % de 240", c:["6","60","24","48"], a:1, e:"25 % = un quart : 240 ÷ 4 = 60. Ou 240 × 25 ÷ 100 = 60." },
-        { d:2, q:"Une écharpe à 30 € augmente de 20 %. Nouveau prix ?", c:["36 €","32 €","50 €","24 €"], a:0, e:"Augmentation : 30 × 20 ÷ 100 = 6 €. Nouveau prix : 30 + 6 = 36 €." },
-        { d:2, q:"Sur une carte à l'échelle 1/100 000, deux villages sont à 4 cm. Distance réelle ?", c:["400 m","4 km","40 km","40 m"], a:1, e:"1 cm sur la carte = 100 000 cm réels = 1 km. Donc 4 cm = 4 km." },
-        { d:3, q:"Un article à 80 € est soldé à −25 %. Prix soldé ?", c:["55 €","60 €","65 €","20 €"], a:1, e:"Réduction : 80 × 25 ÷ 100 = 20 €. Prix soldé : 80 − 20 = 60 €." },
-        { d:3, q:"15 litres d'essence coûtent 24 € ; prix de 40 litres (proportionnel) ?", a:"64", e:"Coefficient : 24 ÷ 15 = 1,6 €/L. Donc 40 × 1,6 = 64 €." },
-        { d:3, q:"Après une hausse de 10 %, un abonnement coûte 44 €. Prix avant hausse ?", c:["39,60 €","34 €","40 €","44,10 €"], a:2, e:"Après hausse de 10 %, le prix vaut 110 % de l'ancien : 44 = 1,1 × p, donc p = 44 ÷ 1,1 = 40 €." },
-        { d:4, q:"Une école compte 480 élèves ; 55 % sont des filles. Combien de garçons ?", a:"216", e:"Filles : 480 × 55 ÷ 100 = 264. Garçons : 480 − 264 = 216." },
-        { d:4, q:"Le prix d'un vélo passe de 150 € à 120 €. Quelle est la baisse en % ?", c:["30 %","20 %","25 %","80 %"], a:1, e:"Baisse : 30 €. Pourcentage : 30/150 = 1/5 = 20 %." },
-        { d:4, q:"Une maquette à l'échelle 1/50 : une tour de 35 m de hauteur mesure combien sur la maquette ?", c:["70 cm","7 cm","35 cm","1,75 m"], a:0, e:"35 m = 3 500 cm ; 3 500 ÷ 50 = 70 cm." }
+        { d:1, q:"Le symétrique du point M par rapport à O est le point M' tel que...", c:["O est le milieu de [MM']","OM = MM'","(OM') perpendiculaire à (OM)","O est le symétrique de M"], a:0, e:"O, centre de la symétrie, est exactement le milieu du segment [MM']." },
+        { d:1, q:"L'image du segment [AB] par une symétrie de centre O est...", c:["un segment [A'B'] de même longueur","un cercle","un point","un segment [A'B'] deux fois plus long"], a:0, e:"La symétrie centrale transforme un segment en un segment de même longueur : l'image de [AB] est [A'B'] avec A'B' = AB." },
+        { d:1, q:"Parmi ces figures, laquelle possède un centre de symétrie ?", c:["un cercle","un triangle quelconque","un angle aigu","un demi-cercle"], a:0, e:"Le cercle est invariant par un demi-tour autour de son centre. Un triangle quelconque, un angle ou un demi-cercle n'ont aucun centre de symétrie." },
+        { d:2, q:"M' est le symétrique de M par rapport à O et MO = 4 cm. Que vaut OM' ?", a:"4", e:"O est le milieu de [MM'] : OM' = MO = 4 cm." },
+        { d:2, q:"M' est le symétrique de M par rapport à O et MO = 9 cm. Que vaut MM' ?", a:"18", e:"O est le milieu de [MM'] : MM' = MO + OM' = 9 + 9 = 18 cm." },
+        { d:2, q:"La symétrie centrale conserve...", c:["les longueurs, les angles et les aires","seulement les longueurs","les angles mais pas les aires","l'orientation de la figure"], a:0, e:"Une symétrie centrale conserve les longueurs, les angles et les aires ; seule la position change (la figure fait un demi-tour autour de O)." },
+        { d:3, q:"[AB] mesure 12 cm et [A'B'] est son image par une symétrie de centre O. Que vaut A'B' ?", a:"12", e:"La symétrie centrale conserve les longueurs : A'B' = AB = 12 cm." },
+        { d:3, q:"Quel est le centre de symétrie d'un parallélogramme ?", c:["le point d'intersection de ses diagonales","le milieu d'un côté","un des sommets","un parallélogramme n'a pas de centre de symétrie"], a:0, e:"Chaque sommet a pour symétrique le sommet opposé : le centre est l'intersection des diagonales." },
+        { d:3, q:"L'image d'une droite (d) ne passant pas par le centre O est...", c:["une droite parallèle à (d)","un cercle","un point","un segment plus court que (d)"], a:0, e:"L'image d'une droite ne passant pas par O est une droite parallèle à (d) ; si (d) passe par O, son image est (d) elle-même." },
+        { d:4, q:"Sur une droite graduée, le symétrique du point d'abscisse 5 par rapport au point d'abscisse 1 est le point d'abscisse...", a:"-3", e:"1 doit être le milieu : (5 + x') ÷ 2 = 1, donc x' = 2 − 5 = -3." },
+        { d:4, q:"Un triangle quelconque et son image par une symétrie de centre O...", c:["sont superposables après un demi-tour autour de O","ont des périmètres différents","ont des aires différentes","n'ont aucun point commun possible"], a:0, e:"La symétrie centrale conserve tout : l'image se superpose à la figure d'origine après un demi-tour autour de O." },
+        { d:4, q:"Un rectangle de 7 cm sur 3 cm a pour image, par une symétrie de centre O, un rectangle d'aire...", a:"21", e:"La symétrie centrale conserve les dimensions : l'image est un rectangle 7 × 3, d'aire 7 × 3 = 21 cm²." }
       ],
       gen: {
-        2: () => { const q = [10,20,25,50][Math.floor(Math.random()*4)]; const n = (2+Math.floor(Math.random()*40))*4;
-          return { q:`Calculer ${q} % de ${n}`, a:String(n*q/100), e:`${q} % de ${n} = ${n} × ${q} ÷ 100 = ${n*q}/100 = ${n*q/100}.` }; },
-        3: () => { const p = 20 + Math.floor(Math.random()*40)*5, t = [10,20,25,50][Math.floor(Math.random()*4)];
-          return { q:`Un article à ${p} € est soldé à −${t} %. Prix soldé ?`, a:String(p*(100-t)/100), e:`Réduction : ${p} × ${t} ÷ 100 = ${p*t/100}. Prix soldé : ${p} − ${p*t/100} = ${p*(100-t)/100} €.` }; }
+        1: () => { const a = 2 + Math.floor(Math.random() * 8);
+          return { q: `M' est le symétrique de M par rapport à O et OM = ${a} cm. Que vaut OM' ?`, a: String(a), e: `O est le milieu de [MM'] : OM' = OM = ${a} cm.` }; },
+        2: () => { const a = 2 + Math.floor(Math.random() * 8);
+          return { q: `M' est le symétrique de M par rapport à O et OM = ${a} cm. Que vaut MM' ?`, a: String(2 * a), e: `O est le milieu de [MM'] : MM' = OM + OM' = ${a} + ${a} = ${2 * a} cm.` }; },
+        3: () => { const L = 3 + Math.floor(Math.random() * 8), w = 2 + Math.floor(Math.random() * 6);
+          return { q: `Un rectangle de ${L} cm sur ${w} cm a pour image, par une symétrie de centre O, un rectangle de périmètre...`, a: String(2 * (L + w)), e: `La symétrie conserve les dimensions. Périmètre conservé : 2 × (${L} + ${w}) = ${2 * (L + w)} cm.` }; },
+        4: () => ({ q: "Une figure F a pour image F' par une symétrie de centre O. On peut affirmer que F et F'...", c: ["ont exactement les mêmes longueurs, angles et aires","ont des périmètres différents","sont de tailles différentes","ont des angles différents"], a: 0, e: "La symétrie centrale conserve longueurs, angles et aires : F' est identique à F, juste tournée d'un demi-tour autour de O." })
+      }
+    },
+    {
+      id: "litteral5", titre: "Calcul littéral : distributivité", icone: "✖️",
+      chap: [3, 9],
+      notion: "k × (a + b) = k × a + k × b (simple distributivité).\nRéduire une expression : regrouper les termes « semblables » : 3x + 5x = 8x, mais 3x + 5 ne se réduit pas.",
+      qs: [
+        { d:1, q:"Développer : 3 × (x + 2)", c:["3x + 2","3x + 6","x + 6","3x × 6"], a:1, e:"On distribue le 3 : 3 × x + 3 × 2 = 3x + 6." },
+        { d:1, q:"Réduire : 4x + 3 + 5x", c:["9x + 3","12x","9x","4x + 8x"], a:0, e:"On regroupe les x : 4x + 5x = 9x, on garde le + 3." },
+        { d:1, q:"Développer : 5 × (2 − a)", c:["10 − 5a","7 − 5a","10 − a","5 × 2 × a"], a:0, e:"5 × 2 = 10 et 5 × (−a) = −5a, donc 10 − 5a." },
+        { d:2, q:"Réduire : 7a − 2 + 3a − 8", c:["10a − 10","10a + 6","4a − 10","21a − 6"], a:0, e:"7a + 3a = 10a et −2 − 8 = −10, donc 10a − 10." },
+        { d:2, q:"Développer puis réduire : 2(3x + 4) + 5x", a:"11x+8", e:"2 × 3x = 6x ; 2 × 4 = 8. Puis 6x + 5x = 11x, donc 11x + 8." },
+        { d:2, q:"Quelle expression est égale à 4 × (7 − 3) ?", c:["4 × 7 − 3","4 × 7 − 4 × 3","4 × 7 × 3","7 × 4 − 3"], a:1, e:"Distributivité : 4 × 7 − 4 × 3 = 28 − 12 = 16 = 4 × 4." },
+        { d:3, q:"Factoriser : 5x + 25", c:["5(x + 5)","x(5 + 25)","5(x + 25)","5 × x + 5 × 5"], a:0, e:"5 est un facteur commun : 5x + 25 = 5 × x + 5 × 5 = 5(x + 5)." },
+        { d:3, q:"Développer puis réduire : 3(2x − 5) − 4x", c:["2x − 15","6x − 15","10x − 15","2x + 15"], a:0, e:"3 × 2x = 6x ; 3 × (−5) = −15. Puis 6x − 15 − 4x = 2x − 15." },
+        { d:3, q:"Tester l'expression : que vaut 2x + 5 pour x = 3 ?", a:"11", e:"On remplace x par sa valeur puis on calcule : 2 × 3 + 5 = 6 + 5 = 11." },
+        { d:4, q:"Pour quelle(s) valeur(s) de x a-t-on 4(x + 3) = 3x + 10 ?", c:["x = −2","x = 2","x = 1","x = 7"], a:0, e:"4(x + 3) = 4x + 12. On cherche 4x + 12 = 3x + 10, donc 4x − 3x = 10 − 12 → x = −2. Vérification : 4 × 1 = 4 et 3 × (−2) + 10 = 4." },
+        { d:4, q:"Développer puis réduire : −2(3 − x) + 4x", a:"6x-6", e:"−2 × 3 = −6 ; −2 × (−x) = +2x. Puis −6 + 2x + 4x = 6x − 6." },
+        { d:4, q:"Un rectangle a pour largeur x et pour longueur x + 7. Son périmètre (réduit) ?", c:["2x + 7","4x + 14","2x + 14","x + 7"], a:1, e:"P = 2 × (x + x + 7) = 2 × (2x + 7) = 4x + 14." }
+      ],
+      gen: {
+        2: () => { const k = 2 + Math.floor(Math.random()*6), a = 2 + Math.floor(Math.random()*6), b = 1 + Math.floor(Math.random()*9);
+          return { q:`Développer : ${k} × (x + ${b})`, a:`${k}x+${k*b}`, e:`On distribue ${k} : ${k}x + ${k*b}.` }; },
+        3: () => { const k = 2 + Math.floor(Math.random()*5), a = 1 + Math.floor(Math.random()*4), b = 2 + Math.floor(Math.random()*4);
+          return { q:`Développer puis réduire : ${k}(${a}x + ${b}) − ${k-1}x`, a:`${k*a-(k-1)}x+${k*b}`, e:`${k} × ${a}x = ${k*a}x et ${k} × ${b} = ${k*b}. Puis ${k*a}x − ${k-1}x = ${k*a-(k-1)}x. Résultat : ${k*a-(k-1)}x + ${k*b}.` }; }
+      }
+    },
+    {
+      id: "angles5", titre: "Angles et droites parallèles", icone: "📐",
+      chap: [4],
+      notion: "Angles opposés par le sommet : même sommet, côtés dans le prolongement l'un de l'autre → toujours ÉGAUX.\nAngles adjacents : même sommet, un côté commun ; complémentaires = somme 90°, supplémentaires = somme 180°.\nDeux droites parallèles coupées par une sécante : les angles alternes-internes (en Z) et les angles correspondants (en F) sont égaux.\nRéciproque : si des angles alternes-internes (ou correspondants) sont égaux, alors les deux droites sont parallèles.",
+      qs: [
+        { d:1, q:"Deux angles opposés par le sommet (côtés dans le prolongement l'un de l'autre) sont...", c:["toujours égaux","toujours complémentaires","toujours supplémentaires","parfois égaux, parfois non"], a:0, e:"Deux angles opposés par le sommet (même sommet, côtés dans le prolongement l'un de l'autre) sont toujours égaux." },
+        { d:1, q:"Deux angles sont opposés par le sommet : le premier mesure 43°. Que mesure le second ?", a:"43", e:"Des angles opposés par le sommet sont égaux : le second mesure 43°." },
+        { d:1, q:"Dans une figure en Z (deux droites et une sécante), les angles alternes-internes se trouvent...", c:["entre les deux droites, de part et d'autre de la sécante","du même côté de la sécante","tout les deux à l'extérieur","toujours à 90°"], a:0, e:"Alternes-internes : situés entre les deux droites (en interne), de part et d'autre de la sécante (alternés) — figure en Z." },
+        { d:2, q:"(d1) ∥ (d2) sont coupées par une sécante. Un angle alternes-interne mesure 63°. Que mesure l'autre ?", a:"63", e:"Avec deux droites parallèles, les angles alternes-internes (en Z) sont égaux : 63°." },
+        { d:2, q:"(d1) ∥ (d2) sont coupées par une sécante. Un angle correspondant (situation en F) mesure 115°. Que mesure son correspondant ?", a:"115", e:"Avec deux droites parallèles, les angles correspondants (en F) sont égaux : 115°." },
+        { d:2, q:"Deux angles alternes-internes (situation en Z) sont égaux. Alors les deux droites coupées par la sécante sont...", c:["parallèles","perpendiculaires","sécantes","confondues"], a:0, e:"C'est la réciproque : si des angles alternes-internes (situation en Z) sont égaux, alors les deux droites sont parallèles." },
+        { d:3, q:"(d1) ∥ (d2) sont coupées par une sécante : un angle mesure 70°. Que mesure l'angle adjacent à celui-ci sur la même droite (les deux forment un angle plat) ?", a:"110", e:"Sur une même droite, les angles adjacents forment un angle plat : 180 − 70 = 110°." },
+        { d:3, q:"Deux angles complémentaires : l'un mesure 25°. Que mesure l'autre ?", a:"65", e:"Complémentaires : somme = 90°. 90 − 25 = 65°." },
+        { d:3, q:"Deux angles du même côté de la sécante, l'un entre les deux droites, l'autre à l'extérieur (schéma en F) sont dits...", c:["correspondants","alternes-internes","opposés par le sommet","adjacents"], a:0, e:"Angles du même côté de la sécante, même position relative aux droites : ce sont les angles correspondants (figure en F)." },
+        { d:4, q:"(d1) ∥ (d2) sont coupées par une sécante : un angle mesure 34°. Que mesure l'angle alternes-interne de son supplémentaire ?", a:"146", e:"Supplémentaire : 180 − 34 = 146°. Puis alternes-internes (droites parallèles) : même mesure, 146°." },
+        { d:4, q:"Deux angles supplémentaires : l'un mesure 78°, l'autre vaut x. Que vaut x ?", a:"102", e:"Supplémentaires : somme = 180°. x = 180 − 78 = 102°." },
+        { d:4, q:"x et y sont complémentaires et y = 2x. Que vaut x ?", c:["30°","45°","60°","15°"], a:0, e:"x + 2x = 90° : 3x = 90°, donc x = 30°." }
+      ],
+      gen: {
+        1: () => { const a = 25 + Math.floor(Math.random() * 111);
+          return { q: `Deux angles sont opposés par le sommet : le premier mesure ${a}\u00b0. Que mesure le second ?`, a: String(a), e: `Des angles opposés par le sommet sont égaux : le second mesure ${a}\u00b0.` }; },
+        2: () => { const a = 15 + Math.floor(Math.random() * 156); const alt = Math.random() < 0.5;
+          return alt
+            ? { q: `(d1) \u2225 (d2) sont coup\u00e9es par une s\u00e9cante. Un angle alternes-interne (en Z) mesure ${a}\u00b0. Que mesure l'autre ?`, a: String(a), e: `Droites parallèles : les angles alternes-internes (en Z) sont égaux : ${a}\u00b0.` }
+            : { q: `(d1) \u2225 (d2) sont coup\u00e9es par une s\u00e9cante. Un angle correspondant (en F) mesure ${a}\u00b0. Que mesure son correspondant ?`, a: String(a), e: `Droites parallèles : les angles correspondants (en F) sont égaux : ${a}\u00b0.` }; },
+        3: () => { const a = 35 + Math.floor(Math.random() * 106); const s = 180 - a;
+          return { q: `Deux angles supplémentaires : le premier mesure ${a}\u00b0. Que mesure le second ?`, a: String(s), e: `Supplémentaires : somme = 180\u00b0. ${s} = 180 \u2212 ${a}.` }; },
+        4: () => { const a = 10 + Math.floor(Math.random() * 71); const c = 90 - a;
+          return { q: `Deux angles complémentaires : le premier mesure ${a}\u00b0. Que mesure le second ?`, a: String(c), e: `Complémentaires : somme = 90\u00b0. ${c} = 90 \u2212 ${a}.` }; }
       }
     },
     {
       id: "relatifs", titre: "Nombres relatifs : repérage et calcul", icone: "🌡️",
-      chap: [9],
+      chap: [5, 13],
       notion: "Repérage : sur une droite graduée, chaque point est repéré par un nombre relatif ; dans le plan, un point A se repère par ses coordonnées (abscisse ; ordonnée).\nOpposé : deux nombres opposés sont de part et d'autre de 0 à la même distance ; l'opposé de 6 est −6, l'opposé de −5 est 5.\nComparer : tout nombre négatif est plus petit qu'un nombre positif ; entre deux négatifs, le plus petit est celui qui est le plus loin de 0.\nSomme : même signe → on garde le signe et on ajoute. Signes différents → on soustrait et on garde le signe du plus proche de 0.\nDifférence : soustraire, c'est ajouter l'opposé : a − b = a + (−b).",
       qs: [
         { d: 1, q: "Calculer : (−3) + (−5)", c: ["−8", "−2", "2", "8"], a: 0, e: "Même signe (négatif) : on ajoute les valeurs 3 + 5 = 8 et on garde le signe − : −8." },
@@ -166,9 +172,140 @@ window.BANK_5E = {
         2: "Astuce : entre deux négatifs, le plus grand est le plus proche de 0.\nExemple similaire : entre −9 et −4, le plus grand est −4."
       }
     },
-        {
+    {
+      id: "triangles5", titre: "Triangles et droites remarquables", icone: "🔺",
+      chap: [6, 12],
+      notion: "Somme des angles d'un triangle : toujours 180°.\nInégalité triangulaire : un triangle existe seulement si le plus grand côté est plus petit que la somme des deux autres.\nIsocèle : 2 côtés (donc 2 angles) égaux ; équilatéral : 3 côtés égaux, 3 angles de 60° ; rectangle : un angle droit.\nMédiatrice : droite passant par le milieu d'un côté, perpendiculairement (les 3 se coupent au centre du cercle circonscrit).\nHauteur : du sommet, perpendiculaire au côté opposé (les 3 se coupent à l'orthocentre).\nMédiane : du sommet au milieu du côté opposé (les 3 se coupent au centre de gravité).",
+      qs: [
+        { d:1, q:"Dans un triangle, un des angles mesure 60°, un autre 40°. Que mesure le troisième ?", c:["80°","100°","60°","90°"], a:0, e:"La somme vaut 180° : 180 − (60 + 40) = 80°." },
+        { d:1, q:"Combien de médiatrices dans un triangle ?", c:["3","1","2","6"], a:0, e:"Trois côtés, donc trois médiatrices ; elles se coupent au centre du cercle circonscrit." },
+        { d:1, q:"Un triangle avec deux côtés égaux est...", c:["isocèle","équilatéral (forcément)","rectangle","scalène"], a:0, e:"Deux côtés égaux = triangle isocèle (il a aussi ses deux angles à la base égaux). Équilatéral = les trois côtés égaux." },
+        { d:2, q:"Triangle isocèle : les angles à la base mesurent 55° chacun. Que mesure l'angle au sommet ?", a:"70", e:"180 − 55 − 55 = 70°." },
+        { d:2, q:"ABC est rectangle en A. L'angle en B mesure 37°. Que mesure l'angle en C ?", c:["53°","63°","90°","143°"], a:0, e:"Angle droit en A = 90° : 180 − 90 − 37 = 53°." },
+        { d:2, q:"Peut-on construire un triangle ABC avec AB = 5 cm, AC = 2,4 cm et BC = 1,8 cm ?", c:["Non, car 5 > 2,4 + 1,8","Oui, car 5 < 2,4 + 1,8","Oui, tout triplet fonctionne","Non, car 2,4 + 1,8 > 5"], a:0, e:"2,4 + 1,8 = 4,2 < 5 : le plus grand côté dépasse la somme des deux autres, l'inégalité triangulaire n'est pas respectée." },
+        { d:3, q:"Un triangle a deux angles qui mesurent 40° et 70°. Il est...", c:["isocèle","équilatéral","rectangle","quelconque, jamais isocèle"], a:0, e:"Troisième angle : 180 − 110 = 70°. Deux angles égaux (70°) → triangle isocèle." },
+        { d:3, q:"Quelle droite passe par un sommet et est perpendiculaire au côté opposé ?", c:["la hauteur","la médiatrice","la médiane","la bissectrice"], a:0, e:"C'est la hauteur (les 3 se coupent à l'orthocentre). La médiatrice passe par le MILIEU d'un côté ; la médiane aussi, mais sans être perpendiculaire." },
+        { d:3, q:"Un triangle rectangle a un angle de 25° et un angle droit. Que mesure le troisième angle ?", a:"65", e:"180 − 90 − 25 = 65°." },
+        { d:4, q:"Dans le triangle ABC, la médiatrice de [AB] passe par C. Que peut-on affirmer ?", c:["CA = CB","l'angle en C est droit","AB = BC","l'angle en A mesure 60°"], a:0, e:"Tout point d'une médiatrice est à égale distance des extrémités : CA = CB." },
+        { d:4, q:"Les médianes d'un triangle se coupent en un point appelé...", c:["centre de gravité","orthocentre","centre du cercle circonscrit","point de Gergonne"], a:0, e:"Médiane = du sommet au milieu du côté opposé ; les 3 se coupent au centre de gravité. (Orthocentre = hauteurs ; cercle circonscrit = médiatrices.)" },
+        { d:4, q:"Un triangle isocèle a un angle au sommet de 44°. Que mesure un angle à la base ?", a:"68", e:"Angles à la base égaux : (180 − 44) ÷ 2 = 68°." }
+      ],
+      gen: {
+        1: () => { const a = 35 + Math.floor(Math.random() * 50); const b = 30 + Math.floor(Math.random() * (145 - a - 25)); const c = 180 - a - b;
+          return { q: `Deux angles d'un triangle mesurent ${a}\u00b0 et ${b}\u00b0. Que mesure le troisième ?`, a: String(c), e: `Somme des angles = 180\u00b0 : 180 \u2212 ${a} \u2212 ${b} = ${c}\u00b0.` }; },
+        2: () => { const a = 30 + Math.floor(Math.random() * 46); const s = 180 - 2 * a;
+          return { q: `Un triangle isocèle a ses deux angles à la base qui mesurent ${a}\u00b0. Que mesure l'angle au sommet ?`, a: String(s), e: `Somme = 180\u00b0 : 180 \u2212 ${a} \u2212 ${a} = ${s}\u00b0.` }; },
+        3: () => { const a = 10 + Math.floor(Math.random() * 79);
+          return { q: `Un triangle rectangle a un angle de ${a}\u00b0 et un angle droit. Que mesure le troisième angle ?`, a: String(90 - a), e: `Somme = 180\u00b0 : 180 \u2212 90 \u2212 ${a} = ${90 - a}\u00b0.` }; },
+        4: () => { const S = (4 + Math.floor(Math.random() * 40)) * 2; const b = (180 - S) / 2;
+          return { q: `Un triangle isocèle a un angle au sommet de ${S}\u00b0. Que mesure un angle à la base ?`, a: String(b), e: `Les deux angles à la base sont égaux : (180 \u2212 ${S}) \u00f7 2 = ${b}\u00b0.` }; }
+      }
+    },
+    {
+      id: "fractions", titre: "Fractions : comparer, additionner, soustraire", icone: "🍰",
+      chap: [7, 16],
+      notion: "Comparaison : on met les fractions au même dénominateur.\nAddition / soustraction : même dénominateur puis on opère sur les numérateurs.\nSimplifier : on divise numérateur et dénominateur par le même nombre. Fraction d'une quantité : « 2/3 de 60 » = 60 × 2 ÷ 3.",
+      qs: [
+        { d:1, q:"Simplifier la fraction : 12/18", c:["2/3","3/4","6/9","4/6"], a:0, e:"12 = 2 × 6 et 18 = 3 × 6 → 12/18 = 2/3 (on divise par 6). 4/6 et 6/9 ne sont pas simplifiées." },
+        { d:1, q:"Calculer : 1/4 + 2/4", c:["3/8","3/4","2/16","1/2"], a:1, e:"Même dénominateur : on additionne les numérateurs : 1 + 2 = 3, donc 3/4." },
+        { d:1, q:"Quelle fraction est égale à 1/2 ?", c:["3/6","2/5","4/6","5/8"], a:0, e:"3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2." },
+        { d:2, q:"Calculer : 2/3 + 1/6", c:["3/9","5/6","3/6","5/9"], a:1, e:"Dénominateur commun 6 : 2/3 = 4/6. Somme : 4/6 + 1/6 = 5/6." },
+        { d:2, q:"Calculer : 3/4 + 3/8", c:["9/8","3/12","3/8","1/2"], a:0, e:"Même dénominateur : 3/4 = 6/8. Somme : 6/8 + 3/8 = 9/8." },
+        { d:2, q:"Comparer : quel est le plus grand nombre ?", c:["3/4","2/3","5/8","7/12"], a:0, e:"Mise au dénominateur 12 : 3/4 = 9/12, 2/3 = 8/12, 5/8 = 7,5/12, 7/12. Le plus grand est 9/12 = 3/4." },
+        { d:3, q:"Calculer : 5/6 − 2/9", c:["3/3","11/18","23/18","1/3"], a:1, e:"Dénominateur commun 18 : 5/6 = 15/18 et 2/9 = 4/18. Différence : 15/18 − 4/18 = 11/18." },
+        { d:3, q:"Calculer : 4/5 de 60", a:"48", e:"« de » signifie × : 4/5 × 60 = 240/5 = 48." },
+        { d:3, q:"Calculer : 5/6 − 1/3", c:["1/2","1/3","2/3","7/6"], a:0, e:"Même dénominateur : 5/6 − 2/6 = 3/6, simplifié en 1/2." },
+        { d:4, q:"Calculer : 1 − 3/8", a:"5/8", e:"1 = 8/8. Différence : 8/8 − 3/8 = 5/8." },
+        { d:4, q:"Calculer : 7/10 + 1/5", c:["9/10","8/15","3/5","7/50"], a:0, e:"Même dénominateur : 1/5 = 2/10. Somme : 7/10 + 2/10 = 9/10." },
+        { d:4, q:"Un gâteau est partagé en 8. Léa en mange 3/8, Tom en mange 1/4. Quelle fraction du gâteau reste-t-il ?", c:["3/8","1/2","5/8","1/4"], a:0, e:"1/4 = 2/8. Manger : 3/8 + 2/8 = 5/8. Reste : 8/8 − 5/8 = 3/8." }
+      ],
+      gen: {
+        1: () => { const n = 2 + Math.floor(Math.random()*6), d = n + 1 + Math.floor(Math.random()*6);
+          return { q:`Simplifier au maximum : ${n*d}/${d*d}`, a:`${n}/${d}`, e:`On divise numérateur et dénominateur par ${d} : ${n*d} ÷ ${d} = ${n} et ${d*d} ÷ ${d} = ${d}.` }; }
+      }
+    },
+    {
+      id: "parallelogrammes5", titre: "Parallélogrammes et quadrilatères", icone: "🔶",
+      chap: [8, 18],
+      notion: "Parallélogramme : côtés opposés parallèles (donc égaux) ; diagonales qui se coupent en leur milieu ; angles opposés égaux ; 2 centres-style : centre de symétrie = intersection des diagonales.\nRectangle : parallélogramme avec un angle droit ; diagonales de MÊME longueur.\nLosange : parallélogramme avec 4 côtés égaux ; diagonales PERPENDICULAIRES.\nCarré : rectangle et losange à la fois (4 côtés égaux ET 4 angles droits).\nAire d'un parallélogramme = base × hauteur ; aire d'un losange = (diagonale × diagonale) ÷ 2.",
+      qs: [
+        { d:1, q:"Dans tout parallélogramme, les diagonales...", c:["se coupent en leur milieu","sont de même longueur","sont perpendiculaires","sont des axes de symétrie"], a:0, e:"Dans tout parallélogramme, les diagonales se coupent en leur milieu (c'est son centre de symétrie). Diagonales égales = rectangle ; perpendiculaires = losange." },
+        { d:1, q:"Un quadrilatère avec 4 côtés égaux ET 4 angles droits est un...", c:["carré","rectangle","losange","parallélogramme quelconque"], a:0, e:"4 angles droits = rectangle ; 4 côtés égaux = losange ; les deux à la fois = carré." },
+        { d:1, q:"Dans un parallélogramme, les côtés opposés sont...", c:["parallèles et de même longueur","perpendiculaires","de longueurs différentes","des diagonales"], a:0, e:"Par définition, les côtés opposés d'un parallélogramme sont parallèles ; ils sont aussi de même longueur." },
+        { d:2, q:"Quelle est la propriété d'un losange (parallélogramme particulier) ?", c:["4 côtés égaux et diagonales perpendiculaires","4 angles droits (toujours)","diagonales de même longueur","un seul axe de symétrie"], a:0, e:"Le losange a ses 4 côtés de même longueur et ses diagonales perpendiculaires. Les angles droits sont réservés au carré." },
+        { d:2, q:"Un parallélogramme a des côtés consécutifs de 7 cm et 4 cm. Que vaut son périmètre ?", a:"22", e:"Côtés opposés égaux : deux côtés de 7 et deux de 4 → 2 × (7 + 4) = 22 cm." },
+        { d:2, q:"Dans un parallélogramme, les angles opposés sont...", c:["égaux","complémentaires","supplémentaires","obligatoirement droits"], a:0, e:"Les angles opposés d'un parallélogramme sont égaux ; deux angles consécutifs sont supplémentaires (somme 180°)." },
+        { d:3, q:"Un angle d'un parallélogramme mesure 65°. Que mesure l'angle opposé ?", a:"65", e:"Les angles opposés sont égaux : 65°." },
+        { d:3, q:"Un parallélogramme qui a un angle droit est...", c:["un rectangle","un losange","un trapèze","un simple parallélogramme"], a:0, e:"Un parallélogramme avec un angle droit a ses 4 angles droits : c'est un rectangle." },
+        { d:3, q:"Un parallélogramme a une base de 8 cm et une hauteur associée de 5 cm. Que vaut son aire ?", a:"40", e:"Aire = base × hauteur = 8 × 5 = 40 cm²." },
+        { d:4, q:"Un angle d'un parallélogramme mesure 65°. Que mesure un angle consécutif (à côté de lui) ?", a:"115", e:"Deux angles consécutifs sont supplémentaires : 180 − 65 = 115°." },
+        { d:4, q:"Un parallélogramme dont les diagonales sont perpendiculaires est un...", c:["losange","rectangle","carré (forcément)","trapèze"], a:0, e:"Diagonales perpendiculaires = losange. (Si de plus les diagonales sont de même longueur, c'est un carré.)" },
+        { d:4, q:"Un losange a des diagonales de 6 cm et 8 cm. Que vaut son aire ?", a:"24", e:"Aire du losange = d₁ × d₂ ÷ 2 = 6 × 8 ÷ 2 = 24 cm²." }
+      ],
+      gen: {
+        1: () => { const a = 35 + Math.floor(Math.random() * 116);
+          return { q: `Un angle d'un parallélogramme mesure ${a}\u00b0. Que mesure l'angle opposé ?`, a: String(a), e: `Dans un parallélogramme, les angles opposés sont égaux : ${a}\u00b0.` }; },
+        2: () => { const a = 35 + Math.floor(Math.random() * 116); const s = 180 - a;
+          return { q: `Un angle d'un parallélogramme mesure ${a}\u00b0. Que mesure un angle consécutif (à côté de lui) ?`, a: String(s), e: `Deux angles consécutifs sont supplémentaires : 180 \u2212 ${a} = ${s}\u00b0.` }; },
+        3: () => { const b = 2 + Math.floor(Math.random() * 14), h = 2 + Math.floor(Math.random() * 11);
+          return { q: `Un parallélogramme a une base de ${b} cm et une hauteur associée de ${h} cm. Que vaut son aire ?`, a: String(b * h), e: `Aire = base \u00d7 hauteur = ${b} \u00d7 ${h} = ${b * h} cm\u00b2.` }; },
+        4: () => { const d1 = 2 * (2 + Math.floor(Math.random() * 8)), d2 = 2 + Math.floor(Math.random() * 11);
+          return { q: `Un losange a des diagonales de ${d1} cm et ${d2} cm. Que vaut son aire ?`, a: String(d1 * d2 / 2), e: `Aire = d\u2081 \u00d7 d\u2082 \u00f7 2 = ${d1} \u00d7 ${d2} \u00f7 2 = ${d1 * d2 / 2} cm\u00b2.` }; }
+      }
+    },
+    {
+      id: "aires5", titre: "Périmètres, aires et volumes", icone: "📏",
+      chap: [10, 15, 20],
+      notion: "Périmètre d'un disque : 2 × π × r. Aire du disque : π × r².\nAire du parallélogramme : base × hauteur. Aire du triangle : (base × hauteur) ÷ 2.\nVolume du prisme : aire de la base × hauteur.\nUnités : 1 m² = 100 dm² ; 1 m³ = 1 000 L ; 1 cm³ = 1 mL.",
+      qs: [
+        { d:1, q:"Périmètre d'un rectangle de 8 cm sur 3 cm ?", c:["11 cm","22 cm","24 cm","16 cm"], a:1, e:"P = 2 × (8 + 3) = 2 × 11 = 22 cm." },
+        { d:1, q:"Aire d'un rectangle de 8 cm sur 3 cm ?", c:["11 cm²","22 cm²","24 cm²","16 cm²"], a:2, e:"Aire = longueur × largeur = 8 × 3 = 24 cm²." },
+        { d:1, q:"Aire d'un triangle de base 10 cm et hauteur 6 cm ?", c:["60 cm²","30 cm²","16 cm²","15 cm²"], a:1, e:"Aire = (10 × 6) ÷ 2 = 30 cm²." },
+        { d:2, q:"Aire d'un disque de rayon 5 cm (π ≈ 3,14) ?", c:["31,4 cm²","78,5 cm²","15,7 cm²","25 cm²"], a:1, e:"π × r² = 3,14 × 25 = 78,5 cm². Attention : 2πr donne le périmètre (31,4 cm), pas l'aire." },
+        { d:2, q:"Volume d'un pavé droit de 4 cm × 3 cm × 5 cm ?", c:["12 cm³","60 cm³","9 cm³","75 cm³"], a:1, e:"V = 4 × 3 × 5 = 60 cm³." },
+        { d:2, q:"1 m² = ...", c:["10 dm²","100 cm²","100 dm²","1 000 cm²"], a:2, e:"1 m = 10 dm, donc 1 m² = 10 × 10 = 100 dm² (les unités d'aire vont de 100 en 100)." },
+        { d:3, q:"Périmètre d'un disque de diamètre 10 cm (π ≈ 3,14) ?", a:"31.4", e:"Périmètre = π × d = 3,14 × 10 = 31,4 cm. Espace accepté, virgule ou point, en cm : 31,4." },
+        { d:3, q:"Volume d'un prisme dont la base est un disque de rayon 3 cm, hauteur 10 cm (π ≈ 3,14) ?", a:"282.6", e:"Aire de base : π × 9 = 28,26 cm². Volume : 28,26 × 10 = 282,6 cm³." },
+        { d:3, q:"Un cube a un volume de 216 cm³. Son arête ?", c:["6 cm","36 cm","72 cm","12 cm"], a:0, e:"216 = 6 × 6 × 6 : l'arête est 6 cm." },
+        { d:4, q:"Aire d'un parallélogramme de base 7 cm et hauteur 4 cm ?", a:"28", e:"Aire = base × hauteur = 7 × 4 = 28 cm²." },
+        { d:4, q:"Combien de litres dans 2,5 m³ ?", a:"2500", e:"1 m³ = 1 000 L, donc 2,5 m³ = 2 500 L." },
+        { d:4, q:"Un triangle a une aire de 24 cm² pour une base de 8 cm. Sa hauteur ?", a:"6", e:"Aire = (base × h) ÷ 2 → 24 = 8 × h ÷ 2 = 4 × h → h = 6 cm." }
+      ],
+      gen: {
+        1: () => { const L = 2 + Math.floor(Math.random()*12), l = 1 + Math.floor(Math.random()*(L-1));
+          return { q:`Périmètre d'un rectangle de ${L} cm sur ${l} cm ?`, a:String(2*(L+l)), e:`P = 2 × (${L} + ${l}) = 2 × ${L+l} = ${2*(L+l)} cm.` }; },
+        2: () => { const L = 2 + Math.floor(Math.random()*12), l = 1 + Math.floor(Math.random()*12), h = 2 + Math.floor(Math.random()*9);
+          return { q:`Volume d'un pavé droit de ${L} cm × ${l} cm × ${h} cm ?`, a:String(L*l*h), e:`V = ${L} × ${l} × ${h} = ${L*l*h} cm³.` }; }
+      }
+    },
+    {
+      id: "propo", titre: "Proportionnalité et pourcentages", icone: "📊",
+      chap: [11, 17],
+      notion: "Tableau de proportionnalité : les quotients de chaque colonne sont égaux (coefficient de proportionnalité).\nPourcentage : t % d'une quantité = t/100 × quantité.\nÉchelle : distance sur le dessin ÷ distance réelle (avec la même unité).",
+      qs: [
+        { d:1, q:"3 stylos coûtent 6 €. Prix de 5 stylos (prix proportionnel) ?", c:["9 €","10 €","12 €","15 €"], a:1, e:"Un stylo coûte 6 ÷ 3 = 2 €. Donc 5 stylos : 5 × 2 = 10 €." },
+        { d:1, q:"Calculer 10 % de 80", c:["8","0,8","80","18"], a:0, e:"10 % = ÷10 : 80 ÷ 10 = 8." },
+        { d:1, q:"Calculer 50 % de 34", a:"17", e:"50 % = la moitié : 34 ÷ 2 = 17." },
+        { d:2, q:"Calculer 25 % de 240", c:["6","60","24","48"], a:1, e:"25 % = un quart : 240 ÷ 4 = 60. Ou 240 × 25 ÷ 100 = 60." },
+        { d:2, q:"Une écharpe à 30 € augmente de 20 %. Nouveau prix ?", c:["36 €","32 €","50 €","24 €"], a:0, e:"Augmentation : 30 × 20 ÷ 100 = 6 €. Nouveau prix : 30 + 6 = 36 €." },
+        { d:2, q:"Sur une carte à l'échelle 1/100 000, deux villages sont à 4 cm. Distance réelle ?", c:["400 m","4 km","40 km","40 m"], a:1, e:"1 cm sur la carte = 100 000 cm réels = 1 km. Donc 4 cm = 4 km." },
+        { d:3, q:"Un article à 80 € est soldé à −25 %. Prix soldé ?", c:["55 €","60 €","65 €","20 €"], a:1, e:"Réduction : 80 × 25 ÷ 100 = 20 €. Prix soldé : 80 − 20 = 60 €." },
+        { d:3, q:"15 litres d'essence coûtent 24 € ; prix de 40 litres (proportionnel) ?", a:"64", e:"Coefficient : 24 ÷ 15 = 1,6 €/L. Donc 40 × 1,6 = 64 €." },
+        { d:3, q:"Après une hausse de 10 %, un abonnement coûte 44 €. Prix avant hausse ?", c:["39,60 €","34 €","40 €","44,10 €"], a:2, e:"Après hausse de 10 %, le prix vaut 110 % de l'ancien : 44 = 1,1 × p, donc p = 44 ÷ 1,1 = 40 €." },
+        { d:4, q:"Une école compte 480 élèves ; 55 % sont des filles. Combien de garçons ?", a:"216", e:"Filles : 480 × 55 ÷ 100 = 264. Garçons : 480 − 264 = 216." },
+        { d:4, q:"Le prix d'un vélo passe de 150 € à 120 €. Quelle est la baisse en % ?", c:["30 %","20 %","25 %","80 %"], a:1, e:"Baisse : 30 €. Pourcentage : 30/150 = 1/5 = 20 %." },
+        { d:4, q:"Une maquette à l'échelle 1/50 : une tour de 35 m de hauteur mesure combien sur la maquette ?", c:["70 cm","7 cm","35 cm","1,75 m"], a:0, e:"35 m = 3 500 cm ; 3 500 ÷ 50 = 70 cm." }
+      ],
+      gen: {
+        2: () => { const q = [10,20,25,50][Math.floor(Math.random()*4)]; const n = (2+Math.floor(Math.random()*40))*4;
+          return { q:`Calculer ${q} % de ${n}`, a:String(n*q/100), e:`${q} % de ${n} = ${n} × ${q} ÷ 100 = ${n*q}/100 = ${n*q/100}.` }; },
+        3: () => { const p = 20 + Math.floor(Math.random()*40)*5, t = [10,20,25,50][Math.floor(Math.random()*4)];
+          return { q:`Un article à ${p} € est soldé à −${t} %. Prix soldé ?`, a:String(p*(100-t)/100), e:`Réduction : ${p} × ${t} ÷ 100 = ${p*t/100}. Prix soldé : ${p} − ${p*t/100} = ${p*(100-t)/100} €.` }; }
+      }
+    },
+    {
       id: "stats5", titre: "Statistiques : effectifs et moyenne", icone: "📈",
-      chap: [11],
+      chap: [14],
       notion: "Effectif : nombre de fois où une valeur apparaît.\nÉtendue : plus grande valeur − plus petite valeur.\nMoyenne simple : somme des valeurs ÷ nombre de valeurs (en 5e, chaque valeur compte une fois ou on divise par l'effectif total).\nFréquence : effectif de la valeur ÷ effectif total (souvent en %) ; la somme des fréquences vaut 1 (100 %).\nMédiane : on ordonne les valeurs ; c'est la valeur qui partage la série ordonnée en deux groupes de même effectif.\nDiagramme en rectangles (histogramme) : la hauteur de chaque rectangle est proportionnelle à l'effectif.",
       qs: [
         { d:1, q:"Notes : 8 ; 12 ; 12 ; 15. Quelle est la moyenne ?", c:["12","11,75","11,5","12,5"], a:1, e:"Somme : 8 + 12 + 12 + 15 = 47. Nombre de notes : 4. Moyenne : 47 ÷ 4 = 11,75." },
@@ -198,59 +335,9 @@ window.BANK_5E = {
           return { q: `${p[0] * p[1] / 100} \u00e9l\u00e8ves sur ${p[0]} prennent le bus. Fr\u00e9quence (en %) ?`, a: [`${p[1]} %`, String(p[1])], e: `Fr\u00e9quence = ${p[0] * p[1] / 100} \u00f7 ${p[0]} = ${D[p[1]]} = ${p[1]} %.` }; }
       },
     },
-        {
-      id: "litteral5", titre: "Calcul littéral : distributivité", icone: "✖️",
-      chap: [12],
-      notion: "k × (a + b) = k × a + k × b (simple distributivité).\nRéduire une expression : regrouper les termes « semblables » : 3x + 5x = 8x, mais 3x + 5 ne se réduit pas.",
-      qs: [
-        { d:1, q:"Développer : 3 × (x + 2)", c:["3x + 2","3x + 6","x + 6","3x × 6"], a:1, e:"On distribue le 3 : 3 × x + 3 × 2 = 3x + 6." },
-        { d:1, q:"Réduire : 4x + 3 + 5x", c:["9x + 3","12x","9x","4x + 8x"], a:0, e:"On regroupe les x : 4x + 5x = 9x, on garde le + 3." },
-        { d:1, q:"Développer : 5 × (2 − a)", c:["10 − 5a","7 − 5a","10 − a","5 × 2 × a"], a:0, e:"5 × 2 = 10 et 5 × (−a) = −5a, donc 10 − 5a." },
-        { d:2, q:"Réduire : 7a − 2 + 3a − 8", c:["10a − 10","10a + 6","4a − 10","21a − 6"], a:0, e:"7a + 3a = 10a et −2 − 8 = −10, donc 10a − 10." },
-        { d:2, q:"Développer puis réduire : 2(3x + 4) + 5x", a:"11x+8", e:"2 × 3x = 6x ; 2 × 4 = 8. Puis 6x + 5x = 11x, donc 11x + 8." },
-        { d:2, q:"Quelle expression est égale à 4 × (7 − 3) ?", c:["4 × 7 − 3","4 × 7 − 4 × 3","4 × 7 × 3","7 × 4 − 3"], a:1, e:"Distributivité : 4 × 7 − 4 × 3 = 28 − 12 = 16 = 4 × 4." },
-        { d:3, q:"Factoriser : 5x + 25", c:["5(x + 5)","x(5 + 25)","5(x + 25)","5 × x + 5 × 5"], a:0, e:"5 est un facteur commun : 5x + 25 = 5 × x + 5 × 5 = 5(x + 5)." },
-        { d:3, q:"Développer puis réduire : 3(2x − 5) − 4x", c:["2x − 15","6x − 15","10x − 15","2x + 15"], a:0, e:"3 × 2x = 6x ; 3 × (−5) = −15. Puis 6x − 15 − 4x = 2x − 15." },
-        { d:3, q:"Tester l'expression : que vaut 2x + 5 pour x = 3 ?", a:"11", e:"On remplace x par sa valeur puis on calcule : 2 × 3 + 5 = 6 + 5 = 11." },
-        { d:4, q:"Pour quelle(s) valeur(s) de x a-t-on 4(x + 3) = 3x + 10 ?", c:["x = −2","x = 2","x = 1","x = 7"], a:0, e:"4(x + 3) = 4x + 12. On cherche 4x + 12 = 3x + 10, donc 4x − 3x = 10 − 12 → x = −2. Vérification : 4 × 1 = 4 et 3 × (−2) + 10 = 4." },
-        { d:4, q:"Développer puis réduire : −2(3 − x) + 4x", a:"6x-6", e:"−2 × 3 = −6 ; −2 × (−x) = +2x. Puis −6 + 2x + 4x = 6x − 6." },
-        { d:4, q:"Un rectangle a pour largeur x et pour longueur x + 7. Son périmètre (réduit) ?", c:["2x + 7","4x + 14","2x + 14","x + 7"], a:1, e:"P = 2 × (x + x + 7) = 2 × (2x + 7) = 4x + 14." }
-      ],
-      gen: {
-        2: () => { const k = 2 + Math.floor(Math.random()*6), a = 2 + Math.floor(Math.random()*6), b = 1 + Math.floor(Math.random()*9);
-          return { q:`Développer : ${k} × (x + ${b})`, a:`${k}x+${k*b}`, e:`On distribue ${k} : ${k}x + ${k*b}.` }; },
-        3: () => { const k = 2 + Math.floor(Math.random()*5), a = 1 + Math.floor(Math.random()*4), b = 2 + Math.floor(Math.random()*4);
-          return { q:`Développer puis réduire : ${k}(${a}x + ${b}) − ${k-1}x`, a:`${k*a-(k-1)}x+${k*b}`, e:`${k} × ${a}x = ${k*a}x et ${k} × ${b} = ${k*b}. Puis ${k*a}x − ${k-1}x = ${k*a-(k-1)}x. Résultat : ${k*a-(k-1)}x + ${k*b}.` }; }
-      }
-    },
-        {
-      id: "aires5", titre: "Périmètres, aires et volumes", icone: "📏",
-      chap: [13],
-      notion: "Périmètre d'un disque : 2 × π × r. Aire du disque : π × r².\nAire du parallélogramme : base × hauteur. Aire du triangle : (base × hauteur) ÷ 2.\nVolume du prisme : aire de la base × hauteur.\nUnités : 1 m² = 100 dm² ; 1 m³ = 1 000 L ; 1 cm³ = 1 mL.",
-      qs: [
-        { d:1, q:"Périmètre d'un rectangle de 8 cm sur 3 cm ?", c:["11 cm","22 cm","24 cm","16 cm"], a:1, e:"P = 2 × (8 + 3) = 2 × 11 = 22 cm." },
-        { d:1, q:"Aire d'un rectangle de 8 cm sur 3 cm ?", c:["11 cm²","22 cm²","24 cm²","16 cm²"], a:2, e:"Aire = longueur × largeur = 8 × 3 = 24 cm²." },
-        { d:1, q:"Aire d'un triangle de base 10 cm et hauteur 6 cm ?", c:["60 cm²","30 cm²","16 cm²","15 cm²"], a:1, e:"Aire = (10 × 6) ÷ 2 = 30 cm²." },
-        { d:2, q:"Aire d'un disque de rayon 5 cm (π ≈ 3,14) ?", c:["31,4 cm²","78,5 cm²","15,7 cm²","25 cm²"], a:1, e:"π × r² = 3,14 × 25 = 78,5 cm². Attention : 2πr donne le périmètre (31,4 cm), pas l'aire." },
-        { d:2, q:"Volume d'un pavé droit de 4 cm × 3 cm × 5 cm ?", c:["12 cm³","60 cm³","9 cm³","75 cm³"], a:1, e:"V = 4 × 3 × 5 = 60 cm³." },
-        { d:2, q:"1 m² = ...", c:["10 dm²","100 cm²","100 dm²","1 000 cm²"], a:2, e:"1 m = 10 dm, donc 1 m² = 10 × 10 = 100 dm² (les unités d'aire vont de 100 en 100)." },
-        { d:3, q:"Périmètre d'un disque de diamètre 10 cm (π ≈ 3,14) ?", a:"31.4", e:"Périmètre = π × d = 3,14 × 10 = 31,4 cm. Espace accepté, virgule ou point, en cm : 31,4." },
-        { d:3, q:"Volume d'un prisme dont la base est un disque de rayon 3 cm, hauteur 10 cm (π ≈ 3,14) ?", a:"282.6", e:"Aire de base : π × 9 = 28,26 cm². Volume : 28,26 × 10 = 282,6 cm³." },
-        { d:3, q:"Un cube a un volume de 216 cm³. Son arête ?", c:["6 cm","36 cm","72 cm","12 cm"], a:0, e:"216 = 6 × 6 × 6 : l'arête est 6 cm." },
-        { d:4, q:"Aire d'un parallélogramme de base 7 cm et hauteur 4 cm ?", a:"28", e:"Aire = base × hauteur = 7 × 4 = 28 cm²." },
-        { d:4, q:"Combien de litres dans 2,5 m³ ?", a:"2500", e:"1 m³ = 1 000 L, donc 2,5 m³ = 2 500 L." },
-        { d:4, q:"Un triangle a une aire de 24 cm² pour une base de 8 cm. Sa hauteur ?", a:"6", e:"Aire = (base × h) ÷ 2 → 24 = 8 × h ÷ 2 = 4 × h → h = 6 cm." }
-      ],
-      gen: {
-        1: () => { const L = 2 + Math.floor(Math.random()*12), l = 1 + Math.floor(Math.random()*(L-1));
-          return { q:`Périmètre d'un rectangle de ${L} cm sur ${l} cm ?`, a:String(2*(L+l)), e:`P = 2 × (${L} + ${l}) = 2 × ${L+l} = ${2*(L+l)} cm.` }; },
-        2: () => { const L = 2 + Math.floor(Math.random()*12), l = 1 + Math.floor(Math.random()*12), h = 2 + Math.floor(Math.random()*9);
-          return { q:`Volume d'un pavé droit de ${L} cm × ${l} cm × ${h} cm ?`, a:String(L*l*h), e:`V = ${L} × ${l} × ${h} = ${L*l*h} cm³.` }; }
-      }
-    },
     {
       id: "proba5", titre: "Probabilités", icone: "🎲",
-      chap: [14],
+      chap: [21],
       notion: "Expérience aléatoire : on ne peut pas prédire le résultat. Issues : les résultats possibles ; univers Ω : l'ensemble de toutes les issues.\nÉvénement : une partie de l'univers ; événement élémentaire : une seule issue.\nProbabilité d'un événement (cas équiprobables) : nombre de cas favorables ÷ nombre de cas possibles — un nombre entre 0 et 1.",
       qs: [
         { d:1, q:"Un lancer de pièce équilibrée comporte combien d'issues ?", c:["2","1","4","6"], a:0, e:"Pile ou Face : deux issues possibles." },
