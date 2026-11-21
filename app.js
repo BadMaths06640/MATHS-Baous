@@ -26,6 +26,7 @@ function starsHTML(n) {
 }
 function norm(s) {
   return String(s).toLowerCase()
+    .replace(/[\u2212\u2013\u2014\u2010\u2011]/g, "-")
     .replace(/\s+/g, "")
     .replace(/,/g, ".")
     .replace(/^x=/, "")
