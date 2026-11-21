@@ -74,7 +74,7 @@ window.BANK_5E = {
         { d:3, q:"[AB] mesure 12 cm et [A'B'] est son image par une symétrie de centre O. Que vaut A'B' ?", a:"12", e:"La symétrie centrale conserve les longueurs : A'B' = AB = 12 cm." },
         { d:3, q:"Quel est le centre de symétrie d'un parallélogramme ?", c:["le point d'intersection de ses diagonales","le milieu d'un côté","un des sommets","un parallélogramme n'a pas de centre de symétrie"], a:0, e:"Chaque sommet a pour symétrique le sommet opposé : le centre est l'intersection des diagonales." },
         { d:3, q:"L'image d'une droite (d) ne passant pas par le centre O est...", c:["une droite parallèle à (d)","un cercle","un point","un segment plus court que (d)"], a:0, e:"L'image d'une droite ne passant pas par O est une droite parallèle à (d) ; si (d) passe par O, son image est (d) elle-même." },
-        { d:4, q:"Sur une droite graduée, le symétrique du point d'abscisse 5 par rapport au point d'abscisse 1 est le point d'abscisse...", a:"-3", e:"1 doit être le milieu : (5 + x') ÷ 2 = 1, donc x' = 2 − 5 = -3." },
+        { d:4, q:"Sur une droite graduée, le symétrique du point d'abscisse 5 par rapport au point d'abscisse 9 est le point d'abscisse...", a:"13", e:"9 doit être le milieu : (5 + x') ÷ 2 = 9, donc 5 + x' = 18 et x' = 18 − 5 = 13." },
         { d:4, q:"Un triangle quelconque et son image par une symétrie de centre O...", c:["sont superposables après un demi-tour autour de O","ont des périmètres différents","ont des aires différentes","n'ont aucun point commun possible"], a:0, e:"La symétrie centrale conserve tout : l'image se superpose à la figure d'origine après un demi-tour autour de O." },
         { d:4, q:"Un rectangle de 7 cm sur 3 cm a pour image, par une symétrie de centre O, un rectangle d'aire...", a:"21", e:"La symétrie centrale conserve les dimensions : l'image est un rectangle 7 × 3, d'aire 7 × 3 = 21 cm²." }
       ],
@@ -95,15 +95,15 @@ window.BANK_5E = {
       qs: [
         { d:1, q:"Développer : 3 × (x + 2)", c:["3x + 2","3x + 6","x + 6","3x × 6"], a:1, e:"On distribue le 3 : 3 × x + 3 × 2 = 3x + 6." },
         { d:1, q:"Réduire : 4x + 3 + 5x", c:["9x + 3","12x","9x","4x + 8x"], a:0, e:"On regroupe les x : 4x + 5x = 9x, on garde le + 3." },
-        { d:1, q:"Développer : 5 × (2 − a)", c:["10 − 5a","7 − 5a","10 − a","5 × 2 × a"], a:0, e:"5 × 2 = 10 et 5 × (−a) = −5a, donc 10 − 5a." },
-        { d:2, q:"Réduire : 7a − 2 + 3a − 8", c:["10a − 10","10a + 6","4a − 10","21a − 6"], a:0, e:"7a + 3a = 10a et −2 − 8 = −10, donc 10a − 10." },
+        { d:1, q:"Développer : 5 × (2 + a)", c:["10 + 5a","7 + 5a","10 + a","5 × 2 × a"], a:0, e:"5 × 2 = 10 et 5 × a = 5a, donc 10 + 5a." },
+        { d:2, q:"Réduire : 7a + 2 + 3a + 8", c:["10a + 10","21a + 10","10a + 16","4a + 10"], a:0, e:"7a + 3a = 10a et 2 + 8 = 10, donc 10a + 10." },
         { d:2, q:"Développer puis réduire : 2(3x + 4) + 5x", a:"11x+8", e:"2 × 3x = 6x ; 2 × 4 = 8. Puis 6x + 5x = 11x, donc 11x + 8." },
         { d:2, q:"Quelle expression est égale à 4 × (7 − 3) ?", c:["4 × 7 − 3","4 × 7 − 4 × 3","4 × 7 × 3","7 × 4 − 3"], a:1, e:"Distributivité : 4 × 7 − 4 × 3 = 28 − 12 = 16 = 4 × 4." },
         { d:3, q:"Factoriser : 5x + 25", c:["5(x + 5)","x(5 + 25)","5(x + 25)","5 × x + 5 × 5"], a:0, e:"5 est un facteur commun : 5x + 25 = 5 × x + 5 × 5 = 5(x + 5)." },
-        { d:3, q:"Développer puis réduire : 3(2x − 5) − 4x", c:["2x − 15","6x − 15","10x − 15","2x + 15"], a:0, e:"3 × 2x = 6x ; 3 × (−5) = −15. Puis 6x − 15 − 4x = 2x − 15." },
+        { d:3, q:"Développer puis réduire : 3(2x + 5) − 4x", c:["2x + 15","10x + 15","6x + 15","10x + 5"], a:0, e:"3 × 2x = 6x ; 3 × 5 = 15. Puis 6x + 15 − 4x = 2x + 15." },
         { d:3, q:"Tester l'expression : que vaut 2x + 5 pour x = 3 ?", a:"11", e:"On remplace x par sa valeur puis on calcule : 2 × 3 + 5 = 6 + 5 = 11." },
-        { d:4, q:"Pour quelle(s) valeur(s) de x a-t-on 4(x + 3) = 3x + 10 ?", c:["x = −2","x = 2","x = 1","x = 7"], a:0, e:"4(x + 3) = 4x + 12. On cherche 4x + 12 = 3x + 10, donc 4x − 3x = 10 − 12 → x = −2. Vérification : 4 × 1 = 4 et 3 × (−2) + 10 = 4." },
-        { d:4, q:"Développer puis réduire : −2(3 − x) + 4x", a:"6x-6", e:"−2 × 3 = −6 ; −2 × (−x) = +2x. Puis −6 + 2x + 4x = 6x − 6." },
+        { d:4, q:"L'égalité 2 × (x + 5) = 2x + 5 est-elle vraie pour tout x ?", c:["Non, car 2 × (x + 5) = 2x + 10","Oui, par distributivité","Oui, seulement si x = 0","Non, car 2x + 5 = 7x"], a:0, e:"Par distributivité, 2 × (x + 5) = 2x + 10, qui n'est pas 2x + 5 : l'égalité est fausse (exemple : x = 3 → 16 ≠ 11)." },
+        { d:4, q:"Développer puis réduire : 5(2x + 1) + 3(x + 4)", a:"13x+17", e:"5 × 2x = 10x ; 5 × 1 = 5 ; 3 × x = 3x ; 3 × 4 = 12. Puis 10x + 3x = 13x et 5 + 12 = 17 : 13x + 17." },
         { d:4, q:"Un rectangle a pour largeur x et pour longueur x + 7. Son périmètre (réduit) ?", c:["2x + 7","4x + 14","2x + 14","x + 7"], a:1, e:"P = 2 × (x + x + 7) = 2 × (2x + 7) = 4x + 14." }
       ],
       gen: {
@@ -290,18 +290,18 @@ window.BANK_5E = {
         { d:2, q:"Calculer 25 % de 240", c:["6","60","24","48"], a:1, e:"25 % = un quart : 240 ÷ 4 = 60. Ou 240 × 25 ÷ 100 = 60." },
         { d:2, q:"Une écharpe à 30 € augmente de 20 %. Nouveau prix ?", c:["36 €","32 €","50 €","24 €"], a:0, e:"Augmentation : 30 × 20 ÷ 100 = 6 €. Nouveau prix : 30 + 6 = 36 €." },
         { d:2, q:"Sur une carte à l'échelle 1/100 000, deux villages sont à 4 cm. Distance réelle ?", c:["400 m","4 km","40 km","40 m"], a:1, e:"1 cm sur la carte = 100 000 cm réels = 1 km. Donc 4 cm = 4 km." },
-        { d:3, q:"Un article à 80 € est soldé à −25 %. Prix soldé ?", c:["55 €","60 €","65 €","20 €"], a:1, e:"Réduction : 80 × 25 ÷ 100 = 20 €. Prix soldé : 80 − 20 = 60 €." },
+        { d:3, q:"Un robinet laisse couler 3 litres en 2 minutes. Quantité d'eau en 10 minutes ?", a:"15", e:"3 L en 2 min → 1,5 L par minute. En 10 min : 10 × 1,5 = 15 L." },
         { d:3, q:"15 litres d'essence coûtent 24 € ; prix de 40 litres (proportionnel) ?", a:"64", e:"Coefficient : 24 ÷ 15 = 1,6 €/L. Donc 40 × 1,6 = 64 €." },
-        { d:3, q:"Après une hausse de 10 %, un abonnement coûte 44 €. Prix avant hausse ?", c:["39,60 €","34 €","40 €","44,10 €"], a:2, e:"Après hausse de 10 %, le prix vaut 110 % de l'ancien : 44 = 1,1 × p, donc p = 44 ÷ 1,1 = 40 €." },
+        { d:3, q:"Un paquet de 6 yaourts coûte 4,20 €. Prix (en euros) de 9 yaourts ?", a:"6.3", e:"Un yaourt : 4,20 ÷ 6 = 0,70 €. Pour 9 : 9 × 0,70 = 6,30 €." },
         { d:4, q:"Une école compte 480 élèves ; 55 % sont des filles. Combien de garçons ?", a:"216", e:"Filles : 480 × 55 ÷ 100 = 264. Garçons : 480 − 264 = 216." },
-        { d:4, q:"Le prix d'un vélo passe de 150 € à 120 €. Quelle est la baisse en % ?", c:["30 %","20 %","25 %","80 %"], a:1, e:"Baisse : 30 €. Pourcentage : 30/150 = 1/5 = 20 %." },
+        { d:4, q:"Dans une classe de 25 élèves, 10 sont externes. Quel est le pourcentage d'externes ?", c:["40 %","50 %","25 %","60 %"], a:0, e:"10/25 = 40/100 = 40 %." },
         { d:4, q:"Une maquette à l'échelle 1/50 : une tour de 35 m de hauteur mesure combien sur la maquette ?", c:["70 cm","7 cm","35 cm","1,75 m"], a:0, e:"35 m = 3 500 cm ; 3 500 ÷ 50 = 70 cm." }
       ],
       gen: {
         2: () => { const q = [10,20,25,50][Math.floor(Math.random()*4)]; const n = (2+Math.floor(Math.random()*40))*4;
           return { q:`Calculer ${q} % de ${n}`, a:String(n*q/100), e:`${q} % de ${n} = ${n} × ${q} ÷ 100 = ${n*q}/100 = ${n*q/100}.` }; },
         3: () => { const p = 20 + Math.floor(Math.random()*40)*5, t = [10,20,25,50][Math.floor(Math.random()*4)];
-          return { q:`Un article à ${p} € est soldé à −${t} %. Prix soldé ?`, a:String(p*(100-t)/100), e:`Réduction : ${p} × ${t} ÷ 100 = ${p*t/100}. Prix soldé : ${p} − ${p*t/100} = ${p*(100-t)/100} €.` }; }
+          return { q:`Que valent ${t} % de ${p} € ?`, a:String(p*t/100), e:`${t} % de ${p} = ${p} × ${t} ÷ 100 = ${p*t/100} €.` }; }
       }
     },
     {
@@ -334,6 +334,64 @@ window.BANK_5E = {
           return { q: `S\u00e9rie : ${s.join(" ; ")}. Quelle est la m\u00e9diane ?`, a: String(s[2]), e: `5 valeurs : apr\u00e8s classement, la m\u00e9diane est la 3\u1d49 valeur : ${s[2]}.` }; },
         4: () => { const P = [[4, 25], [4, 50], [4, 75], [5, 20], [5, 40], [5, 60], [5, 80], [10, 30], [10, 40], [10, 60], [10, 70]]; const p = P[Math.floor(Math.random() * P.length)]; const D = { 20: "0,2", 25: "0,25", 30: "0,3", 40: "0,4", 50: "0,5", 60: "0,6", 70: "0,7", 75: "0,75", 80: "0,8" };
           return { q: `${p[0] * p[1] / 100} \u00e9l\u00e8ves sur ${p[0]} prennent le bus. Fr\u00e9quence (en %) ?`, a: [`${p[1]} %`, String(p[1])], e: `Fr\u00e9quence = ${p[0] * p[1] / 100} \u00f7 ${p[0]} = ${D[p[1]]} = ${p[1]} %.` }; }
+      },
+    },
+    {
+      id: "equations5", titre: "Équations et problèmes", icone: "❓",
+      chap: [19],
+      notion: "Résoudre une équation, c'est trouver la valeur de la lettre qui rend l'égalité vraie.\nLa lettre (l'inconnue) désigne un nombre : elle garde la même valeur dans toute l'égalité.\nÉquation somme : x + a = b → x = b − a. Équation produit : a × x = b → x = b ÷ a.\nPour tester une solution, on remplace la lettre par sa valeur dans les deux membres et on compare.",
+      qs: [
+        { d:1, q:"Dans l'équation x + 5 = 12, que vaut x ?", c:["7","17","60","12"], a:0, e:"x + 5 = 12 → x = 12 − 5 = 7. Vérification : 7 + 5 = 12." },
+        { d:1, q:"Résoudre : x + 9 = 17", a:"8", e:"x = 17 − 9 = 8. Vérification : 8 + 9 = 17." },
+        { d:2, q:"Résoudre : 6 × x = 42", a:"7", e:"x = 42 ÷ 6 = 7. Vérification : 6 × 7 = 42." },
+        { d:2, q:"x = 4 est-il solution de 3 × x + 2 = 14 ?", c:["Oui, car 3 × 4 + 2 = 14","Non, car 14 n'est pas multiple de 4","Oui, car x est pair","Non, car 3 × 4 = 12 seulement"], a:0, e:"On teste : 3 × 4 + 2 = 12 + 2 = 14. Les deux membres sont égaux : x = 4 est bien solution." },
+        { d:2, q:"Résoudre : 12 + x = 30", a:"18", e:"x = 30 − 12 = 18. Vérification : 12 + 18 = 30." },
+        { d:3, q:"Résoudre : 5 × x − 6 = 24", a:"6", e:"On isole le produit : 5 × x = 24 + 6 = 30, donc x = 30 ÷ 5 = 6." },
+        { d:3, q:"x − 12 = 5 : que vaut x ?", c:["17","7","60","8"], a:0, e:"x = 5 + 12 = 17. Vérification : 17 − 12 = 5." },
+        { d:3, q:"Résoudre : x + 3 = 3 × 7", a:"18", e:"On calcule d'abord le membre de droite : 3 × 7 = 21. Puis x = 21 − 3 = 18." },
+        { d:4, q:"Résoudre : 36 = 4 × x + 8", a:"7", e:"4 × x = 36 − 8 = 28, donc x = 28 ÷ 4 = 7." },
+        { d:4, q:"Léa avait n images. Elle en reçoit 23 de plus et en a maintenant 51. Combien avait-elle d'images ?", a:"28", e:"On modélise : n + 23 = 51, donc n = 51 − 23 = 28." },
+        { d:4, q:"Le triple d'un nombre diminué de 4 vaut 17. Ce nombre vaut :", c:["7","5","21","13"], a:0, e:"3 × x − 4 = 17, donc 3 × x = 21, et x = 21 ÷ 3 = 7." },
+        { d:4, q:"Résoudre : 2 × x + 5 × 3 = 31", a:"8", e:"5 × 3 = 15, puis 2 × x = 31 − 15 = 16, donc x = 16 ÷ 2 = 8." }
+      ],
+      gen: {
+        1: () => { const a = 3 + Math.floor(Math.random()*9), b = a + 3 + Math.floor(Math.random()*12);
+          return { q:`Résoudre : x + ${a} = ${b}`, a:String(b - a), e:`x = ${b} − ${a} = ${b - a}. Vérification : ${b - a} + ${a} = ${b}.` }; },
+        2: () => { const k = 2 + Math.floor(Math.random()*9), a = 2 + Math.floor(Math.random()*6); const b = a*k;
+          return { q:`Résoudre : ${a} × x = ${b}`, a:String(k), e:`x = ${b} ÷ ${a} = ${k}. Vérification : ${a} × ${k} = ${b}.` }; },
+        3: () => { const b = 2 + Math.floor(Math.random()*5), c = 2 + Math.floor(Math.random()*5), a = 2 + Math.floor(Math.random()*15);
+          return { q:`Résoudre : x + ${a} = ${b} × ${c}`, a:String(b*c - a), e:`${b} × ${c} = ${b*c}, puis x = ${b*c} − ${a} = ${b*c - a}.` }; },
+        4: () => { const x = 2 + Math.floor(Math.random()*8), a = 2 + Math.floor(Math.random()*5), b = 1 + Math.floor(Math.random()*(a*x - 1)); const c = a*x - b;
+          return { q:`Résoudre : ${a} × x − ${b} = ${c}`, a:String(x), e:`${a} × x = ${c} + ${b} = ${a*x}, donc x = ${a*x} ÷ ${a} = ${x}.` }; }
+      },
+    },
+    {
+      id: "informatique5", titre: "Pensée informatique (Scratch)", icone: "🤖",
+      chap: [22],
+      notion: "Une variable est une boîte qui garde une valeur : « n ← 3 » met 3 dans n.\nLes instructions s'exécutent dans l'ordre, l'une après l'autre.\nUne boucle « répéter k fois » exécute la même instruction k fois de suite.\nUne boucle conditionnelle (« tant que … ») s'exécute tant que la condition est vraie : on compte les passages.",
+      qs: [
+        { d:1, q:"Programme de calcul : choisir 4 ; ajouter 5 ; doubler le résultat. Quel est le résultat final ?", a:"18", e:"4 + 5 = 9, puis on double : 9 × 2 = 18." },
+        { d:1, q:"Dans un programme, « n ← 3 » signifie que...", c:["la variable n prend la valeur 3","on teste si n vaut 3","3 devient la lettre n","on efface la valeur 3"], a:0, e:"La flèche ← est une affectation : on range 3 dans la variable n." },
+        { d:2, q:"On exécute : n ← 3 ; n ← n + 5 ; n ← n × 2. Que vaut n à la fin ?", a:"16", e:"n ← 3 + 5 = 8, puis n ← 8 × 2 = 16." },
+        { d:2, q:"n ← 5, puis on répète 4 fois l'instruction « ajouter 3 à n ». Que vaut n ?", a:"17", e:"On ajoute 4 fois 3 : 5 + 4 × 3 = 5 + 12 = 17." },
+        { d:2, q:"Que fait la boucle « répéter 6 fois : ajouter 2 à n » quand n démarre à 10 ?", c:["elle ajoute 12 à n : n = 22","elle ajoute 2 à n : n = 12","elle multiplie n par 12","elle ne change pas n"], a:0, e:"6 ajouts de 2 : n = 10 + 6 × 2 = 22." },
+        { d:3, q:"Programme de calcul : choisir 6 ; ajouter 3 ; multiplier par 2 ; soustraire 5. Résultat final ?", a:"13", e:"6 + 3 = 9 ; 9 × 2 = 18 ; 18 − 5 = 13." },
+        { d:3, q:"n ← 2, puis on répète 3 fois « multiplier n par 3 ». Que vaut n ?", a:"54", e:"n ← 2 × 3 = 6 ; puis 6 × 3 = 18 ; puis 18 × 3 = 54." },
+        { d:3, q:"Un compteur démarre à 2 et un programme ajoute 1 tant que compteur < 7. Combien d'ajouts sont effectués ?", c:["5","7","3","6"], a:0, e:"Le compteur passe à 3, 4, 5, 6, 7 : c'est 5 ajouts (il s'arrête quand la condition devient fausse)." },
+        { d:3, q:"Programme de calcul : choisir 8 ; soustraire 2 ; multiplier par 3. Résultat final ?", a:"18", e:"8 − 2 = 6 ; 6 × 3 = 18." },
+        { d:4, q:"On exécute : x ← 5 ; x ← x + a ; x ← x × 3. Le résultat final est 24. Que vaut a ?", a:"3", e:"(5 + a) × 3 = 24, donc 5 + a = 24 ÷ 3 = 8, et a = 3." },
+        { d:4, q:"n ← 20, puis on répète k fois « retirer 3 à n » et le résultat final est 8. Combien de passages ?", a:"4", e:"20 − 8 = 12 ont été retirés, et 12 ÷ 3 = 4 passages." },
+        { d:4, q:"On exécute : x ← 4 ; x ← x × 2 ; x ← x + a. Le résultat final est 100. Que vaut a ?", c:["92","96","88","100"], a:0, e:"x ← 4 × 2 = 8, puis 8 + a = 100, donc a = 92." }
+      ],
+      gen: {
+        1: () => { const a = 2 + Math.floor(Math.random()*20), b = 2 + Math.floor(Math.random()*15);
+          return { q:`Programme de calcul : choisir ${a} ; ajouter ${b}. Quel est le résultat final ?`, a:String(a + b), e:`${a} + ${b} = ${a + b}.` }; },
+        2: () => { const a = 2 + Math.floor(Math.random()*15), b = 2 + Math.floor(Math.random()*6), k = 2 + Math.floor(Math.random()*4);
+          return { q:`n ← ${a}, puis on répète ${k} fois l'instruction « ajouter ${b} à n ». Que vaut n ?`, a:String(a + k*b), e:`On ajoute ${k} fois ${b} : ${a} + ${k} × ${b} = ${a + k*b}.` }; },
+        3: () => { const a = 1 + Math.floor(Math.random()*15), k = 2 + Math.floor(Math.random()*3); const steps = [a]; for (let i = 1; i <= k; i++) steps.push(steps[i-1]*2);
+          return { q:`n ← ${a}, puis on répète ${k} fois l'instruction « multiplier n par 2 ». Que vaut n ?`, a:String(steps[k]), e:`Chaque passage double n : ${steps.slice(1).map((v,i) => `${steps[i]} × 2 = ${v}`).join(" ; puis ")}.` }; },
+        4: () => { const n = 2 + Math.floor(Math.random()*12), b = 2 + Math.floor(Math.random()*10), k = 2 + Math.floor(Math.random()*6);
+          return { q:`Programme de calcul : choisir ${n} ; ajouter ${b} ; multiplier par ${k}. Quel est le résultat final ?`, a:String((n + b) * k), e:`${n} + ${b} = ${n + b}, puis ${n + b} × ${k} = ${(n + b) * k}.` }; }
       },
     },
     {

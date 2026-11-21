@@ -54,7 +54,7 @@ window.AIDE_5E = {
       "Astuce : une symétrie centrale conserve les longueurs.\nExemple similaire : [AB] = 7 cm → [A'B'] = 7 cm.",
       "Astuce : cherche le point d'où chaque sommet a pour image le sommet opposé.\nExemple similaire : dans un parallélogramme, l'intersection des diagonales est le centre de symétrie.",
       "Astuce : l'image d'une droite est une droite PARALLÈLE (si elle passe par O, elle reste invariante).\nExemple similaire : la droite (d) et son image (d') sont parallèles.",
-      "Astuce : le centre doit être le milieu : (x + x') ÷ 2 = abscisse du centre.\nExemple similaire : symétrique de 7 par rapport à 2 : (7 + x') ÷ 2 = 2 → x' = -3.",
+      "Astuce : le centre doit être le milieu : (x + x') ÷ 2 = abscisse du centre.\nExemple similaire : symétrique de 7 par rapport à 9 : (7 + x') ÷ 2 = 9 → 7 + x' = 18 et x' = 11.",
       "Astuce : l'image est IDENTIQUE : périmètre, aire et angles inchangés.\nExemple similaire : un triangle de côtés 3 ; 4 ; 5 cm a une image de côtés 3 ; 4 ; 5 cm.",
       "Astuce : dimensions conservées → même aire.\nExemple similaire : rectangle 5 × 2 cm → image : rectangle 5 × 2 cm, aire 10 cm²."
     ],
@@ -250,16 +250,16 @@ window.AIDE_5E = {
       "Astuce : 25 % = un quart.\nExemple similaire : 25 % de 200 = 50.",
       "Astuce : calcule l'augmentation, puis ajoute-la au prix initial.\nExemple similaire : 20 € + 20 % → 24 €.",
       "Astuce : 1 cm sur la carte vaut 100 000 cm réels = 1 km.\nExemple similaire : 6 cm à l'échelle 1/100 000 → 6 km.",
-      "Astuce : calcule le montant de la baisse, retire-le du prix initial.\nExemple similaire : 50 € soldés à −20 % → baisse de 10 → 40 €.",
+      "Astuce : cherche d'abord la quantité par minute, puis multiplie.\nExemple similaire : 4 L en 2 min → 2 L/min → en 10 min : 20 L.",
       "Astuce : coefficient = 24 ÷ 15, applique-le à 40.\nExemple similaire : 6 kg pour 9 € → 10 kg pour 15 €.",
-      "Astuce : après +10 %, le prix vaut 110 % de l'ancien : divise par 1,1.\nExemple similaire : 33 € après +10 % → ancien = 33 ÷ 1,1 = 30 €.",
+      "Astuce : divise par 6 pour le prix d'un seul, puis multiplie par 9.\nExemple similaire : 4 yaourts = 2,80 € → 9 = 6,30 €.",
       "Astuce : cherche d'abord le nombre de filles (55 %), puis le complément.\nExemple similaire : 400 élèves dont 30 % en CM2 → 70 % ailleurs.",
-      "Astuce : baisse en % = écart ÷ prix initial × 100.\nExemple similaire : de 60 € à 45 € → 15/60 = 25 %.",
+      "Astuce : pourcentage = (partie ÷ total) × 100.\nExemple similaire : 12 gagnants sur 30 → 12/30 = 40 %.",
       "Astuce : divise la dimension réelle par 50 pour la maquette.\nExemple similaire : 20 m à l'échelle 1/50 → 2000 ÷ 50 = 40 cm."
     ],
     genH: {
       2: "Astuce : multiplie par le pourcentage puis divise par 100.\nExemple similaire : 20 % de 45 = 9.",
-      3: "Astuce : baisse = p × t/100 ; prix soldé = p − baisse.\nExemple similaire : 60 € à −50 % → 30 €."
+      3: "Astuce : multiplie p par t, puis divise par 100.\nExemple similaire : 25 % de 60 = 60 × 25 ÷ 100 = 15."
     }
   },
   relatifs: {
@@ -341,15 +341,15 @@ window.AIDE_5E = {
     qs: [
       "Astuce : distribue le 3 aux deux termes.\nExemple similaire : 4 × (x + 5) = 4x + 20.",
       "Astuce : regroupe les x entre eux, puis les nombres.\nExemple similaire : 6a + 2 + a = 7a + 2.",
-      "Astuce : distribue aussi sur le « − » : 5 × (−a) = −5a.\nExemple similaire : 3 × (4 − b) = 12 − 3b.",
-      "Astuce : regroupe séparément les a et les nombres.\nExemple similaire : 5m − 3 + m − 4 = 6m − 7.",
+      "Astuce : distribue le 5 aux deux termes de la parenthèse.\nExemple similaire : 3 × (2 + b) = 6 + 3b.",
+      "Astuce : regroupe séparément les a et les nombres.\nExemple similaire : 5m + 3 + m + 4 = 6m + 7.",
       "Astuce : développe d'abord, réduis ensuite.\nExemple similaire : 3(2x + 1) + 2x = 6x + 3 + 2x = 8x + 3.",
       "Astuce : teste la distributivité : k(a − b) = ka − kb.\nExemple similaire : 4 × 7 − 4 × 2 = 20 = 4 × (7 − 2).",
       "Astuce : factoriser = écrire un produit ; cherche le facteur commun.\nExemple similaire : 7x + 21 = 7(x + 3).",
-      "Astuce : développe, réduis, attention aux signes.\nExemple similaire : 2(4x − 1) − 3x = 8x − 2 − 3x = 5x − 2.",
+      "Astuce : développe, calcule les constantes, puis réduis les x.\nExemple similaire : 2(4x + 1) − 3x = 8x + 2 − 3x = 5x + 2.",
       "Astuce : remplace la lettre par sa valeur puis calcule.\nExemple similaire : 3y + 1 pour y = 4 → 13.",
-      "Astuce : développe les deux côtés puis regroupe les x d'un côté.\nExemple similaire : 2(x + 1) = x + 4 → 2x + 2 = x + 4 → x = 2.",
-      "Astuce : −2 × 3 = −6 et −2 × (−x) = +2x.\nExemple similaire : −3(2 − x) + x = −6 + 3x + x = 4x − 6.",
+      "Astuce : applique la distributivité sans résoudre : 2 × (x + 5) = 2x + 10, qui n'est pas 2x + 5.\nExemple similaire : 3 × (x + 2) = 3x + 6, qui n'est pas 3x + 2 : l'égalité est fausse pour tout x.",
+      "Astuce : dévelope chaque parenthèse puis réduis les x et les nombres.\nExemple similaire : 2(3x + 1) + x = 6x + 2 + x = 7x + 2.",
       "Astuce : périmètre du rectangle = 2 × (longueur + largeur).\nExemple similaire : largeur x, longueur x + 3 → P = 2(2x + 3) = 4x + 6."
     ],
     genH: {
@@ -412,6 +412,68 @@ window.AIDE_5E = {
     genH: {
       1: "Astuce : une seule face convient, sur 6 issues équiprobables.\nExemple similaire : P(obtenir 4) = 1/6.",
       2: "Astuce : fraction rouges ÷ total, puis simplifie la fraction.\nExemple similaire : 4 rouges et 8 bleues → 4/12 = 1/3."
+    }
+  },
+  equations5: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=6gy3DH19Ifk", t: "Équation x + a = b" },
+      { u: "https://www.youtube.com/watch?v=gcdBHwRaBa8", t: "Équation ax = b" },
+    ],
+    resume: [
+      { t: "Équation somme", f: "x + a = b  →  x = b − a", d: "Exemple : x + 9 = 17 → x = 17 − 9 = 8. Vérification : 8 + 9 = 17." },
+      { t: "Équation produit", f: "a × x = b  →  x = b ÷ a", d: "Exemple : 6 × x = 42 → x = 42 ÷ 6 = 7. Vérification : 6 × 7 = 42." },
+      { t: "Tester une solution", f: "remplace x, compare les 2 membres", d: "Exemple : 3 × x + 2 = 14 avec x = 4 : 3 × 4 + 2 = 14. Les membres sont égaux, donc x = 4 est solution." }
+    ],
+    qs: [
+      "Astuce : x est le résultat moins le nombre ajouté.\nExemple similaire : x + 5 = 12 → x = 12 − 5 = 7.",
+      "Astuce : x = résultat − le nombre ajouté.\nExemple similaire : x + 7 = 14 → x = 7.",
+      "Astuce : x = résultat ÷ facteur connu.\nExemple similaire : 4 × x = 28 → x = 7.",
+      "Astuce : remplace x par la valeur proposée et calcule les deux membres.\nExemple similaire : 2 × x + 1 = 9 avec x = 4 : 2 × 4 + 1 = 9 → oui.",
+      "Astuce : x = total − le nombre connu, même s'il est écrit en premier.\nExemple similaire : 20 + x = 35 → x = 15.",
+      "Astuce : isole d'abord le produit (en ajoutant), puis divise.\nExemple similaire : 4 × x − 5 = 19 → 4 × x = 24 → x = 6.",
+      "Astuce : x = résultat + le nombre retiré.\nExemple similaire : x − 15 = 3 → x = 18.",
+      "Astuce : calcule l'opérateur du membre de droite d'abord, puis soustrais.\nExemple similaire : x + 2 = 4 × 5 → x + 2 = 20 → x = 18.",
+      "Astuce : isole le produit, puis divise.\nExemple similaire : 20 = 3 × x + 2 → 3 × x = 18 → x = 6.",
+      "Astuce : traduis l'histoire en équation, puis résous.\nExemple similaire : n + 12 = 30 → n = 18.",
+      "Astuce : triple = × 3, diminué de = − . Isole le produit, puis divise.\nExemple similaire : le double d'un nombre augmenté de 3 vaut 15 → 2 × x = 12 → x = 6.",
+      "Astuce : calcule l'opérateur isolé d'abord (5 × 3), puis isole le produit avec x.\nExemple similaire : 3 × x + 2 × 4 = 23 → 3 × x = 15 → x = 5."
+    ],
+    genH: {
+      1: "Astuce : x = résultat − le nombre ajouté.\nExemple similaire : x + 7 = 14 → x = 7.",
+      2: "Astuce : x = résultat total ÷ facteur.\nExemple similaire : 5 × x = 40 → x = 8.",
+      3: "Astuce : calcule l'opérateur du membre de droite d'abord, puis soustrais.\nExemple similaire : x + 6 = 4 × 5 → x = 20 − 6 = 14.",
+      4: "Astuce : isole le produit (+ côté droit), puis divise.\nExemple similaire : 4 × x − 6 = 14 → 4 × x = 20 → x = 5."
+    }
+  },
+  informatique5: {
+    videos: [
+      { u: "https://www.lumni.fr/video/algorithmique-et-programmation-en-scratch-variables-boucles-tests", t: "Scratch : variables, boucles, tests" },
+      { u: "https://www.lumni.fr/video/decouverte-de-la-plateforme-de-programmation-coder-un-jeu-sur-scratch-1-8", t: "Découvrir Scratch" },
+    ],
+    resume: [
+      { t: "Variable", f: "n ← 3  : n prend la valeur 3", d: "La flèche est une affectation : on range 3 dans la boîte n ; on peut la changer ensuite avec n ← n + 2." },
+      { t: "Boucle répéter", f: "répéter 4 fois : ajouter 3", d: "Exemple : n ← 5, puis 5 + 4 × 3 = 17 : une boucle de k ajouts de b ajoute k × b en tout." },
+      { t: "Boucle tant que", f: "tant que n < 7 : ajouter 1", d: "Exemple : n = 2 → 3 ; 4 ; 5 ; 6 ; 7 : c'est 5 ajouts, la boucle s'arrête dès que la condition devient fausse." }
+    ],
+    qs: [
+      "Astuce : suis les étapes dans l'ordre, une à une.\nExemple similaire : choisir 3 ; ajouter 4 ; doubler → 7 × 2 = 14.",
+      "Astuce : la flèche ← range une valeur dans la variable.\nExemple similaire : n ← 5 met 5 dans la boîte n.",
+      "Astuce : met à jour n ligne par ligne, en repartant de la valeur précédente.\nExemple similaire : n ← 2 ; n ← n + 3 ; n ← n × 2 → 5 × 2 = 10.",
+      "Astuce : k ajouts de b ajoutent k × b en tout.\nExemple similaire : n ← 4, répéter 3 fois ajouter 2 → 4 + 6 = 10.",
+      "Astuce : nombre de passages × augmentation = ajout total.\nExemple similaire : répéter 5 fois ajouter 3 → +15 au total.",
+      "Astuce : une étape par ligne, en gardant le résultat intermédiaire.\nExemple similaire : 5 ; +2 ; ×3 → 7 × 3 = 21.",
+      "Astuce : chaque passage multiplie par 3 : enchaîne les produits.\nExemple similaire : n ← 1, répéter 3 fois multiplier par 3 → 27.",
+      "Astuce : liste les valeurs du compteur jusqu'à la limite.\nExemple similaire : compteur de 1, tant que < 5 → 4 ajouts (2 ; 3 ; 4 ; 5).",
+      "Astuce : soustrais d'abord, puis multiplie.\nExemple similaire : 10 ; −3 ; ×4 → 7 × 4 = 28.",
+      "Astuce : rejoue le programme avec a inconnu et écris l'équation.\nExemple similaire : (3 + a) × 2 = 14 → 3 + a = 7 → a = 4.",
+      "Astuce : total retiré ÷ pas = nombre de passages.\nExemple similaire : de 12 à 3 en retirant 3 : 9 ÷ 3 = 3 passages.",
+      "Astuce : calcule x avant l'ajout, puis soustrais pour trouver a.\nExemple similaire : x ← 2 ; x ← x × 5 ; x ← x + a = 20 → a = 10."
+    ],
+    genH: {
+      1: "Astuce : une seule instruction : résultat = départ + ajout.\nExemple similaire : choisir 6 ; ajouter 5 → 11.",
+      2: "Astuce : additions répétées = multiplication.\nExemple similaire : n ← 3, répéter 4 fois ajouter 5 → 3 + 20 = 23.",
+      3: "Astuce : compte les doubles successifs, un par passage.\nExemple similaire : n ← 3, répéter 2 fois multiplier par 2 → 3 × 2 = 6, puis 6 × 2 = 12.",
+      4: "Astuce : calcule (départ + ajout) entre parenthèses, puis multiplie.\nExemple similaire : choisir 4 ; ajouter 3 ; multiplier par 5 → 7 × 5 = 35."
     }
   }
 };

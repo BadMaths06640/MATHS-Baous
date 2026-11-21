@@ -3,7 +3,7 @@ window.BANK_4E = {
   themes: [
     {
       id: "propo4", titre: "Pourcentages, vitesses, échelles", icone: "🚗",
-      chap: [1],
+      chap: [1, 18],
       notion: "Vitesse = distance ÷ temps (v = d/t) ; d = v × t ; t = d ÷ v.\nConversion : km/h ÷ 3,6 ≈ m/s.\nAugmenter de t % = multiplier par (1 + t/100) ; diminuer de t % = multiplier par (1 − t/100).",
       qs: [
         { d:1, q:"Une voiture roule à 60 km/h pendant 2 h. Distance parcourue ?", c:["30 km","120 km","62 km","240 km"], a:1, e:"d = v × t = 60 × 2 = 120 km." },
@@ -32,7 +32,7 @@ window.BANK_4E = {
     },
         {
       id: "pythagore", titre: "Théorème de Pythagore", icone: "📐",
-      chap: [2, 15],
+      chap: [2, 13],
       notion: "Si un triangle est rectangle en A, alors BC² = AB² + AC² (l'hypoténuse est le côté opposé à l'angle droit, le plus long).\nRéciproque : si BC² = AB² + AC², alors le triangle est rectangle en A.",
       qs: [
         { d:1, q:"Triangle rectangle, côtés de l'angle droit : 3 cm et 4 cm. Hypoténuse ?", c:["5 cm","7 cm","6 cm","25 cm"], a:0, e:"3² + 4² = 9 + 16 = 25 → hypoténuse = √25 = 5 cm." },
@@ -221,21 +221,21 @@ window.BANK_4E = {
     },
         {
       id: "litteral4", titre: "Calcul littéral et équations", icone: "🧩",
-      chap: [8, 13],
-      notion: "Double distributivité : (a + b)(c + d) = ac + ad + bc + bd.\nÉquation x + a = b → x = b − a. Équation a × x = b → x = b ÷ a.\nL'égalité se conserve si on applique la même opération des deux côtés.",
+      chap: [8, 14],
+      notion: "Distribution simple : k(a + b) = k × a + k × b.\nÉquation x + a = b → x = b − a. Équation a × x = b → x = b ÷ a.\nL'égalité se conserve si on applique la même opération des deux côtés.",
       qs: [
         { d:1, q:"Développer : 2(3x + 1)", c:["6x + 1","6x + 2","5x + 3","3x + 2"], a:1, e:"2 × 3x = 6x et 2 × 1 = 2 → 6x + 2." },
         { d:1, q:"Résoudre : x + 7 = 12", a:"5", e:"x = 12 − 7 = 5." },
         { d:1, q:"Résoudre : 3x = 21", a:"7", e:"x = 21 ÷ 3 = 7." },
         { d:2, q:"Résoudre : x − 5 = −2", a:"3", e:"x = −2 + 5 = 3." },
-        { d:2, q:"Développer puis réduire : (x + 2)(x + 3)", c:["x² + 5x + 6","x² + 6","x² + 5x + 5","x² + 6x + 6"], a:0, e:"x×x = x² ; x×3 = 3x ; 2×x = 2x ; 2×3 = 6. Total : x² + 5x + 6." },
+        { d:2, q:"Supprimer les parenthèses puis réduire : 5 + (3x − 2)", c:["3x + 3","3x + 7","8x + 3","3x − 7"], a:0, e:"Le + devant la parenthèse ne change rien : 5 + 3x − 2 = 3x + 3." },
         { d:2, q:"Résoudre : −4x = 20", a:"-5", e:"x = 20 ÷ (−4) = −5." },
         { d:3, q:"Résoudre : 2x + 3 = 11", a:"4", e:"2x = 11 − 3 = 8 (on enlève 3 des deux côtés), puis x = 8 ÷ 2 = 4." },
-        { d:3, q:"Développer puis réduire : (2x − 1)(x + 4)", c:["2x² + 7x − 4","2x² + 8x − 4","2x² + 7x + 4","2x² + 9x − 4"], a:0, e:"2x × x = 2x² ; 2x × 4 = 8x ; −1 × x = −x ; −1 × 4 = −4. Total : 2x² + 7x − 4." },
+        { d:3, q:"Développer puis réduire : 3(4x + 5) − 2x", c:["10x + 15","10x + 5","7x + 15","12x + 5"], a:0, e:"3 × 4x = 12x et 3 × 5 = 15. Puis 12x − 2x = 10x, donc 10x + 15." },
         { d:3, q:"Résoudre : 5x − 7 = 2x + 8", c:["x = 1","x = 5","x = 15","x = −5"], a:1, e:"5x − 2x = 8 + 7 (on regroupe) → 3x = 15 → x = 5." },
         { d:4, q:"Résoudre : 3(x − 2) = 4x + 1", a:"-7", e:"3x − 6 = 4x + 1 → −6 − 1 = 4x − 3x → x = −7." },
         { d:4, q:"Un rectangle a un périmètre de 24 cm et une longueur de 3 cm de plus que sa largeur. Sa largeur ?", a:"4.5", e:"Largeur x, longueur x + 3 : 2 × (x + x + 3) = 24 → 4x + 6 = 24 → 4x = 18 → x = 4,5 cm." },
-        { d:4, q:"Résoudre : (2x + 3)(x − 5) = 0", c:["x = −3/2 ou x = 5","x = 3/2 ou x = −5","x = −3 ou x = 5","x = 0"], a:0, e:"Produit nul : un des facteurs est nul : 2x + 3 = 0 → x = −3/2 ; ou x − 5 = 0 → x = 5." }
+        { d:4, q:"Résoudre : 7x + 4 = 3x + 20", a:"4", e:"7x − 3x = 20 − 4 (on regroupe) → 4x = 16 → x = 4. Vérification : 7 × 4 + 4 = 32 et 3 × 4 + 20 = 32." }
       ],
       gen: {
         1: () => { const a = 1 + Math.floor(Math.random()*9), b = 1 + Math.floor(Math.random()*9);
@@ -248,7 +248,7 @@ window.BANK_4E = {
       id: "thales4",
       titre: "Th\u00e9or\u00e8me de Thal\u00e8s et triangles \u00e9gaux",
       icone: "\u224b",
-      chap: [9],
+      chap: [9, 16],
       notion: "Th\u00e9or\u00e8me de Thal\u00e8s : si M \u2208 [AB], N \u2208 [AC] et (MN) // (BC), alors AM/AB = AN/AC = MN/BC.\nConfiguration \u00ab papillon \u00bb : la m\u00eame \u00e9galit\u00e9 s'applique quand les droites (MN) et (BC) sont parall\u00e8les avec M entre A et B... en gardant les c\u00f4t\u00e9s qui partent du m\u00eame point.\nCalcul d'une longueur : on utilise le produit en croix, par exemple AM/AB = AN/AC donne AC = AB \u00d7 AN \u00f7 AM.\nTriangles \u00e9gaux : deux triangles sont \u00e9gaux (isom\u00e9triques) s'ils ont des c\u00f4t\u00e9s \u00e9gaux deux \u00e0 deux, ou un angle \u00e9gal compris entre deux c\u00f4t\u00e9s \u00e9gaux, ou deux angles \u00e9gaux et le c\u00f4t\u00e9 compris \u00e9gal.",
       qs: [
         { d: 1, q: "M \u2208 [AB], N \u2208 [AC] et (MN) // (BC). Quelle est l'\u00e9galit\u00e9 de Thal\u00e8s ?", c: ["AM/AB = AN/AC = MN/BC", "AM/AB = AN/BC = MN/AC", "AB/AM = AC/AN = BC/MN", "AM/AB = AC/AN = MN/BC"], a: 0, e: "Les rapports se font sur chaque c\u00f4t\u00e9 en partant du sommet A : AM/AB = AN/AC = MN/BC." },
@@ -311,20 +311,20 @@ window.BANK_4E = {
     },
         {
       id: "puissances", titre: "Puissances", icone: "⚡",
-      chap: [12, 17],
-      notion: "aⁿ = a × a × ... × a (n facteurs) ; a¹ = a ; a⁰ = 1 (a ≠ 0).\n10ⁿ = 1 suivi de n zéros ; 10⁻ⁿ = 1/10ⁿ.\nRègles : aᵐ × aⁿ = aᵐ⁺ⁿ ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ ; (aᵐ)ⁿ = aᵐˣⁿ ; (a×b)ⁿ = aⁿ × bⁿ.",
+      chap: [12],
+      notion: "aⁿ = a × a × ... × a (n facteurs) ; a¹ = a ; a⁰ = 1 (a ≠ 0).\n10ⁿ = 1 suivi de n zéros.\nRègles : aᵐ × aⁿ = aᵐ⁺ⁿ ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ (avec m > n) ; (aᵐ)ⁿ = aᵐˣⁿ ; (a×b)ⁿ = aⁿ × bⁿ.",
       qs: [
         { d:1, q:"Calculer : 2⁴", c:["8","16","6","4"], a:1, e:"2⁴ = 2 × 2 × 2 × 2 = 16 (pas 2 × 4 = 8 !)." },
         { d:1, q:"Calculer : 10⁵", c:["50 000","1 000 000","100 000","10 000"], a:2, e:"10⁵ = 1 suivi de 5 zéros = 100 000." },
         { d:1, q:"Calculer : 7⁰ ... 3⁰ ?", a:"1", e:"Tout nombre non nul à la puissance 0 vaut 1." },
-        { d:2, q:"Simplifier : 5³ × 5⁴", c:["5¹²","5⁷","25⁷","5⁻¹"], a:1, e:"On additionne les exposants : 5³ × 5⁴ = 5³⁺⁴ = 5⁷." },
-        { d:2, q:"Simplifier : 7⁹ ÷ 7⁶", c:["7³","7¹⁵","7⁵⁴","1/7³"], a:0, e:"On soustrait les exposants : 7⁹⁻⁶ = 7³." },
+        { d:2, q:"Simplifier : 5³ × 5⁴", c:["5¹²","5⁷","25⁷","10⁷"], a:1, e:"On additionne les exposants : 5³ × 5⁴ = 5³⁺⁴ = 5⁷." },
+        { d:2, q:"Simplifier : 7⁹ ÷ 7⁶", c:["7³","7¹⁵","7⁵⁴","7⁶"], a:0, e:"On soustrait les exposants : 9 − 6 = 3, donc 7⁹ ÷ 7⁶ = 7³." },
         { d:2, q:"Calculer : (−3)³", c:["9","−27","27","−9"], a:1, e:"(−3)³ = (−3) × (−3) × (−3) = −27. Puissance impaire d'un négatif → négatif." },
-        { d:3, q:"Écriture décimale de : 10⁻³", c:["0,001","0,01","−1 000","0,0001"], a:0, e:"10⁻³ = 1/1000 = 0,001." },
+        { d:3, q:"Écriture décimale de : 10⁵ ÷ 10³", c:["100","1 000","10","0,01"], a:0, e:"On soustrait les exposants (5 − 3 = 2) : 10⁵ ÷ 10³ = 10² = 100." },
         { d:3, q:"Simplifier : (2³)²", a:"64", e:"(2³)² = 2⁽³ˣ²⁾ = 2⁶ = 64." },
         { d:3, q:"Simplifier : 3⁵ × 3² ÷ 3⁴", c:["27","3¹¹","3","9"], a:0, e:"5 + 2 = 7, puis 7 − 4 = 3, donc 3⁵ × 3² ÷ 3⁴ = 3³ = 27." },
         { d:4, q:"Écriture scientifique de 45 200", c:["4,52 × 10⁴","45,2 × 10³","4,52 × 10⁵","4,52 × 10³"], a:0, e:"Scientifique = a × 10ⁿ avec 1 ≤ a < 10 : 45 200 = 4,52 × 10⁴." },
-        { d:4, q:"Calculer : 2⁻² × 2⁵ ÷ 2", a:"4", e:"On additionne les exposants (−2 + 5 − 1 = 2) : 2² = 4." },
+        { d:4, q:"Calculer : 3⁴ ÷ 3² × 3", a:"27", e:"3⁴ ÷ 3² = 3² = 9, puis 3² × 3 = 3³ = 27." },
         { d:4, q:"Quelle égalité est vraie pour tous nombres a et b (a, b ≠ 0) ?", c:["(a × b)ⁿ = aⁿ × bⁿ","(a + b)ⁿ = aⁿ + bⁿ","aⁿ + aᵐ = aⁿ⁺ᵐ","aⁿ ÷ aᵐ = aⁿᵐ"], a:0, e:"La puissance « passe » sur chaque facteur d'un produit : (a × b)ⁿ = aⁿ × bⁿ. Elle ne s'applique pas aux sommes !" }
       ],
       gen: {
@@ -336,7 +336,7 @@ window.BANK_4E = {
     },
         {
       id: "stats4", titre: "Statistiques et probabilités (début)", icone: "📊",
-      chap: [14, 16],
+      chap: [15, 17],
       notion: "Moyenne pondérée : (somme des valeurs × effectifs) ÷ effectif total.\nProbabilité : nombre de cas favorables ÷ nombre de cas possibles (produits équiprobables).\nUne probabilité est comprise entre 0 (impossible) et 1 (certain).",
       qs: [
         { d:1, q:"Probabilité d'obtenir un nombre pair en lançant un dé à 6 faces ?", c:["1/2","1/4","1/3","2/3"], a:0, e:"3 faces paires (2, 4, 6) sur 6 → 3/6 = 1/2." },
