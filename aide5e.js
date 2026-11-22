@@ -7,12 +7,19 @@ window.AIDE_5E = {
   calc: {
     videos: [
       { u: "https://www.youtube.com/watch?v=xsv49X48RvE", t: "Enchaîner des opérations sans parenthèses" },
-      { u: "https://www.youtube.com/watch?v=zi17rpzxsC8", t: "Enchaîner des opérations avec parenthèses" }
+      { u: "https://www.youtube.com/watch?v=zi17rpzxsC8", t: "Enchaîner des opérations avec parenthèses" },
+      { u: "https://www.youtube.com/watch?v=phQY4ybQrUI", t: "Poser une division euclidienne" },
+      { u: "https://www.youtube.com/watch?v=y3nU79nBMpw", t: "Divisibilité par 2" },
+      { u: "https://www.youtube.com/watch?v=d0JC5Ar_Jzc", t: "Divisibilité par 3 et 9" },
+      { u: "https://www.youtube.com/watch?v=kWMh9eZJIxQ", t: "Nombres premiers : définition" },
     ],
     resume: [
       { t: "L'ordre de calcul", f: "1) ( )    2) × ÷    3) + −", d: "D'abord les parenthèses, puis les multiplications et divisions de gauche à droite, enfin les additions et soustractions." },
       { t: "Exemple guide", f: "3 + 5 × 2 = 3 + 10 = 13", d: "La multiplication passe avant l'addition, même si elle vient après dans l'écriture." },
-      { t: "Crochets", f: "24 − [3 × (2 + 5) − 1] = 24 − 20 = 4", d: "Les crochets jouent le rôle de parenthèses : on calcule du plus intérieur (la parenthèse) au plus extérieur, puis on termine l'expression." }
+      { t: "Crochets", f: "24 − [3 × (2 + 5) − 1] = 24 − 20 = 4", d: "Les crochets jouent le rôle de parenthèses : on calcule du plus intérieur (la parenthèse) au plus extérieur, puis on termine l'expression." },
+      { t: "Division euclidienne", f: "23 = 5 × 4 + 3", d: "a = b × q + r avec 0 ≤ r < b. Le reste est toujours plus petit que le diviseur." },
+      { t: "Divisibilité", f: "par 3 ou 9 : la somme des chiffres\npar 2 : finit par 0, 2, 4, 6, 8\npar 5 : finit par 0 ou 5", d: "Si le reste est nul, le diviseur divise le nombre (il en est un diviseur, le nombre en est un multiple)." },
+      { t: "Nombres premiers", f: "2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 ; 23 ; 29 ; 31...", d: "Exactement deux diviseurs : 1 et lui-même. 1 n'est pas premier ; 2 est le seul pair." },
     ],
     qs: [
       "Astuce : la multiplication est prioritaire sur l'addition.\nExemple similaire : 4 + 6 × 3 = 4 + 18 = 22.",
@@ -26,7 +33,16 @@ window.AIDE_5E = {
       "Astuce : calcule chaque produit séparément, puis soustrais.\nExemple similaire : 6 × 3 − 2 × 5 = 18 − 10 = 8.",
       "Astuce : traite chaque parenthèse séparément avant le produit final.\nExemple similaire : (10 − 2 × 4) × (3 + 5) = 2 × 8 = 16.",
       "Astuce : commence par la parenthèse la plus intérieure.\nExemple similaire : 9 − 3 × [8 ÷ (2 + 2)] = 9 − 3 × 2 = 3.",
-      "Astuce : teste chaque choix jusqu'au bout, en respectant l'ordre des opérations.\nExemple similaire : 4 × 6 − 4 × 3 = 24 − 12 = 12."
+      "Astuce : teste chaque choix jusqu'au bout, en respectant l'ordre des opérations.\nExemple similaire : 4 × 6 − 4 × 3 = 24 − 12 = 12.",
+      "Astuce : cherche le multiple de 5 juste en dessous de 23, ce qui manque est le reste.\nExemple similaire : 17 = 5 × 3 + 2 → reste 2.",
+      "Astuce : défile la table de 7.\nExemple similaire : 7 × 6 = 42, donc 42 est un multiple de 7 ; 43 ne l'est pas.",
+      "Astuce : cherche le reste de la division par 4 : s'il n'est pas nul, 4 n'est pas un diviseur.\nExemple similaire : 30 = 4 × 7 + 2 → 4 n'est pas un diviseur de 30.",
+      "Astuce : additionne les chiffres : si la somme est multiple de 3, le nombre aussi.\nExemple similaire : 273 → 2 + 7 + 3 = 12 → divisible par 3.",
+      "Astuce : additionne les chiffres : si la somme est 9, 18, 27..., le nombre est divisible par 9.\nExemple similaire : 729 → 7 + 2 + 9 = 18 → divisible par 9.",
+      "Astuce : tout nombre entier a au moins 1 et lui-même comme diviseurs.\nExemple similaire : 12 a au moins deux diviseurs : 1 et 12.",
+      "Astuce : cherche dans la table une multiplication exacte (reste nul).\nExemple similaire : 7 × 78 = 546 → 546 est divisible par 7,",
+      "Astuce : cherche le plus grand multiple du diviseur en dessous du nombre, le reste complète.\nExemple similaire : 100 = 9 × ... + 1 → 9 × 11 = 99 : le quotient est 11.",
+      "Astuce : isole 11 × z = 362 − 10, puis divise.\nExemple similaire : 100 = 9 × z + 10 → 9 × z = 90 → z = 10.",
     ],
     genH: {
       1: "Astuce : la multiplication est prioritaire sur l'addition.\nExemple similaire : 6 + 5 × 3 = 6 + 15 = 21.",
@@ -34,39 +50,7 @@ window.AIDE_5E = {
       3: "Astuce : parenthèse d'abord, puis les deux produits, et enfin la différence.\nExemple similaire : 4 × (4 + 3) − 4 × 3 = 28 − 12 = 16.",
       4: "Astuce : va du plus intérieur au plus extérieur : parenthèse, crochets, puis soustraction finale.\nExemple similaire : 20 − [3 × (2 + 4) − 2] = 20 − 16 = 4."
     }
-  },
-  arithmetique5: {
-    videos: [
-      { u: "https://www.youtube.com/watch?v=phQY4ybQrUI", t: "Poser une division euclidienne" },
-      { u: "https://www.youtube.com/watch?v=y3nU79nBMpw", t: "Divisibilité par 2" },
-      { u: "https://www.youtube.com/watch?v=d0JC5Ar_Jzc", t: "Divisibilité par 3 et 9" },
-      { u: "https://www.youtube.com/watch?v=kWMh9eZJIxQ", t: "Nombres premiers : définition" }
-    ],
-    resume: [
-      { t: "Division euclidienne", f: "23 = 5 × 4 + 3", d: "a = b × q + r avec 0 ≤ r < b. Le reste est toujours plus petit que le diviseur." },
-      { t: "Divisibilité", f: "par 3 ou 9 : la somme des chiffres\npar 2 : finit par 0, 2, 4, 6, 8\npar 5 : finit par 0 ou 5", d: "Si le reste est nul, le diviseur divise le nombre (il en est un diviseur, le nombre en est un multiple)." },
-      { t: "Nombres premiers", f: "2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 ; 23 ; 29 ; 31...", d: "Exactement deux diviseurs : 1 et lui-même. 1 n'est pas premier ; 2 est le seul pair." }
-    ],
-    qs: [
-      "Astuce : cherche le multiple de 5 juste en dessous de 23, ce qui manque est le reste.\nExemple similaire : 17 = 5 × 3 + 2 → reste 2.",
-      "Astuce : défile la table de 7.\nExemple similaire : 7 × 6 = 42, donc 42 est un multiple de 7 ; 43 ne l'est pas.",
-      "Astuce : cherche le reste de la division par 4 : s'il n'est pas nul, 4 n'est pas un diviseur.\nExemple similaire : 30 = 4 × 7 + 2 → 4 n'est pas un diviseur de 30.",
-      "Astuce : additionne les chiffres : si la somme est multiple de 3, le nombre aussi.\nExemple similaire : 273 → 2 + 7 + 3 = 12 → divisible par 3.",
-      "Astuce : additionne les chiffres : si la somme est 9, 18, 27..., le nombre est divisible par 9.\nExemple similaire : 729 → 7 + 2 + 9 = 18 → divisible par 9.",
-      "Astuce : tout nombre entier a au moins 1 et lui-même comme diviseurs.\nExemple similaire : 12 a au moins deux diviseurs : 1 et 12.",
-      "Astuce : teste la division par 2, 3, 5, 7... si aucun ne marche, le nombre est premier.\nExemple similaire : 29 n'est divisible ni par 2, ni par 3, ni par 5 → premier.",
-      "Astuce : cherche dans la table une multiplication exacte (reste nul).\nExemple similaire : 7 × 78 = 546 → 546 est divisible par 7,",
-      "Astuce : cherche le plus grand multiple du diviseur en dessous du nombre, le reste complète.\nExemple similaire : 100 = 9 × ... + 1 → 9 × 11 = 99 : le quotient est 11.",
-      "Astuce : divise par 2 une première fois : si le résultat est encore pair, le nombre est divisible par 4.\nExemple similaire : 132 ÷ 2 = 66, pair → 132 est divisible par 4.",
-      "Astuce : isole 11 × z = 362 − 10, puis divise.\nExemple similaire : 100 = 9 × z + 10 → 9 × z = 90 → z = 10.",
-      "Astuce : sauf 2, tous les nombres premiers sont impairs, et le produit de deux impairs est impair.\nExemple similaire : 3 × 5 = 15, impair."
-    ],
-    genH: {
-      1: "Astuce : cherche le multiple du diviseur juste en dessous du nombre, le reste est ce qui manque.\nExemple similaire : 47 = 6 × 7 + 5 → reste 5.",
-      2: "Astuce : additionne les chiffres : si la somme est dans la table de 3, le nombre est divisible par 3.\nExemple similaire : 271 → 2 + 7 + 1 = 10 → non ; 273 → 12 → oui."
-    }
-  },
-  symetrie5: {
+  },  symetrie5: {
     videos: [
       { u: "https://www.youtube.com/watch?v=o-LXjfesIxw", t: "La symétrie centrale" },
       { u: "https://www.youtube.com/watch?v=EBEiFNLxm9s", t: "Utiliser les propriétés de la symétrie centrale" }
