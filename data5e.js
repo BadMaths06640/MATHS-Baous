@@ -2,7 +2,7 @@
 window.BANK_5E = {
   themes: [
     {
-      id: "calc", titre: "Calcul et priorités opératoires", icone: "🧮",
+      id: "calc", titre: "Opérations sur les décimaux (1) : priorités de calcul", icone: "🧮",
       chap: [1],
       notion: "Sans parenthèses : on calcule d'abord × et ÷, puis + et − de gauche à droite.\nAvec des parenthèses : on calcule d'abord l'intérieur des parenthèses (et des crochets).\nUne barre de fraction joue le rôle de parenthèses.",
       qs: [
@@ -31,7 +31,7 @@ window.BANK_5E = {
       }
     },
     {
-      id: "arithmetique5", titre: "Arithmétique : diviseurs et nombres premiers", icone: "🧮",
+      id: "arithmetique5", titre: "Opérations sur les décimaux (2) : multiples et diviseurs", icone: "🧮",
       chap: [1],
       notion: "Division euclidienne de a par b : a = b × q + r avec 0 ≤ r < b (q quotient entier, r reste).\nb est un diviseur de a quand le reste est nul (alors a est un multiple de b).\nCritères : par 2 (chiffre des unités pair) · par 5 (finit par 0 ou 5) · par 4 (la moitié du nombre est paire) · par 3 et 9 (somme des chiffres multiple de 3 ou 9).\nNombre premier : exactement deux diviseurs (1 et lui-même). 1 n'est pas premier ; 2 est le seul premier pair.",
       qs: [
