@@ -97,34 +97,37 @@ window.AIDE_5E = {
       4: "Astuce : la symétrie centrale conserve longueurs, angles et aires (juste un demi-tour autour de O).\nExemple similaire : un triangle de côtés 3 ; 4 ; 5 cm a une image aux mêmes côtés."
     }
   },
-  litteral5: {
+  litteral1: {
     videos: [
       { u: "https://www.youtube.com/watch?v=eBPOd0bTBro", t: "Simplifier une expression" },
-      { u: "https://www.youtube.com/watch?v=xZCXVgGT_Bk", t: "Tester une égalité" }
+      { u: "https://www.youtube.com/watch?v=DFthuKo3byw", t: "Puissance d'exposant positif" }
     ],
     resume: [
-      { t: "Simple distributivité", f: "k × (a + b) = k×a + k×b\n3 × (x + 2) = 3x + 6", d: "On distribue le facteur k à CHAQUE terme de la parenthèse (attention aux signes)." },
-      { t: "Réduire", f: "4x + 3 + 5x = 9x + 3", d: "On regroupe les termes « semblables » (les x entre eux, les nombres entre eux). Mais 3x + 5 ne se réduit pas." },
-      { t: "Tester une valeur", f: "2x + 5 pour x = 3 → 2×3 + 5 = 11", d: "On remplace la lettre par sa valeur, puis on calcule en respectant les priorités." }
+      { t: "Écritures", f: "3 × x = 3x    5 × (a + 2) = 5(a + 2)", d: "Le signe × peut être caché devant une lettre ou une parenthèse." },
+      { t: "Valeur d'une expression", f: "4x + 3 pour x = 5 → 4×5 + 3 = 23", d: "On remplace la lettre par sa valeur, puis on calcule en respectant les priorités." },
+      { t: "Puissances", f: "x² = x × x    x³ = x × x × x", d: "Le carré multiplie deux fois (7² = 49), le cube trois fois (2³ = 8)." }
     ],
     qs: [
-      "Astuce : distribue le 3 aux deux termes.\nExemple similaire : 4 × (x + 5) = 4x + 20.",
-      "Astuce : regroupe les x entre eux, puis les nombres.\nExemple similaire : 6a + 2 + a = 7a + 2.",
-      "Astuce : distribue le 5 aux deux termes de la parenthèse.\nExemple similaire : 3 × (2 + b) = 6 + 3b.",
-      "Astuce : regroupe séparément les a et les nombres.\nExemple similaire : 5m + 3 + m + 4 = 6m + 7.",
-      "Astuce : développe d'abord, réduis ensuite.\nExemple similaire : 3(2x + 1) + 2x = 6x + 3 + 2x = 8x + 3.",
-      "Astuce : teste la distributivité : k(a − b) = ka − kb.\nExemple similaire : 4 × 7 − 4 × 2 = 20 = 4 × (7 − 2).",
-      "Astuce : factoriser = écrire un produit ; cherche le facteur commun.\nExemple similaire : 7x + 21 = 7(x + 3).",
-      "Astuce : développe, calcule les constantes, puis réduis les x.\nExemple similaire : 2(4x + 1) − 3x = 8x + 2 − 3x = 5x + 2.",
-      "Astuce : remplace la lettre par sa valeur puis calcule.\nExemple similaire : 3y + 1 pour y = 4 → 13.",
-      "Astuce : applique la distributivité sans résoudre : 2 × (x + 5) = 2x + 10, qui n'est pas 2x + 5.\nExemple similaire : 3 × (x + 2) = 3x + 6, qui n'est pas 3x + 2 : l'égalité est fausse pour tout x.",
-      "Astuce : dévelope chaque parenthèse puis réduis les x et les nombres.\nExemple similaire : 2(3x + 1) + x = 6x + 2 + x = 7x + 2.",
-      "Astuce : périmètre du rectangle = 2 × (longueur + largeur).\nExemple similaire : largeur x, longueur x + 3 → P = 2(2x + 3) = 4x + 6."
+      "Astuce : multiplie x par 2 et cache le signe ×.\nExemple similaire : le double de a → 2a.",
+      "Astuce : supprime le × devant la lettre.\nExemple similaire : 7 × b = 7b.",
+      "Astuce : remplace la lettre par sa valeur, puis respecte les priorités.\nExemple similaire : 5x + 2 pour x = 3 → 5×3 + 2 = 17.",
+      "Astuce : triple = 3 × n et « diminué de » = −.\nExemple similaire : le triple de n diminué de 2 → 3n − 2.",
+      "Astuce : 2x = 2 × x : multiplie d'abord, puis soustrais.\nExemple similaire : 9 − 2y pour y = 4 → 9 − 8 = 1.",
+      "Astuce : suivant = + 1, précédent = − 1.\nExemple similaire : l'entier précédant n est n − 1.",
+      "Astuce : carré = le nombre multiplié par lui-même.\nExemple similaire : 6² = 6 × 6 = 36.",
+      "Astuce : cube = multiplie le nombre trois fois.\nExemple similaire : 3³ = 3 × 3 × 3 = 27.",
+      "Astuce : multiplie le prix par le nombre de tickets, puis ajoute la partie fixe.\nExemple similaire : 4 tickets à p € + 1 € → 4p + 1.",
+      "Astuce : calcule d'abord le carré, puis multiplie.\nExemple similaire : 3x² pour x = 4 → x² = 16, puis 3 × 16 = 48.",
+      "Astuce : l'aire du carré = côté × côté = c².\nExemple similaire : côté 5 → aire 25 (4 × 5 = 20 donne le périmètre).",
+      "Astuce : écris la longueur en fonction de x, puis P = 2 × (L + l).\nExemple similaire : largeur x, longueur x + 3 → P = 2 × (2x + 3) = 4x + 6."
     ],
     genH: {
-      2: "Astuce : multiplie k par x (kx) et k par le nombre.\nExemple similaire : 4 × (x + 3) = 4x + 12.",
-      3: "Astuce : développe, calcule les constantes, puis réduis les x.\nExemple similaire : 3(2x + 4) − 2x = 6x + 12 − 2x = 4x + 12."
+      1: "Astuce : remplace la lettre par sa valeur.\nExemple similaire : 3x + 2 pour x = 4 → 14.",
+      2: "Astuce : multiplie d'abord, puis soustrais.\nExemple similaire : 5x − 2 pour x = 3 → 13.",
+      3: "Astuce : carré = nombre × lui-même.\nExemple similaire : 9² = 81.",
+      4: "Astuce : carré d'abord, multiplication ensuite.\nExemple similaire : 2x² pour x = 3 → 2 × 9 = 18."
     }
+
   },
   angles5: {
     videos: [
@@ -159,36 +162,34 @@ window.AIDE_5E = {
       4: "Astuce : complémentaires = somme 90°.\nExemple similaire : l'un 18° → l'autre 90 − 18 = 72°."
     }
   },
-  relatifs: {
+  relatifs1: {
     videos: [
-      { u: "https://www.youtube.com/watch?v=WauL1kM2lmQ", t: "Repérer un nombre relatif" },
-      { u: "https://www.youtube.com/watch?v=4hRzrbn32V8", t: "Comparer des nombres relatifs" },
-      { u: "https://www.youtube.com/watch?v=I0NiW8GeHEY", t: "Additionner des nombres relatifs" },
-      { u: "https://www.youtube.com/watch?v=3YKQYLe93Yk", t: "Soustraire des nombres relatifs" }
+      { u: "https://www.youtube.com/watch?v=WauL1kM2lmQ", t: "Repérer un nombre relatif" }
     ],
     resume: [
-      { t: "Repérage et opposés", f: "A(3 ; −2)\nopposé de 6 : −6", d: "Dans le plan : abscisse (droite/gauche), ordonnée (haut/bas). Deux opposés sont de part et d'autre de 0, à la même distance." },
-      { t: "Comparer", f: "−7 < −2 < 0 < 3", d: "Tout négatif est plus petit que tout positif. Entre deux négatifs, le plus petit est le plus loin de 0." },
-      { t: "Additionner − soustraire", f: "(−5) + 8 = +3\n(−10) − (−4) = −6", d: "Même signe : on ajoute. Signes contraires : on soustrait et on garde le signe du plus loin de 0. Soustraire = ajouter l'opposé." }
+      { t: "Positifs et négatifs", f: "3,2 > 0 (positif)    −3,2 < 0 (négatif)", d: "Les nombres relatifs regroupent les positifs et les négatifs ; 0 est à la frontière." },
+      { t: "Opposé", f: "opposé de 6 : −6    opposé de −7 : 7", d: "Deux nombres opposés sont à la même distance de 0, de part et d'autre." },
+      { t: "Repérage", f: "A(3 ; −2) → 3 à droite, 2 en dessous", d: "Abscisse = horizontal (droite si positif), ordonnée = vertical (haut si positif)." }
     ],
     qs: [
-      "Astuce : même signe (−) → on ajoute et on garde le −.\nExemple similaire : (−2) + (−6) = −8.",
-      "Astuce : signes différents → on calcule la différence et on garde le signe du plus loin de 0.\nExemple similaire : (−9) + 5 = −4.",
-      "Astuce : sur la droite graduée, part de 6 et recule de 10 crans.\nExemple similaire : 4 − 9 = −5.",
+      "Astuce : sous 0 = négatif, au-dessus de 0 = positif.\nExemple similaire : −8 est un nombre négatif.",
+      "Astuce : regarde le signe devant le nombre.\nExemple similaire : +5,1 est positif, −5,1 est négatif.",
+      "Astuce : à gauche de l'origine = négatif.\nExemple similaire : 6 unités à gauche → −6.",
       "Astuce : l'opposé est à la même distance de 0, de l'autre côté.\nExemple similaire : l'opposé de −3 est 3.",
-      "Astuce : soustraire un négatif = ajouter le positif.\nExemple similaire : (−6) − (−9) = −6 + 9 = 3.",
-      "Astuce : place les nombres sur une droite graduée, le plus petit est à gauche.\nExemple similaire : entre −5 et −1, le plus petit est −5.",
       "Astuce : abscisse = horizontal (droite si positive), ordonnée = vertical (haut si positive).\nExemple similaire : B(−2 ; 4) est à gauche et en haut.",
-      "Astuce : procède de gauche à droite, un calcul à la fois.\nExemple similaire : −4 + 7 − 10 = 3 − 10 = −7.",
-      "Astuce : la distance à zéro de −5, c'est sa partie numérique (sans le signe).\nExemple similaire : distance à zéro de −9 : 9.",
-      "Astuce : part de la température initiale et enchaîne les variations.\nExemple similaire : départ −3, puis +10 puis −5 : −3 + 10 − 5 = +2.",
-      "Astuce : procède de gauche à droite, en gardant le signe à chaque étape.\nExemple similaire : 2 − 8 + 5 − 1 = −6 + 5 − 1 = −2.",
-      "Astuce : sur la droite graduée, ce qui est à droite est le plus grand.\nExemple similaire : −4 > −9, car −4 est plus proche de 0."
+      "Astuce : abscisse négative → à gauche ; ordonnée positive → en haut.\nExemple similaire : D(−6 ; 3) : à gauche et au-dessus.",
+      "Astuce : l'origine est le point de départ des deux axes.\nExemple similaire : l'origine du repère s'écrit O(0 ; 0).",
+      "Astuce : abscisse ET ordonnée négatives → en bas à gauche.\nExemple similaire : E(−1 ; −7) est en bas à gauche.",
+      "Astuce : l'opposé d'un négatif est un positif.\nExemple similaire : l'opposé de −12 est 12.",
+      "Astuce : la distance à 0 ignore le signe (partie numérique).\nExemple similaire : distance à 0 de −12 → 12.",
+      "Astuce : même abscisse → le segment est vertical.\nExemple similaire : A(−3 ; 2) et B(−3 ; 6) : segment vertical de 4 unités.",
+      "Astuce : compte les crans sur la droite graduée en partant de l'origine.\nExemple similaire : 3 à droite puis 5 en arrière → abscisse −2."
     ],
     genH: {
-      1: "Astuce : sur la droite graduée, part du premier nombre et avance/recule.\nExemple similaire : (−8) + 5 = −3.",
-      2: "Astuce : entre deux négatifs, le plus grand est le plus proche de 0.\nExemple similaire : entre −9 et −4, le plus grand est −4."
+      1: "Astuce : à gauche de l'origine = négatif.\nExemple similaire : 6 unités à gauche → −6.",
+      2: "Astuce : compte jusqu'à 0 puis jusqu'à l'autre point, et additionne.\nExemple similaire : de −3 à 4 → 3 + 4 = 7 unités."
     }
+
   },
   triangles5: {
     videos: [
@@ -222,129 +223,157 @@ window.AIDE_5E = {
       4: "Astuce : angles à la base = (180 − angle au sommet) ÷ 2.\nExemple similaire : sommet 60° → base = (180 − 60) ÷ 2 = 60° (triangle équilatéral)."
     }
   },
-  fractions: {
+  fractions1: {
     videos: [
       { u: "https://www.youtube.com/watch?v=RJwAP3LNPqA", t: "Fractions égales et simplification" },
-      { u: "https://www.youtube.com/watch?v=Kgy1Uv0KAdY", t: "Comparer une fraction à l'unité" },
-      { u: "https://www.youtube.com/watch?v=K7e_5LJdKPE", t: "Additionner des fractions de dénominateurs différents" }
+      { u: "https://www.youtube.com/watch?v=Kgy1Uv0KAdY", t: "Comparer une fraction à l'unité" }
     ],
     resume: [
-      { t: "Addition / soustraction", f: "2/3 + 1/6 = 4/6 + 1/6 = 5/6", d: "On met d'abord au même dénominateur, puis on additionne les numérateurs." },
-      { t: "Fraction d'une quantité", f: "2/3 de 60 = 60 × 2 = 120 → ÷ 3 = 40", d: "« 2/3 de 60 » : on multiplie par le numérateur puis on divise par le dénominateur (ou l'inverse, le résultat est le même)." },
-      { t: "Simplification", f: "12/18 = 2/3   (÷6)", d: "On divise numérateur et dénominateur par un même nombre, jusqu'à la fraction irréductible." }
+      { t: "Fractions égales", f: "12/18 = 2/3   (÷6)", d: "On divise (ou multiplie) numérateur et dénominateur par le même nombre." },
+      { t: "Comparer à l'unité", f: "3/4 < 1    5/4 > 1", d: "Numérateur < dénominateur : la fraction est plus petite que 1 (et inversement)." },
+      { t: "Comparer deux fractions", f: "2/5 = 6/15 et 1/3 = 5/15 → 2/5 > 1/3", d: "On met au même dénominateur (ou au même numérateur) et on compare." }
     ],
     qs: [
       "Astuce : cherche le plus grand diviseur commun.\nExemple similaire : 15/25 = 3/5 (÷5).",
-      "Astuce : dénominateurs égaux → additionne simplement les numérateurs.\nExemple similaire : 2/5 + 1/5 = 3/5.",
+      "Astuce : même numérateur → le plus petit dénominateur gagne.\nExemple similaire : 2/3 > 2/7.",
       "Astuce : cherche une fraction égale en divisant numérateur et dénominateur.\nExemple similaire : 4/8 = 1/2 et 3/6 = 1/2.",
-      "Astuce : dénominateur commun 6 ici : 2/3 = 4/6.\nExemple similaire : 1/2 + 1/3 = 3/6 + 2/6 = 5/6.",
-      "Astuce : 3/4 = 6/8 : mets au même dénominateur puis additionne.\nExemple similaire : 1/4 + 1/8 = 2/8 + 1/8 = 3/8.",
+      "Astuce : même dénominateur → compare les numérateurs.\nExemple similaire : 4/9 < 6/9.",
       "Astuce : mets tout au même dénominateur pour comparer.\nExemple similaire : 1/2 = 4/8 et 5/8 : le plus grand est 5/8.",
-      "Astuce : dénominateur commun 18.\nExemple similaire : 3/4 − 1/6 = 9/12 − 2/12 = 7/12.",
-      "Astuce : « de » signifie « fois ».\nExemple similaire : 2/3 de 90 = 2/3 × 90 = 60.",
-      "Astuce : 1/3 = 2/6, même dénominateur puis soustrais.\nExemple similaire : 3/4 − 1/2 = 3/4 − 2/4 = 1/4.",
-      "Astuce : écris 1 = 8/8 (même dénominateur), puis soustrais.\nExemple similaire : 1 − 2/5 = 5/5 − 2/5 = 3/5.",
-      "Astuce : 1/5 = 2/10 : détecte le dénominateur commun qui simplifie tout.\nExemple similaire : 1/2 + 3/10 = 5/10 + 3/10 = 8/10 = 4/5.",
-      "Astuce : fraction restante = 1 − fractions mangées.\nExemple similaire : 1/2 + 1/4 mangés → reste 1/4."
+      "Astuce : une fraction est plus petite que 1 si son numérateur est plus petit que son dénominateur.\nExemple similaire : 5/6 < 1 < 9/8.",
+      "Astuce : même numérateur → plus petit dénominateur = plus grande fraction.\nExemple similaire : 3/5 > 3/8.",
+      "Astuce : mets au même dénominateur, puis compare les numérateurs.\nExemple similaire : 2/3 = 6/9 > 5/9.",
+      "Astuce : cherche le plus grand diviseur commun, puis divise les deux termes.\nExemple similaire : 15/25 = 3/5 (÷5).",
+      "Astuce : met les trois fractions au même dénominateur avant d'ordonner.\nExemple similaire : 1/2 = 2/4 < 3/4 < 4/4.",
+      "Astuce : dénominateur commun, puis compare.\nExemple similaire : 1/2 = 3/6 > 2/6 = 1/3."
     ],
     genH: {
-      1: "Astuce : divise numérateur et dénominateur par le même nombre.\nExemple similaire : 20/35 = 4/7 (÷5)."
+      1: "Astuce : cherche le plus grand diviseur commun.\nExemple similaire : 15/25 = 3/5 (÷5).",
+      2: "Astuce : même dénominateur → compare les numérateurs.\nExemple similaire : 3/7 < 5/7."
     }
+
   },
   parallelogrammes5: {
     videos: [
       { u: "https://www.youtube.com/watch?v=4dGM22L9030", t: "Le parallélogramme" },
       { u: "https://www.youtube.com/watch?v=hUoaHWdYi_8", t: "Reconnaître un parallélogramme" },
-      { u: "https://www.youtube.com/watch?v=e-baAiHlypg", t: "Parallélogrammes particuliers" },
-      { u: "https://www.youtube.com/watch?v=y2UKmaVd0WI", t: "Carré, rectangle, losange : définitions et propriétés" },
       { u: "https://www.youtube.com/watch?v=DRGJ2Y_TyCI", t: "Construire un parallélogramme au compas" },
       { u: "https://www.youtube.com/watch?v=RrdxZu9l1_8", t: "Construire un parallélogramme règle et équerre" },
       { u: "https://www.youtube.com/watch?v=ctVWi7FakFc", t: "Construire un parallélogramme sur quadrillage" }
     ],
     resume: [
-      { t: "Parallélogramme", f: "côtés opposés ∥ et égaux", d: "Diagonales coupées en leur milieu (= centre de symétrie) ; angles opposés égaux ; angles consécutifs supplémentaires." },
-      { t: "Rectangle", f: "parallélogramme + angle droit", d: "4 angles droits ; diagonales de MÊME longueur." },
-      { t: "Losange", f: "parallélogramme + 4 côtés égaux", d: "Diagonales PERPENDICULAIRES." },
-      { t: "Carré et aires", f: "carré = rectangle + losange", d: "Aire d'un parallélogramme = base × hauteur ; aire d'un losange = d₁ × d₂ ÷ 2." }
+      { t: "Parallélogramme", f: "côtés opposés ∥ et de même longueur", d: "Son centre de symétrie est l'intersection des diagonales." },
+      { t: "Diagonales", f: "[AC] et [BD] se coupent en leur milieu", d: "OA = OC et OB = OD dans tout parallélogramme." },
+      { t: "Angles", f: "opposés égaux    consécutifs : 180°", d: "Deux angles consécutifs sont supplémentaires." }
     ],
     qs: [
-      "Astuce : diagonales coupées en leur milieu = propriété de TOUS les parallélogrammes.\nExemple similaire : des diagonales de même longueur → rectangle, pas tous les parallélogrammes.",
-      "Astuce : 4 angles droits = rectangle ; 4 côtés égaux = losange ; les deux à la fois = carré.\nExemple similaire : côtés de 5 cm partout et 4 angles droits → carré.",
+      "Astuce : diagonales coupées en leur milieu = propriété de TOUS les parallélogrammes.\nExemple similaire : dans un parallélogramme ABCD, O est à la fois le milieu de [AC] et de [BD].",
       "Astuce : parallélogramme = côtés opposés PARALLÈLES, donc de même longueur.\nExemple similaire : [AB] et [DC] parallèles et AB = DC.",
-      "Astuce : losange = 4 côtés égaux ET diagonales perpendiculaires. Les angles droits sont pour le carré.\nExemple similaire : « diagonales de même longueur » → rectangle.",
+      "Astuce : si les diagonales se coupent en leur milieu, c'est un parallélogramme.\nExemple similaire : un quadrilatère dont O est le milieu des deux diagonales → parallélogramme.",
       "Astuce : côté opposé = même longueur ; périmètre = 2 × (a + b).\nExemple similaire : côtés 6 cm et 3 cm → 2 × (6 + 3) = 18 cm.",
       "Astuce : angles opposés égaux ; angles consécutifs supplémentaires (somme 180°).\nExemple similaire : angles de 120° et 60° en vis-à-vis.",
+      "Astuce : O est le milieu des deux diagonales → OA = OC et OB = OD.\nExemple similaire : OB = 5 → OD = 5.",
       "Astuce : les angles opposés d'un parallélogramme sont ÉGAUX.\nExemple similaire : l'un 72° → l'opposé 72°.",
-      "Astuce : un angle droit dans un parallélogramme → les quatre angles sont droits (rectangle).\nExemple similaire : un losange avec un angle droit serait un carré.",
-      "Astuce : aire = base × hauteur (la hauteur : perpendiculaire du sommet à la base).\nExemple similaire : base 6 cm, hauteur 4 cm → 24 cm².",
+      "Astuce : les côtés opposés sont égaux : AB = CD.\nExemple similaire : BC = 7 → DA = 7.",
       "Astuce : angles consécutifs = supplémentaires → 180 − angle.\nExemple similaire : angle 70° → consécutif 110°.",
-      "Astuce : diagonales perpendiculaires = losange ; diagonales de même longueur = rectangle.\nExemple similaire : un losange avec des diagonales ⊥ et de même longueur → carré.",
-      "Astuce : aire du losange = d₁ × d₂ ÷ 2.\nExemple similaire : diagonales 10 et 4 cm → 10 × 4 ÷ 2 = 20 cm²."
+      "Astuce : A et B sont consécutifs → angle B = 180 − angle A.\nExemple similaire : angle A = 130° → angle B = 50°."
     ],
     genH: {
       1: "Astuce : les angles opposés d'un parallélogramme sont égaux.\nExemple similaire : l'un 84° → l'opposé 84°.",
       2: "Astuce : angles consécutifs supplémentaires : 180 − angle.\nExemple similaire : angle 98° → consécutif 82°.",
-      3: "Astuce : aire du parallélogramme = base × hauteur.\nExemple similaire : base 11 cm, hauteur 3 cm → 33 cm².",
-      4: "Astuce : aire du losange = d₁ × d₂ ÷ 2.\nExemple similaire : diagonales 8 et 5 cm → 20 cm²."
     }
+
   },
-  espace5: {
+  litteral9: {
     videos: [
-      { u: "https://www.youtube.com/watch?v=Ao8cRWT_ELY", t: "Volume d'un prisme et d'un cylindre" }
+      { u: "https://www.youtube.com/watch?v=eBPOd0bTBro", t: "Simplifier une expression" },
+      { u: "https://www.youtube.com/watch?v=xZCXVgGT_Bk", t: "Tester une égalité" }
     ],
     resume: [
-      { t: "Volume du pavé", f: "V = L × l × h", d: "cube : V = arête³\nex : 4 × 3 × 5 = 60 cm³" },
-      { t: "Prisme et cylindre", f: "V = (aire de la base) × hauteur", d: "cylindre : V = π × r² × h\nex : r = 3, h = 10 → 282,6 cm³" },
-      { t: "Volumes et litres", f: "1 L = 1 dm³", d: "1 m³ = 1 000 L\n2,5 m³ = 2 500 L" }
+      { t: "Développer", f: "3 × (x + 2) = 3x + 6", d: "On distribue le facteur à chaque terme de la parenthèse." },
+      { t: "Réduire", f: "4x + 3 + 5x = 9x + 3", d: "On regroupe les termes semblables (les x entre eux, les nombres entre eux)." },
+      { t: "Tester une égalité", f: "3 × (x + 1) = 3x + 3", d: "On remplace x par une valeur et on compare les deux membres." }
     ],
     qs: [
-      "Astuce : multiplie les trois dimensions.\nExemple similaire : 2 × 3 × 4 = 24 cm³.",
-      "Astuce : prisme = aire de la base × hauteur.\nExemple similaire : disque r = 1, h = 5 → 3,14 × 5 = 15,7 cm³.",
-      "Astuce : cherche l'arête a : V = a³.\nExemple similaire : 27 = 3 × 3 × 3 → arête 3 cm.",
-      "Astuce : 1 m³ = 1000 L.\nExemple similaire : 1,2 m³ = 1200 L.",
-      "Astuce : compte les arêtes du dessin en perspective : 4 en bas, 4 en haut, 4 verticales.\nExemple similaire : un cube (pavé régulier) a aussi 12 arêtes.",
-      "Astuce : le cube est un pavé dont les 3 dimensions sont égales.\nExemple similaire : arête 2 cm → 2 × 2 × 2 = 8 cm³.",
-      "Astuce : volume du pavé = produit des trois dimensions.\nExemple similaire : 4 × 3 × 5 = 60 cm³.",
-      "Astuce : d'abord l'aire du disque de base (π × r²), puis × hauteur.\nExemple similaire : rayon 2, hauteur 10 → 3,14 × 4 × 10 = 125,6 cm³.",
-      "Astuce : h = V ÷ (L × l).\nExemple similaire : V = 48, L = 6, l = 2 → h = 4 cm.",
-      "Astuce : 1 L = 1 dm³ ; pour passer de dm³ à cm³ on multiplie par 1 000.\nExemple similaire : 2 L = 2 000 cm³.",
-      "Astuce : prisme comme cylindre : V = (aire de la base) × hauteur.\nExemple similaire : base 25 cm², hauteur 4 → 100 cm³.",
-      "Astuce : si chaque dimension est multipliée par k, le volume est multiplié par k × k × k.\nExemple similaire : dimensions triplées → volume ×27."
+      "Astuce : distribue le 3 aux deux termes.\nExemple similaire : 4 × (x + 5) = 4x + 20.",
+      "Astuce : regroupe les x entre eux, puis les nombres.\nExemple similaire : 6a + 2 + a = 7a + 2.",
+      "Astuce : distribue le 5 aux deux termes de la parenthèse.\nExemple similaire : 3 × (2 + b) = 6 + 3b.",
+      "Astuce : regroupe séparément les a et les nombres.\nExemple similaire : 5m + 3 + m + 4 = 6m + 7.",
+      "Astuce : développe d'abord, réduis ensuite.\nExemple similaire : 3(2x + 1) + 2x = 6x + 3 + 2x = 8x + 3.",
+      "Astuce : teste la distributivité : k(a − b) = ka − kb.\nExemple similaire : 4 × 7 − 4 × 2 = 20 = 4 × (7 − 2).",
+      "Astuce : factoriser = écrire un produit ; cherche le facteur commun.\nExemple similaire : 7x + 21 = 7(x + 3).",
+      "Astuce : développe, calcule les constantes, puis réduis les x.\nExemple similaire : 2(4x + 1) − 3x = 8x + 2 − 3x = 5x + 2.",
+      "Astuce : teste une égalité en remplaçant la lettre par une valeur, sans résoudre.\nExemple similaire : 4 × (x + 1) = 4x + 4, et non 4x + 1 : l'égalité est fausse pour tout x.",
+      "Astuce : applique la distributivité sans résoudre : 2 × (x + 5) = 2x + 10, qui n'est pas 2x + 5.\nExemple similaire : 3 × (x + 2) = 3x + 6, qui n'est pas 3x + 2 : l'égalité est fausse pour tout x.",
+      "Astuce : dévelope chaque parenthèse puis réduis les x et les nombres.\nExemple similaire : 2(3x + 1) + x = 6x + 2 + x = 7x + 2.",
+      "Astuce : périmètre du rectangle = 2 × (longueur + largeur).\nExemple similaire : largeur x, longueur x + 3 → P = 2(2x + 3) = 4x + 6."
     ],
     genH: {
-      2: "Astuce : multiplie les trois dimensions.\nExemple similaire : 3 × 4 × 5 = 60 cm³.",
-      3: "Astuce : V = π × r² × h.\nExemple : rayon 2, hauteur 10 → 3,14 × 4 × 10 = 125,6 cm³.",
-      4: "Astuce : dimensions × k → volume × k × k × k.\nExemple : k = 2 → volume ×8."
+      2: "Astuce : multiplie k par x (kx) et k par le nombre.\nExemple similaire : 4 × (x + 3) = 4x + 12.",
+      3: "Astuce : développe, calcule les constantes, puis réduis les x.\nExemple similaire : 3(2x + 4) − 2x = 6x + 12 − 2x = 4x + 12."
     }
+
   },
-  propo: {
+  espace1: {
     videos: [
-      { u: "https://www.youtube.com/watch?v=leBAfrIbAbk", t: "Le tableau de proportionnalité" },
-      { u: "https://www.youtube.com/watch?v=6MMvDOPKDOE", t: "Appliquer et calculer un pourcentage" }
+      { u: "https://www.youtube.com/watch?v=XBoNTs-5ko4", t: "Prismes : perspective cavalière (5ème)" },
+      { u: "https://www.youtube.com/watch?v=BI89OjsQjjo", t: "Patrons d'un pavé droit" }
     ],
     resume: [
-      { t: "Tableau de proportionnalité", f: "3 → 6 €\n1 → 2 €   (÷3)\n5 → 10 €  (×5)", d: "Le coefficient multiplie toute la colonne : passer par l'unité évite les erreurs." },
-      { t: "Pourcentages", f: "10 % de 80 = 80 × 10/100 = 8", d: "Repères : 50 % = moitié, 25 % = quart, 10 % = dixième. Sinon on multiplie par t/100." },
-      { t: "Graphique proportionnel", f: "points alignés avec l'origine (0 ; 0)", d: "Si les points ne sont pas alignés avec l'origine, la situation n'est pas proportionnelle." }
+      { t: "Pavé droit", f: "6 faces    12 arêtes    8 sommets", d: "Comme le cube, mais avec des faces rectangulaires de dimensions différentes." },
+      { t: "Perspective cavalière", f: "arêtes fuyantes : ÷2 à ~30°", d: "Arêtes de face : vraies longueurs ; fuyantes : raccourcies ; cachées : pointillés." },
+      { t: "Patron", f: "solide déplié → on plie pour reconstruire", d: "Exemple : le cylindre a un patron de 2 disques + 1 rectangle." }
+    ],
+    qs: [
+      "Astuce : compte les arêtes du dessin en perspective : 4 en bas, 4 en haut, 4 verticales.\nExemple similaire : un cube (pavé régulier) a aussi 12 arêtes.",
+      "Astuce : 3 paires de faces identiques → 6 faces ; tous les coins partagés → 8 sommets.\nExemple similaire : le cube a aussi 6 faces et 8 sommets.",
+      "Astuce : le cube a 6 faces carrées.\nExemple similaire : le dé d'un jeu de société.",
+      "Astuce : arête invisible = pointillé.\nExemple similaire : l'arête « du fond » d'un pavé est en pointillés.",
+      "Astuce : seules les arêtes fuyantes (profondeur) sont raccourcies.\nExemple similaire : la hauteur d'un pavé en perspective garde sa vraie longueur.",
+      "Astuce : patron = solide déplié, on plie pour le reconstruire.\nExemple similaire : une boîte d'allumettes ouverte à plat.",
+      "Astuce : fuyantes ≈ moitié de la vraie longueur, à ~30° de l'horizontale.\nExemple similaire : arête de 6 cm → dessinée ~3 cm.",
+      "Astuce : imagine le cylindre « déroulé » : 2 disques + un rectangle.\nExemple similaire : l'étiquette d'une boîte ronde est un rectangle.",
+      "Astuce : 2 bases triangulaires (3 sommets chacune) reliées par 3 faces rectangles.\nExemple similaire : la tente de camping (prisme triangulaire) a 6 sommets.",
+      "Astuce : c'est un résultat connu : 11 patrons non superposables.\nExemple similaire : on les obtient en plaçant les 6 carrés différemment.",
+      "Astuce : les 2 bases sont des triangles + 3 rectangles latéraux.\nExemple similaire : le patron a 5 faces en tout."
+    ],
+    genH: {
+      1: "Astuce : 4 arêtes en bas, 4 en haut, 4 verticales.\nExemple similaire : le pavé droit a aussi 12 arêtes.",
+      2: "Astuce : 2 bases + autant de rectangles que de côtés de la base.\nExemple similaire : base triangulaire → 3 + 2 = 5 faces.",
+      3: "Astuce : n arêtes par base + n arêtes verticales.\nExemple similaire : base à 4 côtés → 12 arêtes.",
+      4: "Astuce : 2 fois le nombre de sommets de la base.\nExemple similaire : base triangulaire → 6 sommets."
+    }
+
+  },
+  propo1: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=leBAfrIbAbk", t: "Le tableau de proportionnalité" }
+    ],
+    resume: [
+      { t: "Grandeurs proportionnelles", f: "valeurs × le même nombre", d: "Le coefficient de proportionnalité relie toutes les valeurs." },
+      { t: "Tableau", f: "3 → 6 €    1 → 2 €    5 → 10 €", d: "On peut passer par l'unité : prix d'un seul objet, puis on multiplie." },
+      { t: "Graphique", f: "points alignés AVEC (0 ; 0)", d: "Si les points ne passent pas par l'origine, ce n'est pas proportionnel." }
     ],
     qs: [
       "Astuce : cherche d'abord le prix d'UN objet.\nExemple similaire : 4 cahiers = 8 € → 1 = 2 € → 7 = 14 €.",
-      "Astuce : 10 % = diviser par 10.\nExemple similaire : 10 % de 50 = 5.",
-      "Astuce : 50 % = la moitié.\nExemple similaire : 50 % de 52 = 26.",
-      "Astuce : 25 % = un quart.\nExemple similaire : 25 % de 200 = 50.",
-      "Astuce : calcule l'augmentation, puis ajoute-la au prix initial.\nExemple similaire : 20 € + 20 % → 24 €.",
+      "Astuce : cherche le coefficient (la valeur d'un seul) puis multiplie.\nExemple similaire : 4 cahiers = 8 € → 1 = 2 € → 7 = 14 €.",
+      "Astuce : cherche d'abord le coefficient de la première colonne.\nExemple similaire : 2 → 10 (coefficient 5), donc 4 → 20.",
       "Astuce : cherche d'abord le prix d'UN kilo.\nExemple similaire : 2 kg = 3 € → 1 kg = 1,50 € → 5 kg = 7,50 €.",
+      "Astuce : même coefficient partout : quand l'entrée double, la sortie double.\nExemple similaire : 3 kg → 6 €, donc 6 kg → 12 €.",
       "Astuce : cherche d'abord la quantité par minute, puis multiplie.\nExemple similaire : 4 L en 2 min → 2 L/min → en 10 min : 20 L.",
       "Astuce : coefficient = 24 ÷ 15, applique-le à 40.\nExemple similaire : 6 kg pour 9 € → 10 kg pour 15 €.",
       "Astuce : divise par 6 pour le prix d'un seul, puis multiplie par 9.\nExemple similaire : 4 yaourts = 2,80 € → 9 = 6,30 €.",
-      "Astuce : cherche d'abord le nombre de filles (55 %), puis le complément.\nExemple similaire : 400 élèves dont 30 % en CM2 → 70 % ailleurs.",
-      "Astuce : pourcentage = (partie ÷ total) × 100.\nExemple similaire : 12 gagnants sur 30 → 12/30 = 40 %.",
-      "Astuce : pourcentage = (variation ÷ prix initial) × 100.\nExemple similaire : baisse de 20 € sur 80 € → 20/80 = 25 %."
+      "Astuce : cherche d'abord la valeur d'UNE unité, puis multiplie.\nExemple similaire : 4 L en 2 min → 2 L/min → 10 min : 20 L.",
+      "Astuce : points alignés avec l'origine = proportionnel.\nExemple similaire : une droite qui commence à (0 ; 0).",
+      "Astuce : passe par l'unité (500 g), puis compte les paquets.\nExemple similaire : 250 g = 3 € → 1 kg = 12 €.",
+      "Astuce : cherche la distance en 1 minute d'abord.\nExemple similaire : 30 cm en 2 min → 15 cm/min → 5 min : 75 cm."
     ],
     genH: {
-      2: "Astuce : multiplie par le pourcentage puis divise par 100.\nExemple similaire : 20 % de 45 = 9.",
-      3: "Astuce : multiplie p par t, puis divise par 100.\nExemple similaire : 25 % de 60 = 60 × 25 ÷ 100 = 15."
+      1: "Astuce : cherche le prix d'un seul objet d'abord.\nExemple similaire : 3 stylos = 9 € → 1 = 3 € → 6 stylos = 18 €.",
+      2: "Astuce : coefficient = valeur ÷ entrée, à appliquer partout.\nExemple similaire : 2 → 14 (coeff 7), donc 4 → 28.",
+      3: "Astuce : divise par les minutes pour avoir 1 minute, puis multiplie.\nExemple similaire : 6 L en 3 min → 2 L/min → 5 min : 10 L.",
+      4: "Astuce : vitesse = distance ÷ temps, puis multiplie par le nouveau temps.\nExemple similaire : 60 cm en 4 min → 15 cm/min → 6 min : 90 cm."
     }
+
   },
   droitesrem5: {
     videos: [
@@ -372,6 +401,37 @@ window.AIDE_5E = {
     ],
     genH: {
       2: "Astuce : sur la médiatrice, les distances aux deux extrémités sont égales.\nExemple : MA = 5 → MB = 5."
+    }
+  },
+  relatifs2: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=4hRzrbn32V8", t: "Comparer des nombres relatifs" },
+      { u: "https://www.youtube.com/watch?v=I0NiW8GeHEY", t: "Additionner des nombres relatifs" },
+      { u: "https://www.youtube.com/watch?v=3YKQYLe93Yk", t: "Soustraire des nombres relatifs" }
+    ],
+    resume: [
+      { t: "Comparer", f: "−7 < −2 < 0 < 3", d: "Sur la droite graduée, ce qui est à gauche est plus petit ; entre négatifs, le plus petit est le plus loin de 0." },
+      { t: "Additionner", f: "(−3) + (−5) = −8    (−7) + 4 = −3", d: "Même signe : on ajoute et on garde le signe. Signes différents : on soustrait et on garde le signe du plus loin de 0." },
+      { t: "Soustraire", f: "(−10) − (−4) = −10 + 4 = −6", d: "Soustraire un nombre = additionner son opposé." }
+    ],
+    qs: [
+      "Astuce : même signe (−) → on ajoute et on garde le −.\nExemple similaire : (−2) + (−6) = −8.",
+      "Astuce : signes différents → on calcule la différence et on garde le signe du plus loin de 0.\nExemple similaire : (−9) + 5 = −4.",
+      "Astuce : sur la droite graduée, part de 6 et recule de 10 crans.\nExemple similaire : 4 − 9 = −5.",
+      "Astuce : deux négatifs s'additionnent : on ajoute les valeurs et on garde le −.\nExemple similaire : (−2) + (−6) = −8.",
+      "Astuce : soustraire un négatif = ajouter le positif.\nExemple similaire : (−6) − (−9) = −6 + 9 = 3.",
+      "Astuce : place les nombres sur une droite graduée, le plus petit est à gauche.\nExemple similaire : entre −5 et −1, le plus petit est −5.",
+      "Astuce : place les nombres sur une droite graduée, le plus petit est le plus à gauche.\nExemple similaire : entre −9 et −2, le plus petit est −9.",
+      "Astuce : procède de gauche à droite, un calcul à la fois.\nExemple similaire : −4 + 7 − 10 = 3 − 10 = −7.",
+      "Astuce : la distance à zéro de −5, c'est sa partie numérique (sans le signe).\nExemple similaire : distance à zéro de −9 : 9.",
+      "Astuce : enchaîne de gauche à droite, une opération à la fois.\nExemple similaire : (−4) − 3 + 9 → −7 + 9 = 2.",
+      "Astuce : part de la température initiale et enchaîne les variations.\nExemple similaire : départ −3, puis +10 puis −5 : −3 + 10 − 5 = +2.",
+      "Astuce : procède de gauche à droite, en gardant le signe à chaque étape.\nExemple similaire : 2 − 8 + 5 − 1 = −6 + 5 − 1 = −2.",
+      "Astuce : sur la droite graduée, ce qui est à droite est le plus grand.\nExemple similaire : −4 > −9, car −4 est plus proche de 0."
+    ],
+    genH: {
+      1: "Astuce : sur la droite graduée, part du premier nombre et avance/recule.\nExemple similaire : (−8) + 5 = −3.",
+      2: "Astuce : entre deux négatifs, le plus grand est le plus proche de 0.\nExemple similaire : entre −9 et −4, le plus grand est −4."
     }
   },
   stats5: {
@@ -438,6 +498,93 @@ window.AIDE_5E = {
       2: "Astuce : A = (base × hauteur) ÷ 2.\nExemple : base 8, hauteur 6 → 48 ÷ 2 = 24 cm²."
     }
   },
+  fractions2: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=K7e_5LJdKPE", t: "Additionner des fractions de dénominateurs différents" }
+    ],
+    resume: [
+      { t: "Même dénominateur", f: "1/4 + 2/4 = 3/4", d: "On additionne (ou soustrait) seulement les numérateurs." },
+      { t: "Dénominateurs multiples", f: "2/3 + 1/6 = 4/6 + 1/6 = 5/6", d: "1/4 = 2/8 et 1/3 = 2/6 : on transforme avant d'opérer." },
+      { t: "Manque pour l'unité", f: "1 − 3/8 = 8/8 − 3/8 = 5/8", d: "On écrit 1 = b/b avec b le dénominateur commun." }
+    ],
+    qs: [
+      "Astuce : dénominateurs égaux → additionne simplement les numérateurs.\nExemple similaire : 2/5 + 1/5 = 3/5.",
+      "Astuce : dénominateurs égaux → additionne les numérateurs.\nExemple similaire : 1/5 + 2/5 = 3/5.",
+      "Astuce : même dénominateur → soustrais les numérateurs.\nExemple similaire : 5/6 − 2/6 = 3/6 = 1/2.",
+      "Astuce : dénominateur commun 6 ici : 2/3 = 4/6.\nExemple similaire : 1/2 + 1/3 = 3/6 + 2/6 = 5/6.",
+      "Astuce : 3/4 = 6/8 : mets au même dénominateur puis additionne.\nExemple similaire : 1/4 + 1/8 = 2/8 + 1/8 = 3/8.",
+      "Astuce : 1/3 = 2/6 → mets tout en sixièmes.\nExemple similaire : 1/4 + 1/8 = 2/8 + 1/8 = 3/8.",
+      "Astuce : dénominateur commun 18.\nExemple similaire : 3/4 − 1/6 = 9/12 − 2/12 = 7/12.",
+      "Astuce : 1/3 = 2/6, même dénominateur puis soustrais.\nExemple similaire : 3/4 − 1/2 = 3/4 − 2/4 = 1/4.",
+      "Astuce : écris 1 = 8/8 (même dénominateur), puis soustrais.\nExemple similaire : 1 − 2/5 = 5/5 − 2/5 = 3/5.",
+      "Astuce : 1/5 = 2/10 : détecte le dénominateur commun qui simplifie tout.\nExemple similaire : 1/2 + 3/10 = 5/10 + 3/10 = 8/10 = 4/5.",
+      "Astuce : fraction restante = 1 − fractions mangées.\nExemple similaire : 1/2 + 1/4 mangés → reste 1/4."
+    ],
+    genH: {
+      1: "Astuce : même dénominateur → opère sur les numérateurs.\nExemple similaire : 1/6 + 4/6 = 5/6.",
+      2: "Astuce : double le premier dénominateur pour l'aligner.\nExemple similaire : 1/4 + 3/8 = 2/8 + 3/8 = 5/8."
+    }
+
+  },
+  propo2: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=6MMvDOPKDOE", t: "Appliquer et calculer un pourcentage" },
+      { u: "https://www.youtube.com/watch?v=l88QVVAAdhs", t: "Augmenter d'un pourcentage" },
+      { u: "https://www.youtube.com/watch?v=lJZ_cQ-hiT8", t: "Diminuer d'un pourcentage" }
+    ],
+    resume: [
+      { t: "Pourcentage", f: "10 % de 80 = 80 × 10/100 = 8", d: "Prendre t % = multiplier par t/100 (25 % = ÷ 4 ; 50 % = moitié)." },
+      { t: "Augmenter / baisser", f: "20 € + 20 % → 20 + 4 = 24 €", d: "On calcule d'abord la part, puis on l'ajoute (ou on la retire)." },
+      { t: "Fraction d'une quantité", f: "2/3 de 60 = 60 × 2 ÷ 3 = 40", d: "« de » se traduit par une multiplication." }
+    ],
+    qs: [
+      "Astuce : 10 % = diviser par 10.\nExemple similaire : 10 % de 50 = 5.",
+      "Astuce : 50 % = la moitié.\nExemple similaire : 50 % de 52 = 26.",
+      "Astuce : 25 % = un quart.\nExemple similaire : 25 % de 200 = 50.",
+      "Astuce : calcule l'augmentation, puis ajoute-la au prix initial.\nExemple similaire : 20 € + 20 % → 24 €.",
+      "Astuce : « de » signifie « fois ».\nExemple similaire : 2/3 de 90 = 2/3 × 90 = 60.",
+      "Astuce : multiplie le total par le pourcentage ÷ 100.\nExemple similaire : 25 % de 12 élèves → 12 × 25 ÷ 100 = 3.",
+      "Astuce : cherche d'abord le nombre de filles (55 %), puis le complément.\nExemple similaire : 400 élèves dont 30 % en CM2 → 70 % ailleurs.",
+      "Astuce : pourcentage = (partie ÷ total) × 100.\nExemple similaire : 12 gagnants sur 30 → 12/30 = 40 %.",
+      "Astuce : pourcentage = (variation ÷ prix initial) × 100.\nExemple similaire : baisse de 20 € sur 80 € → 20/80 = 25 %.",
+      "Astuce : calcule la baisse en €, puis soustrais-la du prix.\nExemple similaire : 60 € − 10 % → baisse 6 € → reste 54 €."
+    ],
+    genH: {
+      2: "Astuce : multiplie par le pourcentage puis divise par 100.\nExemple similaire : 20 % de 45 = 9.",
+      3: "Astuce : multiplie p par t, puis divise par 100.\nExemple similaire : 25 % de 60 = 60 × 25 ÷ 100 = 15."
+    }
+  },
+  parallelogrammes2: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=e-baAiHlypg", t: "Parallélogrammes particuliers" },
+      { u: "https://www.youtube.com/watch?v=y2UKmaVd0WI", t: "Carré, rectangle, losange : définitions et propriétés" }
+    ],
+    resume: [
+      { t: "Rectangle", f: "parallélogramme + 4 angles droits", d: "Ses diagonales sont de même longueur." },
+      { t: "Losange", f: "parallélogramme + 4 côtés égaux", d: "Ses diagonales sont perpendiculaires." },
+      { t: "Carré", f: "rectangle ET losange", d: "4 côtés égaux ET 4 angles droits." },
+      { t: "Aires", f: "parallélogramme : b × h    losange : d₁ × d₂ ÷ 2", d: "La hauteur est perpendiculaire à la base ; le losange : (d₁ × d₂) ÷ 2." }
+    ],
+    qs: [
+      "Astuce : 4 angles droits = rectangle ; 4 côtés égaux = losange ; les deux à la fois = carré.\nExemple similaire : côtés de 5 cm partout et 4 angles droits → carré.",
+      "Astuce : losange = 4 côtés égaux ET diagonales perpendiculaires. Les angles droits sont pour le carré.\nExemple similaire : « diagonales de même longueur » → rectangle.",
+      "Astuce : un angle droit dans un parallélogramme → les quatre angles sont droits (rectangle).\nExemple similaire : un losange avec un angle droit serait un carré.",
+      "Astuce : diagonales perpendiculaires = losange ; diagonales de même longueur = rectangle.\nExemple similaire : un losange avec des diagonales ⊥ et de même longueur → carré.",
+      "Astuce : aire = base × hauteur (la hauteur : perpendiculaire du sommet à la base).\nExemple similaire : base 6 cm, hauteur 4 cm → 24 cm².",
+      "Astuce : aire du losange = d₁ × d₂ ÷ 2.\nExemple similaire : diagonales 10 et 4 cm → 10 × 4 ÷ 2 = 20 cm².",
+      "Astuce : un rectangle a 4 angles droits (et des diagonales de même longueur).\nExemple similaire : côtés 3 et 8 avec 4 angles droits → rectangle.",
+      "Astuce : 4 côtés égaux sans angle droit → au moins un losange (s'il avait des angles droits, ce serait un carré).\nExemple similaire : côtés 4, 4, 4, 4 sans angle droit → losange.",
+      "Astuce : dans un rectangle, les diagonales sont égales (pas perpendiculaires en général).\nExemple similaire : diagonales de 10 cm toutes les deux → rectangle.",
+      "Astuce : le carré cumule rectangle ET losange.\nExemple similaire : tout carré est un rectangle et un losange."
+    ],
+    genH: {
+      1: "Astuce : aire du rectangle = longueur × largeur.\nExemple similaire : 5 × 3 = 15 cm².",
+      2: "Astuce : 4 côtés égaux = losange, 4 angles droits = rectangle, les deux = carré.\nExemple similaire : côtés égaux + un angle droit = carré.",
+      3: "Astuce : aire = base × hauteur.\nExemple similaire : base 5 cm, hauteur 3 cm → 15 cm².",
+      4: "Astuce : aire du losange = d₁ × d₂ ÷ 2.\nExemple similaire : diagonales 8 et 6 → 8 × 6 ÷ 2 = 24 cm²."
+    }
+
+  },
   equations5: {
     videos: [
       { u: "https://www.youtube.com/watch?v=6gy3DH19Ifk", t: "Équation x + a = b" },
@@ -467,6 +614,35 @@ window.AIDE_5E = {
       2: "Astuce : x = résultat total ÷ facteur.\nExemple similaire : 5 × x = 40 → x = 8.",
       3: "Astuce : calcule l'opérateur du membre de droite d'abord, puis soustrais.\nExemple similaire : x + 6 = 4 × 5 → x = 20 − 6 = 14.",
       4: "Astuce : isole le produit (+ côté droit), puis divise.\nExemple similaire : 4 × x − 6 = 14 → 4 × x = 20 → x = 5."
+    }
+  },
+  espace2: {
+    videos: [
+      { u: "https://www.youtube.com/watch?v=Ao8cRWT_ELY", t: "Volume d'un prisme et d'un cylindre" }
+    ],
+    resume: [
+      { t: "Volume du pavé", f: "V = L × l × h", d: "cube : V = arête³\nex : 4 × 3 × 5 = 60 cm³" },
+      { t: "Prisme et cylindre", f: "V = (aire de la base) × hauteur", d: "cylindre : V = π × r² × h\nex : r = 3, h = 10 → 282,6 cm³" },
+      { t: "Volumes et litres", f: "1 L = 1 dm³", d: "1 m³ = 1 000 L\n2,5 m³ = 2 500 L" }
+    ],
+    qs: [
+      "Astuce : volume du pavé = longueur × largeur × hauteur.\nExemple similaire : 3 × 2 × 4 = 24 cm³.",
+      "Astuce : arête × arête × arête.\nExemple similaire : arête 2 cm → 2 × 2 × 2 = 8 cm³.",
+      "Astuce : multiplie les trois dimensions.\nExemple similaire : 2 × 3 × 4 = 24 cm³.",
+      "Astuce : volume du pavé = produit des trois dimensions.\nExemple similaire : 4 × 3 × 5 = 60 cm³.",
+      "Astuce : d'abord l'aire du disque de base (π × r²), puis × hauteur.\nExemple similaire : rayon 2, hauteur 10 → 3,14 × 4 × 10 = 125,6 cm³.",
+      "Astuce : d'abord l'aire du disque de base (π × r²), puis × hauteur.\nExemple similaire : rayon 2, hauteur 10 → 3,14 × 4 × 10 = 125,6 cm³.",
+      "Astuce : cherche l'arête a : V = a³.\nExemple similaire : 27 = 3 × 3 × 3 → arête 3 cm.",
+      "Astuce : h = V ÷ (L × l).\nExemple similaire : V = 48, L = 6, l = 2 → h = 4 cm.",
+      "Astuce : 1 L = 1 dm³ ; pour passer de dm³ à cm³ on multiplie par 1 000.\nExemple similaire : 2 L = 2 000 cm³.",
+      "Astuce : 1 m³ = 1000 L.\nExemple similaire : 1,2 m³ = 1200 L.",
+      "Astuce : prisme comme cylindre : V = (aire de la base) × hauteur.\nExemple similaire : base 25 cm², hauteur 4 → 100 cm³.",
+      "Astuce : si chaque dimension est multipliée par k, le volume est multiplié par k × k × k.\nExemple similaire : dimensions triplées → volume ×27."
+    ],
+    genH: {
+      2: "Astuce : multiplie les trois dimensions.\nExemple similaire : 3 × 4 × 5 = 60 cm³.",
+      3: "Astuce : V = π × r² × h.\nExemple : rayon 2, hauteur 10 → 3,14 × 4 × 10 = 125,6 cm³.",
+      4: "Astuce : dimensions × k → volume × k × k × k.\nExemple : k = 2 → volume ×8."
     }
   },
   proba5: {
