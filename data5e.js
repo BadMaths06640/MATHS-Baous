@@ -2,9 +2,9 @@
 window.BANK_5E = {
   themes: [
     {
-      id: "calc", titre: "Opérations sur les décimaux (1) : priorités de calcul", icone: "🧮",
+      id: "calc", titre: "Opérations sur les nombres décimaux", icone: "🧮",
       chap: [1],
-      notion: "Sans parenthèses : on calcule d'abord × et ÷, puis + et − de gauche à droite.\nAvec des parenthèses : on calcule d'abord l'intérieur des parenthèses (et des crochets).\nUne barre de fraction joue le rôle de parenthèses.",
+      notion: "Sans parenthèses : on calcule d'abord × et ÷, puis + et − de gauche à droite.\nAvec des parenthèses : on calcule d'abord l'intérieur des parenthèses (et des crochets).\nUne barre de fraction joue le rôle de parenthèses.\nDivision euclidienne de a par b : a = b × q + r avec 0 ≤ r < b (q quotient entier, r reste).\nb est un diviseur de a quand le reste est nul (alors a est un multiple de b).\nCritères : par 2 (chiffre des unités pair) · par 5 (finit par 0 ou 5) · par 4 (la moitié du nombre est paire) · par 3 et 9 (somme des chiffres multiple de 3 ou 9).\nNombre premier : exactement deux diviseurs (1 et lui-même). 1 n'est pas premier ; 2 est le seul premier pair.",
       qs: [
         { d: 1, q: "Calculer : 3 + 5 × 2", c: ["16","13","11","10"], a: 1, e: "On fait d'abord la multiplication : 5 × 2 = 10, puis l'addition : 3 + 10 = 13." },
         { d: 1, q: "Calculer : 20 − 8 ÷ 2", c: ["6","14","16","24"], a: 2, e: "On fait d'abord la division : 8 ÷ 2 = 4, puis la soustraction : 20 − 4 = 16." },
@@ -18,6 +18,15 @@ window.BANK_5E = {
         { d: 4, q: "Calculer : (4 + 2 × 3) × (8 − 2 × 3)", c: ["20","8","26","14"], a: 0, e: "Première parenthèse : 2 × 3 = 6, donc 4 + 6 = 10. Seconde parenthèse : 2 × 3 = 6, donc 8 − 6 = 2. Produit : 10 × 2 = 20." },
         { d: 4, q: "Calculer : 7 − 2 × [ 12 ÷ (1 + 5) ]", a: "3", e: "Parenthèse : 1 + 5 = 6. Crochets : 12 ÷ 6 = 2, puis 2 × 2 = 4. Puis 7 − 4 = 3." },
         { d: 4, q: "Quelle expression est égale à 15 ?", c: ["(2 + 3) × 4 − 5","2 + 3 × (4 + 5)","2 × (3 + 4) + 5","2 + 5 × 3 + 1"], a: 0, e: "(2 + 3) × 4 − 5 = 5 × 4 − 5 = 20 − 5 = 15. Vérifie les autres : 2 + 3 × 9 = 29 ; 2 × 7 + 5 = 19 ; 2 + 15 + 1 = 18." },
+        { d: 1, q: "Dans la division euclidienne de 23 par 5, le reste vaut...", c: ["3","2","4","0"], a: 0, e: "23 = 5 × 4 + 3 avec 3 < 5 : le quotient est 4 et le reste est 3." },
+        { d: 1, q: "Parmi ces nombres, lequel est un multiple de 7 ?", c: ["42","50","45","64"], a: 0, e: "42 = 7 × 6 : c'est un multiple de 7. 50 = 2 × 25, 64 = 2 × 32, et 45 n'est pas 7 × entier." },
+        { d: 2, q: "4 est-il un diviseur de 34 ?", c: ["Non, car 34 = 4 × 8 + 2","Oui, car 34 = 4 × 8","Oui, car 34 est pair","Non, car 34 est impair"], a: 0, e: "34 = 4 × 8 + 2 : le reste est 2 (non nul), donc 4 n'est pas un diviseur de 34." },
+        { d: 2, q: "147 est-il divisible par 3 ?", c: ["Oui, car 1 + 4 + 7 = 12","Non, car il finit par 7","Oui, car il est impair","Non, aucun critère ne s'applique"], a: 0, e: "1 + 4 + 7 = 12 est multiple de 3 : 147 = 3 × 49." },
+        { d: 2, q: "Parmi ces nombres, lequel est divisible par 9 ?", c: ["531","124","322","451"], a: 0, e: "5 + 3 + 1 = 9 : 531 est divisible par 9 (531 = 9 × 59). Pour 124, 322 et 451, la somme des chiffres n'est ni 9 ni 18." },
+        { d: 2, q: "Combien un nombre entier admet-il de diviseurs « évidents » au minimum ?", c: ["2","1","0","4"], a: 0, e: "Tout entier admet au moins deux diviseurs : 1 et lui-même." },
+        { d: 3, q: "Laquelle de ces divisions a un reste nul ?", c: ["546 ÷ 7","546 ÷ 9","487 ÷ 7","926 ÷ 7"], a: 0, e: "546 = 7 × 78 (reste 0). 546 ÷ 9 : 5 + 4 + 6 = 15, pas multiple de 9. 487 = 7 × 69 + 4 ; 926 = 7 × 132 + 2." },
+        { d: 3, q: "Compléter la division euclidienne : 245 = 12 × ... + 5. Quel est le quotient ?", a: "20", e: "12 × 20 = 240, et 240 + 5 = 245. Le quotient est 20 (reste 5 < 12)." },
+        { d: 4, q: "z est entier et 362 = 11 × z + 10. Que vaut z ?", a: "32", e: "362 − 10 = 352, et 352 = 11 × 32. Le quotient est 32 (reste 10 < 11)." },
       ],
       gen: {
         1: () => { const a = 2 + Math.floor(Math.random()*9), b = 2 + Math.floor(Math.random()*9), c = 2 + Math.floor(Math.random()*6);
@@ -28,32 +37,6 @@ window.BANK_5E = {
           return { q:`Calculer : ${a} × (${a} + ${b}) \u2212 ${a} × ${b}`, a:String(a*a), e:`Parenthèse : ${a} + ${b} = ${a+b}. Produit : ${a} × ${a+b} = ${a*(a+b)}. Autre produit : ${a} × ${b} = ${a*b}. Différence : ${a*(a+b)} \u2212 ${a*b} = ${a*a}.` }; },
         4: () => { const b = 2 + Math.floor(Math.random()*2), c = 2 + Math.floor(Math.random()*3), d = 2 + Math.floor(Math.random()*3), k = 1 + Math.floor(Math.random()*4); const inner = b*(c+d) - k; const p = 2 + Math.floor(Math.random()*12); const a = inner + p;
           return { q:`Calculer : ${a} − [ ${b} × (${c} + ${d}) − ${k} ]`, a:String(p), e:`Parenthèse : ${c} + ${d} = ${c+d}. Crochets : ${b} × ${c+d} − ${k} = ${b*(c+d)} − ${k} = ${inner}. Puis ${a} − ${inner} = ${p}.` }; }
-      }
-    },
-    {
-      id: "arithmetique5", titre: "Opérations sur les décimaux (2) : multiples et diviseurs", icone: "🧮",
-      chap: [1],
-      notion: "Division euclidienne de a par b : a = b × q + r avec 0 ≤ r < b (q quotient entier, r reste).\nb est un diviseur de a quand le reste est nul (alors a est un multiple de b).\nCritères : par 2 (chiffre des unités pair) · par 5 (finit par 0 ou 5) · par 4 (la moitié du nombre est paire) · par 3 et 9 (somme des chiffres multiple de 3 ou 9).\nNombre premier : exactement deux diviseurs (1 et lui-même). 1 n'est pas premier ; 2 est le seul premier pair.",
-      qs: [
-        { d: 1, q: "Dans la division euclidienne de 23 par 5, le reste vaut...", c: ["3","2","4","0"], a: 0, e: "23 = 5 × 4 + 3 avec 3 < 5 : le quotient est 4 et le reste est 3." },
-        { d: 1, q: "Parmi ces nombres, lequel est un multiple de 7 ?", c: ["42","50","45","64"], a: 0, e: "42 = 7 × 6 : c'est un multiple de 7. 50 = 2 × 25, 64 = 2 × 32, et 45 n'est pas 7 × entier." },
-        { d: 2, q: "4 est-il un diviseur de 34 ?", c: ["Non, car 34 = 4 × 8 + 2","Oui, car 34 = 4 × 8","Oui, car 34 est pair","Non, car 34 est impair"], a: 0, e: "34 = 4 × 8 + 2 : le reste est 2 (non nul), donc 4 n'est pas un diviseur de 34." },
-        { d: 2, q: "147 est-il divisible par 3 ?", c: ["Oui, car 1 + 4 + 7 = 12","Non, car il finit par 7","Oui, car il est impair","Non, aucun critère ne s'applique"], a: 0, e: "1 + 4 + 7 = 12 est multiple de 3 : 147 = 3 × 49." },
-        { d: 2, q: "Parmi ces nombres, lequel est divisible par 9 ?", c: ["531","124","322","451"], a: 0, e: "5 + 3 + 1 = 9 : 531 est divisible par 9 (531 = 9 × 59). Pour 124, 322 et 451, la somme des chiffres n'est ni 9 ni 18." },
-        { d: 2, q: "Combien un nombre entier admet-il de diviseurs « évidents » au minimum ?", c: ["2","1","0","4"], a: 0, e: "Tout entier admet au moins deux diviseurs : 1 et lui-même." },
-        { d: 3, q: "Parmi ces nombres, lequel est premier ?", c: ["31","27","33","39"], a: 0, e: "27 = 3 × 9 ; 33 = 3 × 11 ; 39 = 3 × 13 (somme des chiffres multiple de 3). 31 n'a que 1 et 31 comme diviseurs." },
-        { d: 3, q: "Laquelle de ces divisions a un reste nul ?", c: ["546 ÷ 7","546 ÷ 9","487 ÷ 7","926 ÷ 7"], a: 0, e: "546 = 7 × 78 (reste 0). 546 ÷ 9 : 5 + 4 + 6 = 15, pas multiple de 9. 487 = 7 × 69 + 4 ; 926 = 7 × 132 + 2." },
-        { d: 3, q: "Compléter la division euclidienne : 245 = 12 × ... + 5. Quel est le quotient ?", a: "20", e: "12 × 20 = 240, et 240 + 5 = 245. Le quotient est 20 (reste 5 < 12)." },
-        { d: 4, q: "Un nombre est divisible par 4 quand...", c: ["la moitié du nombre est un nombre pair","il se termine par 0","la somme de ses chiffres vaut 4","il est impair"], a: 0, e: "Exemple : 116 ÷ 2 = 58, qui est pair, donc 116 est divisible par 4 (116 = 4 × 29)." },
-        { d: 4, q: "z est entier et 362 = 11 × z + 10. Que vaut z ?", a: "32", e: "362 − 10 = 352, et 352 = 11 × 32. Le quotient est 32 (reste 10 < 11)." },
-        { d: 4, q: "Le produit de deux nombres premiers (autres que 2) est...", c: ["toujours impair","toujours pair","toujours premier","toujours nul"], a: 0, e: "Les nombres premiers sont impairs sauf 2 : le produit de deux impairs est impair. Exemple : 3 × 7 = 21." },
-      ],
-      gen: {
-        1: () => { const q = 2 + Math.floor(Math.random()*8), r = Math.floor(Math.random()*7), b = 7 + Math.floor(Math.random()*4), a = b*q + r;
-          return { q:`Quel est le reste de la division euclidienne de ${a} par ${b} ?`, a:String(r), e:`${a} = ${b} × ${q} + ${r} avec ${r} < ${b} : le quotient est ${q} et le reste est ${r}.` }; },
-        2: () => { const ok = Math.random() < 0.5, t = 100 + Math.floor(Math.random()*300), n = ok ? t*3 : t*3 + 1;
-          const s = String(n).split("").reduce((u, c) => u + Number(c), 0);
-          return { q:`${n} est-il divisible par 3 ? (répondre oui ou non)`, a: ok ? "oui" : "non", e:`La somme des chiffres de ${n} est ${s}, qui ${ok ? "est" : "n'est pas"} multiple de 3 : réponse ${ok ? "oui" : "non"}.` }; }
       }
     },
     {
