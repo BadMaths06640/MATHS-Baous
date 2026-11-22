@@ -325,7 +325,7 @@ window.AIDE_5E = {
     resume: [
       { t: "Tableau de proportionnalité", f: "3 → 6 €\n1 → 2 €   (÷3)\n5 → 10 €  (×5)", d: "Le coefficient multiplie toute la colonne : passer par l'unité évite les erreurs." },
       { t: "Pourcentages", f: "10 % de 80 = 80 × 10/100 = 8", d: "Repères : 50 % = moitié, 25 % = quart, 10 % = dixième. Sinon on multiplie par t/100." },
-      { t: "Échelle", f: "1/100 000 : 1 cm → 1 km", d: "Multiplie la distance mesurée par le dénominateur de l'échelle, puis convertis en unité lisible." }
+      { t: "Graphique proportionnel", f: "points alignés avec l'origine (0 ; 0)", d: "Si les points ne sont pas alignés avec l'origine, la situation n'est pas proportionnelle." }
     ],
     qs: [
       "Astuce : cherche d'abord le prix d'UN objet.\nExemple similaire : 4 cahiers = 8 € → 1 = 2 € → 7 = 14 €.",
@@ -333,13 +333,13 @@ window.AIDE_5E = {
       "Astuce : 50 % = la moitié.\nExemple similaire : 50 % de 52 = 26.",
       "Astuce : 25 % = un quart.\nExemple similaire : 25 % de 200 = 50.",
       "Astuce : calcule l'augmentation, puis ajoute-la au prix initial.\nExemple similaire : 20 € + 20 % → 24 €.",
-      "Astuce : 1 cm sur la carte vaut 100 000 cm réels = 1 km.\nExemple similaire : 6 cm à l'échelle 1/100 000 → 6 km.",
+      "Astuce : cherche d'abord le prix d'UN kilo.\nExemple similaire : 2 kg = 3 € → 1 kg = 1,50 € → 5 kg = 7,50 €.",
       "Astuce : cherche d'abord la quantité par minute, puis multiplie.\nExemple similaire : 4 L en 2 min → 2 L/min → en 10 min : 20 L.",
       "Astuce : coefficient = 24 ÷ 15, applique-le à 40.\nExemple similaire : 6 kg pour 9 € → 10 kg pour 15 €.",
       "Astuce : divise par 6 pour le prix d'un seul, puis multiplie par 9.\nExemple similaire : 4 yaourts = 2,80 € → 9 = 6,30 €.",
       "Astuce : cherche d'abord le nombre de filles (55 %), puis le complément.\nExemple similaire : 400 élèves dont 30 % en CM2 → 70 % ailleurs.",
       "Astuce : pourcentage = (partie ÷ total) × 100.\nExemple similaire : 12 gagnants sur 30 → 12/30 = 40 %.",
-      "Astuce : divise la dimension réelle par 50 pour la maquette.\nExemple similaire : 20 m à l'échelle 1/50 → 2000 ÷ 50 = 40 cm."
+      "Astuce : pourcentage = (variation ÷ prix initial) × 100.\nExemple similaire : baisse de 20 € sur 80 € → 20/80 = 25 %."
     ],
     genH: {
       2: "Astuce : multiplie par le pourcentage puis divise par 100.\nExemple similaire : 20 % de 45 = 9.",
@@ -383,20 +383,20 @@ window.AIDE_5E = {
     resume: [
       { t: "Moyenne simple", f: "(8 + 12 + 12 + 15) ÷ 4 = 11,75", d: "Somme de toutes les valeurs ÷ nombre de valeurs." },
       { t: "Effectif", f: "« 12 » apparaît 2 fois → effectif 2", d: "L'effectif d'une valeur = le nombre de fois où elle apparaît dans la série." },
-      { t: "Étendue", f: "max − min = 12 − 1 = 11", d: "L'étendue mesure l'écart entre la plus grande et la plus petite valeur." }
+      { t: "Médiane", f: "2 ; 3 ; 5 ; 6 ; 9 → médiane 5", d: "On ordonne la série ; la médiane la partage en deux groupes de même effectif." }
     ],
     qs: [
       "Astuce : somme ÷ nombre de notes.\nExemple similaire : (7 + 9 + 14) ÷ 3 = 10.",
       "Astuce : compte les apparitions de la valeur.\nExemple similaire : 5 ; 5 ; 5 ; 2 → effectif de 5 = 3.",
-      "Astuce : trie d'abord la série.\nExemple similaire : 2 ; 10 ; 3 → triée 2 ; 3 ; 10 → étendue 8.",
+      "Astuce : compte toutes les valeurs de la série.\nExemple similaire : 6 ; 8 ; 8 ; 10 ; 12 → 5 valeurs, effectif total 5.",
       "Astuce : divise la somme par l'effectif.\nExemple similaire : (4 + 11 + 15) ÷ 3 = 10.",
-      "Astuce : cherche max et min après tri.\nExemple similaire : max 6 mm, min 0 mm → étendue 6 mm.",
+      "Astuce : multiplie chaque valeur par son effectif, additionne, puis divise.\nExemple similaire : (3×12 + 2×15) ÷ 5 = 66 ÷ 5 = 13,2.",
       "Astuce : moyenne = total ÷ nombre de notes.\nExemple similaire : 36 sur 4 notes → 9.",
       "Astuce : multiplie chaque valeur par son effectif, additionne, divise par l'effectif total.\nExemple similaire : (3×10 + 2×14) ÷ 5 = 58 ÷ 5 = 11,6.",
       "Astuce : somme pondérée ÷ effectif total.\nExemple similaire : 2 (5 fois) et 0 (5 fois) → (2×5) ÷ 10 = 1.",
       "Astuce : la moyenne est une valeur « centrale » : rien n'oblige chaque note à l'atteindre.\nExemple similaire : notes 8 et 17 → moyenne 12,5 sans note à 12,5.",
       "Astuce : nouvelle moyenne = nouvelle somme ÷ nouvel effectif.\nExemple similaire : 6 notes, moyenne 10 → 60 ; on ajoute 16 → 76 ÷ 7 ≈ 10,9.",
-      "Astuce : étendue = max − min pour chaque série.\nExemple similaire : série 1 ; 9 → étendue 8.",
+      "Astuce : ordonne la série, puis compte les valeurs.\nExemple similaire : 9 valeurs → la médiane est la 5e.",
       "Astuce : somme visée = moyenne × nombre de notes ; note manquante = différence.\nExemple similaire : 4 notes de moyenne 12 (somme 48), viser 13 sur 5 → 65 − 48 = 17.",
       "Astuce : fréquence = effectif de la valeur ÷ effectif total.\nExemple similaire : 3 garçons sur 12 élèves : 3/12 = 0,25 = 25 %.",
       "Astuce : compte les apparitions de la valeur, puis divise par le nombre total de valeurs.\nExemple similaire : 1 ; 2 ; 2 ; 4 : fréquence de 2 = 2/4 = 50 %.",

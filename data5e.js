@@ -277,20 +277,20 @@ window.BANK_5E = {
     {
       id: "propo", titre: "Proportionnalité et pourcentages", icone: "📊",
       chap: [11,17],
-      notion: "Tableau de proportionnalité : les quotients de chaque colonne sont égaux (coefficient de proportionnalité).\nPourcentage : t % d'une quantité = t/100 × quantité.\nÉchelle : distance sur le dessin ÷ distance réelle (avec la même unité).",
+      notion: "Tableau de proportionnalité : les quotients de chaque colonne sont égaux (coefficient de proportionnalité).\nPourcentage : t % d'une quantité = t/100 × quantité.\nLien graphique : une situation proportionnelle se représente par des points alignés avec l'origine (0 ;0) ; sinon elle n'est pas proportionnelle.",
       qs: [
         { d: 1, q: "3 stylos coûtent 6 €. Prix de 5 stylos (prix proportionnel) ?", c: ["9 €","10 €","12 €","15 €"], a: 1, e: "Un stylo coûte 6 ÷ 3 = 2 €. Donc 5 stylos : 5 × 2 = 10 €." },
         { d: 1, q: "Calculer 10 % de 80", c: ["8","0,8","80","18"], a: 0, e: "10 % = ÷10 : 80 ÷ 10 = 8." },
         { d: 1, q: "Calculer 50 % de 34", a: "17", e: "50 % = la moitié : 34 ÷ 2 = 17." },
         { d: 2, q: "Calculer 25 % de 240", c: ["6","60","24","48"], a: 1, e: "25 % = un quart : 240 ÷ 4 = 60. Ou 240 × 25 ÷ 100 = 60." },
         { d: 2, q: "Une écharpe à 30 € augmente de 20 %. Nouveau prix ?", c: ["36 €","32 €","50 €","24 €"], a: 0, e: "Augmentation : 30 × 20 ÷ 100 = 6 €. Nouveau prix : 30 + 6 = 36 €." },
-        { d: 2, q: "Sur une carte à l'échelle 1/100 000, deux villages sont à 4 cm. Distance réelle ?", c: ["400 m","4 km","40 km","40 m"], a: 1, e: "1 cm sur la carte = 100 000 cm réels = 1 km. Donc 4 cm = 4 km." },
+        { d: 2, q: "3 kg de pommes coûtent 4,50 €. Prix de 7 kg de pommes (prix proportionnel) ?", c: ["10,50 €","9 €","11,50 €","8,50 €"], a: 0, e: "Un kilo : 4,50 ÷ 3 = 1,50 €. Donc 7 kg : 7 × 1,50 = 10,50 €." },
         { d: 3, q: "Un robinet laisse couler 3 litres en 2 minutes. Quantité d'eau en 10 minutes ?", a: "15", e: "3 L en 2 min → 1,5 L par minute. En 10 min : 10 × 1,5 = 15 L." },
         { d: 3, q: "15 litres d'essence coûtent 24 € ; prix de 40 litres (proportionnel) ?", a: "64", e: "Coefficient : 24 ÷ 15 = 1,6 €/L. Donc 40 × 1,6 = 64 €." },
         { d: 3, q: "Un paquet de 6 yaourts coûte 4,20 €. Prix (en euros) de 9 yaourts ?", a: "6.3", e: "Un yaourt : 4,20 ÷ 6 = 0,70 €. Pour 9 : 9 × 0,70 = 6,30 €." },
         { d: 4, q: "Une école compte 480 élèves ; 55 % sont des filles. Combien de garçons ?", a: "216", e: "Filles : 480 × 55 ÷ 100 = 264. Garçons : 480 − 264 = 216." },
         { d: 4, q: "Dans une classe de 25 élèves, 10 sont externes. Quel est le pourcentage d'externes ?", c: ["40 %","50 %","25 %","60 %"], a: 0, e: "10/25 = 40/100 = 40 %." },
-        { d: 4, q: "Une maquette à l'échelle 1/50 : une tour de 35 m de hauteur mesure combien sur la maquette ?", c: ["70 cm","7 cm","35 cm","1,75 m"], a: 0, e: "35 m = 3 500 cm ; 3 500 ÷ 50 = 70 cm." }
+        { d: 4, q: "Un appareil à 240 € baisse de 75 €. De quel pourcentage a-t-il baissé ? (répondre en %)", a: "31.25", e: "Pourcentage de baisse : 75 ÷ 240 = 0,3125, soit 31,25 %." }
       ],
       gen: {
         2: () => { const q = [10,20,25,50][Math.floor(Math.random()*4)]; const n = (2+Math.floor(Math.random()*40))*4;
@@ -325,19 +325,19 @@ window.BANK_5E = {
     {
       id: "stats5", titre: "Statistiques : effectifs et moyenne", icone: "📈",
       chap: [14],
-      notion: "Effectif : nombre de fois où une valeur apparaît.\nÉtendue : plus grande valeur − plus petite valeur.\nMoyenne simple : somme des valeurs ÷ nombre de valeurs (en 5e, chaque valeur compte une fois ou on divise par l'effectif total).\nFréquence : effectif de la valeur ÷ effectif total (souvent en %) ; la somme des fréquences vaut 1 (100 %).\nMédiane : on ordonne les valeurs ; c'est la valeur qui partage la série ordonnée en deux groupes de même effectif.\nDiagramme en rectangles (histogramme) : la hauteur de chaque rectangle est proportionnelle à l'effectif.",
+      notion: "Effectif : nombre de fois où une valeur apparaît.\nMoyenne simple : somme des valeurs ÷ nombre de valeurs (en 5e, chaque valeur compte une fois ou on divise par l'effectif total).\nFréquence : effectif de la valeur ÷ effectif total (souvent en %) ; la somme des fréquences vaut 1 (100 %).\nMédiane : on ordonne les valeurs ; c'est la valeur qui partage la série ordonnée en deux groupes de même effectif.\nDiagramme en rectangles (histogramme) : la hauteur de chaque rectangle est proportionnelle à l'effectif.",
       qs: [
         { d: 1, q: "Notes : 8 ; 12 ; 12 ; 15. Quelle est la moyenne ?", c: ["12","11,75","11,5","12,5"], a: 1, e: "Somme : 8 + 12 + 12 + 15 = 47. Nombre de notes : 4. Moyenne : 47 ÷ 4 = 11,75." },
         { d: 1, q: "9 ; 3 ; 12 ; 14 ; 12 ; 14; 12 quel est l'effectif de la valeur 12 ?", c: ["3","1","12","2"], a: 0, e: "12 apparaît trois fois : son effectif est 3." },
-        { d: 1, q: "Températures : 3 °C ; 9 °C ; 12 °C ; 1 °C. Étendue ?", c: ["11 °C","12 °C","9 °C","25 °C"], a: 0, e: "Maximum − minimum : 12 − 1 = 11 °C." },
+        { d: 1, q: "Dans une série statistique, l'effectif total est...", c: ["le nombre total de valeurs de la série","la somme des valeurs de la série","la moyenne des valeurs","la plus grande valeur"], a: 0, e: "L'effectif total est la somme des effectifs de toutes les valeurs : par ex. 2 ; 8 ; 8 ; 10 contient 4 valeurs." },
         { d: 2, q: "Moyenne de : 6 ; 10 ; 14 ?", a: "10", e: "6 + 10 + 14 = 30 ; 30 ÷ 3 = 10." },
-        { d: 2, q: "Sur 10 jours, il a plu : 3 − 1 − 0 − 0 − 2 − 1 − 0 − 4 − 1 − 0 (mm). Quelle est l'étendue ?", c: ["4 mm","3 mm","1 mm","12 mm"], a: 0, e: "Max : 4, min : 0 → étendue 4 mm." },
+        { d: 2, q: "Notes de Farid : 12 obtenu 3 fois et 15 obtenu 2 fois. Quelle est sa moyenne ?", c: ["13,2","13,5","13","12,5"], a: 0, e: "Moyenne pondérée : (3 × 12 + 2 × 15) ÷ 5 = 66 ÷ 5 = 13,2." },
         { d: 2, q: "Moyenne de 5 notes valant au total 42 ?", c: ["8,4","8,5","42","37"], a: 0, e: "42 ÷ 5 = 8,4." },
         { d: 3, q: "Âges : 12 ans (4 fois) ; 13 ans (6 fois). Âge moyen ?", c: ["12,6 ans","13 ans","12,8 ans","12,5 ans"], a: 0, e: "Total âges : 4 × 12 + 6 × 13 = 48 + 78 = 126. Effectif 10 (4+6). Moyenne : 126 ÷ 10 = 12,6 ans." },
         { d: 3, q: "Nombre de frères et sœurs : 1 (7 élèves), 0 (5 élèves), 2 (8 élèves). Moyenne, arrondie au dixième ?", c: ["1,2","1","2","1,1"], a: 0, e: "1 × 7 + 0 × 5 + 2 × 8 = 23. Effectif : 20. Moyenne : 23 ÷ 20 = 1,15 → arrondie au dixième : 1,2." },
         { d: 3, q: "Après le contrôle, la moyenne de la classe est 12,5. Tous les élèves ont-ils 12,5 ?", c: ["Non, la moyenne ne donne pas chaque note","Oui, toujours","On ne peut pas savoir du tout","Seulement si l'effectif est pair"], a: 0, e: "La moyenne est une valeur « centrale » : des notes autour d'elle (par ex. 8, 12, 17,5) peuvent donner 12,5." },
         { d: 4, q: "7 valeurs ont une moyenne de 9. On ajoute une valeur 20. Nouvelle moyenne ?", c: ["10,375","10,5","10","11"], a: 0, e: "Somme initiale : 7 × 9 = 63. Nouvelle somme : 63 + 20 = 83, pour 8 valeurs : 83 ÷ 8 = 10,375." },
-        { d: 4, q: "Quelle série a la plus grande étendue ?", c: ["2 ; 5 ; 9","1 ; 3 ; 7 ; 8","4 ; 6 ; 8","0 ; 5 ; 10"], a: 3, e: "Étendues respectives : 7 ; 7 ; 4 ; 10. La plus grande est 10 pour 0 ; 5 ; 10." },
+        { d: 4, q: "Une série compte 9 valeurs. Après les avoir ordonnées, la médiane est...", c: ["la 5e valeur","la 4e valeur","la moyenne des 9 valeurs","la 9e valeur"], a: 0, e: "9 valeurs ordonnées : la médiane est la (9 + 1) ÷ 2 = 5e valeur, qui partage la série en deux groupes de même effectif." },
         { d: 4, q: "Une série de 4 notes a une moyenne de 13. On veut une moyenne de 14 après une 5e note. Combien faut-il obtenir ?", a: "18", e: "Somme visée : 5 × 14 = 70. Somme actuelle : 4 × 13 = 52. Note nécessaire : 70 − 52 = 18." },
         { d: 3, q: "Dans une série statistique, la fréquence d'une valeur est...", c: ["l'effectif de la valeur divisé par l'effectif total","l'effectif total divisé par l'effectif de la valeur","la somme de tous les effectifs","la plus grande valeur de la série"], a: 0, e: "Fréquence = effectif de la valeur ÷ effectif total ; souvent donnée en pourcentage." },
         { d: 3, q: "Série : 2 ; 5 ; 3 ; 5 ; 7. Quelle est la fréquence de la valeur 5 ?", c: ["40 %","20 %","25 %","50 %"], a: 0, e: "5 apparaît 2 fois sur 5 valeurs : fréquence = 2 ÷ 5 = 0,4 = 40 %." },
