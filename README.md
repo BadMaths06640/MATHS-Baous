@@ -39,9 +39,9 @@ index.html    interface (3 étapes : niveau → thème → maîtrise)
 style.css     design responsive (mobile/tablette/ordinateur)
 app.js        moteur : navigation, adaptativité, correction, stockage local
 data.js       agrégation des niveaux
-data5e.js     banque de questions 5e (10 thèmes)
-data4e.js     banque de questions 4e (12 thèmes)
-data3e.js     banque de questions 3e (14 thèmes)
+data5e.js     banque de questions 5e (17 thèmes / 22 chapitres)
+data4e.js     banque de questions 4e (17 thèmes / 18 chapitres)
+data3e.js     banque de questions 3e (19 thèmes / 19 chapitres)
 aide5e.js     résumés de cours + aides par question (5e)
 aide4e.js     résumés de cours + aides par question (4e)
 aide3e.js     résumés de cours + aides par question (3e)
@@ -56,6 +56,6 @@ Les thèmes sont **rangés dans l'ordre de l'année** et affichent les chapitres
 
 | Niveau | Thèmes → chapitres de la progression |
 |---|---|
-| 5e | Priorités opératoires (ch. 1) · Symétrie, triangles et angles (ch. 2, 6, 8, 10) · Fractions (ch. 3, 5) · Arithmétique : diviseurs et nombres premiers (ch. 4) · Proportionnalité et pourcentages (ch. 7) · Nombres relatifs (ch. 9) · Statistiques : effectifs, moyenne, médiane (ch. 11) · Calcul littéral : distributivité (ch. 12) · Périmètres, aires et volumes (ch. 13) · Probabilités (ch. 14) |
-| 4e | Pourcentages, vitesses, échelles (ch. 1) · Pythagore et racine carrée (ch. 2, 15) · Relatifs : multiplication, division, repérage (ch. 3) · Pyramide, cône et sections (ch. 4) · Divisibilité et nombres premiers (ch. 5) · Fractions (ch. 6, 10) · Translation (ch. 7) · Calcul littéral et équations (ch. 8, 13) · Thalès et triangles égaux (ch. 9) · Cosinus (ch. 11) · Puissances et puissances de 10 (ch. 12, 17) · Statistiques et probabilités (ch. 14, 16) |
-| 3e | Racines carrées (outil) · Fractions et nombres relatifs (ch. 1) · Thalès, réciproque et homothétie (ch. 2, 6, 19) · Équations et problèmes (ch. 3, 15) · Puissances (ch. 4) · Fonctions (ch. 5) · Fonctions linéaires et affines (ch. 7, 12) · Arithmétique : multiples et diviseurs (ch. 8) · Identités remarquables et factorisation (ch. 9, 15) · Statistiques : médiane et quartiles (ch. 10) · Rotation (ch. 11) · Trigonométrie (ch. 13, 16) · Sphères, sections et repérage (ch. 14, 17) · Probabilités (ch. 18) |
+| 5e | Calcul et priorités opératoires (ch. 1) · Arithmétique : diviseurs et nombres premiers (ch. 1) · Symétrie centrale (ch. 2) · Calcul littéral : distributivité (ch. 3, 9) · Angles et droites parallèles (ch. 4) · Nombres relatifs : repérage et calcul (ch. 5, 13) · Triangles : angles et constructions (ch. 6) · Fractions : comparer, additionner, soustraire (ch. 7, 16) · Parallélogrammes et quadrilatères (ch. 8, 18) · Géométrie dans l'espace : solides et volumes (ch. 10, 20) · Proportionnalité et pourcentages (ch. 11, 17) · Droites remarquables du triangle (ch. 12) · Statistiques : effectifs et moyenne (ch. 14) · Périmètres et aires (ch. 15) · Équations et problèmes (ch. 19) · Probabilités (ch. 21) · Pensée informatique (Scratch) (ch. 22) |
+| 4e | Proportionnalité et pourcentages (ch. 1) · Théorème de Pythagore et racine carrée (ch. 2) · Multiplication et division de nombres relatifs (ch. 3) · Solides : volumes (ch. 4) · Divisibilité et nombres premiers (ch. 5) · Nombres rationnels : les 4 opérations (ch. 6, 10) · La translation (ch. 7) · Calcul littéral : développer et réduire (ch. 8) · Théorème de Thalès (ch. 9) · Cosinus d'un angle aigu (ch. 11) · Puissances (ch. 12) · Réciproque de Pythagore (ch. 13) · Équations : résoudre (ch. 14) · Statistiques : moyenne et médiane (ch. 15) · Réciproque de Thalès (ch. 16) · Probabilités (ch. 17) · Grandeurs : vitesses et débits (ch. 18) |
+| 3e | Fractions et nombres relatifs (ch. 1) · Puissances et notation scientifique (ch. 2) · Théorème de Thalès et rappel de Pythagore (ch. 3) · Calcul littéral, partie 1 (ch. 4) · Fonctions : image et antécédent (ch. 5) · Réciproque et contraposée de Thalès (ch. 6) · Fonction linéaire (ch. 7) · Arithmétique : multiples et diviseurs (ch. 8) · Calcul littéral, partie 2 : identités remarquables (ch. 9) · Statistiques : médiane et quartiles (ch. 10) · Rotation (ch. 11) · Fonction affine (ch. 12) · Trigonométrie : calculer des longueurs (ch. 13) · La sphère et la boule (ch. 14) · Calcul littéral, partie 3 : factorisation et produit nul (ch. 15) · Trigonométrie : calculer des angles (ch. 16) · Repérage dans l'espace et sections de solides (ch. 17) · Probabilités (ch. 18) · Homothéties et agrandissements (ch. 19) |
